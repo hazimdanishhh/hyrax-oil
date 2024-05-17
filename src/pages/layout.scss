@@ -1,11 +1,47 @@
-nav {
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
 
-    ul {
+.navbar {
+    height: 100px;
+    width: 100%;
+
+    position: absolute;
+
+    nav {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    
+        height: 100%;
+        max-width: 1366px;
+        margin: auto;
+    
 
-        li {
-            list-style-type: none;
+    
+        div {
+            margin: 0 0 0 1rem;
+    
+            .nav-logo {
+                width: 80px;
+            }
+        }
+    
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 1rem;
+    
+            li {
+                list-style-type: none;
+                margin: 2rem;
+            }
         }
     }
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.2s;
 }

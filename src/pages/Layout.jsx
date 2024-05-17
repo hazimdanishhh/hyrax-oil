@@ -5,16 +5,27 @@ import "./layout.scss";
 function Layout() {
   return (
     <>
-    <nav>
-        <ul>
-            <li>
-                <Link to="/">home</Link>
-            </li>
-            <li>
-                <Link to="/about">about</Link>
-            </li>
-        </ul>
-    </nav>
+    <div className='navbar'>
+        <nav>
+            <div>
+                <Link to="/"><img className="nav-logo" src="./hyraxoil-logo.png" alt="Hyrax Oil Logo" /></Link>
+            </div>
+            <ul>
+                <li>
+                    <Link to="/">home</Link>
+                </li>
+                <li>
+                    <Link to="/about">about</Link>
+                </li>
+                <li>
+                    <Link to="/info">info</Link>
+                </li>
+                <li>
+                    <Link to="/contact">contact</Link>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <Outlet />
     </>

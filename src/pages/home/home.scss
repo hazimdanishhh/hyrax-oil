@@ -1,0 +1,25 @@
+#home-top {
+    min-height: 100vh;
+    background-image: url("./carousel-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+
+    div {
+        height: 100%;
+
+        .home-title {
+            font-size: 4rem;
+            font-weight: 1;
+            margin: 150px;
+            width: 35%;
+        }
+    }
+}
+
+#best-lubricants {
+    min-height: 100vh;
+}

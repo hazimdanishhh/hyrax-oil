@@ -1,0 +1,67 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.home-top {
+  min-height: 100vh;
+  background-image: url("./carousel-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .home-top-gradient {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, transparent 0%, black 300%);
+
+    .home-top-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      min-height: 100vh;
+      max-width: 1366px;
+      margin: auto;
+    
+      .home-top-text {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        margin-left: 3rem;
+
+        .home-top-title {
+            font-size: 3.5rem;
+            font-weight: 1;
+            text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1.0);
+            margin-bottom: 2rem;
+        }
+
+        .home-top-link-div {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+
+          .home-top-link {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+          }
+
+          .link-arrow {
+            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg) brightness(102%) contrast(102%);
+            width: 50px;
+          }
+        }
+
+        .home-top-link-div:hover {
+          filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg) brightness(99%) contrast(92%);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}

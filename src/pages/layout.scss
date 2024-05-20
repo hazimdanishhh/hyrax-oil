@@ -8,6 +8,7 @@ $background: white;
     width: 100%;
 
     position: absolute;
+    z-index: 1000;
 
     nav {
         display: flex;
@@ -17,8 +18,6 @@ $background: white;
         height: 100%;
         max-width: 1366px;
         margin: auto;
-    
-
     
         div {
             margin: 0 0 0 1rem;

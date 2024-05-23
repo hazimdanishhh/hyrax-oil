@@ -1,0 +1,116 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  max-height: 100vh;
+
+  .carousel-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-img-hidden {
+    display: none;
+  }
+
+  .home-top-gradient {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.2) 70%);
+
+    .home-top-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      min-height: 100vh;
+      max-width: 1366px;
+      margin: auto;
+    
+      .home-top-text {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        margin-left: 3rem;
+
+        z-index: 2;
+    
+        .home-top-title {
+          font-size: 3.5rem;
+          font-weight: 1;
+          text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1.0);
+          margin-bottom: 2rem;
+        }
+    
+        .home-top-link-div {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+    
+          .home-top-link {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+          }
+    
+          .link-arrow {
+            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg) brightness(102%) contrast(102%);
+            width: 50px;
+          }
+        }
+    
+        .home-top-link-div:hover {
+          filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg) brightness(99%) contrast(92%);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+
+  .indicators {
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+
+    max-width: 1366px;
+
+    .indicator {
+      background: rgb(242,111,39);
+      background: linear-gradient(90deg, rgba(242,111,39,1) 0%, rgba(242,163,39,1) 77%);
+      height: 0.3rem;
+      width: 10rem;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      margin: 0 5rem;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .indicator:hover {
+      width: 15rem;
+    }
+
+    .indicator-inactive {
+      background: rgb(160, 160, 160);
+      width: 10rem;
+    }
+  }
+}

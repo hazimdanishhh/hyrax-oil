@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../Layout'
 import "./home.scss";
 import Carousel from './components/carousel/Carousel';
@@ -8,6 +8,10 @@ import TrustQuality from './components/trust-our-quality/TrustQuality';
 import PoweringUp from './components/powering-up/PoweringUp';
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Hyrax Oil | Better Oil, Better Care'; // Quick solution
+  }, []);
+
   return (
     <div>
       {/* NAVBAR */}

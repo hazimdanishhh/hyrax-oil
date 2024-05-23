@@ -4,6 +4,8 @@ import "./home.scss";
 import Carousel from './components/carousel/Carousel';
 import Footer from '../Footer';
 import SectionLink from './components/section-link/SectionLink';
+import TrustQuality from './components/trust-our-quality/TrustQuality';
+import PoweringUp from './components/powering-up/PoweringUp';
 
 function Home() {
   return (
@@ -31,18 +33,18 @@ function Home() {
       </section>
 
       {/* TRUST OUR QUALITY */}
+      {/* <section> */}
+        <TrustQuality />
+      {/* </section> */}
+
       <section>
-        <div>
-          <h2>Trust Our Quality</h2>
-        </div>
+        Labs, Engine, Racetrack Cards
       </section>
 
       {/* POWERING UP THE WORLD */}
-      <section>
-        <div>
-          <h2>Powering Up The World</h2>
-        </div>
-      </section>
+      {/* <section> */}
+        <PoweringUp />
+      {/* </section> */}
 
       {/* Hyrax TFO */}
       <section>

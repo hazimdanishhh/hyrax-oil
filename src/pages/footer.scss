@@ -8,6 +8,8 @@ $background: white;
   .footer-wrapper {
     display: flex;
     flex-direction: column;
+    max-width: 1366px;
+    margin: auto;
 
     .footer-segments {
       display: flex;

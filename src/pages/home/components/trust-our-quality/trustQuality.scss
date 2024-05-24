@@ -8,9 +8,9 @@ $background: white;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   .bg-gradient {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(32, 32, 32, 0.95);
     backdrop-filter: blur(5px);
 
     .section-link-wrapper {
@@ -26,10 +26,10 @@ $background: white;
         z-index: 2;
         display: flex;
         flex-direction: column;
-    
+
         width: 70%;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-    
+
         .title {
           // font-family: "GilroyExtraBold";
           font-size: 40px;
@@ -38,7 +38,7 @@ $background: white;
             color: $primary;
           }
         }
-    
+
         .desc {
           font-size: 20px;
           text-align: justify;
@@ -49,12 +49,17 @@ $background: white;
           }
         }
 
+        .desc-link {
+          font-size: 20px;
+          text-align: start;
+          margin: 1rem 0;
+          width: fit-content;
+        }
+
         .api-qr {
           width: 300px;
         }
       }
-
-    
 
       .link-div {
         display: flex;
@@ -66,16 +71,17 @@ $background: white;
         }
 
         .link-arrow {
-          filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg) brightness(102%) contrast(102%);
+          filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
+            brightness(102%) contrast(102%);
           width: 30px;
         }
       }
 
       .link-div:hover {
-        filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg) brightness(99%) contrast(92%);
+        filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
+          brightness(99%) contrast(92%);
         transition: 0.2s;
       }
     }
-    
   }
 }

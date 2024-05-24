@@ -3,28 +3,14 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.carousel {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+.home-carousel {
+  min-height: 100vh;
+  background-image: url("./carousel-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  .carousel-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-
-    &.active {
-      opacity: 1;
-    }
-  }
-
-  .carousel-gradient {
+  .home-carousel-gradient {
     content: "";
     position: absolute;
     top: 0;
@@ -33,7 +19,7 @@ $background: white;
     bottom: 0;
     background: linear-gradient(to left, transparent 20%, black 150%);
 
-    .carousel-wrapper {
+    .home-carousel-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: end;
@@ -42,26 +28,26 @@ $background: white;
       max-width: 1366px;
       margin: auto;
 
-      .carousel-text {
+      .home-carousel-text {
         display: flex;
         flex-direction: column;
         width: 35%;
         margin-left: 3rem;
         margin-bottom: 10%;
 
-        .carousel-title {
+        .home-carousel-title {
           font-size: 3.5rem;
           font-weight: 1;
           text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1);
           margin-bottom: 2rem;
         }
 
-        .carousel-link-div {
+        .home-carousel-link-div {
           display: flex;
           align-items: center;
           width: fit-content;
 
-          .carousel-link {
+          .home-carousel-link {
             font-size: 1.5rem;
             margin-right: 1rem;
           }
@@ -73,44 +59,41 @@ $background: white;
           }
         }
 
-        .carousel-link-div:hover {
+        .home-carousel-link-div:hover {
           filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
             brightness(99%) contrast(92%);
           transition: 0.2s;
         }
       }
 
-      .carousel-indicators {
-        // position: absolute;
-        // bottom: 3rem;
-        // left: 50%;
-        // transform: translateX(-50%);
-
-        margin: 0 auto 3rem auto;
+      .indicators {
         display: flex;
         justify-content: space-around;
-        width: 100%;
+        margin-bottom: 3rem;
 
         .indicator {
           display: flex;
-          width: 15%;
           height: 0.3rem;
-          border: none;
+          width: 20%;
+
           border-radius: 10px;
-          background-color: rgba(255, 255, 255, 0.5);
+          border: none;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
           cursor: pointer;
           transition: 0.5s;
 
-          &.active {
-            width: 20%;
-            background: linear-gradient(270deg, $primary, $secondary);
-            background-size: 200% 200%;
-            animation: gradientAnimation 10s ease infinite;
-          }
+          background: linear-gradient(270deg, $primary, $secondary);
+          background-size: 200% 200%;
+          animation: gradientAnimation 10s ease infinite;
         }
 
         .indicator:hover {
           width: 20%;
+        }
+
+        .indicator-inactive {
+          background: rgba(160, 160, 160, 0.5);
+          width: 15%;
         }
       }
     }
@@ -129,13 +112,46 @@ $background: white;
   }
 }
 
-// @media (max-width: 768px) {
-//   .carousel {
-//     .carousel-indicators {
-//       bottom: 10px;
+/* Mobile styles */
+@media (max-width: 480px) {
+  .home-carousel-text {
+    width: 70% !important;
 
-//       .indicator {
-//       }
-//     }
-//   }
-// }
+    .home-carousel-title {
+      font-size: 2.75rem !important;
+    }
+    .home-carousel-link {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .home-carousel-title {
+    font-size: 3rem !important;
+  }
+  .home-carousel-link {
+    font-size: 1rem !important;
+  }
+}
+
+/* Laptop and desktop styles */
+@media (min-width: 1025px) and (max-width: 1680px) {
+  .home-carousel-title {
+    font-size: 3.25rem !important;
+  }
+  .home-carousel-link {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Large desktop and TV styles */
+@media (min-width: 1681px) {
+  .home-carousel-title {
+    font-size: 3.5rem !important;
+  }
+  .home-carousel-link {
+    font-size: 1.5rem !important;
+  }
+}

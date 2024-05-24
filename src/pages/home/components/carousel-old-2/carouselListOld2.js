@@ -9,7 +9,7 @@ const carouselList = [
     url: "./carousel-2.jpg",
     alt: "carousel 2 image",
     title: "Trust Our Quality",
-    href: "#trust-quality"
+    href: "#trust-quality",
   },
   {
     url: "./carousel-3.jpg",
@@ -21,7 +21,7 @@ const carouselList = [
     url: "./carousel-4.png",
     alt: "carousel 4 image",
     title: "Our Partnerships",
-    href: "#powering-up"
+    href: "#powering-up",
   },
 ];
 

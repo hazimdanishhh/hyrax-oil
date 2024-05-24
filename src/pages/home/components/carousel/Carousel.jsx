@@ -1,68 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import images from "./images";
 import "./carousel.scss";
-import carouselList from "./carouselList";
-import {motion} from "framer-motion";
 
 function Carousel() {
-  const [slide, setSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  function nextSlide() {
-    setSlide(slide === carouselList.length - 1 ? 0 : slide + 1);
-  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 8000); // Change image every 8 seconds
+    return () => clearInterval(interval);
+  }, []);
 
-  function prevSlide() {
-    setSlide(slide === 0 ? carouselList.length - 1 : slide - 1);
-  }
-
-  // const timeout = setInterval(sliderTimeout, 3000);
-
-  function sliderTimeout() {
-    setSlide((slide === carouselList.length - 1) ? 0 : slide + 1);
-    // setTimeout(setSlide(slide === carouselList.length - 1 ? 0 : slide + 1), 3000);
-  }
-
-  function resetSliderTimeout() {
-    clearTimeout(timeout);
-    sliderTimeout();
+  function goToSlide(index) {
+    setCurrentIndex(index);
   }
 
   return (
-    <motion.div
-      className="home-carousel"
-      style={{backgroundImage: `url(${carouselList[slide].url})`}}
-      initial={{opacity:0}}
-      animate={{opacity:1}}
-      transition={{duration:0.5, delay:0.3}}
-    >
-      <div className='home-carousel-gradient'>
-        <div className='home-carousel-wrapper'>
-          <motion.div
-            className='home-carousel-text'
-            initial={{x:-100, opacity:0}}
-            animate={{x:0, opacity:1}}
-            transition={{duration:1.3, delay:0.5}}
-          >
-            <h2 className='home-carousel-title'>{carouselList[slide].title}</h2>
-            <a className='home-carousel-link-div' href={carouselList[slide].href}><span className='home-carousel-link'>read more</span><img className='link-arrow' src="./link-arrow.svg" alt="Link Arrow" /></a>
-          </motion.div>
+    <div className="carousel">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`carousel-slide ${index === currentIndex ? "active" : ""}`}
+          style={{ backgroundImage: `url(${image.src})` }}
+          alt={image.alt}
+        ></div>
+      ))}
 
-          <div className="indicators">
-            {carouselList.map((_, i) => {
-              return (
-                <button
-                  className={
-                    slide === i ? "indicator" : "indicator indicator-inactive"
-                  }
-                  key={i}
-                  onClick={() => setSlide(i)}
-                ></button>
-              );
-            })}
+      <div className="carousel-gradient">
+        <div className="carousel-wrapper">
+          <div className="carousel-text">
+            <h2 className="carousel-title">{images[currentIndex].title}</h2>
+            <a className="carousel-link-div" href={images[currentIndex].href}>
+              <span className="carousel-link">read more</span>
+              <img
+                className="link-arrow"
+                src="./link-arrow.svg"
+                alt="Link Arrow"
+              />
+            </a>
+          </div>
+
+          <div className="carousel-indicators">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                className={`indicator ${
+                  index === currentIndex ? "active" : ""
+                }`}
+                onClick={() => goToSlide(index)}
+              ></button>
+            ))}
           </div>
         </div>
       </div>
-    </motion.div>
-  )
+    </div>
+  );
 }
 
-export default Carousel
+export default Carousel;

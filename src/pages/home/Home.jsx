@@ -37,21 +37,21 @@ function Home() {
       </section>
 
       {/* TRUST OUR QUALITY */}
-      {/* <section> */}
+      <div id='trust-quality'>
         <TrustQuality />
-      {/* </section> */}
+      </div>
 
       <section>
         Labs, Engine, Racetrack Cards
       </section>
 
       {/* POWERING UP THE WORLD */}
-      {/* <section> */}
+      <div id='powering-up'>
         <PoweringUp />
-      {/* </section> */}
+      </div>
 
       {/* Hyrax TFO */}
-      <section>
+      <section id='tfo'>
         <div>
           <h2>Hyrax Transformer Oils &#40;TFO&#41;</h2>
         </div>

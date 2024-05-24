@@ -10,7 +10,7 @@ function Layout() {
             <div>
                 <Link to="/"><img className="nav-logo" src="./hyraxoil-logo.png" alt="Hyrax Oil Logo" /></Link>
             </div>
-            <ul>
+            <ul className='link-list'>
                 <li>
                     <Link to="/">home</Link>
                 </li>

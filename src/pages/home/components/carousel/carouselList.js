@@ -1,23 +1,27 @@
 const carouselList = [
   {
-    src: "./carousel-1.png",
+    url: "./carousel-1.jpg",
     alt: "carousel 1 image",
     title: "We Are The Lubricants Experts",
     href: "#lube-expert",
   },
   {
-    src: "./power-line.jpg",
-    alt: "carousel 1 image",
-    title: "Powering Up The World",
+    url: "./carousel-2.jpg",
+    alt: "carousel 2 image",
+    title: "Trust Our Quality",
+    href: "#trust-quality"
+  },
+  {
+    url: "./carousel-3.jpg",
+    alt: "carousel 3 image",
+    title: "Hyrax Transformer Oils (TFO)",
+    href: "#tfo",
+  },
+  {
+    url: "./carousel-4.png",
+    alt: "carousel 4 image",
+    title: "Our Partnerships",
     href: "#powering-up"
-  },
-  {
-    src: "./carousel-1.png",
-    alt: "carousel 1 image",
-  },
-  {
-    src: "./power-line.jpg",
-    alt: "carousel 1 image",
   },
 ];
 

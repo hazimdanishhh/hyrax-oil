@@ -6,43 +6,87 @@ $quarternary: white;
 // GENERAL STYLES
 
 html {
-    scroll-behavior: smooth;
-    background-color: $tertiary;
+  scroll-behavior: smooth;
+  background-color: $tertiary;
 }
 
 body {
-    font-family: "GilroyLight";
-    color: $quarternary;
+  font-family: "GilroyLight";
+  color: $quarternary;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-    color: $secondary;
-    transition: 0.2s;
+  color: $secondary;
+  transition: 0.2s;
 }
 
 @font-face {
-    font-family: "GilroyLight";
-    src: local("GilroyLight"),
-      url("./fonts/Gilroy-Light.otf") format("opentype");
-    font-weight: normal;
+  font-family: "GilroyLight";
+  src: local("GilroyLight"),
+  url("./fonts/Gilroy-Light.otf") format("opentype");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "GilroyExtraBold";
-    src: local("GilroyExtraBold"),
-      url("./fonts/Gilroy-ExtraBold.otf") format("opentype");
-    font-weight: normal;
+  font-family: "GilroyExtraBold";
+  src: local("GilroyExtraBold"),
+  url("./fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: normal;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
     
 }
 
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  h1 { font-size: 1.5rem; }   /* 24px */
+  h2 { font-size: 1.25rem; }  /* 20px */
+  h3 { font-size: 1.125rem; } /* 18px */
+  h4 { font-size: 1rem; }     /* 16px */
+  h5 { font-size: 0.875rem; } /* 14px */
+  h6 { font-size: 0.75rem; }  /* 12px */
+  p { font-size: 1rem; }      /* 16px */
+}
+
+/* Tablet styles */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  h1 { font-size: 1.75rem; }  /* 28px */
+  h2 { font-size: 1.5rem; }   /* 24px */
+  h3 { font-size: 1.25rem; }  /* 20px */
+  h4 { font-size: 1.125rem; } /* 18px */
+  h5 { font-size: 1rem; }     /* 16px */
+  h6 { font-size: 0.875rem; } /* 14px */
+  p { font-size: 1.125rem; }  /* 18px */
+}
+
+/* Laptop and desktop styles */
+@media screen and (min-width: 1025px) and (max-width: 1680px) {
+  h1 { font-size: 2rem; }     /* 32px */
+  h2 { font-size: 1.75rem; }  /* 28px */
+  h3 { font-size: 1.5rem; }   /* 24px */
+  h4 { font-size: 1.25rem; }  /* 20px */
+  h5 { font-size: 1.125rem; } /* 18px */
+  h6 { font-size: 1rem; }     /* 16px */
+  p { font-size: 1.125rem; }  /* 18px */
+}
+
+/* Large desktop and TV styles */
+@media screen and (min-width: 1681px) {
+  h1 { font-size: 2.25rem; }  /* 36px */
+  h2 { font-size: 2rem; }     /* 32px */
+  h3 { font-size: 1.75rem; }  /* 28px */
+  h4 { font-size: 1.5rem; }   /* 24px */
+  h5 { font-size: 1.25rem; }  /* 20px */
+  h6 { font-size: 1.125rem; } /* 18px */
+  p { font-size: 1.25rem; }   /* 20px */
+}

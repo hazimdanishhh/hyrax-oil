@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import images from "./images";
 import "./carousel.scss";
+import { motion } from "framer-motion";
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,17 +58,32 @@ function Carousel() {
 
       <div className="carousel-gradient">
         <div className="carousel-wrapper">
-          <div className="carousel-text">
-            <h2 className="carousel-title">{images[currentIndex].title}</h2>
-            <a className="carousel-link-div" href={images[currentIndex].href}>
-              <span className="carousel-link">read more</span>
-              <img
-                className="link-arrow"
-                src="./link-arrow.svg"
-                alt="Link Arrow"
-              />
-            </a>
-          </div>
+          {images.map((image, index) => (
+            <>
+              <motion.div
+                className={`carousel-text ${
+                  index === currentIndex ? "active" : ""
+                }`}
+                initial={{ x: -300 }}
+                animate={{ x: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <h2 className="carousel-title">{image.title}</h2>
+                <motion.a
+                  className="carousel-link-div"
+                  href={image.href}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <span className="carousel-link">read more</span>
+                  <img
+                    className="link-arrow"
+                    src="./link-arrow.svg"
+                    alt="Link Arrow"
+                  />
+                </motion.a>
+              </motion.div>
+            </>
+          ))}
 
           <div className="carousel-indicators">
             {images.map((_, index) => (

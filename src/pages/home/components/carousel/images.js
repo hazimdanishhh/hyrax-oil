@@ -18,7 +18,7 @@ const images = [
     href: "#tfo",
   },
   {
-    src: "./carousel-4.png",
+    src: "./about-us.jpeg",
     alt: "carousel 4 image",
     title: "Our Partnerships",
     href: "#powering-up",

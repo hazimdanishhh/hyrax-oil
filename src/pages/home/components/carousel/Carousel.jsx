@@ -18,7 +18,7 @@ function Carousel() {
 
   useEffect(() => {
     startAutoplay();
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalRef);
   }, []);
 
   function resetAutoplay() {
@@ -55,11 +55,14 @@ function Carousel() {
   };
 
   return (
-    <div
+    <motion.div
       className="carousel"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
     >
       {images.map((image, index) => (
         <div
@@ -73,27 +76,25 @@ function Carousel() {
       <div className="carousel-gradient">
         <div className="carousel-wrapper">
           {images.map((image, index) => (
-            <>
-              <motion.div
-                key={index}
-                className={`carousel-text ${
-                  index === currentIndex ? "active" : ""
-                }`}
-                initial={{ x: -300 }}
-                animate={{ x: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                <h2 className="carousel-title">{image.title}</h2>
-                <a className="carousel-link-div" href={image.href}>
-                  <span className="carousel-link">read more</span>
-                  <img
-                    className="link-arrow"
-                    src="./link-arrow.svg"
-                    alt="Link Arrow"
-                  />
-                </a>
-              </motion.div>
-            </>
+            <motion.div
+              key={index}
+              className={`carousel-text ${
+                index === currentIndex ? "active" : ""
+              }`}
+              initial={{ x: -600 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <h2 className="carousel-title">{image.title}</h2>
+              <a className="carousel-link-div" href={image.href}>
+                <span className="carousel-link">read more</span>
+                <img
+                  className="link-arrow"
+                  src="./link-arrow.svg"
+                  alt="Link Arrow"
+                />
+              </a>
+            </motion.div>
           ))}
 
           <div className="carousel-indicators">
@@ -109,7 +110,7 @@ function Carousel() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

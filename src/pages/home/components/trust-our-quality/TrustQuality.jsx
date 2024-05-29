@@ -1,13 +1,19 @@
 import React from "react";
 import "./trustQuality.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function TrustQuality() {
   return (
     <div className="trust-background">
       <div className="bg-gradient">
         <div className="section-link-wrapper">
-          <div className="text">
+          <motion.div
+            className="text"
+            initial={{ opacity: 0, x: -600 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+          >
             <h2 className="title">
               Trust Our <span>Quality</span>
             </h2>
@@ -22,7 +28,7 @@ function TrustQuality() {
               href="https://www.api.org/"
               target="__blank"
             >
-              American Petroleum Institute &#40;“API”&#41;
+              American Petroleum Institute &#40;API&#41;
               <img
                 className="link-arrow"
                 src="./link-arrow-2.svg"
@@ -34,7 +40,7 @@ function TrustQuality() {
               href="https://www.acea.auto/"
               target="__blank"
             >
-              European Automobile Manufacturers Association &#40;“ACEA”&#41;
+              European Automobile Manufacturers Association &#40;ACEA&#41;
               <img
                 className="link-arrow"
                 src="./link-arrow-2.svg"
@@ -46,7 +52,7 @@ function TrustQuality() {
               href="https://www.mtu-solutions.com/eu/en.regionselect.html"
               target="__blank"
             >
-              MTU Friedrichshafen GmbH &#40;"MTU"&#41;
+              MTU Friedrichshafen GmbH &#40;MTU&#41;
               <img
                 className="link-arrow"
                 src="./link-arrow-2.svg"
@@ -58,7 +64,7 @@ function TrustQuality() {
               href="https://www.doble.com/"
               target="__blank"
             >
-              Doble Engineering Company &#40;“DOBLE”&#41;
+              Doble Engineering Company &#40;DOBLE&#41;
               <img
                 className="link-arrow"
                 src="./link-arrow-2.svg"
@@ -66,7 +72,7 @@ function TrustQuality() {
               />
             </a>
             <img className="api-qr" src="./API-QR.png" alt="API QR Code" />
-          </div>
+          </motion.div>
 
           <Link
             className="link-div"

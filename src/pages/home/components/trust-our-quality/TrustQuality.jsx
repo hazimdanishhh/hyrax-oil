@@ -23,6 +23,11 @@ function TrustQuality() {
               target="__blank"
             >
               American Petroleum Institute &#40;“API”&#41;
+              <img
+                className="link-arrow"
+                src="./link-arrow-2.svg"
+                alt="Link Arrow"
+              />
             </a>
             <a
               className="desc-link"
@@ -30,6 +35,11 @@ function TrustQuality() {
               target="__blank"
             >
               European Automobile Manufacturers Association &#40;“ACEA”&#41;
+              <img
+                className="link-arrow"
+                src="./link-arrow-2.svg"
+                alt="Link Arrow"
+              />
             </a>
             <a
               className="desc-link"
@@ -37,6 +47,11 @@ function TrustQuality() {
               target="__blank"
             >
               MTU Friedrichshafen GmbH &#40;"MTU"&#41;
+              <img
+                className="link-arrow"
+                src="./link-arrow-2.svg"
+                alt="Link Arrow"
+              />
             </a>
             <a
               className="desc-link"
@@ -44,6 +59,11 @@ function TrustQuality() {
               target="__blank"
             >
               Doble Engineering Company &#40;“DOBLE”&#41;
+              <img
+                className="link-arrow"
+                src="./link-arrow-2.svg"
+                alt="Link Arrow"
+              />
             </a>
             <img className="api-qr" src="./API-QR.png" alt="API QR Code" />
           </div>

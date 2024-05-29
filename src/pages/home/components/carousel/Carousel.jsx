@@ -7,16 +7,28 @@ function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const intervalRef = useRef(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  // Start Autoplay on Load
+  function startAutoplay() {
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 8000); // Change image every 8 seconds
+  }
+
+  useEffect(() => {
+    startAutoplay();
     return () => clearInterval(interval);
   }, []);
 
+  function resetAutoplay() {
+    clearInterval(intervalRef.current);
+    startAutoplay();
+  }
+
   function goToSlide(index) {
     setCurrentIndex(index);
+    resetAutoplay();
   }
 
   // Touch Slider for Mobile Use
@@ -32,11 +44,13 @@ function Carousel() {
     if (touchStartX.current - touchEndX.current > 50) {
       // Swiped left
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      resetAutoplay();
     } else if (touchStartX.current - touchEndX.current < -50) {
       // Swiped right
       setCurrentIndex((prevIndex) =>
         prevIndex === 0 ? images.length - 1 : prevIndex - 1
       );
+      resetAutoplay();
     }
   };
 
@@ -61,6 +75,7 @@ function Carousel() {
           {images.map((image, index) => (
             <>
               <motion.div
+                key={index}
                 className={`carousel-text ${
                   index === currentIndex ? "active" : ""
                 }`}
@@ -69,18 +84,14 @@ function Carousel() {
                 transition={{ delay: 0.5 }}
               >
                 <h2 className="carousel-title">{image.title}</h2>
-                <motion.a
-                  className="carousel-link-div"
-                  href={image.href}
-                  whileHover={{ scale: 1.05 }}
-                >
+                <a className="carousel-link-div" href={image.href}>
                   <span className="carousel-link">read more</span>
                   <img
                     className="link-arrow"
                     src="./link-arrow.svg"
                     alt="Link Arrow"
                   />
-                </motion.a>
+                </a>
               </motion.div>
             </>
           ))}

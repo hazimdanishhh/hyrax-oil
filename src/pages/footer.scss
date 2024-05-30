@@ -4,7 +4,6 @@ $tertiary: #323232;
 $background: white;
 
 .footer {
-
   .footer-wrapper {
     display: flex;
     flex-direction: column;
@@ -34,7 +33,26 @@ $background: white;
       }
 
       .footer-socials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100px;
+        height: 150px;
 
+        a {
+          height: fit-content;
+
+          .socials-img {
+            width: 40px;
+          }
+        }
+
+        a:hover {
+          .socials-img {
+            filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
+              brightness(99%) contrast(92%);
+          }
+        }
       }
     }
 
@@ -67,7 +85,7 @@ $background: white;
           width: 50px;
           margin-right: 3rem;
         }
-  
+
         .footer-hyraxoil-logo {
           width: 50px;
         }

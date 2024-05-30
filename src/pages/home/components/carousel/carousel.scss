@@ -5,6 +5,7 @@ $background: white;
 
 .carousel {
   position: relative;
+  // height: calc(100vh - 100px);
   height: 100vh;
   overflow: hidden;
 
@@ -38,7 +39,8 @@ $background: white;
       flex-direction: column;
       justify-content: end;
 
-      min-height: 100vh;
+      // min-height: calc(100vh - 100px);
+      height: 100vh;
       max-width: 1366px;
       margin: auto;
 
@@ -116,7 +118,8 @@ $background: white;
           transition: 0.5s;
 
           &.active {
-            width: 20%;
+            // width: 20%;
+            width: 40%;
             background: linear-gradient(270deg, $primary, $secondary);
             background-size: 200% 200%;
             animation: gradientAnimation 10s ease infinite;
@@ -124,7 +127,8 @@ $background: white;
         }
 
         .indicator:hover {
-          width: 20%;
+          // width: 20%;
+          background-color: white;
         }
       }
     }

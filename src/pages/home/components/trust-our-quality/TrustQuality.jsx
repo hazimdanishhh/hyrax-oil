@@ -8,12 +8,7 @@ function TrustQuality() {
     <div className="trust-background">
       <div className="bg-gradient">
         <div className="section-link-wrapper">
-          <motion.div
-            className="text"
-            initial={{ opacity: 0, x: -600 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-          >
+          <div className="text">
             <h2 className="title">
               Trust Our <span>Quality</span>
             </h2>
@@ -72,7 +67,7 @@ function TrustQuality() {
               />
             </a>
             <img className="api-qr" src="./API-QR.png" alt="API QR Code" />
-          </motion.div>
+          </div>
 
           <Link
             className="link-div"

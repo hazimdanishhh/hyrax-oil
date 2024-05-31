@@ -9,7 +9,7 @@ $background: white;
     flex-direction: column;
     justify-content: center;
 
-    width: 1366px;
+    max-width: 1366px;
     margin: auto;
     padding: 6rem 3rem;
 
@@ -17,7 +17,7 @@ $background: white;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      max-width: 60%;
+      max-width: 70%;
 
       .bestlubricants-title {
         font-size: 1.5rem;
@@ -39,6 +39,10 @@ $background: white;
           color: $primary;
         }
       }
+    }
+
+    .bestlubricants-video {
+      margin-top: 6rem;
     }
   }
 }

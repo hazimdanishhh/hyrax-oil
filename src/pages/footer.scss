@@ -13,7 +13,7 @@ $background: white;
     .footer-segments {
       display: flex;
       justify-content: space-between;
-      margin: 2rem;
+      margin: 6rem 2rem 2rem 2rem;
 
       .footer-item {
         display: flex;
@@ -56,21 +56,11 @@ $background: white;
       }
     }
 
-    .footer-summary {
-      margin: 0 2rem;
-      width: 50%;
-      text-align: justify;
-
-      span {
-        color: #f26f27;
-      }
-    }
-
     .footer-copyright {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 1rem 2rem;
+      margin: 0 2rem 2rem 2rem;
 
       span {
         color: #ffffff90;
@@ -88,6 +78,40 @@ $background: white;
 
         .footer-hyraxoil-logo {
           width: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    .footer-wrapper {
+      .footer-segments {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem;
+
+        .footer-socials {
+          justify-content: space-between;
+          width: 100%;
+          height: fit-content;
+
+          a {
+            height: fit-content;
+
+            .socials-img {
+              width: 40px;
+            }
+          }
+
+          a:hover {
+            .socials-img {
+              filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
+                brightness(99%) contrast(92%);
+            }
+          }
         }
       }
     }

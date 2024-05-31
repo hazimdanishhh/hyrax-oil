@@ -22,7 +22,7 @@ function BestLubricants() {
             only the best in lubrication.
           </p>
         </div>
-        <img className="" src="./carousel-1.jpg" alt="" />
+        <img className="bestlubricants-video" src="./carousel-1.jpg" alt="" />
       </div>
     </div>
   );

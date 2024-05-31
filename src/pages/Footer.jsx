@@ -81,14 +81,6 @@ function Footer() {
           </div>
         </div>
 
-        <div className="footer-summary">
-          <h4>
-            With <span>33 years of experience</span>, Hyrax Oil Sdn Bhd has
-            grown to be a well-known and established manufacturer of full range{" "}
-            <span>top quality lubricants and functional fluids</span>
-          </h4>
-        </div>
-
         <div className="footer-copyright">
           <span>
             &copy; {new Date().getFullYear()} Hyrax Oil Sdn Bhd 199101017905

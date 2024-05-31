@@ -5,8 +5,8 @@ $background: white;
 
 .carousel {
   position: relative;
-  // height: calc(100vh - 100px);
-  height: 100vh;
+  height: calc(100vh - 3rem);
+  // height: 100vh;
   overflow: hidden;
 
   .carousel-slide {
@@ -39,8 +39,8 @@ $background: white;
       flex-direction: column;
       justify-content: end;
 
-      // min-height: calc(100vh - 100px);
-      height: 100vh;
+      height: calc(100vh - 3rem);
+      // height: 100vh;
       max-width: 1366px;
       margin: auto;
 

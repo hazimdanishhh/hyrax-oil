@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./bestLubricants.scss";
+import { motion } from "framer-motion";
 
 function BestLubricants() {
+  const youtubeID = useState("R9ePLCiB8_8");
+
   return (
     <div className="bestlubricants">
       <div className="bestlubricants-wrapper">
-        <div className="bestlubricants-text">
+        <motion.div
+          className="bestlubricants-text"
+          initial={{ x: -500, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+        >
           <h2 className="bestlubricants-title">Our Specialty</h2>
           <h3 className="bestlubricants-title-2">
             Only <span>The Best Lubricants</span> For The World
@@ -21,8 +28,18 @@ function BestLubricants() {
             expectations, making it the preferred choice for those who demand
             only the best in lubrication.
           </p>
-        </div>
-        <img className="bestlubricants-video" src="./carousel-1.jpg" alt="" />
+        </motion.div>
+        <motion.iframe
+          className="bestlubricants-video"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+          referrerPolicy="strict-origin-when-cross-origin"
+          src="https://www.youtube.com/embed/NuvsA8V9SXg?si=rBLytyhSy9yCOJhC"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        ></motion.iframe>
       </div>
     </div>
   );

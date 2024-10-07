@@ -41,7 +41,7 @@ function Carousel() {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX.current - touchEndX.current > 50) {
+    if (touchStartX.current - touchEndX.current > 100) {
       // Swiped left
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       resetAutoplay();
@@ -57,9 +57,6 @@ function Carousel() {
   return (
     <motion.div
       className="carousel"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -84,6 +81,9 @@ function Carousel() {
               initial={{ x: -600 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.5 }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               <h2 className="carousel-title">{image.title}</h2>
               <a className="carousel-link-div" href={image.href}>

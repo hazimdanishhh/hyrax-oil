@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import Layout from "../Layout";
 
-function Contact() {
+function Media() {
   useEffect(() => {
-    document.title = "Hyrax Oil | Contact Us"; // Quick solution
+    document.title = "Hyrax Oil | Media"; // Quick solution
   }, []);
 
   return (
     <div>
       <Layout />
 
-      <h1>Contact</h1>
+      <h1>Media</h1>
     </div>
   );
 }
 
-export default Contact;
+export default Media;

@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import Layout from "../Layout";
 
-function Contact() {
+function Products() {
   useEffect(() => {
-    document.title = "Hyrax Oil | Contact Us"; // Quick solution
+    document.title = "Hyrax Oil | Products"; // Quick solution
   }, []);
 
   return (
     <div>
       <Layout />
 
-      <h1>Contact</h1>
+      <h1>Products</h1>
     </div>
   );
 }
 
-export default Contact;
+export default Products;

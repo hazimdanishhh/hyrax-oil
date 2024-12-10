@@ -70,7 +70,12 @@ function Carousel() {
         ></div>
       ))}
 
-      <div className="carousel-gradient">
+      <div
+        className="carousel-gradient"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="carousel-wrapper">
           {images.map((image, index) => (
             <motion.div
@@ -81,9 +86,6 @@ function Carousel() {
               initial={{ x: -600 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.5 }}
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
             >
               <h2 className="carousel-title">{image.title}</h2>
               <a className="carousel-link-div" href={image.href}>

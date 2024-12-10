@@ -1,23 +1,29 @@
 $primary: #f26f27;
-$secondary: #f2a327;
+$secondary: #ff9d10;
 $tertiary: #323232;
 $background: white;
 
 .navbar {
-  height: 100px;
+  height: 70px;
   width: 100%;
+  margin-top: 16px;
 
-  position: absolute;
+  position: fixed;
   z-index: 1000;
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1.5rem;
 
     height: 100%;
     max-width: 1366px;
     margin: auto;
+    background-color: rgba(31, 31, 31, 0.75);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 90px;
 
     div {
       margin: 0 0 0 1rem;
@@ -34,19 +40,122 @@ $background: white;
 
       li {
         list-style-type: none;
-        margin: 2rem;
+        margin: 0 2rem;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: $secondary;
+          text-underline-offset: 0.4rem;
+          transition: 0.3s;
+        }
       }
+
+      .link-active {
+        color: $secondary;
+        text-decoration: underline;
+        text-decoration-color: $secondary;
+        text-underline-offset: 0.4rem;
+        transition: 0.3s;
+      }
+    }
+
+    .nav-buttons {
+      display: flex;
+
+      .button-type-2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 140px;
+        min-width: fit-content;
+        height: 33px;
+        padding: 0 1rem;
+        margin-right: 0.5rem;
+        font-family: "GilroyLight";
+
+        border-radius: 20px;
+        border: 1px solid $primary;
+        background: rgba(0, 0, 0, 0);
+        color: $primary;
+        transition: 0.3s;
+
+        &:hover {
+          border-color: $secondary;
+          background: linear-gradient(270deg, $primary, $secondary);
+          color: white;
+
+          svg path {
+            stroke: white;
+            transition: 0.3s;
+          }
+        }
+
+        &:active {
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8) inset;
+        }
+      }
+
+      .button-type-1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 140px;
+        min-width: fit-content;
+        height: 33px;
+        padding: 0 1rem;
+        font-family: "GilroyLight";
+
+        border-radius: 20px;
+        border: 1px solid $secondary;
+        background: linear-gradient(270deg, $primary, $secondary);
+
+        color: white;
+        transition: 0.3s;
+
+        &:hover {
+          background: none;
+          color: $primary;
+
+          svg path {
+            stroke: $primary;
+            transition: 0.3s;
+          }
+        }
+
+        &:active {
+          box-shadow: 0px 0px 4px 0px $primary inset;
+        }
+      }
+    }
+  }
+
+  .nav-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 990;
+
+    .nav-overlay {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      top: 86px;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+
+      background-color: rgba(31, 31, 31, 0.75);
+      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(20px);
+      border-radius: 0 0 34px 34px;
     }
   }
 }
 
-.navbar:hover {
-  background-color: rgb(32, 32, 32, 0.5);
-  transition: 0.2s;
-}
-
 @media screen and (max-width: 1024px) {
-  .link-list {
+  .nav-list {
     display: none !important;
   }
 }

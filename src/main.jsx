@@ -10,10 +10,11 @@ import Media from "./pages/media/Media.jsx";
 import Careers from "./pages/careers/Careers.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import "./main.scss";
+import { HashRouter as Router } from "react-router-dom";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route index element={<Home />} />
@@ -24,7 +25,7 @@ export default function App() {
         <Route path="careers" element={<Careers />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

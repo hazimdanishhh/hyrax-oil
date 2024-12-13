@@ -230,9 +230,10 @@ $background: white;
               transition: 0.3s;
 
               .nav-title {
-                background-color: #32323291;
+                background-color: #323232b7;
                 backdrop-filter: blur(20px);
                 transition: 0.3s;
+                color: #f26f27;
               }
             }
           }
@@ -243,7 +244,7 @@ $background: white;
 }
 
 @media screen and (max-width: 1024px) {
-  .nav-list {
+  .nav-buttons {
     display: none !important;
   }
 }

@@ -11,7 +11,6 @@ This repository hosts the source code for the Hyrax Oil website, built with Reac
 - [Technologies Used](#technologies-used)
 - [Installation and Setup](#installation-and-setup)
 - [Deployment](#deployment)
-- [Troubleshooting](#troubleshooting)
 - [License](#license)
 
 ---
@@ -105,43 +104,6 @@ The website is deployed using GitHub Pages. To deploy updates:
    ```
 
 4. Verify the site at: [https://hazimdanishhh.github.io/hyrax-oil/](https://hazimdanishhh.github.io/hyrax-oil/)
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-1. **404 Errors on GitHub Pages:**
-
-   - Ensure the `homepage` field in `package.json` is correctly configured.
-   - Use `HashRouter` instead of `BrowserRouter` in `react-router-dom`.
-
-   Example:
-
-   ```jsx
-   import { HashRouter as Router } from "react-router-dom";
-
-   <Router>
-     <App />
-   </Router>;
-   ```
-
-2. **Assets Not Loading:**
-
-   - Place static assets in the `public` folder and reference them with absolute paths.
-   - Example:
-     ```scss
-     background-image: url("/power-line.jpg");
-     ```
-
-3. **Build Errors:**
-   - Ensure all dependencies are installed correctly.
-   - Clear npm cache and reinstall dependencies:
-     ```bash
-     npm cache clean --force
-     npm install
-     ```
 
 ---
 

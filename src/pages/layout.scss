@@ -25,12 +25,8 @@ $background: white;
     backdrop-filter: blur(20px);
     border-radius: 90px;
 
-    div {
-      margin: 0 0 0 1rem;
-
-      .nav-logo {
-        width: 80px;
-      }
+    .nav-logo {
+      width: 80px;
     }
 
     ul {
@@ -66,11 +62,10 @@ $background: white;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 140px;
         min-width: fit-content;
         height: 33px;
         padding: 0 1rem;
-        margin-right: 0.5rem;
+        margin-right: 1rem;
         font-family: "GilroyLight";
 
         border-radius: 20px;
@@ -78,6 +73,10 @@ $background: white;
         background: rgba(0, 0, 0, 0);
         color: $primary;
         transition: 0.3s;
+
+        svg {
+          margin-left: 0.5rem;
+        }
 
         &:hover {
           border-color: $secondary;
@@ -99,7 +98,6 @@ $background: white;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 140px;
         min-width: fit-content;
         height: 33px;
         padding: 0 1rem;
@@ -111,6 +109,10 @@ $background: white;
 
         color: white;
         transition: 0.3s;
+
+        svg {
+          margin-left: 0.5rem;
+        }
 
         &:hover {
           background: none;
@@ -139,17 +141,103 @@ $background: white;
 
     .nav-overlay {
       position: absolute;
-      width: 500px;
-      height: 500px;
+      width: max-content;
+      height: max-content;
       top: 86px;
       left: 0;
       right: 0;
       margin-inline: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.7rem;
 
       background-color: rgba(31, 31, 31, 0.75);
       box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(20px);
       border-radius: 0 0 34px 34px;
+
+      .nav-overlay-logos {
+        display: flex;
+        gap: 1rem;
+        .nav-overlay-logo {
+          height: 30px;
+        }
+      }
+
+      .nav-card-layout {
+        display: flex;
+        gap: 0.7rem;
+
+        .nav-card {
+          width: 124px;
+          height: 192px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          position: relative;
+
+          .nav-card-img {
+            height: 100%;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+          }
+
+          .nav-card-overlay {
+            width: 124px;
+            height: 192px;
+            position: absolute;
+            border-radius: 10px;
+
+            .nav-title {
+              position: absolute;
+              bottom: 0;
+              height: 60px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0 1rem;
+
+              background-color: #32323249;
+              backdrop-filter: blur(10px);
+
+              h3 {
+                font-size: 14px;
+                text-align: center;
+                text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+              }
+            }
+          }
+
+          &:hover {
+            outline: 2px solid $primary;
+
+            .nav-card-img {
+              -webkit-filter: grayscale(0%);
+              filter: grayscale(0%);
+              transition: 0.3s;
+            }
+
+            .nav-card-overlay {
+              background: rgba(242, 111, 39, 0.01);
+              box-shadow: 0px 0px 30px 1px rgba(242, 111, 39, 0.6) inset;
+              transition: 0.3s;
+
+              .nav-title {
+                background-color: #32323291;
+                backdrop-filter: blur(20px);
+                transition: 0.3s;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

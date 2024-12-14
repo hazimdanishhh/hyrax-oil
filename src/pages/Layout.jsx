@@ -39,7 +39,7 @@ function Layout() {
           </Link>
 
           {/* NAVIGATION LINKS */}
-          <ul className="nav-list">
+          <ul className={`nav-list ${isActive ? "active" : ""}`}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -74,7 +74,7 @@ function Layout() {
           </ul>
 
           {/* NAVIGATION BUTTONS */}
-          <div className="nav-buttons">
+          <div className={`nav-buttons ${isActive ? "active" : ""}`}>
             <Link className="button-type-2" to="/careers">
               Careers
               <svg

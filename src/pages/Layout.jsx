@@ -19,10 +19,16 @@ function Layout() {
     setActivePopup(null);
   };
 
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <>
       <header className="navbar">
-        <nav>
+        <nav className={`${isActive ? "active" : ""}`}>
           {/* LOGO */}
           <Link to="/">
             <img
@@ -104,6 +110,37 @@ function Layout() {
               </svg>
             </Link>
           </div>
+
+          {/* MOBILE NAVIGATION */}
+          <button
+            className={`hamburger-icon ${isActive ? "active" : ""}`}
+            onClick={toggleMenu}
+            aria-label="Toggle navigation"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 70"
+              width="40"
+              height="40"
+              className="hamburger-svg"
+            >
+              <rect className="line top" width="100" height="10" rx="5"></rect>
+              <rect
+                className="line middle"
+                y="30"
+                width="100"
+                height="10"
+                rx="5"
+              ></rect>
+              <rect
+                className="line bottom"
+                y="60"
+                width="100"
+                height="10"
+                rx="5"
+              ></rect>
+            </svg>
+          </button>
         </nav>
 
         {/* NAV OVERLAY DESKTOP*/}

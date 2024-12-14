@@ -6,7 +6,6 @@ $background: white;
 .navbar {
   height: 70px;
   width: 100%;
-  margin-top: 16px;
 
   position: fixed;
   z-index: 1000;
@@ -20,10 +19,21 @@ $background: white;
     height: 100%;
     max-width: 1366px;
     margin: auto;
+    margin-top: 16px;
+
     background-color: rgba(31, 31, 31, 0.75);
     box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     border-radius: 90px;
+    transition: 0.5s;
+
+    &.active {
+      width: 100%;
+      height: 100vh;
+      border-radius: 0;
+      margin: 0px;
+      transition: 0.5s;
+    }
 
     .nav-logo {
       width: 80px;
@@ -171,80 +181,62 @@ $background: white;
       .nav-card-layout {
         display: flex;
         gap: 0.7rem;
-
-        .nav-card {
-          width: 124px;
-          height: 192px;
-          border-radius: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-          position: relative;
-
-          .nav-card-img {
-            height: 100%;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-          }
-
-          .nav-card-overlay {
-            width: 124px;
-            height: 192px;
-            position: absolute;
-            border-radius: 10px;
-
-            .nav-title {
-              position: absolute;
-              bottom: 0;
-              height: 60px;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 0 1rem;
-
-              background-color: #32323249;
-              backdrop-filter: blur(10px);
-
-              h3 {
-                font-size: 14px;
-                text-align: center;
-                text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-              }
-            }
-          }
-
-          &:hover {
-            outline: 2px solid $primary;
-
-            .nav-card-img {
-              -webkit-filter: grayscale(0%);
-              filter: grayscale(0%);
-              transition: 0.3s;
-            }
-
-            .nav-card-overlay {
-              background: rgba(242, 111, 39, 0.01);
-              box-shadow: 0px 0px 30px 1px rgba(242, 111, 39, 0.6) inset;
-              transition: 0.3s;
-
-              .nav-title {
-                background-color: #323232b7;
-                backdrop-filter: blur(20px);
-                transition: 0.3s;
-                color: #f26f27;
-              }
-            }
-          }
-        }
       }
     }
   }
 }
 
+/* HamburgerIcon.scss */
+.hamburger-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hamburger-svg {
+    fill: #000;
+    transition: all 0.3s ease;
+
+    .line {
+      fill: #ffffff;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+
+  &.active {
+    .line.top {
+      transform: translateX(15px) translateY(-5px) rotate(45deg);
+    }
+
+    .line.middle {
+      opacity: 0;
+    }
+
+    .line.bottom {
+      transform: translateX(-35px) translateY(25px) rotate(-45deg);
+    }
+
+    nav {
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .nav-list {
+    display: none !important;
+  }
   .nav-buttons {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hamburger-icon {
     display: none !important;
   }
 }

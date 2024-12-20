@@ -4,8 +4,10 @@ $tertiary: #323232;
 $background: white;
 
 .nav-card {
-  width: 124px;
-  height: 192px;
+  max-width: 124px;
+  min-width: 110px;
+  max-height: 192px;
+  min-height: 180px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -21,7 +23,9 @@ $background: white;
 
   .nav-card-overlay {
     width: 124px;
+    min-width: 110px;
     height: 192px;
+    min-height: 180px;
     position: absolute;
     border-radius: 10px;
 

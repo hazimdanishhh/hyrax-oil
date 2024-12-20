@@ -8,55 +8,45 @@ $background: white;
   height: 100vh;
 }
 
-.navbar {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+
   height: 70px;
-  width: 100%;
+  max-width: 1366px;
+  margin: auto;
+  margin-top: 16px;
+
+  background-color: rgba(31, 31, 31, 0.75);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 90px;
+  transition: 0.5s;
 
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 
-  nav {
+  .nav-logo {
+    width: 80px;
+    position: absolute;
+    top: -5px;
+  }
+
+  ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
+    margin-right: 1rem;
 
-    height: 100%;
-    max-width: 1366px;
-    margin: auto;
-    margin-top: 16px;
+    li {
+      list-style-type: none;
+      margin: 0 2rem;
 
-    background-color: rgba(31, 31, 31, 0.75);
-    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px);
-    border-radius: 90px;
-    transition: 0.5s;
-
-    .nav-logo {
-      width: 80px;
-      position: absolute;
-      top: -5px;
-    }
-
-    ul {
-      display: flex;
-      justify-content: space-between;
-      margin-right: 1rem;
-
-      li {
-        list-style-type: none;
-        margin: 0 2rem;
-
-        &:hover {
-          text-decoration: underline;
-          text-decoration-color: $secondary;
-          text-underline-offset: 0.4rem;
-          transition: 0.3s;
-        }
-      }
-
-      .link-active {
-        color: $secondary;
+      &:hover {
         text-decoration: underline;
         text-decoration-color: $secondary;
         text-underline-offset: 0.4rem;
@@ -64,134 +54,151 @@ $background: white;
       }
     }
 
-    .nav-buttons {
-      display: flex;
-
-      .button-type-2 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        min-width: fit-content;
-        height: 33px;
-        padding: 0 1rem;
-        margin-right: 1rem;
-        font-family: "GilroyLight";
-
-        border-radius: 20px;
-        border: 1px solid $primary;
-        background: rgba(0, 0, 0, 0);
-        color: $primary;
-        transition: 0.3s;
-
-        svg {
-          margin-left: 0.5rem;
-        }
-
-        &:hover {
-          border-color: $secondary;
-          background: linear-gradient(270deg, $primary, $secondary);
-          color: white;
-
-          svg path {
-            stroke: white;
-            transition: 0.3s;
-          }
-        }
-
-        &:active {
-          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8) inset;
-        }
-      }
-
-      .button-type-1 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        min-width: fit-content;
-        height: 33px;
-        padding: 0 1rem;
-        font-family: "GilroyLight";
-
-        border-radius: 20px;
-        border: 1px solid $secondary;
-        background: linear-gradient(270deg, $primary, $secondary);
-
-        color: white;
-        transition: 0.3s;
-
-        svg {
-          margin-left: 0.5rem;
-        }
-
-        &:hover {
-          background: none;
-          color: $primary;
-
-          svg path {
-            stroke: $primary;
-            transition: 0.3s;
-          }
-        }
-
-        &:active {
-          box-shadow: 0px 0px 4px 0px $primary inset;
-        }
-      }
+    .link-active {
+      color: $secondary;
+      text-decoration: underline;
+      text-decoration-color: $secondary;
+      text-underline-offset: 0.4rem;
+      transition: 0.3s;
     }
   }
 
-  .nav-outer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 990;
+  .nav-buttons {
+    display: flex;
 
-    .nav-overlay {
-      position: absolute;
-      width: max-content;
-      height: max-content;
-      top: 86px;
-      left: 0;
-      right: 0;
-      margin-inline: auto;
-      padding: 1.5rem 2rem;
+    .button-type-2 {
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
-      gap: 0.7rem;
+      min-width: fit-content;
+      height: 33px;
+      padding: 0 1rem;
+      margin-right: 1rem;
+      font-family: "GilroyLight";
 
-      background-color: rgba(31, 31, 31, 0.75);
-      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(20px);
-      border-radius: 0 0 34px 34px;
+      border-radius: 20px;
+      border: 1px solid $primary;
+      background: rgba(0, 0, 0, 0);
+      color: $primary;
+      transition: 0.3s;
 
-      .nav-overlay-logos {
-        display: flex;
-        gap: 1rem;
-        .nav-overlay-logo {
-          height: 30px;
+      svg {
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        border-color: $secondary;
+        background: linear-gradient(270deg, $primary, $secondary);
+        color: white;
+
+        svg path {
+          stroke: white;
+          transition: 0.3s;
         }
       }
 
-      .nav-card-layout {
-        display: flex;
-        gap: 0.7rem;
+      &:active {
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8) inset;
+      }
+    }
+
+    .button-type-1 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-width: fit-content;
+      height: 33px;
+      padding: 0 1rem;
+      font-family: "GilroyLight";
+
+      border-radius: 20px;
+      border: 1px solid $secondary;
+      background: linear-gradient(270deg, $primary, $secondary);
+
+      color: white;
+      transition: 0.3s;
+
+      svg {
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        background: none;
+        color: $primary;
+
+        svg path {
+          stroke: $primary;
+          transition: 0.3s;
+        }
+      }
+
+      &:active {
+        box-shadow: 0px 0px 4px 0px $primary inset;
       }
     }
   }
 }
 
-/* HamburgerIcon.scss */
+.nav-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.nav-overlay {
+  position: fixed;
+  max-width: 1000px;
+  width: fit-content;
+  height: max-content;
+  top: 86px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  z-index: 1100;
+
+  background-color: rgba(31, 31, 31, 0.75);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 0 0 34px 34px;
+
+  .nav-overlay-header {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-overlay-logos {
+    display: flex;
+    gap: 1rem;
+    .nav-overlay-logo {
+      height: 30px;
+    }
+  }
+
+  .nav-card-layout {
+    display: flex;
+    gap: 0.7rem;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
 .hamburger-icon {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -224,6 +231,10 @@ $background: white;
 }
 
 @media screen and (max-width: 1024px) {
+  .navbar {
+    overflow: auto;
+  }
+
   nav {
     &.active {
       width: 100%;
@@ -233,6 +244,7 @@ $background: white;
       transition: 0.5s;
 
       padding: 1rem;
+      overflow: auto;
     }
   }
   .nav-list {
@@ -272,23 +284,38 @@ $background: white;
   }
 
   .nav-overlay {
-    max-width: 100%;
-    min-height: 100vh;
+    min-width: 100%;
+    height: calc(100vh - 86px);
+    display: flex;
+    border-radius: 0%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    margin: 0;
+    gap: 2rem;
 
-    // position: fixed !important;
-    // top: 0 !important;
-    // left: 0 !important;
-    // overflow-y: auto !important;
+    .nav-overlay-header {
+      display: flex;
+      width: 100%;
+
+      .back-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        cursor: pointer;
+        svg {
+          fill: white;
+        }
+      }
+    }
 
     .nav-card-layout {
-      flex-wrap: wrap;
       justify-content: center;
     }
   }
-}
 
-@media screen and (min-width: 1025px) {
   .hamburger-icon {
-    display: none !important;
+    display: flex !important;
   }
 }

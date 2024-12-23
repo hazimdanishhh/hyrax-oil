@@ -50,3 +50,21 @@ $background: white;
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .bestlubricants {
+    .bestlubricants-wrapper {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      .bestlubricants-text {
+        max-width: 100%;
+      }
+
+      .bestlubricants-video {
+        margin-top: 3rem;
+        height: 50vh;
+      }
+    }
+  }
+}

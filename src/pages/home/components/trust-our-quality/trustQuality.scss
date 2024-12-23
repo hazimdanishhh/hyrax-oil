@@ -110,3 +110,15 @@ $background: white;
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .section-link-wrapper {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 2rem;
+
+    .text {
+      width: 100% !important;
+    }
+  }
+}

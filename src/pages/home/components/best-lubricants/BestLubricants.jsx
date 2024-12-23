@@ -10,7 +10,7 @@ function BestLubricants() {
       <div className="bestlubricants-wrapper">
         <motion.div
           className="bestlubricants-text"
-          initial={{ x: -500, opacity: 0 }}
+          initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
         >
           <h2 className="bestlubricants-title">Our Specialty</h2>

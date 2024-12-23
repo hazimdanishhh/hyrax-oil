@@ -300,6 +300,28 @@ function Layout() {
             )}
             {activePopup === "services" && (
               <>
+                <div className="nav-overlay-header">
+                  <svg
+                    onClick={closeOverlay}
+                    className="back-icon"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m15 19-7-7 7-7"
+                    />
+                  </svg>
+
+                  <h2>Services</h2>
+                </div>
                 <div className="nav-card-layout">
                   {servicesSections.map((segment, index) => (
                     <NavCard
@@ -315,6 +337,28 @@ function Layout() {
             )}
             {activePopup === "media" && (
               <>
+                <div className="nav-overlay-header">
+                  <svg
+                    onClick={closeOverlay}
+                    className="back-icon"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m15 19-7-7 7-7"
+                    />
+                  </svg>
+
+                  <h2>Media</h2>
+                </div>
                 <div className="nav-card-layout">
                   {mediaSections.map((segment, index) => (
                     <NavCard

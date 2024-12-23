@@ -231,7 +231,7 @@ function Layout() {
       {activePopup && (
         <>
           <motion.div
-            className={`nav-overlay ${activePopup ? "active" : ""}`}
+            className={"nav-overlay"}
             ref={navOverlayRef}
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
             initial={{ opacity: 0, x: initialX }}

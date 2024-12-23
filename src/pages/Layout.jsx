@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "./layout.scss";
 import NavCard from "./navbar/NavOverlay";
 import { productSegments } from "./navbar/components/nav-products/NavProductSegments";
-import { productSegments2 } from "./navbar/components/nav-products/NavProductSegments2";
 import { aboutSections } from "./navbar/components/nav-about/NavAboutSections";
 import { servicesSections } from "./navbar/components/nav-services/NavServicesSections";
 import { mediaSections } from "./navbar/components/nav-media/NavMediaSections";
+import { motion } from "framer-motion";
 
 function Layout() {
   const [activePopup, setActivePopup] = useState(null);
+  const [isActive, setIsActive] = useState(false);
+  const prevIsMobileView = useRef(
+    window.matchMedia("(max-width: 1024px)").matches
+  );
+  const [initialX, setInitialX] = useState(0);
+  const navOverlayRef = useRef(null);
 
   const openOverlay = (popupName) => {
     setActivePopup(popupName);
@@ -18,8 +24,6 @@ function Layout() {
   const closeOverlay = () => {
     setActivePopup(null);
   };
-
-  const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -46,16 +50,15 @@ function Layout() {
   useEffect(() => {
     const handleResize = () => {
       const isMobileView = window.matchMedia("(max-width: 1024px)").matches;
-      const wasMobileView = activePopup || isActive;
 
       // If the screen size changes across the threshold, reset states
-      if (
-        (isMobileView && !wasMobileView) ||
-        (!isMobileView && wasMobileView)
-      ) {
+      if (isMobileView !== prevIsMobileView.current) {
         setActivePopup(false);
         setIsActive(false);
       }
+
+      // Update the previous state
+      prevIsMobileView.current = isMobileView;
     };
 
     window.addEventListener("resize", handleResize);
@@ -65,6 +68,46 @@ function Layout() {
       window.removeEventListener("resize", handleResize);
     };
   }, [activePopup, isActive]);
+
+  // Close nav-overlay when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        navOverlayRef.current &&
+        !navOverlayRef.current.contains(event.target)
+      ) {
+        closeOverlay();
+      }
+    };
+
+    if (activePopup) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [activePopup]);
+
+  // Update initialX based on screen size
+  useEffect(() => {
+    const updateInitialX = () => {
+      if (window.innerWidth <= 1024) {
+        setInitialX(500);
+      } else {
+        setInitialX(0);
+      }
+    };
+
+    updateInitialX();
+    window.addEventListener("resize", updateInitialX);
+
+    return () => {
+      window.removeEventListener("resize", updateInitialX);
+    };
+  }, []);
 
   return (
     <>
@@ -187,11 +230,13 @@ function Layout() {
       {/* NAV OVERLAY DESKTOP*/}
       {activePopup && (
         <>
-          <div className="nav-outer" onClick={closeOverlay}></div>
-
-          <div
-            className="nav-overlay"
+          <motion.div
+            className={`nav-overlay ${activePopup ? "active" : ""}`}
+            ref={navOverlayRef}
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+            initial={{ opacity: 0, x: initialX }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
           >
             {activePopup === "about" && (
               <>
@@ -372,7 +417,7 @@ function Layout() {
                 </div>
               </>
             )}
-          </div>
+          </motion.div>
         </>
       )}
 

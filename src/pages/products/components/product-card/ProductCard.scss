@@ -16,7 +16,9 @@ $background: white;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
 
   .product-card-img {
-    height: 100%;
+    position: absolute;
+    height: 80%;
+    top: 0;
   }
 
   .product-card-overlay {
@@ -113,20 +115,22 @@ $background: white;
   right: 0;
   margin: auto;
   color: #9c7008;
-  background: linear-gradient(to top, #ae8625, #f7ef8a);
+  background: linear-gradient(to right, #ae8625, #f7ef8a);
   width: 60%;
   height: 30px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
 
+  font-weight: bold;
+
   &.semi {
-    background: linear-gradient(to top, #727272, #cfcfcf);
+    background: linear-gradient(to right, #727272, #cfcfcf);
     color: rgb(255, 255, 255);
   }
 
   &.premium {
-    background: linear-gradient(to top, #804a00, #9c7a3c);
-    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #804a00, #9c7a3c);
+    color: #ffc87d;
   }
 }

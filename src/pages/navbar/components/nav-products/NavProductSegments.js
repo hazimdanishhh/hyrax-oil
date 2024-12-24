@@ -3,7 +3,7 @@ export const productSegments = [
     src: "./navbar/pcmo.png",
     alt: "Passenger Car Motor Oils",
     title: "Passenger Car Motor Oils",
-    link: "/passenger-car-motor-oils",
+    link: "/products/passenger-car-motor-oils",
   },
   {
     src: "./navbar/gfeo.png",

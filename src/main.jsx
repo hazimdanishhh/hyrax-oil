@@ -23,7 +23,10 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="products" element={<Products />} />
-        <Route path="passenger-car-motor-oils" element={<PassengerCar />} />
+        <Route
+          path="products/passenger-car-motor-oils"
+          element={<PassengerCar />}
+        />
         <Route path="gas-fuel-engine-oils" element={<Products />} />
         <Route path="diesel-engine-oils" element={<Products />} />
         <Route path="tractor-fluids" element={<Products />} />

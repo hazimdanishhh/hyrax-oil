@@ -31,6 +31,9 @@ $background: white;
       padding: 7rem 3rem;
 
       .crumble {
+        display: flex;
+        align-items: center;
+
         span {
           color: $secondary;
           text-decoration: underline;
@@ -91,16 +94,16 @@ $background: white;
 
     h2 {
       font-family: "GilroyMedium", sans-serif;
-      font-size: 40px;
+      font-size: 2.5rem;
       color: black;
     }
 
     .product-layout {
       display: flex;
-      gap: 1.5rem;
+      gap: 4rem;
       max-width: 100%;
       flex-wrap: wrap;
-      justify-content: space-evenly;
+      justify-content: center;
     }
   }
 }
@@ -117,4 +120,17 @@ $background: white;
   backdrop-filter: blur(30px);
 
   z-index: 1300;
+
+  padding: 1.5rem;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+
+  .product-close-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
 }

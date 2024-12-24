@@ -18,7 +18,7 @@ export const productsPCMO = [
     alt: "Hyrax Aureus",
     title: "Hyrax Aureus",
     link: "#",
-    type: "Semi Synthetic",
+    type: "Fully Synthetic",
   },
   {
     src: "./products/Hyrax-Elite-Ultra.png",

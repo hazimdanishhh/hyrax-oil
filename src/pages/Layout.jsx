@@ -130,6 +130,7 @@ function Layout() {
 
           <li
             onClick={() => openOverlay("about")}
+            onMouseEnter={() => openOverlay("about")}
             className={`${activePopup === "about" ? "link-active" : ""}`}
           >
             <Link to="#">About</Link>
@@ -137,6 +138,7 @@ function Layout() {
 
           <li
             onClick={() => openOverlay("products")}
+            onMouseEnter={() => openOverlay("products")}
             className={`${activePopup === "products" ? "link-active" : ""}`}
           >
             <Link to="#">Products</Link>
@@ -144,6 +146,7 @@ function Layout() {
 
           <li
             onClick={() => openOverlay("services")}
+            onMouseEnter={() => openOverlay("services")}
             className={`${activePopup === "services" ? "link-active" : ""}`}
           >
             <Link to="#">Services</Link>
@@ -151,6 +154,7 @@ function Layout() {
 
           <li
             onClick={() => openOverlay("media")}
+            onMouseEnter={() => openOverlay("media")}
             className={`${activePopup === "media" ? "link-active" : ""}`}
           >
             <Link to="#">Media</Link>
@@ -330,17 +334,6 @@ function Layout() {
                     />
                   ))}
                 </div>
-                {/* <div className="nav-card-layout">
-                  {productSegments2.map((segment, index) => (
-                    <NavCard
-                      key={index}
-                      src={segment.src}
-                      alt={segment.alt}
-                      title={segment.title}
-                      link={segment.link}
-                    />
-                  ))}
-                </div> */}
               </>
             )}
             {activePopup === "services" && (

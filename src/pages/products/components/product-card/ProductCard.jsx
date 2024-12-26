@@ -14,11 +14,10 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
             className="product-card-img"
           />
           <div className="product-card-overlay">
-            <div className="product-hover">Learn More</div>
-            <div className="product-title">
-              <h3>{title}</h3>
+            <div className="product-hover">
+              Learn More
               <svg
-                className="w-6 h-6 text-gray-800 dark:text-white"
+                className="w-6 h-6 text-gray-800 dark:text-white plus-icon"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -34,6 +33,9 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
                   d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
+            </div>
+            <div className="product-title">
+              <h3>{title}</h3>
             </div>
           </div>
         </Link>

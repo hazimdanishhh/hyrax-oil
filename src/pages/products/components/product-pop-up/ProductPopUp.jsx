@@ -76,10 +76,11 @@ function ProductPopUp({ product, onClose }) {
 
         {product.grades && (
           <div>
+            <h3 className="product-pop-up-grade-title">Grades</h3>
             {product.grades.map((grade, index) => (
-              <h3 key={index} className="product-pop-up-grade">
+              <p key={index} className="product-pop-up-grade">
                 {grade}
-              </h3>
+              </p>
             ))}
           </div>
         )}

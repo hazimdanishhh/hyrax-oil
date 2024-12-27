@@ -6,6 +6,8 @@ import { Link, Outlet } from "react-router-dom";
 import { productsPCMO } from "./productsPCMO";
 import ProductCard from "../../products/components/product-card/ProductCard";
 import ProductPopUp from "../components/product-pop-up/ProductPopUp";
+import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
+import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 
 function PassengerCar() {
   const [activePopup, setActivePopup] = useState(null);
@@ -89,6 +91,8 @@ function PassengerCar() {
       {activePopup && (
         <ProductPopUp product={activePopup} onClose={closeOverlay} />
       )}
+
+      <CarouselSlider items={productSegments} />
 
       <Footer />
 

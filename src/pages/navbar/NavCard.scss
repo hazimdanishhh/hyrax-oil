@@ -5,9 +5,7 @@ $background: white;
 
 .nav-card {
   max-width: 124px;
-  min-width: 110px;
   max-height: 192px;
-  min-height: 180px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -15,6 +13,11 @@ $background: white;
   overflow: hidden;
   position: relative;
   outline: 2px solid #f26e2700;
+
+  &.carousel-card {
+    max-width: 180px;
+    max-height: 280px;
+  }
 
   .nav-card-img {
     height: 100%;
@@ -24,12 +27,15 @@ $background: white;
 
   .nav-card-overlay {
     width: 124px;
-    min-width: 110px;
     height: 192px;
-    min-height: 180px;
     position: absolute;
     border-radius: 10px;
     box-shadow: 0px 0px 30px 1px rgba(242, 110, 39, 0) inset;
+
+    &.carousel-card-overlay {
+      width: 180px;
+      height: 280px;
+    }
 
     .nav-title {
       position: absolute;

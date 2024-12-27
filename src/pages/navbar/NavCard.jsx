@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import "./NavOverlay.scss";
+import "./NavCard.scss";
 
-function NavOverlay({ src, alt, title, link }) {
+function NavCard({ src, alt, title, link }) {
   return (
     <>
-      <Link className="nav-card" to={link}>
+      <Link className="nav-card carousel-card" to={link}>
         <img loading="lazy" src={src} alt={alt} className="nav-card-img" />
-        <div className="nav-card-overlay">
+        <div className="nav-card-overlay carousel-card-overlay">
           <div className="nav-title">
             <h3>{title}</h3>
           </div>
@@ -19,4 +19,4 @@ function NavOverlay({ src, alt, title, link }) {
   );
 }
 
-export default NavOverlay;
+export default NavCard;

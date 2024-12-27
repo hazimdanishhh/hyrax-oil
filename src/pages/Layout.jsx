@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "./layout.scss";
-import NavCard from "./navbar/NavOverlay";
+import NavCard from "./navbar/NavCard";
 import { productSegments } from "./navbar/components/nav-products/NavProductSegments";
 import { aboutSections } from "./navbar/components/nav-about/NavAboutSections";
 import { servicesSections } from "./navbar/components/nav-services/NavServicesSections";
 import { mediaSections } from "./navbar/components/nav-media/NavMediaSections";
 import { motion } from "framer-motion";
+import ButtonRouter from "./components/buttons/ButtonRouter";
 
 function Layout() {
   const [activePopup, setActivePopup] = useState(null);
@@ -163,40 +164,17 @@ function Layout() {
 
         {/* NAVIGATION BUTTONS */}
         <div className={`nav-buttons ${isActive ? "active" : ""}`}>
-          <Link className="button-type-2" to="/careers">
-            Careers
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="12"
-              viewBox="0 0 14 12"
-              fill="none"
-            >
-              <path
-                d="M13 6L7.85714 1M13 6L7.85714 11M13 6H1"
-                stroke="#f26f27"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
-          <Link className="button-type-1" to="/contact">
-            Contact Us
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="12"
-              viewBox="0 0 14 12"
-              fill="none"
-            >
-              <path
-                d="M13 6L7.85714 1M13 6L7.85714 11M13 6H1"
-                stroke="white"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+          <ButtonRouter
+            name={"Careers"}
+            link={"/careers"}
+            type={"button-type-2"}
+          />
+
+          <ButtonRouter
+            name="Contact Us"
+            link="/contact"
+            type={"button-type-1"}
+          />
         </div>
 
         {/* MOBILE NAVIGATION */}
@@ -242,6 +220,9 @@ function Layout() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
           >
+            {/* =============== */}
+            {/* ABOUT */}
+            {/* =============== */}
             {activePopup === "about" && (
               <>
                 <div className="nav-overlay-header">
@@ -279,6 +260,10 @@ function Layout() {
                 </div>
               </>
             )}
+
+            {/* =============== */}
+            {/* PRODUCTS */}
+            {/* =============== */}
             {activePopup === "products" && (
               <>
                 <div className="nav-overlay-header">
@@ -336,6 +321,10 @@ function Layout() {
                 </div>
               </>
             )}
+
+            {/* =============== */}
+            {/* SERVICES */}
+            {/* =============== */}
             {activePopup === "services" && (
               <>
                 <div className="nav-overlay-header">
@@ -373,6 +362,10 @@ function Layout() {
                 </div>
               </>
             )}
+
+            {/* =============== */}
+            {/* MEDIA */}
+            {/* =============== */}
             {activePopup === "media" && (
               <>
                 <div className="nav-overlay-header">

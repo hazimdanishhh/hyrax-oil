@@ -56,7 +56,7 @@ function Carousel() {
 
   return (
     <motion.div
-      className="carousel"
+      className="home-carousel"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -64,32 +64,34 @@ function Carousel() {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`carousel-slide ${index === currentIndex ? "active" : ""}`}
+          className={`home-carousel-slide ${
+            index === currentIndex ? "active" : ""
+          }`}
           style={{ backgroundImage: `url(${image.src})` }}
           alt={image.alt}
         ></div>
       ))}
 
       <div
-        className="carousel-gradient"
+        className="home-carousel-gradient"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="carousel-wrapper">
+        <div className="home-carousel-wrapper">
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className={`carousel-text ${
+              className={`home-carousel-text ${
                 index === currentIndex ? "active" : ""
               }`}
               initial={{ x: -600 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <h2 className="carousel-title">{image.title}</h2>
-              <a className="carousel-link-div" href={image.href}>
-                <span className="carousel-link">read more</span>
+              <h2 className="home-carousel-title">{image.title}</h2>
+              <a className="home-carousel-link-div" href={image.href}>
+                <span className="home-carousel-link">read more</span>
                 <img
                   className="link-arrow"
                   src="./link-arrow.svg"
@@ -99,7 +101,7 @@ function Carousel() {
             </motion.div>
           ))}
 
-          <div className="carousel-indicators">
+          <div className="home-carousel-indicators">
             {images.map((_, index) => (
               <button
                 key={index}

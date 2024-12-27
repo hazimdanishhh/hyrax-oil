@@ -3,13 +3,6 @@ $secondary: #ff9d10;
 $tertiary: #323232;
 $background: white;
 
-.carousel-background {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .carousel-title {
   left: 0;
   right: 0;
@@ -29,7 +22,7 @@ $background: white;
   position: relative;
   max-width: 1366px;
   margin: auto;
-  padding: 2rem;
+  padding: 3rem;
   margin-bottom: 2rem;
 }
 

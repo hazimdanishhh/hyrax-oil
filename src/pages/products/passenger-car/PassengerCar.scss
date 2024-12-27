@@ -3,13 +3,13 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.pcmo-background {
+.hero-background {
   background-image: url("/products/pcmo-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  .bg-gradient {
+  .hero-gradient {
     // background-color: rgba(32, 32, 32, 0.2);
     // backdrop-filter: blur(1px);
     background-image: linear-gradient(
@@ -18,7 +18,7 @@ $background: white;
       rgba(0, 0, 0, 0.2)
     );
 
-    .pcmo-wrapper {
+    .hero-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -30,29 +30,28 @@ $background: white;
       margin: auto;
       padding: 7rem 3rem;
 
-      .crumble {
-        display: flex;
-        align-items: center;
-
-        span {
-          color: $secondary;
-          text-decoration: underline;
-          text-decoration-thickness: 1px;
-          text-underline-offset: 0.4rem;
-        }
+      @media screen and (max-width: 1024px) {
+        padding: 7rem 1rem;
       }
 
-      .text {
+      .hero-crumble {
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-text-container {
         z-index: 2;
         display: flex;
         flex-direction: column;
 
         width: 70%;
-        // text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 
-        .title {
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+
+        .hero-title {
           font-family: "GilroyMedium", sans-serif;
-          font-size: 40px;
           background: linear-gradient(to right, $primary, $secondary);
           background-clip: $primary;
           -webkit-text-fill-color: transparent;
@@ -63,7 +62,7 @@ $background: white;
           }
         }
 
-        .desc {
+        .hero-desc {
           font-size: 20px;
           text-align: justify;
           margin: 1rem 0;
@@ -92,9 +91,12 @@ $background: white;
     margin: auto;
     padding: 7rem 3rem;
 
+    @media screen and (max-width: 1024px) {
+      padding: 7rem 1rem;
+    }
+
     h2 {
       font-family: "GilroyMedium", sans-serif;
-      font-size: 2.5rem;
       color: black;
     }
 

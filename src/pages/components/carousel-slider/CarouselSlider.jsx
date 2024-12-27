@@ -47,6 +47,8 @@ const CarouselSlider = ({ items }) => {
               alt={segment.alt}
               title={segment.title}
               link={segment.link}
+              styleLink="nav-card carousel-card"
+              styleOverlay="nav-card-overlay carousel-card-overlay"
             />
           ))}
         </div>

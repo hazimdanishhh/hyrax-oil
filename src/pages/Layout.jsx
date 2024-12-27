@@ -255,6 +255,8 @@ function Layout() {
                       alt={segment.alt}
                       title={segment.title}
                       link={segment.link}
+                      styleLink="nav-card"
+                      styleOverlay="nav-card-overlay"
                     />
                   ))}
                 </div>
@@ -316,6 +318,8 @@ function Layout() {
                       alt={segment.alt}
                       title={segment.title}
                       link={segment.link}
+                      styleLink="nav-card"
+                      styleOverlay="nav-card-overlay"
                     />
                   ))}
                 </div>
@@ -357,6 +361,8 @@ function Layout() {
                       alt={segment.alt}
                       title={segment.title}
                       link={segment.link}
+                      styleLink="nav-card"
+                      styleOverlay="nav-card-overlay"
                     />
                   ))}
                 </div>
@@ -398,6 +404,8 @@ function Layout() {
                       alt={segment.alt}
                       title={segment.title}
                       link={segment.link}
+                      styleLink="nav-card"
+                      styleOverlay="nav-card-overlay"
                     />
                   ))}
                 </div>

@@ -3,13 +3,13 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.carousel {
+.home-carousel {
   position: relative;
   height: calc(100vh - 3rem);
   // height: 100vh;
   overflow: hidden;
 
-  .carousel-slide {
+  .home-carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@ $background: white;
     }
   }
 
-  .carousel-gradient {
+  .home-carousel-gradient {
     content: "";
     position: absolute;
     top: 0;
@@ -34,7 +34,7 @@ $background: white;
     bottom: 0;
     background: linear-gradient(to left, transparent 20%, black 150%);
 
-    .carousel-wrapper {
+    .home-carousel-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: end;
@@ -44,7 +44,7 @@ $background: white;
       max-width: 1366px;
       margin: auto;
 
-      .carousel-text {
+      .home-carousel-text {
         position: absolute;
         display: none;
         flex-direction: column;
@@ -58,22 +58,23 @@ $background: white;
           display: flex;
           opacity: 1;
           z-index: 2;
+          width: 70%;
         }
 
-        .carousel-title {
+        .home-carousel-title {
           font-family: "GilroyMedium";
-          font-size: 3.5rem;
+          font-size: 3rem;
           font-weight: 1;
           text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1);
           margin-bottom: 2rem;
         }
 
-        .carousel-link-div {
+        .home-carousel-link-div {
           display: flex;
           align-items: center;
           width: fit-content;
 
-          .carousel-link {
+          .home-carousel-link {
             font-size: 1.5rem;
             margin-right: 1rem;
           }
@@ -87,7 +88,7 @@ $background: white;
           }
         }
 
-        .carousel-link-div:hover {
+        .home-carousel-link-div:hover {
           .link-arrow {
             filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
               brightness(99%) contrast(92%);
@@ -97,7 +98,7 @@ $background: white;
         }
       }
 
-      .carousel-indicators {
+      .home-carousel-indicators {
         // position: absolute;
         // bottom: 3rem;
         // left: 50%;
@@ -150,8 +151,8 @@ $background: white;
 }
 
 // @media (max-width: 768px) {
-//   .carousel {
-//     .carousel-indicators {
+//   .home-carousel {
+//     .home-carousel-indicators {
 //       bottom: 10px;
 
 //       .indicator {

@@ -29,10 +29,10 @@ function PassengerCar() {
       <Layout />
 
       {/* HERO SECTION */}
-      <div className="pcmo-background">
-        <div className="bg-gradient">
-          <div className="pcmo-wrapper">
-            <div className="crumble">
+      <div className="hero-background">
+        <div className="hero-gradient">
+          <div className="hero-wrapper">
+            <div className="hero-crumble">
               <Link to="/">Home</Link>{" "}
               <svg
                 className="w-6 h-6 text-gray-800 dark:text-white"
@@ -53,12 +53,10 @@ function PassengerCar() {
               </svg>
               Passenger Car Motor Oils
             </div>
-            <div className="text">
-              <h2 className="title">
-                <span>Passenger Car Motor Oils</span>
-              </h2>
+            <div className="hero-text-container">
+              <h1 className="hero-title">Passenger Car Motor Oils</h1>
 
-              <p className="desc">
+              <p className="hero-desc">
                 Discover our wide range of Passenger Car Motor Oils, engineered
                 for performance.
               </p>

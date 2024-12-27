@@ -12,12 +12,14 @@ import Careers from "./pages/careers/Careers.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import "./main.scss";
 import { HashRouter as Router } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default function App() {
   return (
     // Change from Router to BrowserRouter when deploying
     // GitHub Pages does not support BrowserRouter, so use HashRouter instead
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route index element={<Home />} />

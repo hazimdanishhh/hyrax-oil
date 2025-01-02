@@ -3,10 +3,66 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.product-section-background {
+.founder-section-background {
+  background-color: #ffffff;
+
+  .founder-section-wrapper {
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+    padding: 3rem 3rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 3rem 1rem;
+    }
+
+    .founder-section-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: black;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        gap: 1rem;
+      }
+
+      .founder-section-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+
+        h2 {
+          @media screen and (max-width: 768px) {
+            text-align: center;
+          }
+          span {
+            font-family: "GilroyMedium", sans-serif;
+
+            background: linear-gradient(to right, $primary, $secondary);
+            background-clip: $primary;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+          }
+        }
+
+        p {
+          text-align: justify;
+        }
+      }
+
+      .founder-section-img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.BOD-section-background {
   background-color: #ececec;
 
-  .product-section-wrapper {
+  .BOD-section-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,12 +78,25 @@ $background: white;
       padding: 7rem 1rem;
     }
 
-    h2 {
-      font-family: "GilroyMedium", sans-serif;
-      color: black;
+    .BOD-section-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      h2 {
+        font-family: "GilroyMedium", sans-serif;
+        color: black;
+      }
+
+      hr {
+        height: 2px;
+        width: 30%;
+        background: black;
+        border: 1px solid black;
+      }
     }
 
-    .product-layout {
+    .BOD-layout {
       display: flex;
       gap: 4rem;
       max-width: 100%;

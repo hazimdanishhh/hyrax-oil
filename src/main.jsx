@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
 import About from "./pages/about/About.jsx";
+import OurLeaders from "./pages/about/our-leaders/OurLeaders.jsx";
 import Products from "./pages/products/Products.jsx";
 import PassengerCar from "./pages/products/passenger-car/PassengerCar.jsx";
 import Services from "./pages/services/Services.jsx";
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/" element={<Layout />} />
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="about/our-leaders" element={<OurLeaders />} />
         <Route path="products" element={<Products />} />
         <Route
           path="products/passenger-car-motor-oils"

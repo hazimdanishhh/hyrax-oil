@@ -8,6 +8,7 @@ import ProductCard from "../../products/components/product-card/ProductCard";
 import ProductPopUp from "../components/product-pop-up/ProductPopUp";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
+import Hero from "../../components/hero/Hero";
 
 function PassengerCar() {
   const [activePopup, setActivePopup] = useState(null);
@@ -29,41 +30,12 @@ function PassengerCar() {
       <Layout />
 
       {/* HERO SECTION */}
-      <div className="hero-background">
-        <div className="hero-gradient">
-          <div className="hero-wrapper">
-            <div className="hero-crumble">
-              <Link to="/">Home</Link>{" "}
-              <svg
-                className="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="m10 16 4-4-4-4"
-                />
-              </svg>
-              Passenger Car Motor Oils
-            </div>
-            <div className="hero-text-container">
-              <h1 className="hero-title">Passenger Car Motor Oils</h1>
-
-              <p className="hero-desc">
-                Discover our wide range of Passenger Car Motor Oils, engineered
-                for performance.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Hero
+        image='url("/public/products/pcmo-background.jpg")'
+        crumble="Products"
+        title="Passenger Car Motor Oils"
+        desc="Discover our wide range of passenger car motor oils, designed to provide the best protection for your engine."
+      />
 
       {/* PRODUCT SECTION */}
       <div className="product-section-background">

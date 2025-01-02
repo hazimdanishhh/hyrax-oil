@@ -5,9 +5,11 @@ import "./OurLeaders.scss";
 import { Link, Outlet } from "react-router-dom";
 import Hero from "../../components/hero/Hero";
 import ButtonRouter from "../../components/buttons/ButtonRouter";
-import ProductPopUp from "../../products/components/product-pop-up/ProductPopUp";
-import LeaderCard from "./leader-cards/LeaderCard";
-import { management } from "./leader-cards/management";
+import LeaderCard from "./components/leader-card/LeaderCard";
+import { management } from "./components/leader-card/management";
+import LeaderPopUp from "./components/leader-pop-up/LeaderPopUp";
+import { directors } from "./components/leader-card/directors";
+import { dHZ } from "./components/leader-card/DHZ";
 
 function OurLeaders() {
   const [activePopup, setActivePopup] = useState(null);
@@ -67,12 +69,20 @@ function OurLeaders() {
                 staff, in addition to the Malaysian domestic market, we have
                 successfully penetrated into more than 35 countries.
               </p>
-              <ButtonRouter
-                name={"Learn More"}
-                link={"#"}
-                type={"button-type-1"}
-                onClick={() => openOverlay(leader)}
-              />
+              <div
+                onClick={() => openOverlay(dHZ[0])}
+                role="button"
+                tabIndex="0"
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") openOverlay(dHZ[0]);
+                }}
+              >
+                <ButtonRouter
+                  name={"Learn More"}
+                  link={"#"}
+                  type={"button-type-1"}
+                />
+              </div>
             </div>
             <img
               className="founder-section-img"
@@ -91,16 +101,17 @@ function OurLeaders() {
             <hr />
           </div>
           <div className="BOD-layout">
-            {/* {directors.map((leader, index) => (
+            {directors.map((leader, index) => (
               <LeaderCard
                 key={index}
                 src={leader.src}
                 alt={leader.alt}
+                name={leader.name}
                 title={leader.title}
                 link={leader.link}
                 onClick={() => openOverlay(leader)}
               />
-            ))} */}
+            ))}
           </div>
         </div>
       </div>
@@ -130,7 +141,7 @@ function OurLeaders() {
 
       {/* PRODUCT POP UP */}
       {activePopup && (
-        <ProductPopUp product={activePopup} onClose={closeOverlay} />
+        <LeaderPopUp leader={activePopup} onClose={closeOverlay} />
       )}
 
       <Footer />

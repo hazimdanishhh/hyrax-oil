@@ -134,7 +134,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("about")}
             className={`${activePopup === "about" ? "link-active" : ""}`}
           >
-            <Link to="/about/the-company">About</Link>
+            <Link to="#">About</Link>
           </li>
 
           <li
@@ -142,7 +142,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("products")}
             className={`${activePopup === "products" ? "link-active" : ""}`}
           >
-            <Link to="/products">Products</Link>
+            <Link to="#">Products</Link>
           </li>
 
           <li
@@ -150,7 +150,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("services")}
             className={`${activePopup === "services" ? "link-active" : ""}`}
           >
-            <Link to="/services">Services</Link>
+            <Link to="#">Services</Link>
           </li>
 
           <li

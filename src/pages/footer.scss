@@ -14,10 +14,13 @@ $background: white;
       display: flex;
       justify-content: space-between;
       margin: 6rem 2rem 4rem 2rem;
+      flex-wrap: wrap;
+      gap: 2rem;
 
       .footer-item {
         display: flex;
         flex-direction: column;
+        min-width: fit-content;
 
         h3 {
           margin: 5px 0;
@@ -37,6 +40,11 @@ $background: white;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @media screen and (max-width: 844px) {
+          flex-direction: row;
+          width: 100%;
+        }
       }
     }
 
@@ -45,6 +53,8 @@ $background: white;
       justify-content: space-between;
       align-items: center;
       margin: 0 2rem 2rem 2rem;
+      flex-wrap: wrap;
+      gap: 2rem;
 
       span {
         color: #ffffff90;
@@ -65,37 +75,38 @@ $background: white;
         }
       }
     }
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .footer {
-    .footer-wrapper {
-      .footer-segments {
-        flex-direction: column;
+    .back-to-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin: auto;
+      margin-bottom: 2rem;
+      border-radius: 50%;
+      border: 1px solid white;
+
+      &:hover {
+        border: 1px solid $secondary;
+      }
+
+      .back-to-top-hover {
+        display: flex;
         justify-content: center;
-        gap: 2rem;
-        margin: 2rem;
+        align-items: center;
+        visibility: visible;
+        position: absolute;
+        top: -2.5rem;
+        width: 150px;
+        height: 30px;
+        border-radius: 25px;
+        border: 1px solid $secondary;
 
-        .footer-socials {
-          justify-content: space-between;
-          width: 100%;
-          height: fit-content;
-
-          a {
-            height: fit-content;
-
-            .socials-img {
-              width: 40px;
-            }
-          }
-
-          a:hover {
-            .socials-img {
-              filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
-                brightness(99%) contrast(92%);
-            }
-          }
+        @media screen and (max-width: 768px) {
+          display: none;
+          visibility: hidden;
         }
       }
     }

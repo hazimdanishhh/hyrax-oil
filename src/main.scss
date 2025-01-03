@@ -18,11 +18,15 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    color: $secondary;
+    transition: 0.2s;
+  }
 }
 
-a:hover {
-  color: $secondary;
-  transition: 0.2s;
+span {
+  color: $primary;
 }
 
 @font-face {

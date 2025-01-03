@@ -50,24 +50,34 @@ function OurLeaders() {
                 YBhg. Dato' Hazimah Zainuddin
               </h2>
               <p>
-                At Hyrax Oil, we have a strong desire to excel in all areas of
-                our business. Each and every staff in our company plays his or
-                her role and contributes to achieve a culture of excellence.{" "}
+                At Hyrax Oil, we are driven by a relentless commitment to
+                excellence in every aspect of our business. Our dedicated team
+                is the cornerstone of our success, with each individual
+                contributing meaningfully toward fostering a culture of
+                innovation and quality. <br />
+                <br />
+                The expertise and teamwork of our people have positioned Hyrax
+                Oil as a leader in an increasingly competitive global market.
+                This unwavering pursuit of excellence is not only reflected in
+                our organizational achievements but also in the exceptional
+                quality of our products.
                 <br />
                 <br />
-                The expertise of our team and their commitment to teamwork are
-                key factors in the success of Hyrax Oil in a competitive
-                business environment. The strong desire for excellence also
-                contributes to quality of the products.
+                Our Hyrax brand products are manufactured to meet the highest
+                standards, adhering to stringent specifications and earning
+                certifications from renowned international regulatory bodies,
+                including the American Petroleum Institute, MTU Friedrichshafen
+                GmbH of Germany, and Doble Engineering Company of the USA.
                 <br />
                 <br />
-                The products of Hyrax Oil follow strict specifications and are
-                certified by international regulatory standards such as the
-                American Petroleum Institute, MTU Friedrichshafen GmbH of
-                Germany, and Doble Engineering Company of USA. Due to the
-                quality of the products as well as the commitment from the
-                staff, in addition to the Malaysian domestic market, we have
-                successfully penetrated into more than 35 countries.
+                With a strong foundation of superior product quality and a
+                dedicated workforce, we have successfully expanded our footprint
+                beyond Malaysia, reaching over 35 countries worldwide.
+                <br />
+                <br />
+                As we look to the future, Hyrax Oil remains steadfast in our
+                mission to deliver excellence, foster innovation, and uphold the
+                trust of our partners and customers globally.
               </p>
               <div
                 className="founder-section-button"

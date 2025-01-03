@@ -20,8 +20,7 @@ export const directors = [
     title: "Group Chief Operating Officer",
     link: "#",
     description: [
-      "Shazly holds a degree in Public Management (Hons) upon his graduation in 1998 from Universiti Utara Malaysia.  He started his career in the following year with the Perlis State’s civil service, handling several state government’s retail projects in the northern region before joining the private sector in 2005 in the line of petrochemical and lubricants industry based in Klang Valley.",
-      "In 2009, Shazly landed his progressive career with Hyrax Oil Sdn Bhd where he started as a Warehouse Executive and later being promoted several times over the years and currently holding an important position as the General Manager in charge of domestic sales covering the corporate, industrial and retail accounts.  He is expected to play a key role in the consolidation of the sales operations of the company, especially on strategic alliances with corporate clients, business partners and local distributors.",
+      "Upon completing his MBA from Cardiff University, UK, Jufryzal joins Petronas in 1998 as Market Development Executive in charge of developing Petronas’ global lubricant business. With 17 years of experience in the lubricant industry serving various functions such as market development executive, procurement manager, plant manager and head of export sales for Petronas Lubricants International (Asia Pacific), Jufryzal join Hyrax in August 2014 as the General Manager of Sales and Marketing. He is responsible to further grow Hyrax domestic and international lubricant business and put Hyrax brand as one of the known global brand for lubricant.",
     ],
   },
   {
@@ -31,8 +30,7 @@ export const directors = [
     title: "Group Chief Financial Officer",
     link: "#",
     description: [
-      "Hafiz holds a Commerce Degree(majoring in Accounting & Finance) from Murdoch University, Western Australia and possess more than 18 years of working experience in various industries.Hafiz started his career with UEM Group Berhad in 1999 as an Internal Auditor. Later over the years, he served in several subsidiary companies of UEM Group and held his last post as Deputy Senior Manager wherehe diligently served the Office of Senior Director of UEM Group with the portfolios of International Business and Group Strategy & Business Development.",
-      "In 2010, Hafiz joined PETRONAS Lubricants International SdnBhd (“PLI”) as a Manager of Business Development and Mergers &Acquisitionsbefore changing his portfolio roles in the Export Sales Divisionin early 2014. At PLI, Hafiz was dealingwith strategic market development and penetration into the Middle East, Pakistan and Bangladesh. He successfully set up PLI’s business in Dubai with an unprecedented sales volume for the initial year of operation.Hafiz joined Hyrax Oil in August 2014 and currently playing pivotal roles in the strategic marketing and international sales of Hyrax’s products and services, mainly focusing in the Middle East and North African markets. ",
+      "Holds a Bachelor of Science degree in Accounting and Law from De Monfort University, Leicester, UK. Has 20 years in Corporate and Commercial Business banking field. Started career in 1994 with CIMB Bank Bhd. Held various roles and responsibilities from Regional Corporate Banking of then Bank of Commerce, and later Commercial and Midcorp business customers of the Bank. Has 16 years managerial experience in business centres of CIMB Bank in Klang Valley and in Perak, spearheading the team to manage business portfolios as well as marketing new businesses to capture wider market presence and enhance earnings contributions. Was also having dual roles as one of approval lending authority committee. Later joined Agrobank, prior to joining Hyrax Oil.",
     ],
   },
   {
@@ -42,7 +40,9 @@ export const directors = [
     title: "Group Business Development & Sales Director",
     link: "#",
     description: [
-      "Zaini obtained his BSc (Hons) in Applied Chemistry from Sheffield Hallam University in the United Kingdom in 1993. He started his professional career as a chemist at Inchcape International, Malaysia in 1994 before joining Hyrax Oil in 1995.",
+      "Muhamad Lutfi holds a degree in Business (majoring in Accounting) from Victoria University in Melbourne, Australia after graduating in 2019. He started his career in 2020 with Ernst & Young’s Assurance Department based in Kuala Lumpur mainly performing auditing work related to the upstream division of the oil and gas industry with the focused scope in production sharing contracts.",
+      "Later in 2021, Muhamad Lutfi joined Usaha Kencana Builders Sdn Bhd – a fast growing local engineering and construction company, as a Finance Director, handling the company’s multi-million-ringgit financing needs for its housing development projects of more than 200 houses in Kuantan, Pahang and Langkap, Perak.",
+      "In 2022, after a stint in the construction industry, Muhamad Lutfi joined Hyrax Oil Sdn Bhd as a Director, overseeing the sales and marketing and operations of the company. With his youth and career experience, the presence of Muhamad Lutfi is expected to enhance the sales and marketing unit, business digitalization and operational efficiency of Hyrax Oil to the next level.",
     ],
   },
   {
@@ -52,7 +52,8 @@ export const directors = [
     title: "Group Human Resources & Administration Director",
     link: "#",
     description: [
-      "Eddy holds a Diploma in Accountancy. He joined Hyrax Oil as an Accounts Executive in 1997 and was promoted to Senior Finance & Operations Executive in year 2000. He left Hyrax Oil in 2002 to pursue a career in textile related business in Konsortium Usahawan Tekstil Sdn Bhd. Rejoined Hyrax Oil in year 2008 and played a key role in the promotion and marketing of Hyrax’s products both domestically and internationally.",
+      "Intan Munirah holds a Bachelor in Business Management majoring in Accounting from Victoria University in Melbourne, Australia after graduating in 2019. She started her career at Hyrax Oil Sdn Bhd in 2021 as a Special Officer to the Group Managing Director where she is assisting in corporate governance and administration.",
+      "Soon after demonstrating her administrative command. She is now one of the Directors in Hyrax Oil, overseeing the Human Resource, and corporate governance aspect of the company.",
     ],
   },
 ];

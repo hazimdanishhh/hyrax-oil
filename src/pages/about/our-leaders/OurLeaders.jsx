@@ -32,7 +32,7 @@ function OurLeaders() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./public/about/our-leaders-background.png")'
+        image='url("./about/our-leaders-background.png")'
         crumble="About"
         title="Our Leaders"
         desc="Meet the visionaries behind Hyrax Oil, driven by a commitment to innovation, excellence, and sustainability, guiding the company toward a brighter and more dynamic future."
@@ -84,7 +84,7 @@ function OurLeaders() {
             </div>
             <img
               className="founder-section-img"
-              src="./public/about/dato-hazimah.png"
+              src="./about/dato-hazimah.png"
               alt="Dato' Hazimah Zainuddin"
             />
           </div>

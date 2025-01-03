@@ -31,7 +31,7 @@ function PassengerCar() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("/public/products/pcmo-background.jpg")'
+        image='url("./public/products/pcmo-background.jpg")'
         crumble="Products"
         title="Passenger Car Motor Oils"
         desc="Discover our wide range of passenger car motor oils, designed to provide the best protection for your engine."

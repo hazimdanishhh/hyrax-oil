@@ -32,7 +32,7 @@ function OurLeaders() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("/public/about/our-leaders-background.png")'
+        image='url("./public/about/our-leaders-background.png")'
         crumble="About"
         title="Our Leaders"
         desc="Meet the visionaries behind Hyrax Oil, driven by a commitment to innovation, excellence, and sustainability, guiding the company toward a brighter and more dynamic future."
@@ -70,12 +70,10 @@ function OurLeaders() {
                 successfully penetrated into more than 35 countries.
               </p>
               <div
+                className="founder-section-button"
                 onClick={() => openOverlay(dHZ[0])}
                 role="button"
                 tabIndex="0"
-                onKeyPress={(e) => {
-                  if (e.key === "Enter") openOverlay(dHZ[0]);
-                }}
               >
                 <ButtonRouter
                   name={"Learn More"}
@@ -86,7 +84,7 @@ function OurLeaders() {
             </div>
             <img
               className="founder-section-img"
-              src="/public/about/dato-hazimah.png"
+              src="./public/about/dato-hazimah.png"
               alt="Dato' Hazimah Zainuddin"
             />
           </div>

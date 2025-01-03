@@ -13,7 +13,7 @@ $background: white;
     .footer-segments {
       display: flex;
       justify-content: space-between;
-      margin: 6rem 2rem 2rem 2rem;
+      margin: 6rem 2rem 4rem 2rem;
 
       .footer-item {
         display: flex;
@@ -34,25 +34,9 @@ $background: white;
 
       .footer-socials {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 100px;
-        height: 150px;
-
-        a {
-          height: fit-content;
-
-          .socials-img {
-            width: 40px;
-          }
-        }
-
-        a:hover {
-          .socials-img {
-            filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
-              brightness(99%) contrast(92%);
-          }
-        }
       }
     }
 

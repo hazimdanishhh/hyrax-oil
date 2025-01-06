@@ -41,7 +41,7 @@ $background: white;
         flex-wrap: wrap;
         justify-content: space-between;
 
-        @media screen and (max-width: 844px) {
+        @media screen and (max-width: 1024px) {
           flex-direction: row;
           width: 100%;
         }
@@ -55,6 +55,14 @@ $background: white;
       margin: 0 2rem 2rem 2rem;
       flex-wrap: wrap;
       gap: 2rem;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+        span {
+          text-align: center;
+        }
+      }
 
       span {
         color: #ffffff90;
@@ -103,6 +111,7 @@ $background: white;
         height: 30px;
         border-radius: 25px;
         border: 1px solid $secondary;
+        color: $secondary;
 
         @media screen and (max-width: 768px) {
           display: none;

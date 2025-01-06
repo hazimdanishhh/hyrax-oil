@@ -8,6 +8,7 @@ import TheCompany from "./pages/about/the-company/TheCompany.jsx";
 import OurLeaders from "./pages/about/our-leaders/OurLeaders.jsx";
 import Products from "./pages/products/Products.jsx";
 import PassengerCar from "./pages/products/passenger-car/PassengerCar.jsx";
+import GasFuel from "./pages/products/gas-fuel/GasFuel.jsx";
 import Services from "./pages/services/Services.jsx";
 import Media from "./pages/media/Media.jsx";
 import Careers from "./pages/careers/Careers.jsx";
@@ -37,22 +38,31 @@ export default function App() {
           path="products/passenger-car-motor-oils"
           element={<PassengerCar />}
         />
-        <Route path="gas-fuel-engine-oils" element={<Products />} />
-        <Route path="diesel-engine-oils" element={<Products />} />
-        <Route path="tractor-fluids" element={<Products />} />
-        <Route path="four-stroke-motorcycle-oils" element={<Products />} />
+        <Route path="products/gas-fuel-engine-oils" element={<GasFuel />} />
+        <Route path="products/diesel-engine-oils" element={<Products />} />
+        <Route path="products/tractor-fluids" element={<Products />} />
         <Route
-          path="two-stroke-motorcycle-and-engine-oils"
+          path="products/four-stroke-motorcycle-oils"
           element={<Products />}
         />
-        <Route path="marine-and-large-engine-oils" element={<Products />} />
-        <Route path="gear-oils" element={<Products />} />
-        <Route path="transmission-fluids" element={<Products />} />
-        <Route path="industrial-oils" element={<Products />} />
-        <Route path="transformer-and-electrical-oils" element={<Products />} />
-        <Route path="specialty-oils" element={<Products />} />
-        <Route path="brake-fluids" element={<Products />} />
-        <Route path="greases" element={<Products />} />
+        <Route
+          path="products/two-stroke-motorcycle-and-engine-oils"
+          element={<Products />}
+        />
+        <Route
+          path="products/marine-and-large-engine-oils"
+          element={<Products />}
+        />
+        <Route path="products/gear-oils" element={<Products />} />
+        <Route path="products/transmission-fluids" element={<Products />} />
+        <Route path="products/industrial-oils" element={<Products />} />
+        <Route
+          path="products/transformer-and-electrical-oils"
+          element={<Products />}
+        />
+        <Route path="products/specialty-oils" element={<Products />} />
+        <Route path="products/brake-fluids" element={<Products />} />
+        <Route path="products/greases" element={<Products />} />
 
         {/* SERVICES */}
         <Route path="services" element={<Services />} />

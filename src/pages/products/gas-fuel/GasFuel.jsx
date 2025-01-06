@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../Layout";
 import Footer from "../../Footer";
 import { Link, Outlet } from "react-router-dom";
-import { productsGFEO } from "./productsGFEO";
+import { productsGFEO } from "./productsGFEO.js";
 import ProductCard from "../../products/components/product-card/ProductCard";
 import ProductPopUp from "../components/product-pop-up/ProductPopUp";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
@@ -21,7 +21,7 @@ function GasFuel() {
   };
 
   useEffect(() => {
-    document.title = "Hyrax Oil | Passenger Car Motor Oils";
+    document.title = "Hyrax Oil | Gas Fuel Engine Oils";
   }, []);
 
   return (

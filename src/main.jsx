@@ -9,6 +9,7 @@ import OurLeaders from "./pages/about/our-leaders/OurLeaders.jsx";
 import Products from "./pages/products/Products.jsx";
 import PassengerCar from "./pages/products/passenger-car/PassengerCar.jsx";
 import GasFuel from "./pages/products/gas-fuel/GasFuel.jsx";
+import DieselEngineOil from "./pages/products/diesel-engine-oils/DieselEngineOil.jsx";
 import Services from "./pages/services/Services.jsx";
 import Media from "./pages/media/Media.jsx";
 import Careers from "./pages/careers/Careers.jsx";
@@ -39,7 +40,10 @@ export default function App() {
           element={<PassengerCar />}
         />
         <Route path="products/gas-fuel-engine-oils" element={<GasFuel />} />
-        <Route path="products/diesel-engine-oils" element={<Products />} />
+        <Route
+          path="products/diesel-engine-oils"
+          element={<DieselEngineOil />}
+        />
         <Route path="products/tractor-fluids" element={<Products />} />
         <Route
           path="products/four-stroke-motorcycle-oils"

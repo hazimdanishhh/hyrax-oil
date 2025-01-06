@@ -57,17 +57,19 @@ function ProductPopUp({ product, onClose }) {
             alt={product.alt}
           />
           <h2>{product.title}</h2>
-          <div
-            className={`product-pop-up-type ${
-              product.type == "Semi Synthetic"
-                ? "semi"
-                : product.type == "Premium Blend"
-                ? "premium"
-                : ""
-            }`}
-          >
-            {product.type}
-          </div>
+          {product.type ? (
+            <div
+              className={`product-pop-up-type ${
+                product.type == "Semi Synthetic"
+                  ? "semi"
+                  : product.type == "Premium Blend"
+                  ? "premium"
+                  : ""
+              }`}
+            >
+              {product.type}
+            </div>
+          ) : null}
         </div>
 
         <div className="product-pop-up-body">

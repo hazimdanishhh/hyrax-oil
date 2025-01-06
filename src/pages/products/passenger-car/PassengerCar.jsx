@@ -33,6 +33,7 @@ function PassengerCar() {
       <Hero
         image='url("./products/pcmo-background.jpg")'
         crumble="Products"
+        crumbleLink="/products"
         title="Passenger Car Motor Oils"
         desc="Discover our wide range of passenger car motor oils, designed to provide the best protection for your engine."
       />

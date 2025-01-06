@@ -19,6 +19,8 @@ import "./main.scss";
 import { HashRouter as Router } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop.jsx";
 import FourStroke from "./pages/products/four-stroke/FourStroke.jsx";
+import TwoStroke from "./pages/products/two-stroke/TwoStroke.jsx";
+import Marine from "./pages/products/marine/Marine.jsx";
 
 export default function App() {
   return (
@@ -53,11 +55,11 @@ export default function App() {
         />
         <Route
           path="products/two-stroke-motorcycle-and-engine-oils"
-          element={<Products />}
+          element={<TwoStroke />}
         />
         <Route
           path="products/marine-and-large-engine-oils"
-          element={<Products />}
+          element={<Marine />}
         />
         <Route path="products/gear-oils" element={<Products />} />
         <Route path="products/transmission-fluids" element={<Products />} />

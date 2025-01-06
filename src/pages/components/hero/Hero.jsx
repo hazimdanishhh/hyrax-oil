@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./Hero.scss";
 
-function Hero({ image, crumble, title, desc }) {
+function Hero({ image, crumble, crumbleLink, title, desc }) {
   return (
     <>
       <div
@@ -14,7 +14,7 @@ function Hero({ image, crumble, title, desc }) {
         <div className="hero-gradient">
           <div className="hero-wrapper">
             <div className="hero-crumble">
-              <Link to="/">{crumble}</Link>
+              <Link to={crumbleLink}>{crumble}</Link>
               <svg
                 className="w-6 h-6 text-gray-800 dark:text-white"
                 aria-hidden="true"

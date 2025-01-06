@@ -39,17 +39,19 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
             </div>
           </div>
         </Link>
-        <div
-          className={`product-type ${
-            type == "Semi Synthetic"
-              ? "semi"
-              : type == "Premium Blend"
-              ? "premium"
-              : ""
-          }`}
-        >
-          {type}
-        </div>
+        {type ? (
+          <div
+            className={`product-type ${
+              type == "Semi Synthetic"
+                ? "semi"
+                : type == "Premium Blend"
+                ? "premium"
+                : ""
+            }`}
+          >
+            {type}
+          </div>
+        ) : null}
       </div>
 
       <Outlet />

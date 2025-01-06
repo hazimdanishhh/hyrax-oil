@@ -34,6 +34,7 @@ function OurLeaders() {
       <Hero
         image='url("./about/our-leaders-background.png")'
         crumble="About"
+        crumbleLink="/about/the-company"
         title="Our Leaders"
         desc="Meet the visionaries behind Hyrax Oil, driven by a commitment to innovation, excellence, and sustainability, guiding the company toward a brighter and more dynamic future."
       />

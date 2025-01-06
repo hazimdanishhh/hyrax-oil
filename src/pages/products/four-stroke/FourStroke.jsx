@@ -32,6 +32,7 @@ function FourStroke() {
       <Hero
         image='url("./products/four-stroke/fsmo-background.webp")'
         crumble="Products"
+        crumbleLink="/products"
         title="Four-Stroke Motorcycle Oils"
         desc="Discover our wide range of four-stroke motorcycle oils, designed to provide the best protection for your engine."
       />

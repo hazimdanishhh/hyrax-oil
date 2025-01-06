@@ -30,7 +30,7 @@ function GasFuel() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/gfeo-background.jpg")'
+        image='url("./products/gfeo-background.webp")'
         crumble="Products"
         title="Gas Fuel Engine Oils"
         desc="Discover our wide range of gas fuel engine oils, designed to provide the best protection for your engine."

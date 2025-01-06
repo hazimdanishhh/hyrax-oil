@@ -30,7 +30,7 @@ function PassengerCar() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/deo-background.jpg")'
+        image='url("./products/diesel-engine-oils/deo-background.webp")'
         crumble="Products"
         title="Diesel Engine Oils"
         desc="Discover our wide range of diesel engine oils, designed to provide the best protection for your engine."

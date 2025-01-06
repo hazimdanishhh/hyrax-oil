@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../Layout";
 import Footer from "../../Footer";
 import { Link, Outlet } from "react-router-dom";
-import { productsDEO } from "./productsDEO";
+import { productsTF } from "./productsTF";
 import ProductCard from "../../products/components/product-card/ProductCard";
 import ProductPopUp from "../components/product-pop-up/ProductPopUp";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 
-function DieselEngineOil() {
+function TractorFluids() {
   const [activePopup, setActivePopup] = useState(null);
 
   const openOverlay = (product) => {
@@ -21,7 +21,7 @@ function DieselEngineOil() {
   };
 
   useEffect(() => {
-    document.title = "Hyrax Oil | Diesel Engine Oils";
+    document.title = "Hyrax Oil | Tractor Fluids";
   }, []);
 
   return (
@@ -30,10 +30,10 @@ function DieselEngineOil() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/diesel-engine-oils/deo-background.webp")'
+        image='url("./products/tractor-fluids/tf-background.webp")'
         crumble="Products"
-        title="Diesel Engine Oils"
-        desc="Discover our wide range of diesel engine oils, designed to provide the best protection for your engine."
+        title="Tractor Fluids"
+        desc="Discover our wide range of tractor fluids, designed to provide the best protection for your engine."
       />
 
       {/* PRODUCT SECTION */}
@@ -41,7 +41,7 @@ function DieselEngineOil() {
         <div className="product-section-wrapper">
           <h2 className="product-section-title">Our Products</h2>
           <div className="product-layout">
-            {productsDEO.map((product, index) => (
+            {productsTF.map((product, index) => (
               <ProductCard
                 key={index}
                 src={product.src}
@@ -70,4 +70,4 @@ function DieselEngineOil() {
   );
 }
 
-export default DieselEngineOil;
+export default TractorFluids;

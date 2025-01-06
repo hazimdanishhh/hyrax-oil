@@ -62,6 +62,8 @@ function ProductPopUp({ product, onClose }) {
               className={`product-pop-up-type ${
                 product.type == "Semi Synthetic"
                   ? "semi"
+                  : product.type == "Synthetic Blend"
+                  ? "semi"
                   : product.type == "Premium Blend"
                   ? "premium"
                   : ""

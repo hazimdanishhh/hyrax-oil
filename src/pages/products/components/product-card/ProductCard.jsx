@@ -44,6 +44,8 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
             className={`product-type ${
               type == "Semi Synthetic"
                 ? "semi"
+                : type == "Synthetic Blend"
+                ? "semi"
                 : type == "Premium Blend"
                 ? "premium"
                 : ""

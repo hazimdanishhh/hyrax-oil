@@ -21,6 +21,8 @@ import ScrollToTop from "./ScrollToTop.jsx";
 import FourStroke from "./pages/products/four-stroke/FourStroke.jsx";
 import TwoStroke from "./pages/products/two-stroke/TwoStroke.jsx";
 import Marine from "./pages/products/marine/Marine.jsx";
+import GearOils from "./pages/products/gear-oils/GearOils.jsx";
+import TransmissionFluids from "./pages/products/transmission-fluids/TransmissionFluids.jsx";
 
 export default function App() {
   return (
@@ -61,8 +63,11 @@ export default function App() {
           path="products/marine-and-large-engine-oils"
           element={<Marine />}
         />
-        <Route path="products/gear-oils" element={<Products />} />
-        <Route path="products/transmission-fluids" element={<Products />} />
+        <Route path="products/gear-oils" element={<GearOils />} />
+        <Route
+          path="products/transmission-fluids"
+          element={<TransmissionFluids />}
+        />
         <Route path="products/industrial-oils" element={<Products />} />
         <Route
           path="products/transformer-and-electrical-oils"

@@ -42,11 +42,11 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
         {type ? (
           <div
             className={`product-type ${
-              type == "Semi Synthetic"
+              ["Semi Synthetic", "Synthetic Blend", "Uninhibited"].includes(
+                type
+              )
                 ? "semi"
-                : type == "Synthetic Blend"
-                ? "semi"
-                : type == "Premium Blend"
+                : type === "Premium Blend"
                 ? "premium"
                 : ""
             }`}

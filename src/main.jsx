@@ -23,6 +23,8 @@ import TwoStroke from "./pages/products/two-stroke/TwoStroke.jsx";
 import Marine from "./pages/products/marine/Marine.jsx";
 import GearOils from "./pages/products/gear-oils/GearOils.jsx";
 import TransmissionFluids from "./pages/products/transmission-fluids/TransmissionFluids.jsx";
+import IndustrialOils from "./pages/products/industrial-oils/IndustrialOils.jsx";
+import TransformerOils from "./pages/products/transformer-oils/TransformerOils.jsx";
 
 export default function App() {
   return (
@@ -68,10 +70,10 @@ export default function App() {
           path="products/transmission-fluids"
           element={<TransmissionFluids />}
         />
-        <Route path="products/industrial-oils" element={<Products />} />
+        <Route path="products/industrial-oils" element={<IndustrialOils />} />
         <Route
           path="products/transformer-and-electrical-oils"
-          element={<Products />}
+          element={<TransformerOils />}
         />
         <Route path="products/specialty-oils" element={<Products />} />
         <Route path="products/brake-fluids" element={<Products />} />

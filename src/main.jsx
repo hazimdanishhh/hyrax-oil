@@ -25,6 +25,9 @@ import GearOils from "./pages/products/gear-oils/GearOils.jsx";
 import TransmissionFluids from "./pages/products/transmission-fluids/TransmissionFluids.jsx";
 import IndustrialOils from "./pages/products/industrial-oils/IndustrialOils.jsx";
 import TransformerOils from "./pages/products/transformer-oils/TransformerOils.jsx";
+import SpecialtyOils from "./pages/products/specialty-oils/SpecialtyOils.jsx";
+import BrakeFluids from "./pages/products/brake-fluids/BrakeFluids.jsx";
+import Greases from "./pages/products/greases/Greases.jsx";
 
 export default function App() {
   return (
@@ -75,9 +78,9 @@ export default function App() {
           path="products/transformer-and-electrical-oils"
           element={<TransformerOils />}
         />
-        <Route path="products/specialty-oils" element={<Products />} />
-        <Route path="products/brake-fluids" element={<Products />} />
-        <Route path="products/greases" element={<Products />} />
+        <Route path="products/specialty-oils" element={<SpecialtyOils />} />
+        <Route path="products/brake-fluids" element={<BrakeFluids />} />
+        <Route path="products/greases" element={<Greases />} />
 
         {/* SERVICES */}
         <Route path="services" element={<Services />} />

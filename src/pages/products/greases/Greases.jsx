@@ -11,6 +11,7 @@ import Hero from "../../components/hero/Hero";
 
 function Greases() {
   const [activePopup, setActivePopup] = useState(null);
+  const productSegment = "Greases";
 
   const openOverlay = (product) => {
     setActivePopup(product);
@@ -21,7 +22,7 @@ function Greases() {
   };
 
   useEffect(() => {
-    document.title = "Hyrax Oil | Greases";
+    document.title = `Hyrax Oil | ${productSegment}`;
   }, []);
 
   return (
@@ -30,17 +31,19 @@ function Greases() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/grease/g-background.webp")'
+        image='url("./products/greases/g-background.webp")'
         crumble="Products"
         crumbleLink="/products"
-        title="Greases"
+        title={productSegment}
         desc="Discover our wide range of greases, designed to provide the best protection for your engine."
       />
 
       {/* PRODUCT SECTION */}
       <div className="product-section-background">
         <div className="product-section-wrapper">
-          <h2 className="product-section-title">Our Products</h2>
+          <h2 className="product-section-title">
+            Our Range of {productSegment}
+          </h2>
           <div className="product-layout">
             {productsG.map((product, index) => (
               <ProductCard

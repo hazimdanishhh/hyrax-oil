@@ -11,6 +11,7 @@ import Hero from "../../components/hero/Hero";
 
 function DieselEngineOil() {
   const [activePopup, setActivePopup] = useState(null);
+  const productSegment = "Diesel Engine Oils";
 
   const openOverlay = (product) => {
     setActivePopup(product);
@@ -21,7 +22,7 @@ function DieselEngineOil() {
   };
 
   useEffect(() => {
-    document.title = "Hyrax Oil | Diesel Engine Oils";
+    document.title = `Hyrax Oil | ${productSegment}`;
   }, []);
 
   return (
@@ -33,14 +34,16 @@ function DieselEngineOil() {
         image='url("./products/diesel-engine-oils/deo-background.webp")'
         crumble="Products"
         crumbleLink="/products"
-        title="Diesel Engine Oils"
+        title={productSegment}
         desc="Discover our wide range of diesel engine oils, designed to provide the best protection for your engine."
       />
 
       {/* PRODUCT SECTION */}
       <div className="product-section-background">
         <div className="product-section-wrapper">
-          <h2 className="product-section-title">Our Products</h2>
+          <h2 className="product-section-title">
+            Our Range of {productSegment}
+          </h2>
           <div className="product-layout">
             {productsDEO.map((product, index) => (
               <ProductCard

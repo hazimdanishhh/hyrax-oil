@@ -11,6 +11,7 @@ import Hero from "../../components/hero/Hero";
 
 function FourStroke() {
   const [activePopup, setActivePopup] = useState(null);
+  const productSegment = "Four-Stroke Motorcycle Oils";
 
   const openOverlay = (product) => {
     setActivePopup(product);
@@ -21,7 +22,7 @@ function FourStroke() {
   };
 
   useEffect(() => {
-    document.title = "Hyrax Oil | Four-Stroke Motorcycle Oils";
+    document.title = `Hyrax Oil | ${productSegment}`;
   }, []);
 
   return (
@@ -33,14 +34,16 @@ function FourStroke() {
         image='url("./products/four-stroke/fsmo-background.webp")'
         crumble="Products"
         crumbleLink="/products"
-        title="Four-Stroke Motorcycle Oils"
+        title={productSegment}
         desc="Discover our wide range of four-stroke motorcycle oils, designed to provide the best protection for your engine."
       />
 
       {/* PRODUCT SECTION */}
       <div className="product-section-background">
         <div className="product-section-wrapper">
-          <h2 className="product-section-title">Our Products</h2>
+          <h2 className="product-section-title">
+            Our Range of {productSegment}
+          </h2>
           <div className="product-layout">
             {productsFSMO.map((product, index) => (
               <ProductCard

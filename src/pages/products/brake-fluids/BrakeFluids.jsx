@@ -11,6 +11,7 @@ import Hero from "../../components/hero/Hero";
 
 function BrakeFluids() {
   const [activePopup, setActivePopup] = useState(null);
+  const productSegment = "Brake Fluids";
 
   const openOverlay = (product) => {
     setActivePopup(product);
@@ -21,7 +22,7 @@ function BrakeFluids() {
   };
 
   useEffect(() => {
-    document.title = "Hyrax Oil | Brake Fluids";
+    document.title = `Hyrax Oil |  ${productSegment}`;
   }, []);
 
   return (
@@ -33,14 +34,16 @@ function BrakeFluids() {
         image='url("./products/brake/bf-background.webp")'
         crumble="Products"
         crumbleLink="/products"
-        title="Brake Fluids"
+        title={productSegment}
         desc="Discover our wide range of brake fluids, designed to provide the best protection for your engine."
       />
 
       {/* PRODUCT SECTION */}
       <div className="product-section-background">
         <div className="product-section-wrapper">
-          <h2 className="product-section-title">Our Products</h2>
+          <h2 className="product-section-title">
+            Our Range of {productSegment}
+          </h2>
           <div className="product-layout">
             {productsBF.map((product, index) => (
               <ProductCard

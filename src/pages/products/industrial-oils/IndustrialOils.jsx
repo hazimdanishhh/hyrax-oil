@@ -11,6 +11,7 @@ import Hero from "../../components/hero/Hero";
 
 function IndustrialOils() {
   const [activePopup, setActivePopup] = useState(null);
+  const productSegment = "Industrial Oils";
 
   const openOverlay = (product) => {
     setActivePopup(product);
@@ -21,7 +22,7 @@ function IndustrialOils() {
   };
 
   useEffect(() => {
-    document.title = "Hyrax Oil | Industrial Oils";
+    document.title = `Hyrax Oil | ${productSegment}`;
   }, []);
 
   return (
@@ -33,14 +34,16 @@ function IndustrialOils() {
         image='url("./products/industrial/io-background.webp")'
         crumble="Products"
         crumbleLink="/products"
-        title="Industrial Oils"
+        title={productSegment}
         desc="Discover our wide range of industrial oils, designed to provide the best protection for your engine."
       />
 
       {/* PRODUCT SECTION */}
       <div className="product-section-background">
         <div className="product-section-wrapper">
-          <h2 className="product-section-title">Our Products</h2>
+          <h2 className="product-section-title">
+            Our Range of {productSegment}
+          </h2>
           <div className="product-layout">
             {productsIO.map((product, index) => (
               <ProductCard

@@ -8,6 +8,7 @@ import ProductPopUp from "../components/product-pop-up/ProductPopUp";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
+import ProductSideNav from "../components/side-nav/SideNav";
 
 function FourStroke() {
   const [activePopup, setActivePopup] = useState(null);
@@ -66,6 +67,9 @@ function FourStroke() {
       )}
 
       <CarouselSlider items={productSegments} />
+
+      {/* PRODUCT SIDE NAV */}
+      <ProductSideNav />
 
       <Footer />
 

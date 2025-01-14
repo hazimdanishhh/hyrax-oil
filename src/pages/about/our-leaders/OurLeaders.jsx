@@ -9,7 +9,7 @@ import LeaderCard from "./components/leader-card/LeaderCard";
 import { management } from "./components/leader-card/management";
 import LeaderPopUp from "./components/leader-pop-up/LeaderPopUp";
 import { directors } from "./components/leader-card/directors";
-import { dHZ } from "./components/leader-card/DHZ";
+import { dHZ } from "./components/leader-card/dHZ";
 
 function OurLeaders() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,7 +32,7 @@ function OurLeaders() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./about/our-leaders-background.png")'
+        image='url("./about/our-leaders-background.webp")'
         crumble="About"
         crumbleLink="/about/the-company"
         title="Our Leaders"
@@ -95,7 +95,7 @@ function OurLeaders() {
             </div>
             <img
               className="founder-section-img"
-              src="./about/dato-hazimah.png"
+              src="./about/dato-hazimah.webp"
               alt="Dato' Hazimah Zainuddin"
             />
           </div>

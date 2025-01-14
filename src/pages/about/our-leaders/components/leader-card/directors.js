@@ -1,6 +1,6 @@
 export const directors = [
   {
-    src: "./about/habib.png",
+    src: "./about/habib.webp",
     alt: "Al-Haj Habib Kagimu",
     name: "Al-Haj Habib Kagimu",
     title: "Global Advisor & Associate Director",
@@ -14,7 +14,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/jufryzal.png",
+    src: "./about/jufryzal.webp",
     alt: "Jufryzal Bin Ishak",
     name: "Jufryzal Bin Ishak",
     title: "Group Chief Operating Officer",
@@ -24,7 +24,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/nurulhayah.png",
+    src: "./about/nurulhayah.webp",
     alt: "Nurulhayah Binti Nasir",
     name: "Nurulhayah Binti Nasir",
     title: "Group Chief Financial Officer",
@@ -34,7 +34,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/lutfi.png",
+    src: "./about/lutfi.webp",
     alt: "Muhamad Lutfi Bin Dato’ Mohd Isa",
     name: "Muhamad Lutfi Bin Dato’ Mohd Isa",
     title: "Group Business Development & Sales Director",
@@ -46,7 +46,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/munirah.png",
+    src: "./about/munirah.webp",
     alt: "Intan Munirah Che Roslan",
     name: "Intan Munirah Che Roslan",
     title: "Group Human Resources & Administration Director",

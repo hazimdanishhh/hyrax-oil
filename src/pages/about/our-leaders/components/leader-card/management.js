@@ -1,6 +1,6 @@
 export const management = [
   {
-    src: "./about/zaharuddin.png",
+    src: "./about/zaharuddin.webp",
     alt: "Mohamad Zaharuddin Bin Zainuddin",
     name: "Mohamad Zaharuddin Bin Zainuddin",
     title: "General Manager, Sales",
@@ -12,7 +12,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/shazly.png",
+    src: "./about/shazly.webp",
     alt: "Shazly Bin Che Ahmad",
     name: "Shazly Bin Che Ahmad",
     title: "General Manager, Corporate Sales",
@@ -23,7 +23,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/hafiz.png",
+    src: "./about/hafiz.webp",
     alt: "Ahmad Hafiz Bin Zainol Abidin",
     name: "Ahmad Hafiz Bin Zainol Abidin",
     title: "General Manager, Strategic Planning & Corporate Affairs",
@@ -34,7 +34,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/zaini.png",
+    src: "./about/zaini.webp",
     alt: "Zaini Bin Yaakob",
     name: "Zaini Bin Yaakob",
     title: "General Manager, Quality & Innovations",
@@ -44,7 +44,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/eddy.png",
+    src: "./about/eddy.webp",
     alt: "Eddy Rizal Bin Zakariah",
     name: "Eddy Rizal Bin Zakariah",
     title: "General Manager, Operations",

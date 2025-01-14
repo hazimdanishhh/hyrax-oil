@@ -1,6 +1,6 @@
 export const dHZ = [
   {
-    src: "./about/dato-hazimah-2.png",
+    src: "./about/dato-hazimah-2.webp",
     alt: "YBhg. Dato' Hazimah Zainuddin",
     name: "YBhg. Dato' Hazimah Zainuddin",
     title: "Founder & Group Executive Chairman",

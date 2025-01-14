@@ -4,6 +4,7 @@ $tertiary: #323232;
 $background: white;
 
 .product-side-nav-container {
+  visibility: visible;
   z-index: 900;
   display: flex;
   flex-direction: column;
@@ -13,7 +14,7 @@ $background: white;
   bottom: 0;
   height: fit-content;
 
-  background-color: #ececec;
+  // background-color: #ececec;
   margin: auto;
 
   border-radius: 5px 0 0 5px;
@@ -26,7 +27,8 @@ $background: white;
     height: fit-content;
     padding: 0.3rem;
     border-radius: 5px 0 0 5px;
-    box-shadow: 0 1px #323232;
+    background-color: #ececec;
+    border-bottom: 1px solid #323232;
 
     img {
       width: 25px;
@@ -50,5 +52,11 @@ $background: white;
       border-radius: 5px;
       padding: 0.3rem;
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product-side-nav-container {
+    visibility: hidden;
   }
 }

@@ -25,6 +25,10 @@ $background: white;
     h2 {
       font-family: "GilroyMedium", sans-serif;
       color: black;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
     }
 
     .product-layout {

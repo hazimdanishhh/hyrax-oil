@@ -26,13 +26,13 @@ const productSegments = [
   {
     path: "/products/four-stroke-motorcycle-oils",
     icon: "./products/side-nav/fsmo-icon.png",
-    title: "Four Stroke Motorcycle Oils",
+    title: "Four-Stroke Motorcycle Oils",
     textColor: "#08a44c",
   },
   {
     path: "/products/two-stroke-motorcycle-and-engine-oils",
     icon: "./products/side-nav/tsmeo-icon.png",
-    title: "Two Stroke Motorcycle & Engine Oils",
+    title: "Two-Stroke Motorcycle & Engine Oils",
     textColor: "#08A47C",
   },
   {

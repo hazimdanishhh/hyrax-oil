@@ -52,13 +52,14 @@ function WorldMap() {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
-          viewBox={
-            isSmallScreen
-              ? "2220 200 1080 1920" // Fixed viewBox for small screens
-              : zoomed
-              ? "1920 600 1920 1080" // Zoomed-in viewBox for large screens
-              : "0 0 3840 2160" // Default viewBox for large screens
-          }
+          //   viewBox={
+          //     isSmallScreen
+          //       ? "2220 200 1080 1920" // Fixed viewBox for small screens
+          //       : zoomed
+          //       ? "1920 600 1920 1080" // Zoomed-in viewBox for large screens
+          //       : "0 0 3840 2160" // Default viewBox for large screens
+          //   }
+          viewBox="2220 200 1080 1920"
           animate={{
             viewBox: isSmallScreen
               ? "2220 200 1080 1920" // Fixed viewBox for small screens

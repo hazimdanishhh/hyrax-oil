@@ -26,9 +26,7 @@ function Contact() {
       <WorldMap />
 
       <div className="contact-section-background">
-        <div className="contact-section-wrapper">
-          <img src="./contact/world-map.svg" alt="" />
-        </div>
+        <div className="contact-section-wrapper"></div>
       </div>
 
       {/* FOOTER SECTION */}

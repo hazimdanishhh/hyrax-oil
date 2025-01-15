@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./WorldMap.scss";
+// import "./WorldMap.scss";
 import WorldMapPopUp from "../../contact/components/world-map-pop-up/WorldMapPopUp";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -72,16 +72,88 @@ function WorldMap() {
             ease: "easeInOut",
           }}
         >
-          {/* <defs>
-        <filter id="dropShadow">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
-          <feOffset dx="2" dy="2" result="offsetblur" />
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="offsetblur" />
-          </feMerge>
-        </filter>
-      </defs> */}
+          <style>{`
+    .world-map {
+      position: relative;
+    }
+
+    .st0 {
+      fill: #323232;
+    }
+
+    .st1 {
+      fill: #0c0a0b;
+    }
+
+    #malaysia .large {
+      fill: #f26f27; /* $primary */
+    }
+
+    #malaysia .malaysia {
+      fill: #f26f27; /* $primary */
+    }
+
+    #malaysia:hover {
+      cursor: pointer;
+    }
+
+    #malaysia:hover .large {
+      fill: #f2a327; /* $secondary */
+      r: 26;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #malaysia:hover .malaysia {
+      fill: #f2a327; /* $secondary */
+      r: 10;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #malaysia:hover .country-label {
+      fill: #f2a327; /* $secondary */
+      transition: all 0.3s ease-in-out;
+    }
+
+    #srilanka .large {
+      fill: #f26f27; /* $primary */
+    }
+
+    #srilanka .srilanka {
+      fill: #f26f27; /* $primary */
+    }
+
+    #srilanka:hover {
+      cursor: pointer;
+    }
+
+    #srilanka:hover .large {
+      fill: #f2a327; /* $secondary */
+      r: 26;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #srilanka:hover .srilanka {
+      fill: #f2a327; /* $secondary */
+      r: 10;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #srilanka:hover .country-label {
+      fill: #f2a327; /* $secondary */
+      transition: all 0.3s ease-in-out;
+    }
+
+    .malaysia-card {
+      position: absolute;
+      top: 48%;
+      right: 17%;
+      background-color: #ececec;
+      color: #f26f27; /* $primary */
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: 1px solid #f26f27; /* $primary */
+    }
+  `}</style>
           <rect className="st0" width="3840" height="2160" />
           <g>
             <motion.circle

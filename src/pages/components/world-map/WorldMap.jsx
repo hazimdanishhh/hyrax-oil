@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-// import "./WorldMap.scss";
+import "./WorldMap.scss";
 import WorldMapPopUp from "../../contact/components/world-map-pop-up/WorldMapPopUp";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -20,7 +20,7 @@ function WorldMap() {
   // Track screen size
   useEffect(() => {
     const updateScreenSize = () => {
-      setIsSmallScreen(window.innerWidth < 1024);
+      setIsSmallScreen(window.innerWidth < 1025);
     };
 
     updateScreenSize();
@@ -59,7 +59,7 @@ function WorldMap() {
           //       ? "1920 600 1920 1080" // Zoomed-in viewBox for large screens
           //       : "0 0 3840 2160" // Default viewBox for large screens
           //   }
-          viewBox="0 0 3840 2160"
+          viewBox="0 0 1920 1080"
           //   animate={{
           //     viewBox: isSmallScreen
           //       ? "2220 200 1080 1920" // Fixed viewBox for small screens
@@ -72,88 +72,6 @@ function WorldMap() {
           //     ease: "easeInOut",
           //   }}
         >
-          <style>{`
-    .world-map {
-      position: relative;
-    }
-
-    .st0 {
-      fill: #323232;
-    }
-
-    .st1 {
-      fill: #0c0a0b;
-    }
-
-    #malaysia .large {
-      fill: #f26f27; /* $primary */
-    }
-
-    #malaysia .malaysia {
-      fill: #f26f27; /* $primary */
-    }
-
-    #malaysia:hover {
-      cursor: pointer;
-    }
-
-    #malaysia:hover .large {
-      fill: #f2a327; /* $secondary */
-      r: 26;
-      transition: all 0.3s ease-in-out;
-    }
-
-    #malaysia:hover .malaysia {
-      fill: #f2a327; /* $secondary */
-      r: 10;
-      transition: all 0.3s ease-in-out;
-    }
-
-    #malaysia:hover .country-label {
-      fill: #f2a327; /* $secondary */
-      transition: all 0.3s ease-in-out;
-    }
-
-    #srilanka .large {
-      fill: #f26f27; /* $primary */
-    }
-
-    #srilanka .srilanka {
-      fill: #f26f27; /* $primary */
-    }
-
-    #srilanka:hover {
-      cursor: pointer;
-    }
-
-    #srilanka:hover .large {
-      fill: #f2a327; /* $secondary */
-      r: 26;
-      transition: all 0.3s ease-in-out;
-    }
-
-    #srilanka:hover .srilanka {
-      fill: #f2a327; /* $secondary */
-      r: 10;
-      transition: all 0.3s ease-in-out;
-    }
-
-    #srilanka:hover .country-label {
-      fill: #f2a327; /* $secondary */
-      transition: all 0.3s ease-in-out;
-    }
-
-    .malaysia-card {
-      position: absolute;
-      top: 48%;
-      right: 17%;
-      background-color: #ececec;
-      color: #f26f27; /* $primary */
-      padding: 0.5rem;
-      border-radius: 10px;
-      border: 1px solid #f26f27; /* $primary */
-    }
-  `}</style>
           <rect className="st0" width="3840" height="2160" />
           <g>
             <circle className="st1" cx="1349.27" cy="273.01" r="7.5" />

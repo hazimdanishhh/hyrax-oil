@@ -59,7 +59,7 @@ function WorldMap() {
           //       ? "1920 600 1920 1080" // Zoomed-in viewBox for large screens
           //       : "0 0 3840 2160" // Default viewBox for large screens
           //   }
-          viewBox="0 0 1920 1080"
+          viewBox={isSmallScreen ? "2220 200 1080 1920" : "0 0 3840 2160"}
           //   animate={{
           //     viewBox: isSmallScreen
           //       ? "2220 200 1080 1920" // Fixed viewBox for small screens
@@ -72,7 +72,11 @@ function WorldMap() {
           //     ease: "easeInOut",
           //   }}
         >
-          <rect className="st0" width="3840" height="2160" />
+          <rect
+            className="st0"
+            width={isSmallScreen ? "2160" : "3840"}
+            height={isSmallScreen ? "3840" : "2160"}
+          />
           <g>
             <circle className="st1" cx="1349.27" cy="273.01" r="7.5" />
             <circle className="st1" cx="1370.01" cy="273.01" r="7.5" />

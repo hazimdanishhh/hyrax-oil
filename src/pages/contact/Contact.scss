@@ -1,0 +1,25 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.contact-section-background {
+  background-color: #ececec;
+
+  .contact-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //   align-items: space-between;
+    gap: 5rem;
+
+    max-width: 1366px;
+    // min-height: calc(100vh - 86px);
+    margin: auto;
+    padding: 7rem 3rem;
+
+    @media screen and (max-width: 1024px) {
+      padding: 7rem 1rem;
+    }
+  }
+}

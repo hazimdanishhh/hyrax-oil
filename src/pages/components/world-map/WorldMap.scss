@@ -1,0 +1,89 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.world-map {
+  position: relative;
+}
+
+.st0 {
+  fill: #323232;
+}
+
+.st1 {
+  fill: #0c0a0b;
+}
+
+#malaysia {
+  .large {
+    fill: $primary;
+  }
+
+  .malaysia {
+    fill: $primary;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .large {
+      fill: $secondary;
+      r: 26;
+      transition: 0.3s;
+    }
+
+    .malaysia {
+      fill: $secondary;
+      r: 10;
+      transition: 0.3s;
+    }
+
+    .country-label {
+      fill: $secondary;
+      transition: 0.3s;
+    }
+  }
+}
+
+#srilanka {
+  .large {
+    fill: $primary;
+  }
+
+  .srilanka {
+    fill: $primary;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .large {
+      fill: $secondary;
+      r: 26;
+      transition: 0.3s;
+    }
+
+    .srilanka {
+      fill: $secondary;
+      r: 10;
+      transition: 0.3s;
+    }
+
+    .country-label {
+      fill: $secondary;
+      transition: 0.3s;
+    }
+  }
+}
+
+.malaysia-card {
+  position: absolute;
+  top: 48%;
+  right: 17%;
+  background-color: #ececec;
+  color: $primary;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid $primary;
+}

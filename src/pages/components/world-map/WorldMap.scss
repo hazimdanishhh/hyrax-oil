@@ -4,86 +4,80 @@ $tertiary: #323232;
 $background: white;
 
 .world-map {
-  position: relative;
+  background: white;
 }
-
 .st0 {
-  fill: #323232;
+  fill: #ccc6c2;
 }
-
 .st1 {
-  fill: #0c0a0b;
+  fill: #e5a98f;
+}
+.st2 {
+  fill: #f26f27;
+}
+.st3 {
+  fill: white;
+  stroke: #f26f27;
+  stroke-miterlimit: 10;
+}
+.st4 {
+  fill: white;
 }
 
-#malaysia {
-  .large {
-    fill: $primary;
-  }
-
-  .malaysia {
-    fill: $primary;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    .large {
-      fill: $secondary;
-      r: 26;
-      transition: 0.3s;
-    }
-
-    .malaysia {
-      fill: $secondary;
-      r: 10;
-      transition: 0.3s;
-    }
-
-    .country-label {
-      fill: $secondary;
-      transition: 0.3s;
-    }
-  }
+.st5 {
+  fill: none;
 }
 
-#srilanka {
-  .large {
-    fill: $primary;
+.st6 {
+  fill: none;
+  stroke: none;
+  stroke-miterlimit: 0;
+}
+
+#srilanka:hover {
+  cursor: pointer;
+
+  .st5 {
+    fill: #f26f27;
+    transition: 0.5s;
   }
 
-  .srilanka {
-    fill: $primary;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    .large {
-      fill: $secondary;
-      r: 26;
-      transition: 0.3s;
-    }
-
-    .srilanka {
-      fill: $secondary;
-      r: 10;
-      transition: 0.3s;
-    }
-
-    .country-label {
-      fill: $secondary;
-      transition: 0.3s;
-    }
+  .st6 {
+    fill: white;
+    stroke: #f26f27;
+    stroke-miterlimit: 10;
+    transition: 0.5s;
   }
 }
 
-.malaysia-card {
-  position: absolute;
-  top: 48%;
-  right: 17%;
-  background-color: #ececec;
-  color: $primary;
-  padding: 0.5rem;
-  border-radius: 10px;
-  border: 1px solid $primary;
+#malaysiahq:hover {
+  cursor: pointer;
+
+  .st5 {
+    fill: #f26f27;
+    transition: 0.5s;
+  }
+
+  .st6 {
+    fill: white;
+    stroke: #f26f27;
+    stroke-miterlimit: 10;
+    transition: 0.5s;
+  }
+}
+
+#malaysialobp:hover {
+  cursor: pointer;
+
+  .st5 {
+    fill: #f26f27;
+    transition: 0.5s;
+  }
+
+  .st6 {
+    fill: white;
+    stroke: #f26f27;
+    stroke-miterlimit: 10;
+    transition: 0.5s;
+  }
 }

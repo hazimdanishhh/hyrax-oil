@@ -52,7 +52,7 @@ function WorldMapPopUp({ country, onClose }) {
             />
           </svg>
 
-          {country === "malaysia" && (
+          {country === "malaysiahq" && (
             <>
               <div className="country-pop-up-section">
                 <div className="country-pop-up-header">
@@ -95,12 +95,16 @@ function WorldMapPopUp({ country, onClose }) {
                   ></iframe>
                 </div>
               </div>
+            </>
+          )}
 
-              <hr />
-
+          {country === "malaysialobp" && (
+            <>
               <div className="country-pop-up-section">
                 <div className="country-pop-up-header">
                   <div className="country-pop-up-title">
+                    <h2>Malaysia</h2>
+                    <hr />
                     <h3>Meru Lubricant Oil Blending Plant</h3>
                     <h5>
                       Lot 4937 Batu 5 1/2, Jalan Meru,

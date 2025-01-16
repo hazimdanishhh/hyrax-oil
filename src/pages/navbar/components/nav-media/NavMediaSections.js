@@ -1,36 +1,36 @@
 export const mediaSections = [
   {
-    src: "./navbar/brand-products.png",
+    src: "./navbar/brand-products.webp",
     alt: "Brand & Products",
     title: "Brand & Products",
     link: "#",
   },
   {
-    src: "./navbar/events.png",
+    src: "./navbar/events.webp",
     alt: "Events",
     title: "Events",
     link: "#",
   },
   {
-    src: "./navbar/motorsports.png",
+    src: "./navbar/motorsports.webp",
     alt: "Motorsports",
     title: "Motorsports",
     link: "#",
   },
   {
-    src: "./navbar/training-2.png",
+    src: "./navbar/training-2.webp",
     alt: "Training",
     title: "Training",
     link: "#",
   },
   {
-    src: "./navbar/corporate.png",
+    src: "./navbar/corporate.webp",
     alt: "Corporate",
     title: "Corporate",
     link: "#",
   },
   {
-    src: "./navbar/sponsorships.png",
+    src: "./navbar/sponsorships.webp",
     alt: "Sponsorships",
     title: "Sponsorships",
     link: "#",

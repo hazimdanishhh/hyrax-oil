@@ -22,7 +22,13 @@ $background: white;
       right: 0;
       margin: auto;
       padding: 1rem;
-      background: linear-gradient(to bottom, #ffffff, #ffffff00);
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 60%,
+        rgba(255, 255, 255, 0.3534663865546218) 80%,
+        rgba(255, 255, 255, 0) 100%
+      );
 
       h2 {
         font-family: "GilroyMedium", sans-serif;
@@ -33,9 +39,9 @@ $background: white;
       }
 
       h5 {
-        color: #4d4d4d;
+        color: #4d4d4dde;
         text-align: center;
-        width: 40%;
+        width: 60%;
 
         @media screen and (max-width: 1024px) {
           width: 100%;

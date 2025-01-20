@@ -54,3 +54,60 @@ $background: white;
     }
   }
 }
+
+.the-company-section-2-background {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+
+  .the-company-section-2-wrapper {
+    display: flex;
+    max-width: 1366px;
+    padding: 7rem 3rem;
+    gap: 2rem;
+
+    .vision-mission-cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      .vision-mission-card {
+        display: flex;
+        flex-direction: column;
+        color: #3d3d3d;
+        width: 300px;
+        padding: 1rem;
+        border: 1px solid #b1b1b1;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        position: relative;
+        bottom: 0;
+
+        &:hover {
+          border: 1px solid #f26f27;
+          transition: 0.5;
+        }
+
+        .vision-mission-header {
+          display: flex;
+          padding: 1rem 0;
+
+          h4 {
+            margin-left: 1rem;
+            font-family: "GilroyMedium", sans-serif;
+            background: linear-gradient(to right, $primary, $secondary);
+            background-clip: $primary;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+          }
+        }
+
+        .vision-mission-desc {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

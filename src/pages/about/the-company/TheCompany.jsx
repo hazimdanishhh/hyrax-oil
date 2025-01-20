@@ -4,6 +4,7 @@ import Layout from "../../Layout";
 import Footer from "../../Footer";
 import Hero from "../../components/hero/Hero";
 import MarketMap from "../../components/market-map/MarketMap";
+import { AnimatePresence, motion } from "framer-motion";
 
 function TheCompany() {
   useEffect(() => {
@@ -89,6 +90,192 @@ function TheCompany() {
       </div>
 
       <MarketMap />
+
+      <div className="the-company-section-2-background">
+        <div className="the-company-section-2-wrapper">
+          <div className="vision-mission-cards-wrapper">
+            <motion.div
+              className="vision-mission-card"
+              initial={{ y: 0 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="vision-mission-header">
+                <svg
+                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
+                  />
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+
+                <h4>Our Vision</h4>
+              </div>
+              <p className="vision-mission-desc">
+                Our vision is to be a Leading Global Player in the Oil and Gas
+                industry with a recognized brand worldwide achieved through our
+                sheer hard work, commitment and dedication.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="vision-mission-card"
+              initial={{ y: 0 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="vision-mission-header">
+                <svg
+                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
+                  />
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+
+                <h4>Our Vision</h4>
+              </div>
+              <p className="vision-mission-desc">
+                Our vision is to be a Leading Global Player in the Oil and Gas
+                industry with a recognized brand worldwide achieved through our
+                sheer hard work, commitment and dedication.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="vision-mission-card"
+              initial={{ y: 0 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="vision-mission-header">
+                <svg
+                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
+                  />
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+
+                <h4>Our Vision</h4>
+              </div>
+              <p className="vision-mission-desc">
+                Our vision is to be a Leading Global Player in the Oil and Gas
+                industry with a recognized brand worldwide achieved through our
+                sheer hard work, commitment and dedication.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="vision-mission-card"
+              initial={{ y: 0 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="vision-mission-header">
+                <svg
+                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
+                  />
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+
+                <h4>Our Vision</h4>
+              </div>
+              <p className="vision-mission-desc">
+                Our vision is to be a Leading Global Player in the Oil and Gas
+                industry with a recognized brand worldwide achieved through our
+                sheer hard work, commitment and dedication.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="vision-mission-card"
+              initial={{ y: 0 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="vision-mission-header">
+                <svg
+                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
+                  />
+                  <path
+                    stroke="#f26f27"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+
+                <h4>Our Vision</h4>
+              </div>
+              <p className="vision-mission-desc">
+                Our vision is to be a Leading Global Player in the Oil and Gas
+                industry with a recognized brand worldwide achieved through our
+                sheer hard work, commitment and dedication.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </>

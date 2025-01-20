@@ -3,15 +3,59 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.world-map {
-  background: #ffffff;
+.world-map-background {
+  background-color: #ffffff;
+
+  .world-map {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+
+    .world-map-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: fit-content;
+      position: absolute;
+      margin-top: 3%;
+      background: linear-gradient(to bottom, #ffffff, #ffffff4f);
+
+      h2 {
+        font-family: "GilroyMedium", sans-serif;
+        background: linear-gradient(to right, $primary, $secondary);
+        background-clip: $primary;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+
+      h5 {
+        color: #4d4d4d;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .st0 {
   fill: #e8e1dd;
 }
 .st1 {
-  fill: #e5a98f;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    r: 7.5;
+    fill: #eecbbc;
+  }
+  50% {
+    r: 10; /* Example pulsing effect */
+    fill: #e5a98f;
+  }
 }
 .st2 {
   fill: #ffffff;
@@ -23,6 +67,8 @@ $background: white;
 }
 .st4 {
   fill: #f26f27;
+  stroke: white;
+  stroke-miterlimit: 10;
 }
 .st5 {
   fill: none;

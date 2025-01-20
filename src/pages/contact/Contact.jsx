@@ -23,10 +23,11 @@ function Contact() {
         desc="Stay connected, stay ahead. Get in touch with us!"
       />
 
-      <WorldMap />
-
       <div className="contact-section-background">
-        <div className="contact-section-wrapper"></div>
+        <div className="contact-section-wrapper">
+          <WorldMap />
+          <div className="test-modal">TEST</div>
+        </div>
       </div>
 
       {/* FOOTER SECTION */}

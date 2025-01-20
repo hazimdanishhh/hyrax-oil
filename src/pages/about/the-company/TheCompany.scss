@@ -1,0 +1,48 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.the-company-section-background {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+
+  .the-company-section-wrapper {
+    display: flex;
+    max-width: 1366px;
+    padding: 7rem 3rem;
+
+    .the-company-about-us {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 2rem;
+
+      .about-us-header {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        h2 {
+          display: flex;
+          width: fit-content;
+          font-family: "GilroyMedium", sans-serif;
+          color: black;
+        }
+
+        hr {
+          height: 2px;
+          width: 30%;
+          background: black;
+          border: 1px solid black;
+        }
+      }
+
+      p {
+        text-align: justify;
+        color: black;
+      }
+    }
+  }
+}

@@ -20,7 +20,7 @@ function MarketMap() {
   // Track screen size
   useEffect(() => {
     const updateScreenSize = () => {
-      setIsSmallScreen(window.innerWidth < 1025);
+      setIsSmallScreen(window.innerWidth < 769);
     };
 
     updateScreenSize();
@@ -43,21 +43,6 @@ function MarketMap() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  // Track screen size
-  useEffect(() => {
-    const updateScreenSize = () => {
-      setIsSmallScreen(window.innerWidth < 769);
-    };
-
-    updateScreenSize();
-
-    window.addEventListener("resize", updateScreenSize);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenSize);
     };
   }, []);
 

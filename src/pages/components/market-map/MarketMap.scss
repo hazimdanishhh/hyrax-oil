@@ -47,9 +47,7 @@ $background: white;
 .st1 {
   fill: #eecbbc;
 
-  // @media screen and (min-width: 1024px) {
-  //   animation: pulse 1.5s infinite;
-  // }
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {

@@ -58,12 +58,14 @@ function Footer() {
               </Link>
               <br />
 
-              <h3>Factory</h3>
+              <h3>Meru LOBP</h3>
               <Link
                 to="https://www.google.com/maps?ll=3.123462,101.441422&z=11&t=m&hl=en&gl=MY&mapclient=embed&cid=5472883420717197171"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                Meru Lubricant Oil Blending Plant
+                <br />
                 Lot 4937 Batu 5 1/2, Jalan Meru,
                 <br />
                 Mukim Kapar,

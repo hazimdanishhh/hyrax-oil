@@ -66,7 +66,7 @@ function MarketMap() {
       <div className="world-map-background">
         <div className="world-map">
           <div className="world-map-header">
-            {/* <motion.h2
+            <motion.h2
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
@@ -82,15 +82,7 @@ function MarketMap() {
               Delivering high-quality, innovative lubricants and specialty
               fluids to diverse industries across Asia Pacific, the Middle East,
               and Africa.
-            </motion.h5> */}
-
-            <h2>Our Market Presence</h2>
-
-            <h5>
-              Delivering high-quality, innovative lubricants and specialty
-              fluids to diverse industries across Asia Pacific, the Middle East,
-              and Africa.
-            </h5>
+            </motion.h5>
           </div>
           {/* <li>
               Our customer-focused approach ensures tailored solutions backed by
@@ -112,7 +104,7 @@ function MarketMap() {
             xmlnsXlink="http://www.w3.org/1999/xlink"
             x="0px"
             y="0px"
-            viewBox="800 -300 2160 2500"
+            viewBox="0 0 3840 2160"
             xmlSpace="preserve"
           >
             <g>

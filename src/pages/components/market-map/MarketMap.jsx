@@ -65,7 +65,7 @@ function MarketMap() {
     <>
       <div className="world-map-background">
         <div className="world-map">
-          <div className="world-map-header">
+          {/* <div className="world-map-header">
             <motion.h2
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -83,7 +83,7 @@ function MarketMap() {
               fluids to diverse industries across Asia Pacific, the Middle East,
               and Africa.
             </motion.h5>
-          </div>
+          </div> */}
           {/* <li>
               Our customer-focused approach ensures tailored solutions backed by
               strong relationships, cutting-edge research, and advanced

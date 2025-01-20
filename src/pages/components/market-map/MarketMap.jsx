@@ -64,12 +64,7 @@ function MarketMap() {
   return (
     <>
       <div className="world-map-background">
-        <motion.div
-          className="world-map"
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="world-map">
           <div className="world-map-header">
             <motion.h2
               initial={{ x: -50, opacity: 0 }}
@@ -5611,7 +5606,7 @@ function MarketMap() {
           {activePopup && (
             <WorldMapPopUp country={activePopup} onClose={closeOverlay} />
           )}
-        </motion.div>
+        </div>
       </div>
     </>
   );

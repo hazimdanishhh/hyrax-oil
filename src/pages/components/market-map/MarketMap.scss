@@ -1,0 +1,47 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.world-map {
+  background: #ffffff;
+}
+
+.st0 {
+  fill: #e8e1dd;
+}
+.st1 {
+  fill: #e5a98f;
+}
+.st2 {
+  fill: #ffffff;
+  stroke: #f26f27;
+  stroke-miterlimit: 10;
+}
+.st3 {
+  enable-background: new;
+}
+.st4 {
+  fill: #f26f27;
+}
+.st5 {
+  fill: none;
+  stroke: #f26f27;
+  stroke-miterlimit: 10;
+}
+.st6 {
+  fill: #ffffff;
+}
+
+.country-group {
+  .market-map-text {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .market-map-text {
+      visibility: visible;
+      transition: 0.5;
+    }
+  }
+}

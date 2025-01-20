@@ -1,83 +1,83 @@
-$primary: #f26f27;
-$secondary: #f2a327;
-$tertiary: #323232;
-$background: white;
+// $primary: #f26f27;
+// $secondary: #f2a327;
+// $tertiary: #323232;
+// $background: white;
 
-.world-map {
-  background: white;
-}
-.st0 {
-  fill: #ccc6c2;
-}
-.st1 {
-  fill: #e5a98f;
-}
-.st2 {
-  fill: #f26f27;
-}
-.st3 {
-  fill: white;
-  stroke: #f26f27;
-  stroke-miterlimit: 10;
-}
-.st4 {
-  fill: white;
-}
+// .world-map {
+//   background: white;
+// }
+// .st0 {
+//   fill: #ccc6c2;
+// }
+// .st1 {
+//   fill: #e5a98f;
+// }
+// .st2 {
+//   fill: #f26f27;
+// }
+// .st3 {
+//   fill: white;
+//   stroke: #f26f27;
+//   stroke-miterlimit: 10;
+// }
+// .st4 {
+//   fill: white;
+// }
 
-.st5 {
-  fill: none;
-}
+// .st5 {
+//   fill: none;
+// }
 
-.st6 {
-  fill: none;
-  stroke: none;
-  stroke-miterlimit: 0;
-}
+// .st6 {
+//   fill: none;
+//   stroke: none;
+//   stroke-miterlimit: 0;
+// }
 
-#srilanka:hover {
-  cursor: pointer;
+// #srilanka:hover {
+//   cursor: pointer;
 
-  .st5 {
-    fill: #f26f27;
-    transition: 0.5s;
-  }
+//   .st5 {
+//     fill: #f26f27;
+//     transition: 0.5s;
+//   }
 
-  .st6 {
-    fill: white;
-    stroke: #f26f27;
-    stroke-miterlimit: 10;
-    transition: 0.5s;
-  }
-}
+//   .st6 {
+//     fill: white;
+//     stroke: #f26f27;
+//     stroke-miterlimit: 10;
+//     transition: 0.5s;
+//   }
+// }
 
-#malaysiahq:hover {
-  cursor: pointer;
+// #malaysiahq:hover {
+//   cursor: pointer;
 
-  .st5 {
-    fill: #f26f27;
-    transition: 0.5s;
-  }
+//   .st5 {
+//     fill: #f26f27;
+//     transition: 0.5s;
+//   }
 
-  .st6 {
-    fill: white;
-    stroke: #f26f27;
-    stroke-miterlimit: 10;
-    transition: 0.5s;
-  }
-}
+//   .st6 {
+//     fill: white;
+//     stroke: #f26f27;
+//     stroke-miterlimit: 10;
+//     transition: 0.5s;
+//   }
+// }
 
-#malaysialobp:hover {
-  cursor: pointer;
+// #malaysialobp:hover {
+//   cursor: pointer;
 
-  .st5 {
-    fill: #f26f27;
-    transition: 0.5s;
-  }
+//   .st5 {
+//     fill: #f26f27;
+//     transition: 0.5s;
+//   }
 
-  .st6 {
-    fill: white;
-    stroke: #f26f27;
-    stroke-miterlimit: 10;
-    transition: 0.5s;
-  }
-}
+//   .st6 {
+//     fill: white;
+//     stroke: #f26f27;
+//     stroke-miterlimit: 10;
+//     transition: 0.5s;
+//   }
+// }

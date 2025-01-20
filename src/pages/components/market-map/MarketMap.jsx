@@ -104,7 +104,7 @@ function MarketMap() {
             xmlnsXlink="http://www.w3.org/1999/xlink"
             x="0px"
             y="0px"
-            viewBox={isSmallScreen ? "800 -300 2160 2500" : "0 0 3840 2160"}
+            viewBox="800 -300 2160 2500"
             xmlSpace="preserve"
           >
             <g>

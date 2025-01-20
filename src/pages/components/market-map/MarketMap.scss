@@ -3,42 +3,42 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.world-map-background {
-  background-color: #ffffff;
-  height: fit-content;
+.world-map {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 
-  .world-map {
-    background: #ffffff;
+  .world-map-header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    position: absolute;
+    margin-top: 3%;
+    background: linear-gradient(to bottom, #ffffff, #ffffff4f);
 
-    .world-map-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      width: fit-content;
-      position: absolute;
-      margin-top: 3%;
-      background: linear-gradient(to bottom, #ffffff, #ffffff4f);
+    h2 {
+      font-family: "GilroyMedium", sans-serif;
+      background: linear-gradient(to right, $primary, $secondary);
+      background-clip: $primary;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
 
-      h2 {
-        font-family: "GilroyMedium", sans-serif;
-        background: linear-gradient(to right, $primary, $secondary);
-        background-clip: $primary;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-      }
-
-      h5 {
-        color: #4d4d4d;
-        text-align: center;
-      }
+    h5 {
+      color: #4d4d4d;
+      text-align: center;
     }
   }
 }
+
+// .world-map-background {
+//   background-color: #ffffff;
+//   height: fit-content;
+// }
 
 .st0 {
   fill: #e8e1dd;

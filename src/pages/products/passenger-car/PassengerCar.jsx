@@ -33,7 +33,7 @@ function PassengerCar() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/passenger-car/pcmo-background.jpg")'
+        image='url("./products/passenger-car/pcmo-background.webp")'
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./Hero.scss";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Hero({ image, crumble, crumbleLink, title, desc }) {
   return (
@@ -13,7 +14,12 @@ function Hero({ image, crumble, crumbleLink, title, desc }) {
       >
         <div className="hero-gradient">
           <div className="hero-wrapper">
-            <div className="hero-crumble">
+            <motion.div
+              className="hero-crumble"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               <Link to={crumbleLink}>{crumble}</Link>
               <svg
                 className="w-6 h-6 text-gray-800 dark:text-white"
@@ -33,12 +39,17 @@ function Hero({ image, crumble, crumbleLink, title, desc }) {
                 />
               </svg>
               {title}
-            </div>
-            <div className="hero-text-container">
+            </motion.div>
+            <motion.div
+              className="hero-text-container"
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               <h1 className="hero-title">{title}</h1>
 
               <p className="hero-desc">{desc}</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

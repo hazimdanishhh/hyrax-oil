@@ -16,14 +16,13 @@ $background: white;
       justify-content: center;
       align-items: center;
       gap: 1rem;
-      width: fit-content;
+      width: 100%;
       position: absolute;
       left: 0;
       right: 0;
       margin: auto;
-      margin-top: 3%;
-
-      background: linear-gradient(to bottom, #ffffff, #ffffff4f);
+      padding: 1rem;
+      background: linear-gradient(to bottom, #ffffff, #ffffff00);
 
       h2 {
         font-family: "GilroyMedium", sans-serif;
@@ -36,6 +35,11 @@ $background: white;
       h5 {
         color: #4d4d4d;
         text-align: center;
+        width: 40%;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
       }
     }
   }

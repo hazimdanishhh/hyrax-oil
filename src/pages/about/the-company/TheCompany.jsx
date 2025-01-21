@@ -96,8 +96,8 @@ function TheCompany() {
           <div className="vision-mission-cards-wrapper">
             <motion.div
               className="vision-mission-card"
-              initial={{ y: 0 }}
-              whileHover={{ y: -10 }}
+              initial={{ y: 0, scale: 1 }}
+              whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
                 <svg
@@ -121,19 +121,19 @@ function TheCompany() {
                   />
                 </svg>
 
-                <h4>Our Vision</h4>
+                <h4>Vision</h4>
               </div>
               <p className="vision-mission-desc">
-                Our vision is to be a Leading Global Player in the Oil and Gas
-                industry with a recognized brand worldwide achieved through our
-                sheer hard work, commitment and dedication.
+                To become a globally recognized leader in the oil and gas
+                industry, renowned for our innovative solutions, exceptional
+                quality, and unwavering dedication to excellence.
               </p>
             </motion.div>
 
             <motion.div
               className="vision-mission-card"
-              initial={{ y: 0 }}
-              whileHover={{ y: -10 }}
+              initial={{ y: 0, scale: 1 }}
+              whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
                 <svg
@@ -157,19 +157,19 @@ function TheCompany() {
                   />
                 </svg>
 
-                <h4>Our Vision</h4>
+                <h4>Mission</h4>
               </div>
               <p className="vision-mission-desc">
-                Our vision is to be a Leading Global Player in the Oil and Gas
-                industry with a recognized brand worldwide achieved through our
-                sheer hard work, commitment and dedication.
+                To deliver superior petroleum products that exceed global
+                standards and customer expectations, reflecting our commitment
+                to quality, precision, and reliability.
               </p>
             </motion.div>
 
             <motion.div
               className="vision-mission-card"
-              initial={{ y: 0 }}
-              whileHover={{ y: -10 }}
+              initial={{ y: 0, scale: 1 }}
+              whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
                 <svg
@@ -193,19 +193,19 @@ function TheCompany() {
                   />
                 </svg>
 
-                <h4>Our Vision</h4>
+                <h4>Leadership</h4>
               </div>
               <p className="vision-mission-desc">
-                Our vision is to be a Leading Global Player in the Oil and Gas
-                industry with a recognized brand worldwide achieved through our
-                sheer hard work, commitment and dedication.
+                To lead with integrity and inspire through action, fostering
+                trust and motivation among employees, clients, and stakeholders
+                while driving excellence through example.
               </p>
             </motion.div>
 
             <motion.div
               className="vision-mission-card"
-              initial={{ y: 0 }}
-              whileHover={{ y: -10 }}
+              initial={{ y: 0, scale: 1 }}
+              whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
                 <svg
@@ -229,19 +229,19 @@ function TheCompany() {
                   />
                 </svg>
 
-                <h4>Our Vision</h4>
+                <h4>Ethics</h4>
               </div>
               <p className="vision-mission-desc">
-                Our vision is to be a Leading Global Player in the Oil and Gas
-                industry with a recognized brand worldwide achieved through our
-                sheer hard work, commitment and dedication.
+                To uphold integrity and mutual respect as our guiding
+                principles, ensuring responsible practices that nurture our
+                people and safeguard the environment.
               </p>
             </motion.div>
 
             <motion.div
               className="vision-mission-card"
-              initial={{ y: 0 }}
-              whileHover={{ y: -10 }}
+              initial={{ y: 0, scale: 1 }}
+              whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
                 <svg
@@ -265,12 +265,12 @@ function TheCompany() {
                   />
                 </svg>
 
-                <h4>Our Vision</h4>
+                <h4>Culture</h4>
               </div>
               <p className="vision-mission-desc">
-                Our vision is to be a Leading Global Player in the Oil and Gas
-                industry with a recognized brand worldwide achieved through our
-                sheer hard work, commitment and dedication.
+                To cultivate a culture of collaboration, trust, and innovation,
+                empowering our people to achieve sustainable growth for our
+                business and a better future for the planet.
               </p>
             </motion.div>
           </div>

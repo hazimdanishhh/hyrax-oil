@@ -63,7 +63,7 @@ $background: white;
   .the-company-section-2-wrapper {
     display: flex;
     max-width: 1366px;
-    padding: 7rem 3rem;
+    padding: 0 3rem 7rem 3rem;
     gap: 2rem;
 
     .vision-mission-cards-wrapper {
@@ -77,7 +77,7 @@ $background: white;
         display: flex;
         flex-direction: column;
         color: #3d3d3d;
-        width: 300px;
+        width: 330px;
         padding: 1rem;
         border: 1px solid #b1b1b1;
         border-radius: 10px;

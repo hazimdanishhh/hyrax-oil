@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./ProductPopUp.scss";
+import ButtonRouter from "../../../components/buttons/ButtonRouter";
 
 function ProductPopUp({ product, onClose }) {
   const productOverlayRef = useRef(null);
@@ -90,45 +91,16 @@ function ProductPopUp({ product, onClose }) {
         )}
 
         <div className="product-pop-up-buttons">
-          <a
-            className="button-type-1"
-            href={product.pdsLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PDS
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="12"
-              viewBox="0 0 14 12"
-              fill="none"
-            >
-              <path
-                d="M13 6L7.85714 1M13 6L7.85714 11M13 6H1"
-                stroke="white"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
-          <Link className="button-type-2" to="/contact">
-            Contact Us
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="12"
-              viewBox="0 0 14 12"
-              fill="none"
-            >
-              <path
-                d="M13 6L7.85714 1M13 6L7.85714 11M13 6H1"
-                stroke="white"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+          <ButtonRouter
+            name="PDS"
+            link={product.pdsLink}
+            type="button-type-1"
+          />
+          <ButtonRouter
+            name="Contact Us"
+            link="/contact"
+            type="button-type-2"
+          />
         </div>
       </div>
     </motion.div>

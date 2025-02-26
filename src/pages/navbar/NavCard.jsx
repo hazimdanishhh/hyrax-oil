@@ -6,7 +6,7 @@ function NavCard({ src, alt, title, link, styleLink, styleOverlay }) {
   return (
     <>
       <Link className={styleLink} to={link}>
-        <img loading="lazy" src={src} alt={alt} className="nav-card-img" />
+        <img src={src} alt={alt} className="nav-card-img" />
         <div className={styleOverlay}>
           <div className="nav-title">
             <h3>{title}</h3>

@@ -95,6 +95,7 @@ function ProductPopUp({ product, onClose }) {
             name="PDS"
             link={product.pdsLink}
             type="button-type-1"
+            pdf="pdf"
           />
           <ButtonRouter
             name="Contact Us"

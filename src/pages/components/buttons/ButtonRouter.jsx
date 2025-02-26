@@ -11,8 +11,13 @@ function ButtonRouter({ name, link, type, pdf }) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        {pdf ? (
-          <a className={type} href={ink}>
+        {name === "PDS" ? (
+          <a
+            className={type}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {name}
             <svg
               xmlns="http://www.w3.org/2000/svg"

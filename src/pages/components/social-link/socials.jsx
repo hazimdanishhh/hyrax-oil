@@ -1,6 +1,6 @@
 export const socialLinks = [
   {
-    link: "https://www.facebook.com/hyraxoil",
+    link: "https://www.facebook.com/hyraxoilofficialmy",
     icon: (
       <svg
         className="w-6 h-6 text-gray-800 dark:text-white socials-img"

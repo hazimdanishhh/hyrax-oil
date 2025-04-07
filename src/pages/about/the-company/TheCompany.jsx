@@ -5,6 +5,7 @@ import Footer from "../../Footer";
 import Hero from "../../components/hero/Hero";
 import MarketMap from "../../components/market-map/MarketMap";
 import { AnimatePresence, motion } from "framer-motion";
+import Counter from "../../components/counter/Counter";
 
 function TheCompany() {
   useEffect(() => {
@@ -86,6 +87,11 @@ function TheCompany() {
               prestigiously represents one of them.
             </p>
           </div>
+          <img
+            className="about-us-background"
+            src="./about/the-company/about-us.webp"
+            alt="About Us Background"
+          />
         </div>
       </div>
 
@@ -100,26 +106,11 @@ function TheCompany() {
               whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
-                  />
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                </svg>
+                <img
+                  className="vision-icon"
+                  src="./about/the-company/vision.svg"
+                  alt="Vision icon"
+                />
 
                 <h4>Vision</h4>
               </div>
@@ -136,26 +127,11 @@ function TheCompany() {
               whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
-                  />
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                </svg>
+                <img
+                  className="vision-icon"
+                  src="./about/the-company/mission.svg"
+                  alt="Mission icon"
+                />
 
                 <h4>Mission</h4>
               </div>
@@ -172,26 +148,11 @@ function TheCompany() {
               whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
-                  />
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                </svg>
+                <img
+                  className="vision-icon"
+                  src="./about/the-company/leadership.svg"
+                  alt="Leadership icon"
+                />
 
                 <h4>Leadership</h4>
               </div>
@@ -208,26 +169,11 @@ function TheCompany() {
               whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
-                  />
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                </svg>
+                <img
+                  className="vision-icon"
+                  src="./about/the-company/ethics.svg"
+                  alt="Ethics icon"
+                />
 
                 <h4>Ethics</h4>
               </div>
@@ -244,26 +190,11 @@ function TheCompany() {
               whileHover={{ y: -10, scale: 1.1 }}
             >
               <div className="vision-mission-header">
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
-                  />
-                  <path
-                    stroke="#f26f27"
-                    strokeWidth="2"
-                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                </svg>
+                <img
+                  className="vision-icon"
+                  src="./about/the-company/culture.svg"
+                  alt="Culture icon"
+                />
 
                 <h4>Culture</h4>
               </div>
@@ -274,6 +205,60 @@ function TheCompany() {
               </p>
             </motion.div>
           </div>
+        </div>
+      </div>
+
+      <div className="the-company-section-3-background">
+        <div className="the-company-section-3-wrapper">
+          <h2 className="the-company-section-3-header">Our Global Impact</h2>
+          <motion.div
+            className="company-impact-cards-wrapper"
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <div className="company-impact-cards">
+              <Counter end={2} duration={1} />
+              <p>Countries with Lube Oil Blending Plants</p>
+            </div>
+            <div className="company-impact-cards">
+              <div className="company-impact-digit">
+                <Counter end={35} duration={1.5} />
+                <h3 className="company-impact-digit-plus">+</h3>
+              </div>
+              <p>Countries Served Worldwide</p>
+            </div>
+            <div className="company-impact-cards">
+              <div className="company-impact-digit">
+                <Counter end={90} duration={2} />
+                <h3 className="company-impact-digit-plus">+</h3>
+              </div>
+              <p>Total Skilled Employees Globally</p>
+            </div>
+            <div className="company-impact-cards">
+              <div className="company-impact-digit">
+                <Counter end={80} duration={2.5} />
+                <h3 className="company-impact-digit-plus">M+</h3>
+              </div>
+              <p>Liters of Lubricants Delivered Annually</p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="the-company-section-4-background">
+        <div className="the-company-section-4-wrapper">
+          <motion.iframe
+            className="the-company-video"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            referrerPolicy="strict-origin-when-cross-origin"
+            src="https://www.youtube.com/embed/Vwn7uje9Cog?si=b4PVQI7XrVPp0TOV"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          ></motion.iframe>
         </div>
       </div>
 

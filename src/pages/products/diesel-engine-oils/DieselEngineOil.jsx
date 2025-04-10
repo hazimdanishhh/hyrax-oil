@@ -37,6 +37,7 @@ function DieselEngineOil() {
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of diesel engine oils, designed to provide the best protection for your engine."
+        logo="./products/diesel-engine-oils/Hyrax-Enduro.png"
       />
 
       {/* PRODUCT SECTION */}

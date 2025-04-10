@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./Hero.scss";
 import { AnimatePresence, motion } from "framer-motion";
 
-function Hero({ image, crumble, crumbleLink, title, desc }) {
+function Hero({ image, crumble, crumbleLink, title, desc, logo }) {
   return (
     <>
       <div
@@ -40,6 +40,9 @@ function Hero({ image, crumble, crumbleLink, title, desc }) {
               </svg>
               {title}
             </motion.div>
+
+            <img src={logo} alt="Product Brand Logo" className="hero-logo" />
+
             <motion.div
               className="hero-text-container"
               initial={{ x: -50, opacity: 0 }}

@@ -37,6 +37,7 @@ function TwoStroke() {
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of two-stroke motorcycle & engine oils, designed to provide the best protection for your engine."
+        logo="./products/two-stroke/Hyrax-NitroS.png"
       />
 
       {/* PRODUCT SECTION */}

@@ -41,7 +41,9 @@ function Hero({ image, crumble, crumbleLink, title, desc, logo }) {
               {title}
             </motion.div>
 
-            <img src={logo} alt="Product Brand Logo" className="hero-logo" />
+            {logo && (
+              <img src={logo} alt="Product Brand Logo" className="hero-logo" />
+            )}
 
             <motion.div
               className="hero-text-container"

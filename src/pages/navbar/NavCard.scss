@@ -21,6 +21,9 @@ $background: white;
 
   .nav-card-img {
     height: 100%;
+    width: 100%;
+    min-width: 125px;
+    min-height: 180px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }

@@ -1,0 +1,16 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.the-company-history-background {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+
+  .the-company-history-wrapper {
+    display: flex;
+    max-width: 1366px;
+    padding: 7rem 3rem;
+  }
+}

@@ -6,6 +6,7 @@ import Hero from "../../components/hero/Hero";
 import MarketMap from "../../components/market-map/MarketMap";
 import { AnimatePresence, motion } from "framer-motion";
 import Counter from "../../components/counter/Counter";
+import History from "../../components/history/History";
 
 function TheCompany() {
   useEffect(() => {
@@ -87,11 +88,11 @@ function TheCompany() {
               prestigiously represents one of them.
             </p>
           </div>
-          <img
+          {/* <img
             className="about-us-background"
             src="./about/the-company/about-us.webp"
             alt="About Us Background"
-          />
+          /> */}
         </div>
       </div>
 
@@ -245,6 +246,8 @@ function TheCompany() {
           </motion.div>
         </div>
       </div>
+
+      <History />
 
       <div className="the-company-section-4-background">
         <div className="the-company-section-4-wrapper">

@@ -37,7 +37,7 @@ function FourStroke() {
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of four-stroke motorcycle oils, designed to provide the best protection for your engine."
-        logo="./products/four-stroke/Hyrax-NitroX.png"
+        logo="./products/four-stroke/Hyrax-NitroX-3.webp"
       />
 
       {/* PRODUCT SECTION */}

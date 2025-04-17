@@ -1,14 +1,14 @@
 const images = [
   {
-    src: "./carousel-1.jpg",
+    src: "./carousel-1.png",
     alt: "carousel 1 image",
     title: "We Are The Lubricants Experts",
     href: "#lube-expert",
   },
   {
-    src: "./carousel-2.jpg",
+    src: "./carousel-2.png",
     alt: "carousel 2 image",
-    title: "Trust Our Quality",
+    title: "Hyrax Platineum, Best of The Best",
     href: "#trust-quality",
   },
   {

@@ -27,7 +27,7 @@ $background: white;
       text-align: center;
     }
 
-    .history-card-wrapper {
+    .history-card {
       display: flex;
       justify-content: center;
       align-items: start;
@@ -57,6 +57,10 @@ $background: white;
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
+
+        @media screen and (max-width: 768px) {
+          gap: 0.5rem;
+        }
 
         .history-year {
           font-family: "GilroyMedium", sans-serif;
@@ -101,11 +105,12 @@ $background: white;
         }
 
         .history-img {
-          width: 50%;
+          width: 100%;
+          border-radius: 0 0 20px 0;
 
-          @media screen and (max-width: 768px) {
-            width: 100%;
-          }
+          // @media screen and (max-width: 768px) {
+          //   width: 100%;
+          // }
         }
       }
     }

@@ -12,5 +12,116 @@ $background: white;
     display: flex;
     max-width: 1366px;
     padding: 7rem 3rem;
+    flex-direction: column;
+    gap: 8rem;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      padding: 7rem 1rem;
+    }
+
+    h2 {
+      font-family: "GilroyMedium", sans-serif;
+      color: black;
+      width: 100%;
+      text-align: center;
+    }
+
+    .history-card-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      width: 100%;
+      gap: 2rem;
+
+      @media screen and (max-width: 768px) {
+        gap: 1rem;
+      }
+
+      .history-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        min-width: 30px;
+        min-height: 30px;
+        background-color: $primary;
+        border: 3px solid #f0f0f0;
+        z-index: 500;
+      }
+
+      .history-text {
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        .history-year {
+          font-family: "GilroyMedium", sans-serif;
+          background: linear-gradient(to right, $primary, $secondary);
+          background-clip: $primary;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          width: 100%;
+        }
+
+        .history-desc {
+          color: #323232;
+          position: relative;
+          display: flex;
+          justify-content: start;
+          flex-direction: column;
+          max-width: 100%;
+          padding-bottom: 2rem;
+          border-bottom: 1px solid #ffffff00;
+          transition: 1s;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background-color: $secondary;
+            transition: width 0.4s ease;
+            pointer-events: none;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+
+          &:hover {
+            border-bottom: none;
+            transition: 1s;
+          }
+        }
+
+        .history-img {
+          width: 50%;
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hr-div {
+  position: absolute;
+  top: 0;
+  left: 63px; // Adjust to match your circle's center
+  width: 5px;
+  height: 100%;
+  background-color: $primary;
+  transform: translateX(-50%);
+
+  @media screen and (max-width: 768px) {
+    left: 31px;
   }
 }

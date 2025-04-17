@@ -22,7 +22,7 @@ const historyList = [
   {
     title: "1997 - Diversification into Engine Oils",
     desc: "In 1997, Hyrax Oil took another bold step by diversifying its product offerings to include engine oils. Securing a prestigious government tender under the Treasury central contract, the company expanded its reach, catering to a broader market segment. This diversification not only boosted revenue but also solidified Hyrax Oil's position in the highly competitive engine oil market.",
-    src: "./about/the-company/1995.webp",
+    src: "./about/the-company/1997.webp",
     alt: "1997 - Diversification into Engine Oils",
   },
 

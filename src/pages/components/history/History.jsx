@@ -18,8 +18,11 @@ function History() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h3 className="history-year">{item.title}</h3>
-              <p className="history-desc">{item.desc}</p>
+              <div className="history-text-wrapper">
+                <h3 className="history-year">{item.title}</h3>
+                <p className="history-desc">{item.desc}</p>
+              </div>
+
               <img className="history-img" src={item.src} alt={item.alt} />
             </motion.div>
           </div>

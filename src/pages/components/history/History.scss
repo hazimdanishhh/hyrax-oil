@@ -62,25 +62,16 @@ $background: white;
           gap: 0.5rem;
         }
 
-        .history-year {
-          font-family: "GilroyMedium", sans-serif;
-          background: linear-gradient(to right, $primary, $secondary);
-          background-clip: $primary;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-          width: 100%;
-        }
-
-        .history-desc {
-          color: #323232;
+        .history-text-wrapper {
           position: relative;
           display: flex;
           justify-content: start;
           flex-direction: column;
           max-width: 100%;
-          padding-bottom: 2rem;
+          padding-bottom: 1rem;
           border-bottom: 1px solid #f0f0f0;
           transition: 1s;
+          gap: 1rem;
 
           &::after {
             content: "";
@@ -101,6 +92,18 @@ $background: white;
           &:hover {
             // border-bottom: none;
             transition: 1s;
+          }
+          .history-year {
+            font-family: "GilroyMedium", sans-serif;
+            background: linear-gradient(to right, $primary, $secondary);
+            background-clip: $primary;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            width: 100%;
+          }
+
+          .history-desc {
+            color: #323232;
           }
         }
 

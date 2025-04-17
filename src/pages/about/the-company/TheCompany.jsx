@@ -7,6 +7,8 @@ import MarketMap from "../../components/market-map/MarketMap";
 import { AnimatePresence, motion } from "framer-motion";
 import Counter from "../../components/counter/Counter";
 import History from "../../components/history/History";
+import VisionCard from "../../components/vision/VisionCard";
+import visionList from "../../components/vision/visionList";
 
 function TheCompany() {
   useEffect(() => {
@@ -101,110 +103,15 @@ function TheCompany() {
       <div className="the-company-section-2-background">
         <div className="the-company-section-2-wrapper">
           <div className="vision-mission-cards-wrapper">
-            <motion.div
-              className="vision-mission-card"
-              initial={{ y: 0, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.1 }}
-            >
-              <div className="vision-mission-header">
-                <img
-                  className="vision-icon"
-                  src="./about/the-company/vision.svg"
-                  alt="Vision icon"
-                />
-
-                <h4>Vision</h4>
-              </div>
-              <p className="vision-mission-desc">
-                To become a globally recognized leader in the oil and gas
-                industry, renowned for our innovative solutions, exceptional
-                quality, and unwavering dedication to excellence.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="vision-mission-card"
-              initial={{ y: 0, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.1 }}
-            >
-              <div className="vision-mission-header">
-                <img
-                  className="vision-icon"
-                  src="./about/the-company/mission.svg"
-                  alt="Mission icon"
-                />
-
-                <h4>Mission</h4>
-              </div>
-              <p className="vision-mission-desc">
-                To deliver superior petroleum products that exceed global
-                standards and customer expectations, reflecting our commitment
-                to quality, precision, and reliability.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="vision-mission-card"
-              initial={{ y: 0, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.1 }}
-            >
-              <div className="vision-mission-header">
-                <img
-                  className="vision-icon"
-                  src="./about/the-company/leadership.svg"
-                  alt="Leadership icon"
-                />
-
-                <h4>Leadership</h4>
-              </div>
-              <p className="vision-mission-desc">
-                To lead with integrity and inspire through action, fostering
-                trust and motivation among employees, clients, and stakeholders
-                while driving excellence through example.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="vision-mission-card"
-              initial={{ y: 0, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.1 }}
-            >
-              <div className="vision-mission-header">
-                <img
-                  className="vision-icon"
-                  src="./about/the-company/ethics.svg"
-                  alt="Ethics icon"
-                />
-
-                <h4>Ethics</h4>
-              </div>
-              <p className="vision-mission-desc">
-                To uphold integrity and mutual respect as our guiding
-                principles, ensuring responsible practices that nurture our
-                people and safeguard the environment.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="vision-mission-card"
-              initial={{ y: 0, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.1 }}
-            >
-              <div className="vision-mission-header">
-                <img
-                  className="vision-icon"
-                  src="./about/the-company/culture.svg"
-                  alt="Culture icon"
-                />
-
-                <h4>Culture</h4>
-              </div>
-              <p className="vision-mission-desc">
-                To cultivate a culture of collaboration, trust, and innovation,
-                empowering our people to achieve sustainable growth for our
-                business and a better future for the planet.
-              </p>
-            </motion.div>
+            {visionList.map((item, index) => (
+              <VisionCard
+                key={index}
+                src={item.src}
+                alt={item.alt}
+                title={item.title}
+                desc={item.desc}
+              />
+            ))}
           </div>
         </div>
       </div>

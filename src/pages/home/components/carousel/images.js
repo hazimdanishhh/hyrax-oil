@@ -1,27 +1,27 @@
 const images = [
   {
-    src: "./carousel-1.png",
+    src: "./home/Hyrax-NitroX-Carousel-3.webp",
     alt: "carousel 1 image",
-    title: "We Are The Lubricants Experts",
-    href: "#lube-expert",
+    title: "Hyrax NitroX - Unleash Pure Power for Your Ride",
+    href: "/products/four-stroke-motorcycle-oils",
   },
   {
-    src: "./carousel-2.png",
+    src: "./home/Hyrax-Platineum-Carousel-3.webp",
     alt: "carousel 2 image",
-    title: "Hyrax Platineum, Best of The Best",
-    href: "#trust-quality",
+    title: "Hyrax Platineum - The Pinnacle of Engine Performance",
+    href: "/products/passenger-car-motor-oils",
   },
   {
     src: "./carousel-3.jpg",
     alt: "carousel 3 image",
-    title: "Hyrax Transformer Oils (TFO)",
-    href: "#tfo",
+    title: "Hyrax Transformer Oils (TFO) - Built for Power",
+    href: "/products/transformer-and-electrical-oils",
   },
   {
     src: "./about-us.jpeg",
     alt: "carousel 4 image",
-    title: "Our Partnerships",
-    href: "#powering-up",
+    title: "Driven by Innovation, Powered by Sustainability",
+    href: "/about/sustainability",
   },
   // Add more images as needed
 ];

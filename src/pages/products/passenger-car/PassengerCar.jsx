@@ -38,7 +38,7 @@ function PassengerCar() {
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of passenger car motor oils, designed to provide the best protection for your engine."
-        logo="./products/passenger-car/Hyrax-Platineum.png"
+        logo="./products/passenger-car/Hyrax-Platineum-2.webp"
       />
 
       {/* PRODUCT SECTION */}

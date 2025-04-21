@@ -32,7 +32,7 @@ $background: white;
     right: 0;
     bottom: 0;
     // background: linear-gradient(to left, transparent 20%, black 150%);
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 
     .home-carousel-wrapper {
       display: flex;
@@ -75,6 +75,7 @@ $background: white;
           font-size: 3rem;
           font-weight: 1;
           margin-bottom: 2rem;
+          text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
           @media screen and (max-width: 1024px) {
             font-size: 2.5rem;

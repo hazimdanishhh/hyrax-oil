@@ -37,6 +37,7 @@ function TransformerOils() {
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of transformer & electrical oils, designed to provide the best protection for your engine."
+        logo="./products/transformer/Hyrax-HyperTrans.webp"
       />
 
       {/* PRODUCT SECTION */}

@@ -14,7 +14,7 @@ function Carousel() {
   function startAutoplay() {
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 8000); // Change image every 8 seconds
+    }, 10000); // Change image every 10 seconds
   }
 
   useEffect(() => {

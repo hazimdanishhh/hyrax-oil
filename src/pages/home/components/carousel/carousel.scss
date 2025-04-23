@@ -68,13 +68,14 @@ $background: white;
           margin-left: 0;
           text-align: center;
           margin-bottom: 5rem;
+          padding: 0 2rem;
         }
 
         .home-carousel-title {
           font-family: "GilroyMedium", sans-serif;
           font-size: 3rem;
           font-weight: 1;
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
           text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
           @media screen and (max-width: 1024px) {
@@ -91,6 +92,7 @@ $background: white;
           display: flex;
           align-items: center;
           width: fit-content;
+          margin: 1rem 0 0 0;
 
           .home-carousel-link {
             font-size: 1.5rem;

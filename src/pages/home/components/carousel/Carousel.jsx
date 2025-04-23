@@ -92,8 +92,11 @@ function Carousel() {
                 transition={{ delay: 0.5 }}
               >
                 <h2 className="home-carousel-title">{image.title}</h2>
+                {image.desc ? (
+                  <h3 className="home-carousel-desc">{image.desc}</h3>
+                ) : null}
                 <Link className="home-carousel-link-div" to={image.href}>
-                  <span className="home-carousel-link">learn more</span>
+                  <span className="home-carousel-link">Learn More</span>
                   <img
                     className="link-arrow"
                     src="./link-arrow.svg"

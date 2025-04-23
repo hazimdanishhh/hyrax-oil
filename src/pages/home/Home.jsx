@@ -7,6 +7,8 @@ import SectionLink from "./components/section-link/SectionLink";
 import TrustQuality from "./components/trust-our-quality/TrustQuality";
 import PoweringUp from "./components/powering-up/PoweringUp";
 import BestLubricants from "./components/best-lubricants/BestLubricants";
+import CarouselSlider from "../components/carousel-slider/CarouselSlider";
+import { productSegments } from "../navbar/components/nav-products/NavProductSegments";
 
 function Home() {
   useEffect(() => {
@@ -24,15 +26,13 @@ function Home() {
       </section>
 
       {/* BEST LUBRICANTS SECTION */}
-      {/* <section id="best-lubricants"> */}
-      <BestLubricants />
-      {/* </section> */}
+      <section id="home-sec1">
+        <BestLubricants />
+      </section>
 
       {/* LEADING LUBE EXPERT */}
-      <section id="lube-expert">
-        <div>
-          <h2>Leading Lubricants Expert in the Industry</h2>
-        </div>
+      <section id="home-sec2">
+        <CarouselSlider items={productSegments} />
       </section>
 
       {/* TRUST OUR QUALITY */}

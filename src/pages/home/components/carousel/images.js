@@ -14,11 +14,11 @@ const images = [
     href: "/products/passenger-car-motor-oils",
   },
   {
-    src: "./carousel-3.jpg",
-    alt: "Hyrax Transformer Oils - Built for Power",
-    title: "Hyrax Transformer Oils (TFO)",
-    desc: "Built for Power",
-    href: "/products/transformer-and-electrical-oils",
+    src: "./home/Hyrax-Enduro-Carousel.webp",
+    alt: "Hyrax Enduro - Conquer The Journey",
+    title: "Hyrax Enduro",
+    desc: "Conquer The Journey",
+    href: "/products/diesel-engine-oils",
   },
   {
     src: "./about-us.jpeg",

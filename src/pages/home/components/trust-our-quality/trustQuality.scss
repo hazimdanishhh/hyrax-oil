@@ -4,14 +4,15 @@ $tertiary: #323232;
 $background: white;
 
 .trust-background {
-  background-image: url("/trust-our-quality.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("/trust-our-quality.jpg");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: $background;
 
   .bg-gradient {
-    background-color: rgba(32, 32, 32, 0.95);
-    backdrop-filter: blur(5px);
+    // background-color: rgba(32, 32, 32, 0.95);
+    // backdrop-filter: blur(5px);
 
     .section-link-wrapper {
       display: flex;
@@ -26,35 +27,29 @@ $background: white;
         z-index: 2;
         display: flex;
         flex-direction: column;
-
+        gap: 2rem;
         width: 70%;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        color: black;
 
         .title {
           font-family: "GilroyMedium", sans-serif;
-          font-size: 40px;
-
-          span {
-            color: $primary;
-          }
         }
 
         .desc {
-          font-size: 20px;
           text-align: justify;
-          margin: 1rem 0;
 
           span {
-            color: $primary;
+            background: linear-gradient(to right, $primary, $secondary);
+            background-clip: $primary;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
           }
         }
 
         .desc-link {
           display: flex;
           align-items: center;
-          font-size: 20px;
           text-align: start;
-          margin: 1rem 0;
           width: fit-content;
 
           .link-arrow {
@@ -85,6 +80,7 @@ $background: white;
         display: flex;
         align-items: center;
         height: fit-content;
+        color: black;
 
         .link {
           margin-right: 1rem;
@@ -92,7 +88,7 @@ $background: white;
 
         .link-arrow {
           filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
-            brightness(102%) contrast(102%);
+            brightness(0%) contrast(102%);
           width: 30px;
           left: 0;
         }

@@ -9,16 +9,14 @@ function TrustQuality() {
       <div className="bg-gradient">
         <div className="section-link-wrapper">
           <div className="text">
-            <h2 className="title">
-              Trust Our <span>Quality</span>
-            </h2>
+            <h2 className="title">Trust Our Quality</h2>
 
             <p className="desc">
               Our dedication and commitment towards quality has earned us the{" "}
               <span>recognition</span>, <span>key certifications</span> and{" "}
               <span>product approvals</span> which include:
             </p>
-            <a
+            {/* <a
               className="desc-link"
               href="https://www.api.org/"
               target="__blank"
@@ -66,7 +64,7 @@ function TrustQuality() {
                 alt="Link Arrow"
               />
             </a>
-            <img className="api-qr" src="./API-QR.png" alt="API QR Code" />
+            <img className="api-qr" src="./API-QR.png" alt="API QR Code" /> */}
           </div>
 
           <Link

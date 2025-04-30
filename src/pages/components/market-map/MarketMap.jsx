@@ -54,12 +54,14 @@ function MarketMap() {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <div className="world-map-header">
             <motion.h2
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
+              viewport={{ once: true }}
             >
               Our Market Presence
             </motion.h2>
@@ -68,6 +70,7 @@ function MarketMap() {
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
+              viewport={{ once: true }}
             >
               Delivering high-quality, innovative lubricants and specialty
               fluids to diverse industries across Asia Pacific, the Middle East,

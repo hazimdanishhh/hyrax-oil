@@ -14,7 +14,7 @@ const images = [
     href: "/products/passenger-car-motor-oils",
   },
   {
-    src: "./home/Hyrax-Enduro-Carousel.webp",
+    src: "./home/Hyrax-Enduro-Carousel-2.webp",
     alt: "Hyrax Enduro - Conquer The Journey",
     title: "Hyrax Enduro",
     desc: "Conquer The Journey",

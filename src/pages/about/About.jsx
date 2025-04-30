@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
-import Layout from '../Layout'
-import Footer from '../Footer'
+import React, { useEffect } from "react";
+import Layout from "../Layout";
+import Footer from "../Footer";
 
 function About() {
   useEffect(() => {
-    document.title = 'Hyrax Oil | About Us'; // Quick solution
+    document.title = "Hyrax Oil | About Us"; // Quick solution
   }, []);
 
   return (
@@ -16,9 +16,8 @@ function About() {
 
       {/* FOOTER */}
       <Footer />
-
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

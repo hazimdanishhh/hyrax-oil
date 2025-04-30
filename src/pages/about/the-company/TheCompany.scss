@@ -6,7 +6,11 @@ $background: white;
 .the-company-section-background {
   display: flex;
   justify-content: center;
-  background-color: #f0f0f0;
+  // background-color: #f0f0f0;
+  background-image: url(./about/the-company/the-company-sec1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   .the-company-section-wrapper {
     display: flex;
@@ -22,10 +26,11 @@ $background: white;
     .the-company-about-us {
       display: flex;
       flex-direction: column;
-      width: 50%;
+      width: 75%;
+      margin: auto;
       gap: 2rem;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         width: 100%;
       }
 
@@ -39,6 +44,7 @@ $background: white;
           width: fit-content;
           font-family: "GilroyMedium", sans-serif;
           color: black;
+          text-align: center;
         }
 
         hr {

@@ -124,6 +124,7 @@ function TheCompany() {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -30 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
           >
             <div className="company-impact-cards">
               <Counter end={2} duration={1} />

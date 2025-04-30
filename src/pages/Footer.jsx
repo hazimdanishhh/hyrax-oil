@@ -30,13 +30,13 @@ function Footer() {
           <div className="footer-segments">
             <div className="footer-item">
               <h3>Quick Links</h3>
-              <Link to="#">The Company</Link>
-              <Link to="#">Our Leaders</Link>
-              <Link to="#">Awards & Accreditations</Link>
-              <Link to="#">Blending Plants</Link>
+              <Link to="/about/the-company">The Company</Link>
+              <Link to="/about/our-leaders">Our Leaders</Link>
+              <Link to="/about/awards">Awards & Accreditations</Link>
+              <Link to="/about/blending-plants">Blending Plants</Link>
               <Link to="#">Certifications & Compliance</Link>
-              <Link to="#">Our Products</Link>
-              <Link to="#">Our Services</Link>
+              <Link to="/products">Our Products</Link>
+              <Link to="/services">Our Services</Link>
             </div>
 
             <div className="footer-item">

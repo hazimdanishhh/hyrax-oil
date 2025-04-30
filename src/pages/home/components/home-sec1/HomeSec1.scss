@@ -21,29 +21,25 @@ $background: white;
       gap: 2rem;
       max-width: 70%;
       color: #323232;
+      margin: auto;
+      text-align: center;
 
-      // .home-sec1-title {
-      // font-size: 1.5rem;
-      // }
-
-      .home-sec1-title-2 {
+      .home-sec1-title {
         font-family: "GilroyMedium", sans-serif;
         font-size: 2rem;
+
+        background: linear-gradient(to right, $primary, $secondary);
+        background-clip: $primary;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
 
         @media screen and (max-width: 1024px) {
           font-size: 1.5rem;
         }
-
-        span {
-          background: linear-gradient(to right, $primary, $secondary);
-          background-clip: $primary;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-        }
       }
 
       .home-sec1-desc {
-        text-align: justify;
+        // text-align: justify;
 
         span {
           background: linear-gradient(to right, $primary, $secondary);

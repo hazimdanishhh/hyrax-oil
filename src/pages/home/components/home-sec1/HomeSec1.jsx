@@ -1,34 +1,57 @@
 import React, { useState } from "react";
-import "./bestLubricants.scss";
+import "./HomeSec1.scss";
 import { motion } from "framer-motion";
 
-function BestLubricants() {
+function HomeSec1() {
   const youtubeID = useState("R9ePLCiB8_8");
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
 
   return (
     <div className="home-sec1">
       <div className="home-sec1-wrapper">
         <motion.div
           className="home-sec1-text"
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          <h3 className="home-sec1-title-2">
-            Only <span>The Best Lubricants</span> For The World
-          </h3>
-          <p className="home-sec1-desc">
+          <motion.h3 className="home-sec1-title" variants={childVariants}>
+            Only The Best Lubricants For The World
+          </motion.h3>
+
+          <motion.p className="home-sec1-desc" variants={childVariants}>
             By leveraging cutting-edge technology and extensive industry
             knowledge, Hyrax Oil continually develops lubricants that{" "}
             <span>surpass industry standards</span> and consistently deliver{" "}
             <span>superior performance</span>.
-          </p>
-          <p className="home-sec1-desc">
+          </motion.p>
+
+          <motion.p className="home-sec1-desc" variants={childVariants}>
             We always ensure our products are engineered to meet our customers’
             expectations, making it the preferred choice for those who demand
             only the best in lubrication.
-          </p>
+          </motion.p>
         </motion.div>
-        <motion.iframe
+
+        {/* <motion.iframe
           className="home-sec1-video"
           title="YouTube video player"
           frameBorder="0"
@@ -38,10 +61,12 @@ function BestLubricants() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-        ></motion.iframe>
+        ></motion.iframe> */}
+
+        <img src="./home/Sec1-BG.webp" alt="" />
       </div>
     </div>
   );
 }
 
-export default BestLubricants;
+export default HomeSec1;

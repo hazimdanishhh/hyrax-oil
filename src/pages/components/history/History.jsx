@@ -17,6 +17,7 @@ function History() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
             >
               <div className="history-text-wrapper">
                 <h3 className="history-year">{item.title}</h3>

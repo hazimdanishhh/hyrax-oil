@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import "./CarouselSlider.scss"; // Ensure to style as needed
 import NavCard from "../../navbar/NavCard";
+import { motion } from "framer-motion";
 
-const CarouselSlider = ({ items }) => {
+const CarouselSlider = ({ items, isHomePage }) => {
   const carouselRef = useRef(null);
 
   const scroll = (direction) => {
@@ -14,11 +15,36 @@ const CarouselSlider = ({ items }) => {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <>
-      <h2 className="carousel-title">Browse Our Product Segments</h2>
+      {isHomePage ? (
+        <h2 className="carousel-title-home">
+          Find <span>The Right Oil</span> For Every Application
+        </h2>
+      ) : (
+        <h2 className="carousel-title">Browse Our Product Segments</h2>
+      )}
 
-      <div className="carousel-slider-container">
+      <motion.div
+        className="carousel-slider-container"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <button className="carousel-btn left" onClick={() => scroll("left")}>
           <svg
             className="w-6 h-6 text-gray-800 dark:text-white"
@@ -71,7 +97,7 @@ const CarouselSlider = ({ items }) => {
             />
           </svg>
         </button>
-      </div>
+      </motion.div>
     </>
   );
 };

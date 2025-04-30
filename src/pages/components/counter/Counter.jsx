@@ -5,7 +5,7 @@ import "./Counter.scss";
 const Counter = ({ end = 100, duration = 2 }) => {
   const controls = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 }); // triggers when 50% visible
+  const isInView = useInView(ref, { amount: 0.5, once: true }); // triggers when 50% visible
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -14,9 +14,6 @@ const Counter = ({ end = 100, duration = 2 }) => {
         count: end,
         transition: { duration, ease: "easeOut" },
       });
-    } else {
-      controls.set({ count: 0 });
-      setCount(0);
     }
   }, [isInView, controls, end, duration]);
 

@@ -6,9 +6,9 @@ import Footer from "../Footer";
 import SectionLink from "./components/section-link/SectionLink";
 import TrustQuality from "./components/trust-our-quality/TrustQuality";
 import PoweringUp from "./components/powering-up/PoweringUp";
-import BestLubricants from "./components/best-lubricants/BestLubricants";
 import CarouselSlider from "../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../navbar/components/nav-products/NavProductSegments";
+import HomeSec1 from "./components/home-sec1/HomeSec1";
 
 function Home() {
   useEffect(() => {
@@ -27,12 +27,12 @@ function Home() {
 
       {/* BEST LUBRICANTS SECTION */}
       <section id="home-sec1">
-        <BestLubricants />
+        <HomeSec1 />
       </section>
 
       {/* LEADING LUBE EXPERT */}
       <section id="home-sec2">
-        <CarouselSlider items={productSegments} />
+        <CarouselSlider items={productSegments} isHomePage="Yes" />
       </section>
 
       {/* TRUST OUR QUALITY */}

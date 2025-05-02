@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomeSec2.scss";
 import { Link } from "react-router-dom";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import ButtonRouter from "../../../components/buttons/ButtonRouter";
 
 function HomeSec2() {
@@ -19,7 +19,7 @@ function HomeSec2() {
   };
 
   const childVariants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
 
@@ -107,8 +107,7 @@ function HomeSec2() {
         <ButtonRouter
           name="Read More"
           type="button-type-2"
-          link="https://engineoil.api.org/Directory/EolcsResultsDetail?accountId=-1&companyId=10166&resultsUrl=%2FDirectory%2FEolcsResults%3FaccountId%3D-1%26companyName%3DHYRAX%2520OIL"
-          target="__blank"
+          link="/about/certifications"
         />
       </div>
     </div>

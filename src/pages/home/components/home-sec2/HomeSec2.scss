@@ -1,0 +1,147 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.home-sec2 {
+  // background-image: url("/trust-our-quality.jpg");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: $background;
+
+  .home-sec2-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 4rem;
+
+    max-width: 1366px;
+    margin: auto;
+    padding: 6rem 3rem;
+
+    @media screen and (max-width: 1024px) {
+      padding: 5rem 1rem;
+    }
+
+    .home-sec2-text {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      margin: auto;
+      color: black;
+      width: 100%;
+
+      .home-sec2-title {
+        font-family: "GilroyMedium", sans-serif;
+        text-align: center;
+      }
+
+      .home-sec2-desc {
+        text-align: center;
+        width: 70%;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+
+        span {
+          background: linear-gradient(to right, $primary, $secondary);
+          background-clip: $primary;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+      }
+
+      .home-sec2-logos-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .home-sec2-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          text-align: center;
+          color: black;
+
+          .home-sec2-logo {
+            height: 10vh;
+            object-fit: contain;
+            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
+              brightness(0%) contrast(102%);
+            transition: 0.2s;
+
+            &:hover {
+              filter: none;
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+
+      // .desc-link {
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   text-align: center;
+
+      //   .link-arrow {
+      //     filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
+      //       brightness(102%) contrast(102%);
+      //     width: 20px;
+      //     margin-left: 1rem;
+      //     bottom: 0;
+      //   }
+      // }
+
+      // .desc-link:hover {
+      //   .link-arrow {
+      //     filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
+      //       brightness(99%) contrast(92%);
+      //     transition: 0.2s;
+      //     position: relative;
+      //     bottom: 5px;
+      //   }
+      // }
+
+      // .api-qr {
+      //   max-width: 300px;
+      // }
+    }
+
+    // .link-div {
+    //   display: flex;
+    //   align-items: center;
+    //   height: fit-content;
+    //   color: black;
+
+    //   .link {
+    //     margin-right: 1rem;
+    //   }
+
+    //   .link-arrow {
+    //     filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
+    //       brightness(0%) contrast(102%);
+    //     width: 30px;
+    //     left: 0;
+    //   }
+    // }
+
+    // .link-div:hover {
+    //   .link-arrow {
+    //     filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
+    //       brightness(99%) contrast(92%);
+    //     transition: 0.2s;
+    //     position: relative;
+    //     left: 10px;
+    //   }
+    // }
+  }
+}

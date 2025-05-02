@@ -4,7 +4,7 @@ import "./home.scss";
 import Carousel from "./components/carousel/Carousel";
 import Footer from "../Footer";
 import SectionLink from "./components/section-link/SectionLink";
-import TrustQuality from "./components/trust-our-quality/TrustQuality";
+import HomeSec2 from "./components/home-sec2/HomeSec2";
 import PoweringUp from "./components/powering-up/PoweringUp";
 import CarouselSlider from "../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../navbar/components/nav-products/NavProductSegments";
@@ -37,7 +37,7 @@ function Home() {
 
       {/* TRUST OUR QUALITY */}
       <div id="trust-quality">
-        <TrustQuality />
+        <HomeSec2 />
       </div>
 
       <section>Labs, Engine, Racetrack Cards</section>

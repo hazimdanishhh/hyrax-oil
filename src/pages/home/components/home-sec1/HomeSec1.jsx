@@ -63,7 +63,14 @@ function HomeSec1() {
           transition={{ duration: 1 }}
         ></motion.iframe> */}
 
-        <img src="./home/Sec1-BG.webp" alt="" />
+        <motion.img
+          src="./home/Sec1-BG.webp"
+          alt="Hyrax Platineum"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        />
       </div>
     </div>
   );

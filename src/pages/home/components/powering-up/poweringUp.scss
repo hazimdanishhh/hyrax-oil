@@ -4,11 +4,6 @@ $tertiary: #323232;
 $background: white;
 
 .powering-background {
-  background-image: url("/power-line.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
   .bg-gradient {
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px);
@@ -31,7 +26,6 @@ $background: white;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 
         .title {
-          // font-family: "GilroyExtraBold";
           font-size: 40px;
 
           span {

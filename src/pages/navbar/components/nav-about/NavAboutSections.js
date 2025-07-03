@@ -1,42 +1,50 @@
+import image1 from "/src/assets/navbar/the-company-2.webp";
+import image2 from "/src/assets/navbar/our-leaders.webp";
+import image3 from "/src/assets/navbar/awards.webp";
+import image4 from "/src/assets/navbar/blending-plants.webp";
+import image5 from "/src/assets/navbar/ESG.webp";
+import image6 from "/src/assets/navbar/CSR.webp";
+import image7 from "/src/assets/navbar/certifications.webp";
+
 export const aboutSections = [
   {
-    src: "./navbar/the-company-2.webp",
+    src: image1,
     alt: "The Company",
     title: "The Company",
     link: "/about/the-company",
   },
   {
-    src: "./navbar/our-leaders.webp",
+    src: image2,
     alt: "Our Leaders",
     title: "Our Leaders",
     link: "/about/our-leaders",
   },
   {
-    src: "./navbar/awards.webp",
+    src: image3,
     alt: "Awards & Accreditations",
     title: "Awards & Accreditations",
     link: "/about/awards",
   },
   {
-    src: "./navbar/blending-plants.webp",
+    src: image4,
     alt: "Blending Plants",
     title: "Blending Plants",
     link: "/about/blending-plants",
   },
   {
-    src: "./navbar/ESG.webp",
+    src: image5,
     alt: "Sustainability & ESG",
     title: "Sustainability & ESG",
     link: "/about/sustainability",
   },
   {
-    src: "./navbar/CSR.webp",
+    src: image6,
     alt: "CSR & Community Outreach",
     title: "CSR & Community Outreach",
     link: "/about/csr",
   },
   {
-    src: "./navbar/certifications.webp",
+    src: image7,
     alt: "Certifications & Compliance",
     title: "Certifications & Compliance",
     link: "/about/certifications",

@@ -1,36 +1,43 @@
+import image1 from "/src/assets/navbar/brand-products.webp";
+import image2 from "/src/assets/navbar/events.webp";
+import image3 from "/src/assets/navbar/motorsports.webp";
+import image4 from "/src/assets/navbar/training-2.webp";
+import image5 from "/src/assets/navbar/corporate.webp";
+import image6 from "/src/assets/navbar/sponsorships.webp";
+
 export const mediaSections = [
   {
-    src: "./navbar/brand-products.webp",
+    src: image1,
     alt: "Brand & Products",
     title: "Brand & Products",
     link: "#",
   },
   {
-    src: "./navbar/events.webp",
+    src: image2,
     alt: "Events",
     title: "Events",
     link: "#",
   },
   {
-    src: "./navbar/motorsports.webp",
+    src: image3,
     alt: "Motorsports",
     title: "Motorsports",
     link: "#",
   },
   {
-    src: "./navbar/training-2.webp",
+    src: image4,
     alt: "Training",
     title: "Training",
     link: "#",
   },
   {
-    src: "./navbar/corporate.webp",
+    src: image5,
     alt: "Corporate",
     title: "Corporate",
     link: "#",
   },
   {
-    src: "./navbar/sponsorships.webp",
+    src: image6,
     alt: "Sponsorships",
     title: "Sponsorships",
     link: "#",

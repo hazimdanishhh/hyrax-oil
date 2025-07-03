@@ -8,6 +8,11 @@ import {
   fadeInWithEase,
 } from "../../../../functions/motionUtils.js";
 
+import image1 from "/src/assets/logos/API-Logo.webp";
+import image2 from "/src/assets/logos/ACEA-Logo.webp";
+import image3 from "/src/assets/logos/MTU-Logo.webp";
+import image4 from "/src/assets/logos/Doble-Logo.webp";
+
 function HomeSec2() {
   return (
     <div className="home-sec2">
@@ -44,7 +49,7 @@ function HomeSec2() {
           >
             <motion.img
               className="home-sec2-logo"
-              src="./logos/API-Logo.webp"
+              src={image1}
               alt="American Petroleum Institute"
               variants={fadeInWithEase}
             />
@@ -57,7 +62,7 @@ function HomeSec2() {
           >
             <motion.img
               className="home-sec2-logo"
-              src="./logos/ACEA-Logo.webp"
+              src={image2}
               alt="European Automobile Manufacturers Association"
               variants={fadeInWithEase}
             />
@@ -70,7 +75,7 @@ function HomeSec2() {
           >
             <motion.img
               className="home-sec2-logo"
-              src="./logos/MTU-Logo.webp"
+              src={image3}
               alt="MTU Friedrichshafen GmbH"
               variants={fadeInWithEase}
             />
@@ -83,7 +88,7 @@ function HomeSec2() {
           >
             <motion.img
               className="home-sec2-logo"
-              src="./logos/Doble-Logo.webp"
+              src={image4}
               alt="Doble Engineering Company"
               variants={fadeInWithEase}
             />
@@ -91,8 +96,8 @@ function HomeSec2() {
         </motion.div>
 
         <ButtonRouter
-          name="Read More"
-          type="button-type-2"
+          name="Learn More"
+          type="button-type-1"
           link="/about/certifications"
         />
       </div>

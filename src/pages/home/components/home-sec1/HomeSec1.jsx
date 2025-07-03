@@ -6,6 +6,8 @@ import {
   staggerContainer,
 } from "../../../../functions/motionUtils";
 
+import image from "/src/assets/home/Hyrax-Platineum-Background-2.webp";
+
 function HomeSec1() {
   const youtubeID = useState("R9ePLCiB8_8");
 
@@ -52,7 +54,7 @@ function HomeSec1() {
 
           <motion.img
             className="home-sec1-img"
-            src="./home/Sec1-BG.webp"
+            src={image}
             alt="Hyrax Platineum"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -9,21 +9,34 @@ import PoweringUp from "./components/powering-up/PoweringUp";
 import CarouselSlider from "../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../navbar/components/nav-products/NavProductSegments";
 import HomeSec1 from "./components/home-sec1/HomeSec1";
+import Seo from "../../components/Seo";
 
 function Home() {
-  useEffect(() => {
-    document.title = "Hyrax Oil | Better Oil, Better Care"; // Quick solution
-  }, []);
-
   return (
-    <div>
+    <>
+      <Seo
+        title="The World's Top Quality Lubricants | Hyrax Oil - Better Oil, Better Care"
+        description="Hyrax Oil has been honored with the National Mark of Malaysian Brand award, acknowledging its exceptional, top-quality, and distinctive products."
+        image="./og-images/home.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Hyrax Oil",
+          url: "https://hyraxoil.com/",
+          logo: "./logo.png",
+          description:
+            "Web design and development studio in Malaysia offering digital solutions.",
+          sameAs: [
+            "https://twitter.com/hyraxoilofficial",
+            "https://linkedin.com/company/hyrax-oil-sdn-bhd",
+          ],
+        }}
+      />
       {/* NAVBAR */}
       <Layout />
 
       {/* CAROUSEL TOP SECTION */}
-      <section id="#">
-        <Carousel />
-      </section>
+      <Carousel />
 
       {/* BEST LUBRICANTS SECTION */}
       <section id="home-sec1">
@@ -68,7 +81,7 @@ function Home() {
 
       {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 }
 

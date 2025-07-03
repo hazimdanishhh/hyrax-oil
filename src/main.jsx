@@ -17,7 +17,6 @@ import Careers from "./pages/careers/Careers.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import "./main.scss";
 import { HashRouter as Router } from "react-router-dom";
-import ScrollToTop from "./ScrollToTop.jsx";
 import FourStroke from "./pages/products/four-stroke/FourStroke.jsx";
 import TwoStroke from "./pages/products/two-stroke/TwoStroke.jsx";
 import Marine from "./pages/products/marine/Marine.jsx";
@@ -28,6 +27,7 @@ import TransformerOils from "./pages/products/transformer-oils/TransformerOils.j
 import SpecialtyOils from "./pages/products/specialty-oils/SpecialtyOils.jsx";
 import BrakeFluids from "./pages/products/brake-fluids/BrakeFluids.jsx";
 import Greases from "./pages/products/greases/Greases.jsx";
+import ScrollToTop from "./functions/ScrollToTop.jsx";
 
 export default function App() {
   return (

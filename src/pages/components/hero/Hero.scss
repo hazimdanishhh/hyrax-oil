@@ -52,11 +52,11 @@ $background: white;
         }
 
         .hero-title {
-          font-family: "GilroyMedium", sans-serif;
           background: linear-gradient(to right, $primary, $secondary);
           background-clip: $primary;
           -webkit-text-fill-color: transparent;
           -webkit-background-clip: text;
+          width: fit-content;
 
           span {
             color: $primary;

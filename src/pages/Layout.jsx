@@ -164,16 +164,12 @@ function Layout() {
 
         {/* NAVIGATION BUTTONS */}
         <div className={`nav-buttons ${isActive ? "active" : ""}`}>
-          <ButtonRouter
-            name={"Careers"}
-            link={"/careers"}
-            type={"button-type-2"}
-          />
+          <ButtonRouter name="Careers" link="/careers" type="button-type-2" />
 
           <ButtonRouter
             name="Contact Us"
             link="/contact"
-            type={"button-type-1"}
+            type="button-type-1"
           />
         </div>
 
@@ -247,7 +243,7 @@ function Layout() {
 
                   <h2>About</h2>
                 </div>
-                <div className="nav-card-layout">
+                <ul className="nav-card-layout">
                   {aboutSections.map((segment, index) => (
                     <NavCard
                       key={index}
@@ -259,7 +255,7 @@ function Layout() {
                       styleOverlay="nav-card-overlay"
                     />
                   ))}
-                </div>
+                </ul>
               </>
             )}
 
@@ -310,7 +306,7 @@ function Layout() {
                     className="nav-overlay-logo"
                   />
                 </div>
-                <div className="nav-card-layout">
+                <ul className="nav-card-layout">
                   {productSegments.map((segment, index) => (
                     <NavCard
                       key={index}
@@ -322,7 +318,7 @@ function Layout() {
                       styleOverlay="nav-card-overlay"
                     />
                   ))}
-                </div>
+                </ul>
               </>
             )}
 
@@ -353,7 +349,7 @@ function Layout() {
 
                   <h2>Services</h2>
                 </div>
-                <div className="nav-card-layout">
+                <ul className="nav-card-layout">
                   {servicesSections.map((segment, index) => (
                     <NavCard
                       key={index}
@@ -365,7 +361,7 @@ function Layout() {
                       styleOverlay="nav-card-overlay"
                     />
                   ))}
-                </div>
+                </ul>
               </>
             )}
 
@@ -396,7 +392,7 @@ function Layout() {
 
                   <h2>Media</h2>
                 </div>
-                <div className="nav-card-layout">
+                <ul className="nav-card-layout">
                   {mediaSections.map((segment, index) => (
                     <NavCard
                       key={index}
@@ -408,7 +404,7 @@ function Layout() {
                       styleOverlay="nav-card-overlay"
                     />
                   ))}
-                </div>
+                </ul>
               </>
             )}
           </motion.div>

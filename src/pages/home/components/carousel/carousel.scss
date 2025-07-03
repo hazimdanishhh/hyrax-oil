@@ -6,6 +6,7 @@ $background: white;
 .home-carousel {
   position: relative;
   height: calc(100vh - 3rem);
+  min-height: fit-content;
   overflow: hidden;
 
   .home-carousel-slide {
@@ -40,17 +41,15 @@ $background: white;
       justify-content: end;
 
       height: calc(100vh - 3rem);
-      // height: 100vh;
+      min-height: fit-content;
       max-width: 1366px;
       margin: auto;
 
       .home-carousel-text {
-        position: absolute;
         display: none;
         flex-direction: column;
         width: 35%;
-        margin-left: 3rem;
-        margin-bottom: 7rem;
+        margin: 8rem 3rem 8rem 3rem;
         opacity: 0;
         transition: opacity 1s ease-in-out;
 
@@ -62,21 +61,26 @@ $background: white;
         }
 
         @media screen and (max-width: 1024px) {
-          width: 100% !important;
+          width: 100%;
           justify-content: center;
           align-items: center;
           margin-left: 0;
           text-align: center;
           margin-bottom: 5rem;
           padding: 0 2rem;
+
+          &.active {
+            display: flex;
+            opacity: 1;
+            z-index: 2;
+            width: 100%;
+          }
         }
 
         .home-carousel-title {
-          font-family: "GilroyMedium", sans-serif;
           font-size: 3rem;
-          font-weight: 1;
+          font-weight: 500;
           margin-bottom: 1rem;
-          text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
           @media screen and (max-width: 1024px) {
             font-size: 2.5rem;
@@ -88,38 +92,31 @@ $background: white;
           }
         }
 
+        .home-carousel-desc {
+          font-weight: 300;
+        }
+
         .home-carousel-link-div {
           display: flex;
+          justify-content: center;
           align-items: center;
           width: fit-content;
-          margin: 1rem 0 0 0;
+          margin: 2rem 0 0 0;
 
           .home-carousel-link {
-            font-size: 1.5rem;
             margin-right: 1rem;
-
-            @media screen and (max-width: 1024px) {
-              font-size: 1.2rem;
-            }
-
-            @media screen and (max-width: 768px) {
-              font-size: 1rem;
-            }
           }
 
           .link-arrow {
-            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
-              brightness(102%) contrast(102%);
-            max-width: 35px;
             position: relative;
             left: 0;
+            transition: 0.2s;
           }
         }
 
         .home-carousel-link-div:hover {
           .link-arrow {
-            filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
-              brightness(99%) contrast(92%);
+            fill: $secondary;
             transition: 0.2s;
             left: 10px;
           }
@@ -177,14 +174,3 @@ $background: white;
     background-position: 0% 50%;
   }
 }
-
-// @media (max-width: 768px) {
-//   .home-carousel {
-//     .home-carousel-indicators {
-//       bottom: 10px;
-
-//       .indicator {
-//       }
-//     }
-//   }
-// }

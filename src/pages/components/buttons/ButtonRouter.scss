@@ -11,9 +11,7 @@ $background: white;
   justify-content: space-around;
   align-items: center;
   max-width: fit-content;
-  height: 33px;
-  padding: 0 1rem;
-  font-family: "GilroyLight";
+  padding: 0.5rem 1.5rem;
 
   border-radius: 20px;
   border: 1px solid $secondary;
@@ -24,20 +22,17 @@ $background: white;
 
   svg {
     margin-left: 0.5rem;
+    fill: white;
   }
 
   &:hover {
-    background: none;
-    color: $primary;
-
-    svg path {
-      stroke: $primary;
-      transition: 0.3s;
-    }
+    border-color: $secondary;
+    background: linear-gradient(270deg, $primary, $secondary);
+    color: white;
   }
 
   &:active {
-    box-shadow: 0px 0px 4px 0px $primary inset;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8) inset;
   }
 }
 
@@ -49,37 +44,32 @@ $background: white;
   justify-content: space-around;
   align-items: center;
   max-width: fit-content;
-  height: 33px;
-  padding: 0 1rem;
-  margin-right: 1rem;
-  font-family: "GilroyLight";
+  padding: 0.5rem 1.5rem;
 
   border-radius: 20px;
-  border: 1px solid $primary;
+  border: 1px solid $secondary;
   background: rgba(0, 0, 0, 0);
-  color: $primary;
+  color: $secondary;
   transition: 0.3s;
 
   svg {
     margin-left: 0.5rem;
 
-    path {
-      stroke: $primary;
-    }
+    fill: $secondary;
   }
 
   &:hover {
-    border-color: $secondary;
-    background: linear-gradient(270deg, $primary, $secondary);
-    color: white;
+    border: 1px solid $primary;
+    background: none;
+    color: $primary;
 
-    svg path {
-      stroke: white;
+    svg {
+      fill: $primary;
       transition: 0.3s;
     }
   }
 
   &:active {
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8) inset;
+    box-shadow: 0px 0px 4px 0px $primary inset;
   }
 }

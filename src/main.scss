@@ -1,18 +1,30 @@
 $primary: #f26f27;
 $secondary: #f2a327;
-$tertiary: #323232;
-$quarternary: white;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #1b1b1b;
+$lightbg: #ffffff;
 
-// GENERAL STYLES
+// =======================================
+// GLOBAL STYLES
+// This is a global style for the app. It includes font settings, background color, and other general styles.
+// =======================================
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html {
   // scroll-behavior: smooth;
-  background-color: $tertiary;
+  background-color: $darkbg;
 }
 
 body {
-  font-family: "GilroyLight";
-  color: $quarternary;
+  color: $lightbg;
 }
 
 a {
@@ -25,9 +37,27 @@ a {
   }
 }
 
-// span {
-//   color: $primary;
-// }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.textOverflow {
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+.sr-only {
+  display: none;
+}
+
+// =======================================
+// FONTS
+// =======================================
 
 @font-face {
   font-family: "GilroyLight";
@@ -68,13 +98,127 @@ a {
   font-weight: normal;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+// =======================================
+// STANDARDIZED SECTION STYLES (PLAIN / GRADIENT BACKGROUND)
+// This is a standard style for all sections in the app that have either a light or dark background.
+// =======================================
+
+.sectionLight {
+  background-color: $lightbg;
+  color: $dark;
+  transition: 0.5s;
 }
 
-/* Mobile styles */
+.sectionDark {
+  background-color: $darkbg;
+  color: $light;
+  transition: 0.5s;
+}
+
+.sectionDarkGradient {
+  background: linear-gradient(145deg, #000000 0%, #000000 100%);
+}
+
+// =======================================
+// STANDARDIZED SECTION STYLES (WITH BACKGROUND IMAGE AND BLUR EFFECT)
+// This is a standard style for all sections in the app that require a background image, a blur effect, and the section container/wrapper.
+// =======================================
+
+.sectionBackground {
+  // background-image: url("src/assets/home-hero-bg.webp");
+  background-attachment: fixed; // Fix the background image in place, so it doesn't scroll with the content. Can be changed to "scroll" in the section itself if needed.
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  color: $light;
+
+  @media screen and (max-width: 1024px) {
+    background-attachment: scroll;
+  }
+}
+
+.sectionBackgroundBlur {
+  z-index: 1;
+
+  @media screen and (max-width: 1024px) {
+    backdrop-filter: blur(5px);
+  }
+
+  // Noise Filter
+  &:before {
+    content: "";
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 182px;
+    opacity: 0.12;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+// =======================================
+// STANDARD SECTION WRAPPER & CONTENT STYLES
+// This is a standard style for all section wrapper & content
+// =======================================
+
+.sectionWrapper {
+  display: flex;
+  justify-content: center;
+
+  min-height: fit-content; //This is needed in every section, but should be adjusted to accommodate the content size
+  max-width: 1366px;
+  margin: auto;
+  padding: 5rem 3rem;
+
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    padding: 3rem 1rem;
+  }
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 4rem;
+}
+
+// =======================================
+// FONT STYLES
+// This is a standard style for all font sizes in the app. It includes font sizes for headings and paragraphs, and it adjusts the font size based on the screen size.
+// =======================================
+
+.textLight {
+  font-weight: 200;
+  transition: font-weight 0.5s;
+}
+
+.textRegular {
+  font-weight: 500;
+  transition: font-weight 0.5s;
+}
+
+.textBold {
+  font-weight: 700;
+  transition: font-weight 0.5s;
+}
+
+.textExtraBold {
+  font-weight: 900;
+  transition: font-weight 0.5s;
+}
+
+/* MOBILE FONT SIZES */
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
@@ -94,12 +238,54 @@ a {
   h6 {
     font-size: 0.75rem;
   } /* 12px */
-  p {
+  p,
+  li,
+  a,
+  button {
+    font-size: 0.875rem;
+  } /* 14px */
+  blockquote {
     font-size: 1rem;
   } /* 16px */
+  small {
+    font-size: 0.75rem;
+  } /* 12px */
+
+  .textXXS {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+  } /* 12px */
+  .textXS {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+  } /* 14px */
+  .textS {
+    font-size: 1rem;
+    line-height: 1rem;
+  } /* 16px */
+  .textM {
+    font-size: 1.25rem;
+    line-height: 1.125rem;
+  } /* 20px / 18px */
+  .textL {
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+  } /* 24px / 20px */
+  .textXL {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  } /* 32px / 28px */
+  .textXXL {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  } /* 48px / 40px */
+  .textXXXL {
+    font-size: 4rem;
+    line-height: 3rem;
+  } /* 64px / 56px */
 }
 
-/* Tablet styles */
+/* TABLET FONT SIZES */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   h1 {
     font-size: 1.75rem;
@@ -119,12 +305,54 @@ a {
   h6 {
     font-size: 0.875rem;
   } /* 14px */
-  p {
+  p,
+  li,
+  a,
+  button {
+    font-size: 1rem;
+  } /* 16px */
+  blockquote {
     font-size: 1.125rem;
   } /* 18px */
+  small {
+    font-size: 0.875rem;
+  } /* 14px */
+
+  .textXXS {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+  } /* 14px */
+  .textXS {
+    font-size: 1rem;
+    line-height: 1rem;
+  } /* 16px */
+  .textS {
+    font-size: 1.25rem;
+    line-height: 1.125rem;
+  } /* 20px / 18px */
+  .textM {
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+  } /* 24px / 20px */
+  .textL {
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+  } /* 28px / 24px */
+  .textXL {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  } /* 36px / 32px */
+  .textXXL {
+    font-size: 3.5rem;
+    line-height: 3rem;
+  } /* 56px / 48px */
+  .textXXXL {
+    font-size: 5.625rem;
+    line-height: 4.5rem;
+  } /* 90px / 72px */
 }
 
-/* Laptop and desktop styles */
+/* LAPTOP AND DESKTOP FONT SIZES */
 @media screen and (min-width: 1025px) and (max-width: 1680px) {
   h1 {
     font-size: 2rem;
@@ -144,12 +372,54 @@ a {
   h6 {
     font-size: 1rem;
   } /* 16px */
-  p {
-    font-size: 1.125rem;
-  } /* 18px */
+  p,
+  li,
+  a,
+  button {
+    font-size: 1rem;
+  } /* 16px */
+  blockquote {
+    font-size: 1.25rem;
+  } /* 20px */
+  small {
+    font-size: 0.875rem;
+  } /* 14px */
+
+  .textXXS {
+    font-size: 1rem;
+    line-height: 1rem;
+  } /* 16px */
+  .textXS {
+    font-size: 1.25rem;
+    line-height: 1.125rem;
+  } /* 20px / 18px */
+  .textS {
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+  } /* 24px / 20px */
+  .textM {
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+  } /* 28px / 24px */
+  .textL {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  } /* 36px / 32px */
+  .textXL {
+    font-size: 3rem;
+    line-height: 2.75rem;
+  } /* 48px / 44px */
+  .textXXL {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  } /* 64px / 56px */
+  .textXXXL {
+    font-size: 5.625rem;
+    line-height: 4.5rem;
+  } /* 90px / 80px */
 }
 
-/* Large desktop and TV styles */
+/* LARGE DESKTOP AND TV FONT SIZES */
 @media screen and (min-width: 1681px) {
   h1 {
     font-size: 2.25rem;
@@ -169,7 +439,49 @@ a {
   h6 {
     font-size: 1.125rem;
   } /* 18px */
-  p {
-    font-size: 1.25rem;
-  } /* 20px */
+  p,
+  li,
+  a,
+  button {
+    font-size: 1rem;
+  } /* 16px */
+  blockquote {
+    font-size: 1.5rem;
+  } /* 24px */
+  small {
+    font-size: 1rem;
+  } /* 16px */
+
+  .textXXS {
+    font-size: 1.125rem;
+    line-height: 1rem;
+  } /* 18px / 16px */
+  .textXS {
+    font-size: 1.375rem;
+    line-height: 1.25rem;
+  } /* 22px / 20px */
+  .textS {
+    font-size: 1.625rem;
+    line-height: 1.5rem;
+  } /* 26px / 24px */
+  .textM {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  } /* 32px / 28px */
+  .textL {
+    font-size: 2.75rem;
+    line-height: 2.25rem;
+  } /* 44px / 36px */
+  .textXL {
+    font-size: 3.5rem;
+    line-height: 3rem;
+  } /* 56px / 48px */
+  .textXXL {
+    font-size: 5rem;
+    line-height: 4.25rem;
+  } /* 80px / 68px */
+  .textXXXL {
+    font-size: 8.125rem;
+    line-height: 6.25rem;
+  } /* 130px / 100px */
 }

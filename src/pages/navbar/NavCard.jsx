@@ -1,20 +1,20 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./NavCard.scss";
 
 function NavCard({ src, alt, title, link, styleLink, styleOverlay }) {
   return (
     <>
-      <Link className={styleLink} to={link}>
-        <img src={src} alt={alt} className="nav-card-img" />
-        <div className={styleOverlay}>
-          <div className="nav-title">
-            <h3>{title}</h3>
+      <li style={{ listStyle: "none" }}>
+        <Link className={styleLink} to={link}>
+          <img src={src} alt={alt} className="nav-card-img" />
+          <div className={styleOverlay}>
+            <div className="nav-title">
+              <h3>{title}</h3>
+            </div>
           </div>
-        </div>
-      </Link>
-
-      <Outlet />
+        </Link>
+      </li>
     </>
   );
 }

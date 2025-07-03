@@ -3,77 +3,46 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.home-sec1 {
-  background-color: $background;
+.home-sec1-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 70%;
+  color: #323232;
+  margin: auto;
+  text-align: center;
 
-  .home-sec1-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .home-sec1-title {
+    background: linear-gradient(to right, $primary, $secondary);
+    background-clip: $primary;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
 
-    max-width: 1366px;
-    margin: auto;
-    padding: 6rem 3rem;
+  .home-sec1-desc {
+    text-align: justify;
 
-    .home-sec1-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      max-width: 70%;
-      color: #323232;
-      margin: auto;
-      text-align: center;
-
-      .home-sec1-title {
-        font-family: "GilroyMedium", sans-serif;
-        font-size: 2rem;
-
-        background: linear-gradient(to right, $primary, $secondary);
-        background-clip: $primary;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-
-        @media screen and (max-width: 1024px) {
-          font-size: 1.5rem;
-        }
-      }
-
-      .home-sec1-desc {
-        // text-align: justify;
-
-        span {
-          background: linear-gradient(to right, $primary, $secondary);
-          background-clip: $primary;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-        }
-      }
+    span {
+      background: linear-gradient(to right, $primary, $secondary);
+      background-clip: $primary;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
     }
+  }
 
-    .home-sec1-video {
-      margin-top: 6rem;
-      height: calc(100vh - 100px);
-      border-radius: 20px;
-      // width: 80%;
-      // height: 100vh;
-    }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .home-sec1 {
-    .home-sec1-wrapper {
-      padding-left: 1rem;
-      padding-right: 1rem;
+.home-sec1-img {
+  width: 100%;
+}
 
-      .home-sec1-text {
-        max-width: 100%;
-      }
-
-      .home-sec1-video {
-        margin-top: 3rem;
-        height: 50vh;
-      }
-    }
-  }
+.home-sec1-video {
+  margin-top: 6rem;
+  height: calc(100vh - 100px);
+  border-radius: 20px;
+  // width: 80%;
+  // height: 100vh;
 }

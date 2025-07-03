@@ -1,6 +1,12 @@
+import image1 from "/src/assets/about/leaderCards/zaharuddin.webp";
+import image2 from "/src/assets/about/leaderCards/shazly.webp";
+import image3 from "/src/assets/about/leaderCards/hafiz.webp";
+import image4 from "/src/assets/about/leaderCards/zaini.webp";
+import image5 from "/src/assets/about/leaderCards/eddy.webp";
+
 export const management = [
   {
-    src: "./about/zaharuddin.webp",
+    src: image1,
     alt: "Mohamad Zaharuddin Bin Zainuddin",
     name: "Mohamad Zaharuddin Bin Zainuddin",
     title: "General Manager, Sales",
@@ -12,7 +18,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/shazly.webp",
+    src: image2,
     alt: "Shazly Bin Che Ahmad",
     name: "Shazly Bin Che Ahmad",
     title: "General Manager, Corporate Sales",
@@ -23,7 +29,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/hafiz.webp",
+    src: image3,
     alt: "Ahmad Hafiz Bin Zainol Abidin",
     name: "Ahmad Hafiz Bin Zainol Abidin",
     title: "General Manager, Strategic Planning & Corporate Affairs",
@@ -34,7 +40,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/zaini.webp",
+    src: image4,
     alt: "Zaini Bin Yaakob",
     name: "Zaini Bin Yaakob",
     title: "General Manager, Quality & Innovations",
@@ -44,7 +50,7 @@ export const management = [
     ],
   },
   {
-    src: "./about/eddy.webp",
+    src: image5,
     alt: "Eddy Rizal Bin Zakariah",
     name: "Eddy Rizal Bin Zakariah",
     title: "General Manager, Operations",

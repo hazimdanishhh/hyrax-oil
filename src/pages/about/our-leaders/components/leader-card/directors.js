@@ -1,6 +1,12 @@
+import image1 from "/src/assets/about/leaderCards/habib.webp";
+import image2 from "/src/assets/about/leaderCards/jufryzal.webp";
+import image3 from "/src/assets/about/leaderCards/nurulhayah.webp";
+import image4 from "/src/assets/about/leaderCards/lutfi.webp";
+import image5 from "/src/assets/about/leaderCards/munirah.webp";
+
 export const directors = [
   {
-    src: "./about/habib.webp",
+    src: image1,
     alt: "Al-Haj Habib Kagimu",
     name: "Al-Haj Habib Kagimu",
     title: "Global Advisor & Associate Director",
@@ -14,7 +20,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/jufryzal.webp",
+    src: image2,
     alt: "Jufryzal Bin Ishak",
     name: "Jufryzal Bin Ishak",
     title: "Group Chief Operating Officer",
@@ -24,7 +30,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/nurulhayah.webp",
+    src: image3,
     alt: "Nurulhayah Binti Nasir",
     name: "Nurulhayah Binti Nasir",
     title: "Group Chief Financial Officer",
@@ -34,7 +40,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/lutfi.webp",
+    src: image4,
     alt: "Muhamad Lutfi Bin Dato’ Mohd Isa",
     name: "Muhamad Lutfi Bin Dato’ Mohd Isa",
     title: "Group Business Development & Sales Director",
@@ -46,7 +52,7 @@ export const directors = [
     ],
   },
   {
-    src: "./about/munirah.webp",
+    src: image5,
     alt: "Intan Munirah Che Roslan",
     name: "Intan Munirah Che Roslan",
     title: "Group Human Resources & Administration Director",

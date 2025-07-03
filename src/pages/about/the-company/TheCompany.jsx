@@ -10,6 +10,8 @@ import History from "../../components/history/History";
 import VisionCard from "../../components/vision/VisionCard";
 import visionList from "../../components/vision/visionList";
 
+import background from "/src/assets/about/the-company-background.webp";
+
 function TheCompany() {
   useEffect(() => {
     document.title = `Hyrax Oil | About - The Company`;
@@ -21,7 +23,7 @@ function TheCompany() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./the-company-background.webp")'
+        image={`url(${background})`}
         crumble="About"
         crumbleLink="/about/the-company"
         title="The Company"

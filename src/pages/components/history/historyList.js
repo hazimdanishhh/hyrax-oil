@@ -1,8 +1,12 @@
+import image1 from "/src/assets/about/history/1991.webp";
+import image2 from "/src/assets/about/history/1995.webp";
+import image3 from "/src/assets/about/history/1997.webp";
+
 const historyList = [
   {
     title: "1991 - Founding of Hyrax Oil",
     desc: "In 1991, Hyrax Oil Sdn Bhd was founded in Malaysia by Dato' Hazimah Zainuddin. What started as a humble transformer oil trading company quickly grew as the company focused on providing high-quality transformer oils to local clients, including the prestigious Tenaga Nasional Berhad. This laid the foundation for what would become a global leader in lubricants, driven by a commitment to quality and innovation.",
-    src: "./about/the-company/1991.webp",
+    src: image1,
     alt: "1991 - Founding of Hyrax Oil",
   },
 
@@ -10,7 +14,7 @@ const historyList = [
     title:
       "1995 - Establishment of Lube Oil Blending Plant in Meru, Klang, Malaysia",
     desc: "In 1995, Hyrax Oil took a pivotal step in its journey by opening its first lube oil blending plant in Meru, Klang, Malaysia. This facility marked a significant transition from trading to manufacturing, allowing Hyrax to produce a wider variety of lubricant products. It was a crucial turning point that set the stage for the company's future growth in the industry.",
-    src: "./about/the-company/1995.webp",
+    src: image2,
     alt: "1995 - Establishment of Lube Oil Blending Plant in Meru, Klang, Malaysia",
   },
 
@@ -22,7 +26,7 @@ const historyList = [
   {
     title: "1997 - Diversification into Engine Oils",
     desc: "In 1997, Hyrax Oil took another bold step by diversifying its product offerings to include engine oils. Securing a prestigious government tender under the Treasury central contract, the company expanded its reach, catering to a broader market segment. This diversification not only boosted revenue but also solidified Hyrax Oil's position in the highly competitive engine oil market.",
-    src: "./about/the-company/1997.webp",
+    src: image3,
     alt: "1997 - Diversification into Engine Oils",
   },
 

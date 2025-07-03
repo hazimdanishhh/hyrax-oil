@@ -1,6 +1,8 @@
+import image from "/src/assets/about/leaderCards/dato-hazimah-2.webp";
+
 export const dHZ = [
   {
-    src: "./about/dato-hazimah-2.webp",
+    src: image,
     alt: "YBhg. Dato' Hazimah Zainuddin",
     name: "YBhg. Dato' Hazimah Zainuddin",
     title: "Founder & Group Executive Chairman",

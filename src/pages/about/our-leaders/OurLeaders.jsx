@@ -4,12 +4,15 @@ import Footer from "../../Footer";
 import "./OurLeaders.scss";
 import { Link, Outlet } from "react-router-dom";
 import Hero from "../../components/hero/Hero";
-import ButtonRouter from "../../components/buttons/ButtonRouter";
 import LeaderCard from "./components/leader-card/LeaderCard";
 import { management } from "./components/leader-card/management";
 import LeaderPopUp from "./components/leader-pop-up/LeaderPopUp";
 import { directors } from "./components/leader-card/directors";
 import { dHZ } from "./components/leader-card/dHZ";
+
+import background from "/src/assets/about/our-leaders-background.webp";
+import datoImage from "/src/assets/about/leaderCards/dato-hazimah.webp";
+import ButtonRouter from "../../components/buttons/ButtonRouter";
 
 function OurLeaders() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,7 +35,7 @@ function OurLeaders() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./about/our-leaders-background.webp")'
+        image={`url(${background})`}
         crumble="About"
         crumbleLink="/about/the-company"
         title="Our Leaders"
@@ -95,7 +98,7 @@ function OurLeaders() {
             </div>
             <img
               className="founder-section-img"
-              src="./about/dato-hazimah.webp"
+              src={datoImage}
               alt="Dato' Hazimah Zainuddin"
             />
           </div>

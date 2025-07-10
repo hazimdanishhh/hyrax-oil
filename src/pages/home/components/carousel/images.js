@@ -27,12 +27,11 @@ const images = [
   },
   {
     src: image4,
-    alt: "Driven by Innovation, Powered by Sustainability",
-    title: "Driven by Innovation, Powered by Sustainability",
-    desc: "",
+    alt: "Powering a Cleaner Future. Together.",
+    title: "Powering a Cleaner Future. Together.",
+    desc: "A collaborative effort to enhance sustainability in the energy sector.",
     href: "/about/sustainability",
   },
-  // Add more images as needed
 ];
 
 export default images;

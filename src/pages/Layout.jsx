@@ -9,106 +9,22 @@ import { mediaSections } from "./navbar/components/nav-media/NavMediaSections";
 import { motion } from "framer-motion";
 import ButtonRouter from "./components/buttons/ButtonRouter";
 
+import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
+import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
+import apiLogo from "/src/assets/logos/APILogo-Light.webp";
+import malaysianBrandLogo from "/src/assets/logos/malaysian-brand.png";
+import useNavbar from "/src/functions/useNavbar";
+
 function Layout() {
-  const [activePopup, setActivePopup] = useState(null);
-  const [isActive, setIsActive] = useState(false);
-  const prevIsMobileView = useRef(
-    window.matchMedia("(max-width: 1024px)").matches
-  );
-  const [initialX, setInitialX] = useState(0);
-  const navOverlayRef = useRef(null);
-
-  const openOverlay = (popupName) => {
-    setActivePopup(popupName);
-  };
-
-  const closeOverlay = () => {
-    setActivePopup(null);
-  };
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  // Disables background scrolling whenever activePopup or isActive is true
-  useEffect(() => {
-    const shouldDisableScroll =
-      (activePopup || isActive) &&
-      window.matchMedia("(max-width: 1024px)").matches;
-
-    if (shouldDisableScroll) {
-      document.body.classList.add("no-scroll"); // Disable background scrolling
-    } else {
-      document.body.classList.remove("no-scroll"); // Enable scrolling when neither is active
-    }
-
-    return () => {
-      document.body.classList.remove("no-scroll"); // Clean up in case component unmounts
-    };
-  }, [activePopup, isActive]);
-
-  // Sets both isActive and activePopup to false whenever screen size is changed
-  useEffect(() => {
-    const handleResize = () => {
-      const isMobileView = window.matchMedia("(max-width: 1024px)").matches;
-
-      // If the screen size changes across the threshold, reset states
-      if (isMobileView !== prevIsMobileView.current) {
-        setActivePopup(false);
-        setIsActive(false);
-      }
-
-      // Update the previous state
-      prevIsMobileView.current = isMobileView;
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [activePopup, isActive]);
-
-  // Close nav-overlay when clicking outside of it
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        navOverlayRef.current &&
-        !navOverlayRef.current.contains(event.target)
-      ) {
-        closeOverlay();
-      }
-    };
-
-    if (activePopup) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [activePopup]);
-
-  // Update initialX based on screen size
-  useEffect(() => {
-    const updateInitialX = () => {
-      if (window.innerWidth <= 1024) {
-        setInitialX(500);
-      } else {
-        setInitialX(0);
-      }
-    };
-
-    updateInitialX();
-    window.addEventListener("resize", updateInitialX);
-
-    return () => {
-      window.removeEventListener("resize", updateInitialX);
-    };
-  }, []);
+  const {
+    activePopup,
+    isActive,
+    initialX,
+    navOverlayRef,
+    openOverlay,
+    closeOverlay,
+    toggleMenu,
+  } = useNavbar();
 
   return (
     <>
@@ -118,7 +34,7 @@ function Layout() {
           <img
             loading="lazy"
             className="nav-logo"
-            src="./hyraxoil33.png"
+            src={hyraxOil33Logo}
             alt="Hyrax Oil Logo"
           />
         </Link>
@@ -289,19 +205,19 @@ function Layout() {
                 <div className="nav-overlay-logos">
                   <img
                     loading="lazy"
-                    src="./hyrax-logo.png"
+                    src={hyraxLogo}
                     alt="hyrax brand logo"
                     className="nav-overlay-logo"
                   />
                   <img
                     loading="lazy"
-                    src="./api.png"
+                    src={apiLogo}
                     alt="American Petroleum Institute Logo"
                     className="nav-overlay-logo"
                   />
                   <img
                     loading="lazy"
-                    src="./malaysian-brand.png"
+                    src={malaysianBrandLogo}
                     alt="Malaysian Brand Logo"
                     className="nav-overlay-logo"
                   />

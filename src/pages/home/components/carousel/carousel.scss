@@ -5,7 +5,7 @@ $background: white;
 
 .home-carousel {
   position: relative;
-  height: calc(100vh - 3rem);
+  height: 100vh;
   min-height: fit-content;
   overflow: hidden;
 
@@ -17,104 +17,65 @@ $background: white;
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 
-    &.active {
-      opacity: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+      z-index: 1; // Make sure it’s above the image but below text
     }
   }
 
-  .home-carousel-gradient {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    // background: linear-gradient(to left, transparent 20%, black 150%);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  .home-carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 
-    .home-carousel-wrapper {
+    height: calc(100vh - 3rem);
+    min-height: fit-content;
+    max-width: 1366px;
+    margin: auto;
+
+    .home-carousel-text {
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      margin: 8rem 0 0 0;
+      padding: 2rem;
+      transition: opacity 1s ease-in-out;
+      gap: 1rem;
+      z-index: 2;
+      width: fit-content;
 
-      height: calc(100vh - 3rem);
-      min-height: fit-content;
-      max-width: 1366px;
-      margin: auto;
+      @media screen and (max-width: 1024px) {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+      }
 
-      .home-carousel-text {
-        display: none;
-        flex-direction: column;
-        width: 35%;
-        margin: 8rem 3rem 8rem 3rem;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
+      .home-carousel-link-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
 
-        &.active {
-          display: flex;
-          opacity: 1;
-          z-index: 2;
-          width: 70%;
+        .home-carousel-link {
+          margin-right: 1rem;
         }
 
-        @media screen and (max-width: 1024px) {
-          width: 100%;
-          justify-content: center;
-          align-items: center;
-          margin-left: 0;
-          text-align: center;
-          margin-bottom: 5rem;
-          padding: 0 2rem;
-
-          &.active {
-            display: flex;
-            opacity: 1;
-            z-index: 2;
-            width: 100%;
-          }
+        .link-arrow {
+          position: relative;
+          left: 0;
+          transition: 0.2s;
         }
 
-        .home-carousel-title {
-          font-size: 3rem;
-          font-weight: 500;
-          margin-bottom: 1rem;
-
-          @media screen and (max-width: 1024px) {
-            font-size: 2.5rem;
-          }
-
-          @media screen and (max-width: 768px) {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-          }
-        }
-
-        .home-carousel-desc {
-          font-weight: 300;
-        }
-
-        .home-carousel-link-div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: fit-content;
-          margin: 2rem 0 0 0;
-
-          .home-carousel-link {
-            margin-right: 1rem;
-          }
-
-          .link-arrow {
-            position: relative;
-            left: 0;
-            transition: 0.2s;
-          }
-        }
-
-        .home-carousel-link-div:hover {
+        &:hover {
           .link-arrow {
             fill: $secondary;
             transition: 0.2s;
@@ -122,41 +83,36 @@ $background: white;
           }
         }
       }
+    }
 
-      .home-carousel-indicators {
-        // position: absolute;
-        // bottom: 3rem;
-        // left: 50%;
-        // transform: translateX(-50%);
+    .home-carousel-indicators {
+      margin: 0 auto 3rem auto;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      z-index: 100;
 
-        margin: 0 auto 3rem auto;
+      .indicator {
         display: flex;
-        justify-content: space-around;
-        width: 100%;
+        width: 15%;
+        height: 0.3rem;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: 0.5s;
 
-        .indicator {
-          display: flex;
-          width: 15%;
-          height: 0.3rem;
-          border: none;
-          border-radius: 10px;
-          background-color: rgba(255, 255, 255, 0.5);
-          cursor: pointer;
-          transition: 0.5s;
-
-          &.active {
-            // width: 20%;
-            width: 40%;
-            background: linear-gradient(270deg, $primary, $secondary);
-            background-size: 200% 200%;
-            animation: gradientAnimation 10s ease infinite;
-          }
+        &.active {
+          width: 40%;
+          background: linear-gradient(270deg, $primary, $secondary);
+          background-size: 200% 200%;
+          animation: gradientAnimation 10s ease infinite;
         }
+      }
 
-        .indicator:hover {
-          // width: 20%;
-          background-color: white;
-        }
+      .indicator:hover {
+        // width: 20%;
+        background-color: white;
       }
     }
   }

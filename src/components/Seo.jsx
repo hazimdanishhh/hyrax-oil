@@ -40,7 +40,7 @@ export default function Seo({
       <meta name="twitter:image" content={image} />
 
       {/* Theme + Favicons (in public/index.html) */}
-      <meta name="theme-color" content="#ffffff" />
+      {/* <meta name="theme-color" content="#ffffff" /> */}
 
       {/* Structured Data (JSON-LD) */}
       {structuredData && (

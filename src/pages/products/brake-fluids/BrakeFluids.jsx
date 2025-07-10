@@ -9,6 +9,7 @@ import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 import ProductSideNav from "../components/side-nav/SideNav";
+import background from "/src/assets/products/brake/bf-background.webp";
 
 function BrakeFluids() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,7 +33,7 @@ function BrakeFluids() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/brake/bf-background.webp")'
+        image={`url(${background})`}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}

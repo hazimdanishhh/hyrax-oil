@@ -89,7 +89,7 @@ function Layout() {
           />
         </div>
 
-        {/* MOBILE NAVIGATION */}
+        {/* MOBILE HAMBURGER ICON */}
         <button
           className={`hamburger-icon ${isActive ? "active" : ""}`}
           onClick={toggleMenu}
@@ -98,8 +98,8 @@ function Layout() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 70"
-            width="40"
-            height="40"
+            width="24"
+            height="24"
             className="hamburger-svg"
           >
             <rect className="line top" width="100" height="10" rx="5"></rect>
@@ -121,7 +121,7 @@ function Layout() {
         </button>
       </nav>
 
-      {/* NAV OVERLAY DESKTOP*/}
+      {/* NAV OVERLAY MODAL DESKTOP & MOBILE*/}
       {activePopup && (
         <>
           <motion.div

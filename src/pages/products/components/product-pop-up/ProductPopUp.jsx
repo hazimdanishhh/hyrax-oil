@@ -27,8 +27,10 @@ function ProductPopUp({ product, onClose }) {
     <motion.div
       className="product-pop-up"
       ref={productOverlayRef}
-      initial={{ opacity: 1, x: 200 }}
+      initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 100 }}
+      transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }} // cubic-bezier ease
     >
       <div className="product-pop-up-content">
         <svg

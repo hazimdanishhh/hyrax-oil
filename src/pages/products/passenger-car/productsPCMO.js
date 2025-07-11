@@ -1,6 +1,17 @@
+import image1 from "/src/assets/products/passenger/Hyrax-Platineum-HS.webp";
+import image2 from "/src/assets/products/passenger/Hyrax-Platineum.webp";
+import image3 from "/src/assets/products/passenger/Hyrax-Aureus.webp";
+import image4 from "/src/assets/products/passenger/Hyrax-Elite-Ultra.webp";
+import image5 from "/src/assets/products/passenger/Hyrax-Ultra-Novo.webp";
+import PDS1 from "/src/assets/products/passenger/Hyrax-Platineum-HS.pdf";
+import PDS2 from "/src/assets/products/passenger/Hyrax-Platineum.pdf";
+import PDS3 from "/src/assets/products/passenger/Hyrax-Aureus.pdf";
+import PDS4 from "/src/assets/products/passenger/Hyrax-Elite-Ultra.pdf";
+import PDS5 from "/src/assets/products/passenger/Hyrax-Ultra-Novo.pdf";
+
 export const productsPCMO = [
   {
-    src: "./products/passenger-car/Hyrax-Platineum-HS.webp",
+    src: image1,
     alt: "Hyrax Platineum HS",
     title: "Hyrax Platineum HS",
     link: "#",
@@ -8,10 +19,10 @@ export const productsPCMO = [
     description:
       "An ultimate-performance, environmentally friendly, fully synthetic, multigrade motor oil that is specially engineered for those who demand the absolute best in motor oil lubrication technology that exceeds OEMs requirements and the latest API SN specification.",
     grades: ["0W-20"],
-    pdsLink: "./products/passenger-car/Hyrax-Platineum-HS.pdf",
+    pdsLink: PDS1,
   },
   {
-    src: "./products/passenger-car/Hyrax-Platineum.webp",
+    src: image2,
     alt: "Hyrax Platineum",
     title: "Hyrax Platineum",
     link: "#",
@@ -19,10 +30,10 @@ export const productsPCMO = [
     description:
       "An ultimate-performance, fully synthetic, multigrade motor oil that is specially engineered for those who demand the absolute best in motor oil lubrication technology that exceed OEMs requirements and the latest API SN Plus / ILSAC GF-5 Plus specifications (depending on viscosity grade).",
     grades: ["0W-30", "5W-40"],
-    pdsLink: "./products/passenger-car/Hyrax-Platineum.pdf",
+    pdsLink: PDS2,
   },
   {
-    src: "./products/passenger-car/Hyrax-Aureus.webp",
+    src: image3,
     alt: "Hyrax Aureus",
     title: "Hyrax Aureus",
     link: "#",
@@ -30,10 +41,10 @@ export const productsPCMO = [
     description:
       "An extreme performance API SN fully synthetic motor oil that is exclusively designed to provide excellent engine protection and performance for current and future high performance engines.",
     grades: ["5W-40"],
-    pdsLink: "./products/passenger-car/Hyrax-Aureus.pdf",
+    pdsLink: PDS3,
   },
   {
-    src: "./products/passenger-car/Hyrax-Elite-Ultra.webp",
+    src: image4,
     alt: "Hyrax Elite Ultra",
     title: "Hyrax Elite Ultra",
     link: "#",
@@ -41,10 +52,10 @@ export const productsPCMO = [
     description:
       "A high performance API SN synthetic blend multigrade motor oil which is exclusively formulated with premium quality base oils and advanced technology additive system that cleanses and locks away harmful dirt and deposits.",
     grades: ["5W-30", "10W-40"],
-    pdsLink: "./products/passenger-car/Hyrax-Elite-Ultra.pdf",
+    pdsLink: PDS4,
   },
   {
-    src: "./products/passenger-car/Hyrax-Ultra-Novo.webp",
+    src: image5,
     alt: "Hyrax Ultra Novo",
     title: "Hyrax Ultra Novo",
     link: "#",
@@ -52,6 +63,6 @@ export const productsPCMO = [
     description:
       "A premium quality multigrade motor oil designed for use in modern passenger cars and light trucks.",
     grades: ["10W-30", "20W-50"],
-    pdsLink: "./products/passenger-car/Hyrax-Ultra-Novo.pdf",
+    pdsLink: PDS5,
   },
 ];

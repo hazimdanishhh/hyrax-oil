@@ -9,6 +9,8 @@ import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 import ProductSideNav from "../components/side-nav/SideNav";
+import background from "/src/assets/products/four-stroke/fsmo-background.webp";
+import logo from "/src/assets/products/four-stroke/Hyrax-NitroX-3.webp";
 
 function FourStroke() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,12 +34,12 @@ function FourStroke() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/four-stroke/fsmo-background.webp")'
+        image={`url(${background})`}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of four-stroke motorcycle oils, designed to provide the best protection for your engine."
-        logo="./products/four-stroke/Hyrax-NitroX-3.webp"
+        logo={logo}
       />
 
       {/* PRODUCT SECTION */}

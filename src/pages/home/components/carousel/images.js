@@ -1,7 +1,7 @@
 import image1 from "/src/assets/home/Hyrax-NitroX-Background.webp";
 import image2 from "/src/assets/home/Hyrax-Platineum-Background.webp";
 import image3 from "/src/assets/home/Hyrax-Enduro-Background.webp";
-import image4 from "/src/assets/home/Hyrax-Enduro-Background.webp";
+import image4 from "/src/assets/home/Ester-TFO-Background.webp";
 
 const images = [
   {

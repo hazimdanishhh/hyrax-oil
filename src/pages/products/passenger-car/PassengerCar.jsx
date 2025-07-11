@@ -10,6 +10,8 @@ import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 import ProductSideNav from "../components/side-nav/SideNav";
+import background from "/src/assets/products/passenger/pcmo-background.webp";
+import logo from "/src/assets/products/passenger/Hyrax-Platineum-2.webp";
 
 function PassengerCar() {
   const [activePopup, setActivePopup] = useState(null);
@@ -33,12 +35,12 @@ function PassengerCar() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/passenger-car/pcmo-background.webp")'
+        image={`url(${background})`}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of passenger car motor oils, designed to provide the best protection for your engine."
-        logo="./products/passenger-car/Hyrax-Platineum-2.webp"
+        logo={logo}
       />
 
       {/* PRODUCT SECTION */}

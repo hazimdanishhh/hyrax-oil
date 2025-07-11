@@ -9,6 +9,7 @@ import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 import ProductSideNav from "../components/side-nav/SideNav";
+import background from "/src/assets/products/specialty/so-background.webp";
 
 function SpecialtyOils() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,7 +33,7 @@ function SpecialtyOils() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/specialty/so-background.webp")'
+        image={`url(${background})`}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}

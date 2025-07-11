@@ -9,6 +9,7 @@ import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 import ProductSideNav from "../components/side-nav/SideNav";
+import background from "/src/assets/products/transformer/teo-background.webp";
 
 function TransformerOils() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,12 +33,11 @@ function TransformerOils() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/transformer/teo-background.webp")'
+        image={`url(${background})`}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}
-        desc="Discover our wide range of transformer & electrical oils, designed to provide the best protection for your engine."
-        logo="./products/transformer/Hyrax-HyperTrans.webp"
+        desc="Discover our wide range of transformer & electrical oils."
       />
 
       {/* PRODUCT SECTION */}

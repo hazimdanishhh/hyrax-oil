@@ -9,6 +9,8 @@ import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 import ProductSideNav from "../components/side-nav/SideNav";
+import background from "/src/assets/products/two-stroke/tsmeo-background.webp";
+import logo from "/src/assets/products/two-stroke/Hyrax-NitroS.png";
 
 function TwoStroke() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,12 +34,12 @@ function TwoStroke() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/two-stroke/tsmeo-background.webp")'
+        image={`url(${background})`}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of two-stroke motorcycle & engine oils, designed to provide the best protection for your engine."
-        logo="./products/two-stroke/Hyrax-NitroS.png"
+        logo={logo}
       />
 
       {/* PRODUCT SECTION */}

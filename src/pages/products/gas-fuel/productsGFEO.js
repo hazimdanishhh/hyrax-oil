@@ -1,6 +1,9 @@
+import image1 from "/src/assets/products/gas-fuel/Hyrax-Carina.webp";
+import PDS1 from "/src/assets/products/gas-fuel/Hyrax-Carina.pdf";
+
 export const productsGFEO = [
   {
-    src: "./products/gas-fuel/Hyrax-Carina.webp",
+    src: image1,
     alt: "Hyrax Carina",
     title: "Hyrax Carina",
     link: "#",
@@ -8,6 +11,6 @@ export const productsGFEO = [
     description:
       "is a series of extra high performance API SN multi-grade motor oils exclusively designed and formulated with high quality base oils and special additive technology for use in passenger cars and light-duty truck of gasoline and CNG engines running under the most severe driving condition.",
     grades: ["10W-30", "15W-40"],
-    pdsLink: "./products/gas-fuel/Hyrax-Carina.pdf",
+    pdsLink: PDS1,
   },
 ];

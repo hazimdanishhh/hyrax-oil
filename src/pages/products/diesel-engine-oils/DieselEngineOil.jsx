@@ -9,6 +9,8 @@ import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../components/hero/Hero";
 import ProductSideNav from "../components/side-nav/SideNav";
+import background from "/src/assets/products/diesel/deo-background.webp";
+import logo from "/src/assets/products/diesel/Hyrax-Enduro-Logo.webp";
 
 function DieselEngineOil() {
   const [activePopup, setActivePopup] = useState(null);
@@ -32,12 +34,12 @@ function DieselEngineOil() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./products/diesel-engine-oils/deo-background.webp")'
+        image={`url(${background})`}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}
         desc="Discover our wide range of diesel engine oils, designed to provide the best protection for your engine."
-        logo="./products/diesel-engine-oils/Hyrax-Enduro-2.webp"
+        logo={logo}
       />
 
       {/* PRODUCT SECTION */}

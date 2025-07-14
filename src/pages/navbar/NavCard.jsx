@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavCard.scss";
+import { motion } from "framer-motion";
+import { fadeInWithEase } from "../../functions/motionUtils";
 
 function NavCard({ src, alt, title, link, styleLink, styleOverlay }) {
   return (
     <>
-      <li style={{ listStyle: "none" }}>
+      <motion.li style={{ listStyle: "none" }} variants={fadeInWithEase}>
         <Link className={styleLink} to={link}>
           <img src={src} alt={alt} className="nav-card-img" />
           <div className={styleOverlay}>
@@ -14,7 +16,7 @@ function NavCard({ src, alt, title, link, styleLink, styleOverlay }) {
             </div>
           </div>
         </Link>
-      </li>
+      </motion.li>
     </>
   );
 }

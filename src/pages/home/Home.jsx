@@ -25,7 +25,7 @@ function Home() {
           url: "https://hyraxoil.com/",
           logo: "./logo.png",
           description:
-            "Web design and development studio in Malaysia offering digital solutions.",
+            "Established in 1991, Hyrax Oil is a leading manufacturer of high-quality lubricants and transformer oils in Malaysia. We are committed to delivering superior products that meet the highest standards of performance and reliability.",
           sameAs: [
             "https://twitter.com/hyraxoilofficial",
             "https://linkedin.com/company/hyrax-oil-sdn-bhd",

@@ -5,6 +5,11 @@ import { Outlet, Link } from "react-router-dom";
 import SocialLink from "./components/social-link/SocialLink";
 import { socialLinks } from "./components/social-link/socials";
 
+import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
+import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
+import apiLogo from "/src/assets/logos/APILogo-Light.webp";
+import malaysianBrandLogo from "/src/assets/logos/malaysian-brand.png";
+
 function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -25,26 +30,62 @@ function Footer() {
 
   return (
     <>
-      <div className="footer">
+      <footer className="footer">
         <div className="footer-wrapper">
           <div className="footer-segments">
+            {/* FOOTER LINKS */}
             <div className="footer-item">
-              <h3>Quick Links</h3>
-              <Link to="/about/the-company">The Company</Link>
-              <Link to="/about/our-leaders">Our Leaders</Link>
-              <Link to="/about/awards">Awards & Accreditations</Link>
-              <Link to="/about/blending-plants">Blending Plants</Link>
-              <Link to="#">Certifications & Compliance</Link>
-              <Link to="/products">Our Products</Link>
-              <Link to="/services">Our Services</Link>
+              <h3 className="textM textRegular">Quick Links</h3>
+              <ul>
+                <li>
+                  <Link to="/about/the-company" className="textLight textXXS">
+                    The Company
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about/our-leaders" className="textLight textXXS">
+                    Our Leaders
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about/awards" className="textLight textXXS">
+                    Awards & Accreditations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/about/blending-plants"
+                    className="textLight textXXS"
+                  >
+                    Blending Plants
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#" className="textLight textXXS">
+                    Certifications & Compliance
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/products" className="textLight textXXS">
+                    Our Products
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="textLight textXXS">
+                    Our Services
+                  </Link>
+                </li>
+              </ul>
             </div>
 
+            {/* FOOTER ADDRESS */}
             <div className="footer-item">
-              <h3>Head Office</h3>
+              <h3 className="textM textRegular">Head Office</h3>
               <Link
                 to="https://www.google.com/maps/place/Hyrax+Oil+Sdn.+Bhd./data=!4m2!3m1!1s0x0:0x53085859f88dd00d?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="textLight textXXS"
               >
                 A-8-1, Megan Avenue II,
                 <br />
@@ -58,11 +99,12 @@ function Footer() {
               </Link>
               <br />
 
-              <h3>Meru LOBP</h3>
+              <h3 className="textM textRegular">Meru LOBP</h3>
               <Link
                 to="https://www.google.com/maps?ll=3.123462,101.441422&z=11&t=m&hl=en&gl=MY&mapclient=embed&cid=5472883420717197171"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="textLight textXXS"
               >
                 Meru Lubricant Oil Blending Plant
                 <br />
@@ -76,21 +118,30 @@ function Footer() {
               </Link>
             </div>
 
+            {/* FOOTER CONTACT */}
             <div className="footer-item">
-              <h3>Contact</h3>
+              <h3 className="textM textRegular">Contact</h3>
               <span>
-                <Link to="tel:+60321635893">Tel: &#40;+603&#41; 2163-5893</Link>
+                <Link to="tel:+60321635893" className="textLight textXXS">
+                  Tel: &#40;+603&#41; 2163-5893
+                </Link>
               </span>
               <span>
-                <Link to="tel:+60321646577">Fax: &#40;+603&#41; 2164-6577</Link>
+                <Link to="tel:+60321646577" className="textLight textXXS">
+                  Fax: &#40;+603&#41; 2164-6577
+                </Link>
               </span>
               <span>
-                <Link to="mailto:hyrax@hyraxoil.com">
+                <Link
+                  to="mailto:hyrax@hyraxoil.com"
+                  className="textLight textXXS"
+                >
                   Email: hyrax@hyraxoil.com
                 </Link>
               </span>
             </div>
 
+            {/* FOOTER SOCIAL MEDIA */}
             <div className="footer-socials">
               {socialLinks.map((item, index) => (
                 <SocialLink key={index} link={item.link} icon={item.icon} />
@@ -98,6 +149,7 @@ function Footer() {
             </div>
           </div>
 
+          {/* FOOTER COPYRIGHT */}
           <div className="footer-copyright">
             <span>
               &copy; {new Date().getFullYear()} Hyrax Oil Sdn Bhd 199101017905
@@ -110,20 +162,24 @@ function Footer() {
               <Link to="/terms-and-conditions">Terms & Conditions</Link>
             </div> */}
 
-            <div className="footer-logos">
+            {/* FOOTER LOGOS */}
+            <div className="footerLogoWrapper">
+              <img className="footerLogo" src={apiLogo} alt="API Logo" />
               <img
-                className="footer-hyrax-logo"
-                src="./hyrax-logo.png"
-                alt="Hyrax Logo"
+                className="footerLogo"
+                src={malaysianBrandLogo}
+                alt="Malaysian Brand Logo"
               />
+              <img className="footerLogo" src={hyraxLogo} alt="Hyrax Logo" />
               <img
-                className="footer-hyraxoil-logo"
-                src="./hyraxoil-logo.png"
+                className="footerLogo"
+                src={hyraxOil33Logo}
                 alt="Hyrax Oil Logo"
               />
             </div>
           </div>
 
+          {/* SCROLL TO TOP BUTTON */}
           <Link
             to="#"
             onClick={scrollToTop}
@@ -163,7 +219,7 @@ function Footer() {
             </AnimatePresence>
           </Link>
         </div>
-      </div>
+      </footer>
 
       <Outlet />
     </>

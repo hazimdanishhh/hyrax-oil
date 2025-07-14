@@ -3,13 +3,14 @@ import Layout from "../../Layout";
 import Footer from "../../Footer";
 import { Link, Outlet } from "react-router-dom";
 import { productsGFEO } from "./productsGFEO.js";
-import ProductCard from "../../products/components/product-card/ProductCard";
-import ProductPopUp from "../components/product-pop-up/ProductPopUp";
+import ProductCard from "../../../components/product-card/ProductCard.jsx";
+import ProductPopUp from "../../../components/product-pop-up/ProductPopUp.jsx";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
-import Hero from "../../components/hero/Hero";
-import ProductSideNav from "../components/side-nav/SideNav.jsx";
+import Hero from "../../../components/hero/Hero";
+import ProductSideNav from "../../../components/side-nav/SideNav.jsx";
 import background from "/src/assets/products/gas-fuel/gfeo-background.webp";
+import { AnimatePresence } from "framer-motion";
 
 function GasFuel() {
   const [activePopup, setActivePopup] = useState(null);
@@ -63,9 +64,11 @@ function GasFuel() {
       </div>
 
       {/* PRODUCT POP UP */}
-      {activePopup && (
-        <ProductPopUp product={activePopup} onClose={closeOverlay} />
-      )}
+      <AnimatePresence>
+        {activePopup && (
+          <ProductPopUp product={activePopup} onClose={closeOverlay} />
+        )}
+      </AnimatePresence>
 
       <CarouselSlider items={productSegments} />
 

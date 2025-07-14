@@ -21,18 +21,7 @@ $background: white;
         display: flex;
         flex-direction: column;
         min-width: fit-content;
-
-        h3 {
-          margin: 5px 0;
-        }
-
-        a {
-          margin: 3px 0;
-        }
-
-        span {
-          margin: 5px 0;
-        }
+        gap: 0.7rem;
       }
 
       .footer-socials {
@@ -68,17 +57,14 @@ $background: white;
         color: #ffffff90;
       }
 
-      .footer-logos {
+      .footerLogoWrapper {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
 
-        .footer-hyrax-logo {
-          width: 50px;
-          margin-right: 3rem;
-        }
-
-        .footer-hyraxoil-logo {
+        .footerLogo {
           width: 50px;
         }
       }

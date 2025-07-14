@@ -26,6 +26,15 @@ export const staggerContainer = {
   },
 };
 
+export const staggerContainerFast = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
 export const fadeInWithEase = {
   hidden: { opacity: 0, y: 50 },
   visible: {

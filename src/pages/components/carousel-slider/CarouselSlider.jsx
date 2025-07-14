@@ -2,6 +2,10 @@ import React, { useRef } from "react";
 import "./CarouselSlider.scss"; // Ensure to style as needed
 import NavCard from "../../navbar/NavCard";
 import { motion } from "framer-motion";
+import {
+  fadeInWithEase,
+  staggerContainer,
+} from "../../../functions/motionUtils";
 
 const CarouselSlider = ({ items, isHomePage }) => {
   const carouselRef = useRef(null);
@@ -15,32 +19,28 @@ const CarouselSlider = ({ items, isHomePage }) => {
     }
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 1,
-        when: "beforeChildren",
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   return (
     <>
-      {isHomePage ? (
-        <h2 className="carousel-title-home">
-          Find <span>The Right Oil</span> For Every Application
-        </h2>
-      ) : (
-        <h2 className="carousel-title">Browse Our Product Segments</h2>
-      )}
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {isHomePage ? (
+          <motion.h2 className="carousel-title-home" variants={fadeInWithEase}>
+            Find <span>The Right Oil</span> For Every Application
+          </motion.h2>
+        ) : (
+          <motion.h2 className="carousel-title" variants={fadeInWithEase}>
+            Browse Our Product Segments
+          </motion.h2>
+        )}
+      </motion.div>
 
       <motion.div
         className="carousel-slider-container"
-        variants={containerVariants}
+        variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

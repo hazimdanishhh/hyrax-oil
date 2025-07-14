@@ -87,12 +87,16 @@ function Carousel() {
           <div className="home-carousel-indicators">
             {images.map((_, index) => (
               <button
-                key={index}
-                className={`indicator ${
+                className={`indicatorContainer ${
                   index === currentIndex ? "active" : ""
                 }`}
+                key={index}
                 onClick={() => goToSlide(index)}
-              ></button>
+              >
+                <div className="indicatorBackground">
+                  <div className="indicator" />
+                </div>
+              </button>
             ))}
           </div>
         </div>

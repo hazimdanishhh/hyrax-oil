@@ -3,70 +3,10 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.founder-section-background {
-  background-color: #ffffff;
-
-  .founder-section-wrapper {
-    display: flex;
-    max-width: 1366px;
-    margin: auto;
-    padding: 3rem 3rem;
-
-    @media screen and (max-width: 768px) {
-      padding: 3rem 1rem;
-    }
-
-    .founder-section-content {
-      position: relative;
-      display: flex;
-      align-items: center;
-      color: black;
-
-      @media screen and (max-width: 768px) {
-        flex-direction: column-reverse;
-        gap: 1rem;
-      }
-
-      .founder-section-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-
-        h2 {
-          @media screen and (max-width: 768px) {
-            text-align: center;
-          }
-          span {
-            font-family: "GilroyMedium", sans-serif;
-
-            background: linear-gradient(to right, $primary, $secondary);
-            background-clip: $primary;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-          }
-        }
-
-        p {
-          text-align: justify;
-        }
-      }
-
-      .founder-section-button {
-        width: max-content;
-      }
-
-      .founder-section-img {
-        width: 50%;
-      }
-    }
-  }
-}
-
-.BOD-section-background {
+.BODSection {
   background-color: #ececec;
 
-  .BOD-section-wrapper {
+  .BODsectionwrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,13 +22,12 @@ $background: white;
       padding: 7rem 1rem;
     }
 
-    .BOD-section-header {
+    .BODSectionHeader {
       display: flex;
       align-items: center;
       gap: 2rem;
 
       h2 {
-        font-family: "GilroyMedium", sans-serif;
         color: black;
       }
 
@@ -100,6 +39,11 @@ $background: white;
       }
     }
 
+    p {
+      color: $tertiary;
+      text-align: justify;
+    }
+
     .BOD-layout {
       display: flex;
       gap: 4rem;
@@ -108,160 +52,4 @@ $background: white;
       justify-content: center;
     }
   }
-}
-
-.product-pop-up {
-  display: flex;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100dvh;
-  width: 550px;
-  background-color: rgba(32, 32, 32, 0.95);
-  backdrop-filter: blur(30px);
-
-  z-index: 1300;
-
-  padding: 1.5rem;
-  overflow-y: auto;
-
-  @media screen and (max-width: 1024px) {
-    width: 100%;
-    overflow-y: auto;
-  }
-
-  .product-pop-up-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    text-align: justify;
-
-    .product-close-icon {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      cursor: pointer;
-    }
-
-    .product-pop-up-header {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      @media screen and (max-width: 1024px) {
-        align-items: center;
-      }
-
-      .product-pop-up-type {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #9c7008;
-        background: linear-gradient(to right, #ae8625, #f7ef8a);
-        width: 120px;
-        height: 25px;
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
-
-        font-weight: bold;
-        font-size: 0.8rem;
-      }
-    }
-  }
-}
-
-.product-pop-up-buttons {
-  display: flex;
-  gap: 1.5rem;
-
-  padding-bottom: 1.5rem;
-
-  @media screen and (max-width: 1024px) {
-    justify-content: center;
-  }
-
-  .button-type-2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-width: fit-content;
-    height: 33px;
-    padding: 0 1rem;
-    margin-right: 1rem;
-    font-family: "GilroyLight";
-
-    border-radius: 20px;
-    border: 1px solid $primary;
-    background: rgba(0, 0, 0, 0);
-    color: $primary;
-    transition: 0.3s;
-
-    svg {
-      margin-left: 0.5rem;
-
-      path {
-        stroke: $primary;
-      }
-    }
-
-    &:hover {
-      border-color: $secondary;
-      background: linear-gradient(270deg, $primary, $secondary);
-      color: white;
-
-      svg path {
-        stroke: white;
-        transition: 0.3s;
-      }
-    }
-
-    &:active {
-      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8) inset;
-    }
-  }
-
-  .button-type-1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-width: fit-content;
-    height: 33px;
-    padding: 0 1rem;
-    font-family: "GilroyLight";
-
-    border-radius: 20px;
-    border: 1px solid $secondary;
-    background: linear-gradient(270deg, $primary, $secondary);
-
-    color: white;
-    transition: 0.3s;
-
-    svg {
-      margin-left: 0.5rem;
-    }
-
-    &:hover {
-      background: none;
-      color: $primary;
-
-      svg path {
-        stroke: $primary;
-        transition: 0.3s;
-      }
-    }
-
-    &:active {
-      box-shadow: 0px 0px 4px 0px $primary inset;
-    }
-  }
-}
-
-.product-pop-up-img {
-  position: relative;
-  right: 0;
-  left: 0;
-  margin-inline: auto;
-  width: 200px;
 }

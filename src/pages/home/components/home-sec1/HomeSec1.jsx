@@ -14,7 +14,7 @@ function HomeSec1() {
   return (
     <div className="sectionLight">
       <div className="sectionWrapper">
-        <div className="sectionContent">
+        <div className="sectionContent bestLubricantsContent">
           <motion.div
             className="home-sec1-text"
             variants={staggerContainer}
@@ -22,7 +22,10 @@ function HomeSec1() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.h1 className="home-sec1-title" variants={fadeInWithEase}>
+            <motion.h1
+              className="home-sec1-title textRegular textXXL"
+              variants={fadeInWithEase}
+            >
               Only The Best Lubricants For The World
             </motion.h1>
 
@@ -40,17 +43,17 @@ function HomeSec1() {
             </motion.p>
           </motion.div>
 
-          {/* <motion.iframe
-          className="home-sec1-video"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-          referrerPolicy="strict-origin-when-cross-origin"
-          src="https://www.youtube.com/embed/Vwn7uje9Cog?si=b4PVQI7XrVPp0TOV"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        ></motion.iframe> */}
+          <motion.iframe
+            className="home-sec1-video"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            referrerPolicy="strict-origin-when-cross-origin"
+            src="https://www.youtube.com/embed/Vwn7uje9Cog?si=b4PVQI7XrVPp0TOV"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          ></motion.iframe>
 
           <motion.img
             className="home-sec1-img"

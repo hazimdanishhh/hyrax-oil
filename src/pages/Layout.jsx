@@ -6,7 +6,7 @@ import { productSegments } from "./navbar/components/nav-products/NavProductSegm
 import { aboutSections } from "./navbar/components/nav-about/NavAboutSections";
 import { servicesSections } from "./navbar/components/nav-services/NavServicesSections";
 import { mediaSections } from "./navbar/components/nav-media/NavMediaSections";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import ButtonRouter from "./components/buttons/ButtonRouter";
 
 import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
@@ -14,6 +14,7 @@ import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
 import apiLogo from "/src/assets/logos/APILogo-Light.webp";
 import malaysianBrandLogo from "/src/assets/logos/malaysian-brand.png";
 import useNavbar from "/src/functions/useNavbar";
+import { staggerContainerFast } from "../functions/motionUtils";
 
 function Layout() {
   const {
@@ -122,210 +123,238 @@ function Layout() {
       </nav>
 
       {/* NAV OVERLAY MODAL DESKTOP & MOBILE*/}
-      {activePopup && (
-        <>
-          <motion.div
-            className={"nav-overlay"}
-            ref={navOverlayRef}
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
-            initial={{ opacity: 0, x: initialX }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* =============== */}
-            {/* ABOUT */}
-            {/* =============== */}
-            {activePopup === "about" && (
-              <>
-                <div className="nav-overlay-header">
-                  <svg
-                    onClick={closeOverlay}
-                    className="back-icon"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
+      <AnimatePresence>
+        {activePopup && (
+          <>
+            <motion.div
+              className={"nav-overlay"}
+              ref={navOverlayRef}
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+              onMouseLeave={closeOverlay}
+              initial={{ opacity: 0, x: initialX }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: initialX }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* =============== */}
+              {/* ABOUT */}
+              {/* =============== */}
+              {activePopup === "about" && (
+                <>
+                  <div className="nav-overlay-header">
+                    <svg
+                      onClick={closeOverlay}
+                      className="back-icon"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="m15 19-7-7 7-7"
+                      />
+                    </svg>
+
+                    <h2>About</h2>
+                  </div>
+                  <motion.ul
+                    className="nav-card-layout"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                   >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m15 19-7-7 7-7"
-                    />
-                  </svg>
+                    {aboutSections.map((segment, index) => (
+                      <NavCard
+                        key={index}
+                        src={segment.src}
+                        alt={segment.alt}
+                        title={segment.title}
+                        link={segment.link}
+                        styleLink="nav-card"
+                        styleOverlay="nav-card-overlay"
+                      />
+                    ))}
+                  </motion.ul>
+                </>
+              )}
 
-                  <h2>About</h2>
-                </div>
-                <ul className="nav-card-layout">
-                  {aboutSections.map((segment, index) => (
-                    <NavCard
-                      key={index}
-                      src={segment.src}
-                      alt={segment.alt}
-                      title={segment.title}
-                      link={segment.link}
-                      styleLink="nav-card"
-                      styleOverlay="nav-card-overlay"
-                    />
-                  ))}
-                </ul>
-              </>
-            )}
+              {/* =============== */}
+              {/* PRODUCTS */}
+              {/* =============== */}
+              {activePopup === "products" && (
+                <>
+                  <div className="nav-overlay-header">
+                    <svg
+                      onClick={closeOverlay}
+                      className="back-icon"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="m15 19-7-7 7-7"
+                      />
+                    </svg>
 
-            {/* =============== */}
-            {/* PRODUCTS */}
-            {/* =============== */}
-            {activePopup === "products" && (
-              <>
-                <div className="nav-overlay-header">
-                  <svg
-                    onClick={closeOverlay}
-                    className="back-icon"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
+                    <h2>Products</h2>
+                  </div>
+                  <div className="nav-overlay-logos">
+                    <img
+                      loading="lazy"
+                      src={hyraxLogo}
+                      alt="hyrax brand logo"
+                      className="nav-overlay-logo"
+                    />
+                    <img
+                      loading="lazy"
+                      src={apiLogo}
+                      alt="American Petroleum Institute Logo"
+                      className="nav-overlay-logo"
+                    />
+                    <img
+                      loading="lazy"
+                      src={malaysianBrandLogo}
+                      alt="Malaysian Brand Logo"
+                      className="nav-overlay-logo"
+                    />
+                  </div>
+                  <motion.ul
+                    className="nav-card-layout"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                   >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m15 19-7-7 7-7"
-                    />
-                  </svg>
+                    {productSegments.map((segment, index) => (
+                      <NavCard
+                        key={index}
+                        src={segment.src}
+                        alt={segment.alt}
+                        title={segment.title}
+                        link={segment.link}
+                        styleLink="nav-card"
+                        styleOverlay="nav-card-overlay"
+                      />
+                    ))}
+                  </motion.ul>
+                </>
+              )}
 
-                  <h2>Products</h2>
-                </div>
-                <div className="nav-overlay-logos">
-                  <img
-                    loading="lazy"
-                    src={hyraxLogo}
-                    alt="hyrax brand logo"
-                    className="nav-overlay-logo"
-                  />
-                  <img
-                    loading="lazy"
-                    src={apiLogo}
-                    alt="American Petroleum Institute Logo"
-                    className="nav-overlay-logo"
-                  />
-                  <img
-                    loading="lazy"
-                    src={malaysianBrandLogo}
-                    alt="Malaysian Brand Logo"
-                    className="nav-overlay-logo"
-                  />
-                </div>
-                <ul className="nav-card-layout">
-                  {productSegments.map((segment, index) => (
-                    <NavCard
-                      key={index}
-                      src={segment.src}
-                      alt={segment.alt}
-                      title={segment.title}
-                      link={segment.link}
-                      styleLink="nav-card"
-                      styleOverlay="nav-card-overlay"
-                    />
-                  ))}
-                </ul>
-              </>
-            )}
+              {/* =============== */}
+              {/* SERVICES */}
+              {/* =============== */}
+              {activePopup === "services" && (
+                <>
+                  <div className="nav-overlay-header">
+                    <svg
+                      onClick={closeOverlay}
+                      className="back-icon"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="m15 19-7-7 7-7"
+                      />
+                    </svg>
 
-            {/* =============== */}
-            {/* SERVICES */}
-            {/* =============== */}
-            {activePopup === "services" && (
-              <>
-                <div className="nav-overlay-header">
-                  <svg
-                    onClick={closeOverlay}
-                    className="back-icon"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
+                    <h2>Services</h2>
+                  </div>
+                  <motion.ul
+                    className="nav-card-layout"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                   >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m15 19-7-7 7-7"
-                    />
-                  </svg>
+                    {servicesSections.map((segment, index) => (
+                      <NavCard
+                        key={index}
+                        src={segment.src}
+                        alt={segment.alt}
+                        title={segment.title}
+                        link={segment.link}
+                        styleLink="nav-card"
+                        styleOverlay="nav-card-overlay"
+                      />
+                    ))}
+                  </motion.ul>
+                </>
+              )}
 
-                  <h2>Services</h2>
-                </div>
-                <ul className="nav-card-layout">
-                  {servicesSections.map((segment, index) => (
-                    <NavCard
-                      key={index}
-                      src={segment.src}
-                      alt={segment.alt}
-                      title={segment.title}
-                      link={segment.link}
-                      styleLink="nav-card"
-                      styleOverlay="nav-card-overlay"
-                    />
-                  ))}
-                </ul>
-              </>
-            )}
+              {/* =============== */}
+              {/* MEDIA */}
+              {/* =============== */}
+              {activePopup === "media" && (
+                <>
+                  <div className="nav-overlay-header">
+                    <svg
+                      onClick={closeOverlay}
+                      className="back-icon"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="m15 19-7-7 7-7"
+                      />
+                    </svg>
 
-            {/* =============== */}
-            {/* MEDIA */}
-            {/* =============== */}
-            {activePopup === "media" && (
-              <>
-                <div className="nav-overlay-header">
-                  <svg
-                    onClick={closeOverlay}
-                    className="back-icon"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
+                    <h2>Media</h2>
+                  </div>
+                  <motion.ul
+                    className="nav-card-layout"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                   >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m15 19-7-7 7-7"
-                    />
-                  </svg>
-
-                  <h2>Media</h2>
-                </div>
-                <ul className="nav-card-layout">
-                  {mediaSections.map((segment, index) => (
-                    <NavCard
-                      key={index}
-                      src={segment.src}
-                      alt={segment.alt}
-                      title={segment.title}
-                      link={segment.link}
-                      styleLink="nav-card"
-                      styleOverlay="nav-card-overlay"
-                    />
-                  ))}
-                </ul>
-              </>
-            )}
-          </motion.div>
-        </>
-      )}
+                    {mediaSections.map((segment, index) => (
+                      <NavCard
+                        key={index}
+                        src={segment.src}
+                        alt={segment.alt}
+                        title={segment.title}
+                        link={segment.link}
+                        styleLink="nav-card"
+                        styleOverlay="nav-card-overlay"
+                      />
+                    ))}
+                  </motion.ul>
+                </>
+              )}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       <Outlet />
     </>

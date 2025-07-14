@@ -3,13 +3,14 @@ import Layout from "../../Layout";
 import Footer from "../../Footer";
 import { Link, Outlet } from "react-router-dom";
 import { productsTF } from "./productsTF";
-import ProductCard from "../../products/components/product-card/ProductCard";
-import ProductPopUp from "../components/product-pop-up/ProductPopUp";
+import ProductCard from "../../../components/product-card/ProductCard";
+import ProductPopUp from "../../../components/product-pop-up/ProductPopUp";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
-import Hero from "../../components/hero/Hero";
-import ProductSideNav from "../components/side-nav/SideNav";
+import Hero from "../../../components/hero/Hero";
+import ProductSideNav from "../../../components/side-nav/SideNav";
 import background from "/src/assets/products/tractor/tf-background.webp";
+import { AnimatePresence } from "framer-motion";
 
 function TractorFluids() {
   const [activePopup, setActivePopup] = useState(null);
@@ -63,9 +64,11 @@ function TractorFluids() {
       </div>
 
       {/* PRODUCT POP UP */}
-      {activePopup && (
-        <ProductPopUp product={activePopup} onClose={closeOverlay} />
-      )}
+      <AnimatePresence>
+        {activePopup && (
+          <ProductPopUp product={activePopup} onClose={closeOverlay} />
+        )}
+      </AnimatePresence>
 
       <CarouselSlider items={productSegments} />
 

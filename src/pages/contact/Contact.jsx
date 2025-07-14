@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Layout from "../Layout";
-import Hero from "../components/hero/Hero";
 import Footer from "../Footer";
-import WorldMap from "../components/world-map/WorldMap";
 import "./Contact.scss";
+import background from "/src/assets/contact/contact-us-background.webp";
+import Hero from "../../components/hero/Hero";
 
 function Contact() {
   useEffect(() => {
@@ -16,19 +16,12 @@ function Contact() {
 
       {/* HERO SECTION */}
       <Hero
-        image='url("./contact/contact-us-background.webp")'
+        image={`url(${background})`}
         crumble=""
         crumbleLink=""
         title="Contact Us"
         desc="Stay connected, stay ahead. Get in touch with us!"
       />
-
-      <div className="contact-section-background">
-        <div className="contact-section-wrapper">
-          <WorldMap />
-          <div className="test-modal">TEST</div>
-        </div>
-      </div>
 
       {/* FOOTER SECTION */}
       <Footer />

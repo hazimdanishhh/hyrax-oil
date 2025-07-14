@@ -1,0 +1,37 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.founderMessageContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  .founder-section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  .founder-section-button {
+    width: max-content;
+  }
+
+  .founder-section-img {
+    width: 50%;
+    @media screen and (max-width: 1024px) {
+      width: 80%;
+    }
+  }
+}

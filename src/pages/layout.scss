@@ -75,7 +75,12 @@ nav {
     }
 
     li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
       padding: 25px 1rem;
+      cursor: pointer;
 
       &:hover {
         text-decoration: underline;
@@ -86,6 +91,7 @@ nav {
 
       @media screen and (max-width: 1024px) {
         margin: 0;
+        justify-content: start;
       }
     }
 
@@ -129,6 +135,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
+  overflow: hidden;
 
   position: fixed;
   max-width: 1000px;
@@ -200,7 +207,7 @@ nav {
     justify-content: space-evenly;
 
     @media screen and (max-width: 1024px) {
-      justify-content: center;
+      justify-content: start;
     }
   }
 }

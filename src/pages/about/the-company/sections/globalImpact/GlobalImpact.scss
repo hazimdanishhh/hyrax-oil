@@ -1,0 +1,101 @@
+$primary: #f26f27;
+$secondary: #f2a327;
+$tertiary: #323232;
+$background: white;
+
+.globalImpactHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+
+  h2 {
+    width: 30%;
+    text-align: start;
+  }
+  p {
+    width: 70%;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.company-impact-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .company-impact-cards {
+    position: relative;
+    text-align: start;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 20%;
+    height: 250px;
+    padding: 2rem;
+    border-bottom: 1px solid #ffffff;
+    transition: 1s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background-color: $secondary;
+      transition: width 0.4s ease;
+      pointer-events: none;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #232c38;
+      transition: 1s;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      max-width: 90%;
+      width: 90%;
+      height: fit-content;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      align-items: center;
+    }
+
+    .company-impact-digit {
+      display: flex;
+
+      .company-impact-digit-plus {
+        color: $secondary;
+      }
+    }
+  }
+}

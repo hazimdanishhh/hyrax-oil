@@ -3,46 +3,47 @@ $secondary: #f2a327;
 $tertiary: #323232;
 $background: white;
 
-.home-sec1-text {
-  display: flex;
+.bestLubricantsContent {
   flex-direction: column;
-  gap: 2rem;
-  width: 70%;
-  color: #323232;
-  margin: auto;
-  text-align: center;
+  .home-sec1-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 70%;
+    color: #323232;
+    margin: auto;
+    text-align: center;
 
-  .home-sec1-title {
-    background: linear-gradient(to right, $primary, $secondary);
-    background-clip: $primary;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-
-  .home-sec1-desc {
-    text-align: justify;
-
-    span {
+    .home-sec1-title {
       background: linear-gradient(to right, $primary, $secondary);
       background-clip: $primary;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
+
+    .home-sec1-desc {
+      text-align: justify;
+
+      span {
+        background: linear-gradient(to right, $primary, $secondary);
+        background-clip: $primary;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
-  @media screen and (max-width: 1024px) {
+  .home-sec1-img {
     width: 100%;
   }
-}
 
-.home-sec1-img {
-  width: 100%;
-}
-
-.home-sec1-video {
-  margin-top: 6rem;
-  height: calc(100vh - 100px);
-  border-radius: 20px;
-  // width: 80%;
-  // height: 100vh;
+  .home-sec1-video {
+    border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
 }

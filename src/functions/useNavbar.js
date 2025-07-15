@@ -3,11 +3,16 @@ import { useState, useEffect, useRef } from "react";
 export default function useNavbar() {
   const [activePopup, setActivePopup] = useState(null);
   const [isActive, setIsActive] = useState(false);
-  const prevIsMobileView = useRef(
-    window.matchMedia("(max-width: 1024px)").matches
-  );
   const [initialX, setInitialX] = useState(0);
   const navOverlayRef = useRef(null);
+  const prevIsMobileView = useRef(false);
+
+  // ⛑️ Safely check media query on mount only (browser only)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      prevIsMobileView.current = window.matchMedia("(max-width: 1024px)").matches;
+    }
+  }, []);
 
   const openOverlay = (popupName) => {
     setActivePopup(popupName);
@@ -21,11 +26,12 @@ export default function useNavbar() {
     setIsActive(!isActive);
   };
 
-  // Disables background scrolling whenever activePopup or isActive is true
+  // ⛑️ Disables background scroll only on client
   useEffect(() => {
-    const shouldDisableScroll =
-      (activePopup || isActive) &&
-      window.matchMedia("(max-width: 1024px)").matches;
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
+    const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    const shouldDisableScroll = (activePopup || isActive) && isMobile;
 
     if (shouldDisableScroll) {
       document.body.classList.add("no-scroll");
@@ -38,13 +44,15 @@ export default function useNavbar() {
     };
   }, [activePopup, isActive]);
 
-  // Reset isActive and activePopup on screen size change
+  // ⛑️ Listen for resize only in browser
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const handleResize = () => {
       const isMobileView = window.matchMedia("(max-width: 1024px)").matches;
 
       if (isMobileView !== prevIsMobileView.current) {
-        setActivePopup(false);
+        setActivePopup(null);
         setIsActive(false);
       }
 
@@ -52,14 +60,15 @@ export default function useNavbar() {
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  // Close nav-overlay when clicking outside of it
+  // ⛑️ Close overlay when clicking outside (only in browser)
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+
     const handleClickOutside = (event) => {
       if (
         navOverlayRef.current &&
@@ -80,8 +89,10 @@ export default function useNavbar() {
     };
   }, [activePopup]);
 
-  // Update initialX based on screen size
+  // ⛑️ Track screen size for animation
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const updateInitialX = () => {
       setInitialX(window.innerWidth <= 1024 ? 500 : 0);
     };

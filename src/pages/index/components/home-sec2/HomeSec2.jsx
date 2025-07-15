@@ -2,7 +2,7 @@ import React from "react";
 import "./HomeSec2.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import ButtonRouter from "../../../components/buttons/ButtonRouter";
+import ButtonRouter from "../../../components/buttons/ButtonRouter.jsx";
 import {
   staggerContainer,
   fadeInWithEase,

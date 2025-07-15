@@ -1,3 +1,5 @@
+// Home page
+
 import React, { useEffect } from "react";
 import Layout from "../Layout";
 import "./home.scss";
@@ -9,29 +11,10 @@ import PoweringUp from "./components/powering-up/PoweringUp";
 import CarouselSlider from "../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../navbar/components/nav-products/NavProductSegments";
 import HomeSec1 from "./components/home-sec1/HomeSec1";
-import Seo from "../../components/Seo";
 
-function Home() {
+export default function Page() {
   return (
     <>
-      <Seo
-        title="The World's Top Quality Lubricants | Hyrax Oil - Better Oil, Better Care"
-        description="Hyrax Oil has been honored with the National Mark of Malaysian Brand award, acknowledging its exceptional, top-quality, and distinctive products."
-        image="./og-images/home.jpg"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Hyrax Oil",
-          url: "https://hyraxoil.com/",
-          logo: "./logo.png",
-          description:
-            "Established in 1991, Hyrax Oil is a leading manufacturer of high-quality lubricants and transformer oils in Malaysia. We are committed to delivering superior products that meet the highest standards of performance and reliability.",
-          sameAs: [
-            "https://twitter.com/hyraxoilofficial",
-            "https://linkedin.com/company/hyrax-oil-sdn-bhd",
-          ],
-        }}
-      />
       {/* NAVBAR */}
       <Layout />
 
@@ -84,5 +67,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

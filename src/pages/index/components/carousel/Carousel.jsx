@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useMemo } from "react";
 import images from "./images";
 import "./carousel.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, Outlet } from "react-router-dom";
 import { staggerContainer, fadeInWithEase } from "/src/functions/motionUtils";
 import useCarousel from "../../../../functions/useCarousel";
+import useHydrated from "../../../../functions/useHydrated";
 
 function Carousel() {
+  const hydrated = useHydrated();
+  const memoizedImages = useMemo(() => images, []); // <- prevents hook changes
+
   const {
     currentIndex,
     goToSlide,
     handleTouchStart,
     handleTouchMove,
     handleTouchEnd,
-  } = useCarousel(images, 10000); // 10s autoplay delay
+  } = useCarousel(memoizedImages, 10000);
+
+  if (!hydrated || memoizedImages.length === 0) return null;
 
   return (
     <>

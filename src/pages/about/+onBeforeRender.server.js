@@ -3,7 +3,7 @@
 const BASE_URL = process.env.VITE_SITE_BASE_URL || "http://localhost:3000";
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}/about`; // About page path
+  const fullUrl = `${BASE_URL}about`; // About page path
 
   const title = "About Hyrax Oil | Our Mission, Vision & Global Reach";
   const description =

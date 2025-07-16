@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./footer.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import { Outlet, Link } from "react-router-dom";
 import SocialLink from "./components/social-link/SocialLink";
 import { socialLinks } from "./components/social-link/socials";
 
@@ -38,42 +37,42 @@ function Footer() {
               <h3 className="textM textRegular">Quick Links</h3>
               <ul>
                 <li>
-                  <Link to="/about/the-company" className="textLight textXXS">
+                  <a href="/about/the-company" className="textLight textXXS">
                     The Company
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/about/our-leaders" className="textLight textXXS">
+                  <a href="/about/our-leaders" className="textLight textXXS">
                     Our Leaders
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/about/awards" className="textLight textXXS">
+                  <a href="/about/awards" className="textLight textXXS">
                     Awards & Accreditations
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/about/blending-plants"
+                  <a
+                    href="/about/blending-plants"
                     className="textLight textXXS"
                   >
                     Blending Plants
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="#" className="textLight textXXS">
+                  <a href="#" className="textLight textXXS">
                     Certifications & Compliance
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/products" className="textLight textXXS">
+                  <a href="/products" className="textLight textXXS">
                     Our Products
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/services" className="textLight textXXS">
+                  <a href="/services" className="textLight textXXS">
                     Our Services
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -81,8 +80,8 @@ function Footer() {
             {/* FOOTER ADDRESS */}
             <div className="footer-item">
               <h3 className="textM textRegular">Head Office</h3>
-              <Link
-                to="https://www.google.com/maps/place/Hyrax+Oil+Sdn.+Bhd./data=!4m2!3m1!1s0x0:0x53085859f88dd00d?sa=X&ved=1t:2428&ictx=111"
+              <a
+                href="https://www.google.com/maps/place/Hyrax+Oil+Sdn.+Bhd./data=!4m2!3m1!1s0x0:0x53085859f88dd00d?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="textLight textXXS"
@@ -96,12 +95,12 @@ function Footer() {
                 50450 Kuala Lumpur,
                 <br />
                 Wilayah Persekutuan Kuala Lumpur.
-              </Link>
+              </a>
               <br />
 
               <h3 className="textM textRegular">Meru LOBP</h3>
-              <Link
-                to="https://www.google.com/maps?ll=3.123462,101.441422&z=11&t=m&hl=en&gl=MY&mapclient=embed&cid=5472883420717197171"
+              <a
+                href="https://www.google.com/maps?ll=3.123462,101.441422&z=11&t=m&hl=en&gl=MY&mapclient=embed&cid=5472883420717197171"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="textLight textXXS"
@@ -115,29 +114,29 @@ function Footer() {
                 Selangor Darul Ehsan, 41050 Klang,
                 <br />
                 Selangor
-              </Link>
+              </a>
             </div>
 
             {/* FOOTER CONTACT */}
             <div className="footer-item">
               <h3 className="textM textRegular">Contact</h3>
               <span>
-                <Link to="tel:+60321635893" className="textLight textXXS">
+                <a href="tel:+60321635893" className="textLight textXXS">
                   Tel: &#40;+603&#41; 2163-5893
-                </Link>
+                </a>
               </span>
               <span>
-                <Link to="tel:+60321646577" className="textLight textXXS">
+                <a href="tel:+60321646577" className="textLight textXXS">
                   Fax: &#40;+603&#41; 2164-6577
-                </Link>
+                </a>
               </span>
               <span>
-                <Link
-                  to="mailto:hyrax@hyraxoil.com"
+                <a
+                  href="mailto:hyrax@hyraxoil.com"
                   className="textLight textXXS"
                 >
                   Email: hyrax@hyraxoil.com
-                </Link>
+                </a>
               </span>
             </div>
 
@@ -158,8 +157,8 @@ function Footer() {
             </span>
 
             {/* <div>
-              <Link to="/privacy-policy">Privacy Policy</Link>
-              <Link to="/terms-and-conditions">Terms & Conditions</Link>
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/terms-and-conditions">Terms & Conditions</a>
             </div> */}
 
             {/* FOOTER LOGOS */}
@@ -180,8 +179,8 @@ function Footer() {
           </div>
 
           {/* SCROLL TO TOP BUTTON */}
-          <Link
-            to="#"
+          <a
+            href="#"
             onClick={scrollToTop}
             className="back-to-top"
             onMouseEnter={showBTT}
@@ -217,11 +216,9 @@ function Footer() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </Link>
+          </a>
         </div>
       </footer>
-
-      <Outlet />
     </>
   );
 }

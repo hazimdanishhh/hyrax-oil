@@ -15,30 +15,22 @@ import HomeSec1 from "./components/home-sec1/HomeSec1";
 export default function Page() {
   return (
     <>
-      {/* NAVBAR */}
-      <Layout />
-
-      {/* CAROUSEL TOP SECTION */}
       <Carousel />
 
-      {/* BEST LUBRICANTS SECTION */}
       <section id="home-sec1">
         <HomeSec1 />
       </section>
 
-      {/* LEADING LUBE EXPERT */}
       <section id="home-sec2">
         <CarouselSlider items={productSegments} isHomePage="Yes" />
       </section>
 
-      {/* TRUST OUR QUALITY */}
       <div id="trust-quality">
         <HomeSec2 />
       </div>
 
       <section>Labs, Engine, Racetrack Cards</section>
 
-      {/* POWERING UP THE WORLD */}
       <div id="powering-up">
         <PoweringUp />
       </div>
@@ -57,13 +49,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* About Us Summary */}
-      {/* <section> */}
       <SectionLink />
-      {/* </section> */}
-
-      {/* Footer */}
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import "./HomeSec2.scss";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ButtonRouter from "../../../components/buttons/ButtonRouter.jsx";
 import {
@@ -42,9 +41,9 @@ function HomeSec2() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Link
+          <a
             className="home-sec2-link"
-            to="https://www.api.org/"
+            href="https://www.api.org/"
             target="__blank"
           >
             <motion.img
@@ -53,11 +52,11 @@ function HomeSec2() {
               alt="American Petroleum Institute"
               variants={fadeInWithEase}
             />
-          </Link>
+          </a>
 
-          <Link
+          <a
             className="home-sec2-link"
-            to="https://www.acea.auto/"
+            href="https://www.acea.auto/"
             target="__blank"
           >
             <motion.img
@@ -66,11 +65,11 @@ function HomeSec2() {
               alt="European Automobile Manufacturers Association"
               variants={fadeInWithEase}
             />
-          </Link>
+          </a>
 
-          <Link
+          <a
             className="home-sec2-link"
-            to="https://www.mtu-solutions.com/eu/en.regionselect.html"
+            href="https://www.mtu-solutions.com/eu/en.regionselect.html"
             target="__blank"
           >
             <motion.img
@@ -79,11 +78,11 @@ function HomeSec2() {
               alt="MTU Friedrichshafen GmbH"
               variants={fadeInWithEase}
             />
-          </Link>
+          </a>
 
-          <Link
+          <a
             className="home-sec2-link"
-            to="https://www.doble.com/"
+            href="https://www.doble.com/"
             target="__blank"
           >
             <motion.img
@@ -92,7 +91,7 @@ function HomeSec2() {
               alt="Doble Engineering Company"
               variants={fadeInWithEase}
             />
-          </Link>
+          </a>
         </motion.div>
 
         <ButtonRouter

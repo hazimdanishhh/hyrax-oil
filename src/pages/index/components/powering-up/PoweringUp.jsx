@@ -1,6 +1,5 @@
 import React from "react";
 import "./poweringUp.scss";
-import { Link } from "react-router-dom";
 
 function PoweringUp() {
   return (
@@ -19,14 +18,14 @@ function PoweringUp() {
             </p>
           </div>
 
-          <Link className="link-div" to="/contact">
+          <a className="link-div" href="/contact">
             <span className="link">contact us</span>
             <img
               className="link-arrow"
               src="./link-arrow.svg"
               alt="Link Arrow"
             />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

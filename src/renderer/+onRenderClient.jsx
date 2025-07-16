@@ -1,18 +1,17 @@
 // src/renderer/+onRenderClient.jsx
-import { hydrateRoot } from 'react-dom/client'
-import React from 'react'
-import App from './app' // ✅ use default export
+import React from "react";
+import { hydrateRoot } from "react-dom/client";
+import { PageShell } from "./PageShell";
 
 export default function onRenderClient(pageContext) {
-  const { Page, pageProps } = pageContext
-  const container = document.getElementById('page-view')
+  const { Page, pageProps } = pageContext;
 
   hydrateRoot(
-    container,
+    document.getElementById("page-view"),
     <React.StrictMode>
-      <App>
+      <PageShell pageContext={pageContext}>
         <Page {...pageProps} />
-      </App>
+      </PageShell>
     </React.StrictMode>
-  )
+  );
 }

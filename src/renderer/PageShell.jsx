@@ -1,23 +1,34 @@
-import './styles/main.scss'
-
 // src/renderer/PageShell.jsx
-export default function PageShell({ children, documentProps }) {
-  const {
-    title = 'Hyrax Oil | Better Oil, Better Care.',
-    description = "The world's top quality oils"
-  } = documentProps || {}
+import React, { useEffect } from "react";
+import { usePageContext } from "vike-react/usePageContext";
+import "./styles/main.scss"; // global styles
+import Layout from "../pages/Layout";
+import Footer from "../pages/Footer";
+
+export function PageShell({ children, pageContext }) {
+  const context = usePageContext() || pageContext;
+  const { documentProps } = context;
+
+  useEffect(() => {
+    if (documentProps?.title) {
+      document.title = documentProps.title;
+    }
+    if (documentProps?.description) {
+      let meta = document.querySelector('meta[name="description"]');
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.name = "description";
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute("content", documentProps.description);
+    }
+  }, [documentProps?.title, documentProps?.description]);
 
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content={description} />
-        <title>{title}</title>
-      </head>
-      <body>
-        <div id="page-view">{children}</div>
-      </body>
-    </html>
-  )
+    <>
+      <Layout />
+      {children}
+      <Footer />
+    </>
+  );
 }

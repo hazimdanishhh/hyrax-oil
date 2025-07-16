@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Outlet, Link } from "react-router-dom";
 import "./layout.scss";
 import NavCard from "./navbar/NavCard";
 import { productSegments } from "./navbar/components/nav-products/NavProductSegments";
@@ -31,19 +30,19 @@ function Layout() {
     <>
       <nav className={`${isActive ? "active" : ""}`}>
         {/* LOGO */}
-        <Link to="/">
+        <a href="/">
           <img
             loading="lazy"
             className="nav-logo"
             src={hyraxOil33Logo}
             alt="Hyrax Oil Logo"
           />
-        </Link>
+        </a>
 
         {/* NAVIGATION LINKS */}
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
           <li>
-            <Link to="/">Home</Link>
+            <a href="/">Home</a>
           </li>
 
           <li
@@ -51,7 +50,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("about")}
             className={`${activePopup === "about" ? "link-active" : ""}`}
           >
-            <Link to="#">About</Link>
+            <a href="#">About</a>
           </li>
 
           <li
@@ -59,7 +58,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("products")}
             className={`${activePopup === "products" ? "link-active" : ""}`}
           >
-            <Link to="#">Products</Link>
+            <a href="#">Products</a>
           </li>
 
           <li
@@ -67,7 +66,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("services")}
             className={`${activePopup === "services" ? "link-active" : ""}`}
           >
-            <Link to="#">Services</Link>
+            <a href="#">Services</a>
           </li>
 
           <li
@@ -75,7 +74,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("media")}
             className={`${activePopup === "media" ? "link-active" : ""}`}
           >
-            <Link to="#">Media</Link>
+            <a href="#">Media</a>
           </li>
         </ul>
 
@@ -355,8 +354,6 @@ function Layout() {
           </>
         )}
       </AnimatePresence>
-
-      <Outlet />
     </>
   );
 }

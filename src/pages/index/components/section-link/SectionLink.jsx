@@ -1,12 +1,11 @@
 import React from "react";
 import "./sectionLink.scss";
-import { Link } from "react-router-dom";
 
 function SectionLink() {
   return (
     <div className="background">
       <div className="bg-gradient">
-        <Link to="/about" className="section-link-div">
+        <a href="/about" className="section-link-div">
           <div className="section-link-wrapper">
             <div className="text">
               <h2 className="title">About Us</h2>
@@ -34,7 +33,7 @@ function SectionLink() {
               />
             </div>
           </div>
-        </Link>
+        </a>
       </div>
     </div>
   );

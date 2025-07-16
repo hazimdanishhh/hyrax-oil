@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vike build",
     "preview": "vike preview",
-    "start": "node server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {

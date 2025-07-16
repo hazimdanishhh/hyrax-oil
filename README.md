@@ -1,116 +1,205 @@
 # Hyrax Oil Website
 
-This repository hosts the source code for the Hyrax Oil website, built with ReactJS and deployed via GitHub Pages. The website serves as an informational platform for Hyrax Oil, showcasing products, services, and company details.
+A modern, SEO-optimized company website for **Hyrax Oil**, built with React, Vite, Framer-motion, Sass, and **Vike SSR**. This project uses server-side rendering (SSR) via a custom Node.js + Express server and is currently staged on **Render.com**. It serves as Hyrax Oil’s digital platform to showcase products, company info, and brand presence globally.
 
 ---
 
-## Table of Contents
+## 📁 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation and Setup](#installation-and-setup)
-- [Deployment](#deployment)
-- [License](#license)
-
----
-
-## Overview
-
-The Hyrax Oil website is designed to provide a modern, user-friendly interface for customers and stakeholders. It features product information, company details, and dynamic content to engage users.
-
----
-
-## Features
-
-- **Responsive Design:** Optimized for both desktop and mobile devices.
-- **Interactive UI:** Engaging animations and transitions using Framer Motion.
-- **Product Showcase:** Highlights Hyrax Oil's products and services.
-- **React Router Integration:** Enables smooth navigation across multiple pages.
+- [1. Overview](#1-overview)
+- [2. Features](#2-features)
+- [3. Tech Stack](#3-tech-stack)
+- [4. Folder Structure](#4-folder-structure)
+- [5. Getting Started](#5-getting-started)
+- [6. Development](#6-development)
+- [7. Production Build](#7-production-build)
+- [8. Deployment](#8-deployment)
+- [9. Metadata & SEO](#9-metadata--seo)
+- [10. License](#10-license)
+- [11. Contact](#11-contact)
 
 ---
 
-## Technologies Used
+## 1. Overview
 
-- **Frontend Framework:** ReactJS
-- **CSS Preprocessor:** SCSS
-- **Animations:** Framer Motion
-- **Deployment:** GitHub Pages
+This project powers the official website of **Hyrax Oil**, delivering a performance-optimized, scalable front-end that highlights the brand’s lubricant and transformer oil products, services, and identity. Built with modern web technologies and designed to be responsive, engaging, and SEO-ready.
 
 ---
 
-## Installation and Setup
+## 2. Features
 
-Follow these steps to set up the project locally:
-
-### Prerequisites
-
-- Node.js (v16 or higher recommended)
-- npm (comes with Node.js)
-- A GitHub account
-
-### Steps
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/hazimdanishhh/hyrax-oil.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd hyrax-oil
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm start
-   ```
-
-5. Open your browser and navigate to `http://localhost:3000` to view the site.
+- ✅ **Server-Side Rendering** via Vike (Vite + React SSR)
+- ⚡ **Fast initial load** and high Lighthouse performance
+- 🔍 **Per-page SEO metadata** with dynamic `<title>` and `<meta>` tags
+- 🎨 **Framer Motion animations** for modern, fluid interactions
+- 📱 **Mobile-first responsive design**
+- 🧩 **Modular component structure** for easy scalability
 
 ---
 
-## Deployment
+## 3. Tech Stack
 
-The website is deployed using GitHub Pages. To deploy updates:
-
-### Steps
-
-1. Ensure the `homepage` field in `package.json` is correctly set:
-
-   ```json
-   "homepage": "https://hazimdanishhh.github.io/hyrax-oil/"
-   ```
-
-2. Build the project:
-
-   ```bash
-   npm run build
-   ```
-
-3. Deploy to GitHub Pages:
-
-   ```bash
-   npm run deploy
-   ```
-
-4. Verify the site at: [https://hazimdanishhh.github.io/hyrax-oil/](https://hazimdanishhh.github.io/hyrax-oil/)
+| Layer       | Technology                   |
+|-------------|------------------------------|
+| Frontend    | React, SCSS, Framer Motion   |
+| SSR Engine  | Vike (vite-plugin-ssr)       |
+| Routing     | React Router DOM             |
+| Server      | Node.js + Express            |
+| Build Tool  | Vite                         |
+| Deployment  | Node Web Server              |
 
 ---
 
-## License
+## 4. Folder Structure
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```bash
+root/
+├── src/
+│   ├── pages/              # Route-based folders (e.g. index/, about/, services/)
+│   │   ├── index/
+│   │   │   ├── components/
+│   │   │   ├── +config.js
+│   │   │   ├── +onBeforeRender.server.js
+│   │   │   ├── +Page.jsx
+│   │   │   └── home.scss
+│   │   │
+│   │   └── about/
+│   │       ├── components/
+│   │       ├── +config.js
+│   │       ├── +onBeforeRender.server.js
+│   │       ├── +Page.jsx
+│   │       └── about.scss
+│   │
+│   ├── renderer/           # Vike SSR logic (HTML streaming, hydration, layout)
+│   │   ├── styles/
+│   │   │   ├── index.scss  # Global Scss file
+│   │   ├── +config.js
+│   │   ├── +onRenderClient.jsx
+│   │   ├── +onRenderHtml.jsx
+│   │   ├── app.jsx
+│   │   └── PageShell.jsx
+│   │
+│   ├── components/         # Shared reusable components (Navbar, Footer, Cards, etc.)
+│   ├── functions/          # Custom hooks/utilities (e.g. useHydrated, ScrollToTop)
+│   ├── data/               # Shared reusable data
+│   ├── assets/             # Static files (images, logos, fonts)
+│
+├── server.js               # Express server that handles SSR in production
+├── render.yaml             # Render.com deployment config (build/start commands)
+├── vite.config.js          # Vite development/build config
+├── package.json            # Scripts and dependencies
+├── .env                    # Environment variables (e.g. PORT)
+├── .gitignore              # Git exclusions
+├── package-lock.json       # Lockfile for reproducible installs
+└── README.md  ──────────── # You are here
+```
+---
+
+## 5. Getting Started
+
+Prerequisites
+- Node.js v16 or newer
+- npm
+
+Setup
+
+```bash
+# Clone the repo
+git clone https://github.com/hazimdanishhh/hyrax-oil.git
+cd hyrax-oil
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+#Change the VITE_SITE_BASE_URL= in the .env file to match the appropriate base URL (for SEO and Meta)
+```
+
+Open http://localhost:5173 to view it in the browser.
 
 ---
 
-For any questions or issues, please contact [Hazim Danish](https://github.com/hazimdanishhh).
+## 6. Development
+
+- Pages live in src/pages/ and follow Vike routing.
+- Global layout is defined in PageShell.jsx.
+- Per-page metadata (title, description, etc.) is defined in each route’s +onBeforeRender.server.js.
+- Use SCSS for both global and scoped page styles.
+
+---
+
+## 7. Production Build
+
+To prepare the app for production:
+
+```bash
+npm run build
+npm start
+```
+
+This will generate:
+- dist/client/: static assets (HTML, JS, CSS)
+- dist/server/entry.mjs: SSR logic used by server.js
+
+---
+
+## 8. Deployment
+
+Using Render.com (Node Web Service) for staging
+Ensure render.yaml is configured like this:
+
+```yaml
+Copy
+Edit
+services:
+  - type: web
+    name: hyrax-oil
+    env: node
+    buildCommand: npm run build
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+```
+
+To deploy:
+1. Push changes to GitHub
+2. Connect Render to the repository
+3. Deploy — Render will auto-build and serve via Express
+
+---
+
+## 9. Metadata & SEO
+
+Each page can set SSR-friendly metadata dynamically:
+
+```js
+// Example: src/pages/index/+onBeforeRender.server.js
+export function onBeforeRender() {
+  return {
+    pageContext: {
+      documentProps: {
+        title: "Hyrax Oil | High-Performance Lubricants",
+        description: "Global manufacturer of high-quality engine oils, greases, and fluids.",
+      },
+    },
+  };
+}
+```
+
+These are injected into the HTML <head> using +onRenderHtml.jsx.
+
+---
+
+## 10. License
+This project is licensed under the MIT License.
+
+---
+
+## 11. Contact
+Developed by Hazim Danish
+For questions, please reach out via GitHub or email.

@@ -3,7 +3,7 @@
 const BASE_URL = process.env.VITE_SITE_BASE_URL || "http://localhost:3000";
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}/`; // Home page always ends with "/"
+  const fullUrl = `${BASE_URL}`; // Home page is always this
   const title = "Hyrax Oil | High-Performance Lubricants";
   const description =
     "Hyrax Oil is a global lubricants manufacturer delivering high-performance engine oils, greases, and specialty fluids. Engineered for efficiency.";

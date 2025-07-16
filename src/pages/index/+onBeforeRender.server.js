@@ -1,9 +1,9 @@
 // src/pages/index/+onBeforeRender.server.js
 
-const BASE_URL = process.env.VITE_SITE_BASE_URL || "http://localhost:3000";
+const BASE_URL = (process.env.VITE_SITE_BASE_URL || "http://localhost:3000").replace(/\/+$/, "");
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}`; // Home page is always this
+  const fullUrl = `${BASE_URL}/`; // Home page always ends with "/"
   const title = "Hyrax Oil | High-Performance Lubricants";
   const description =
     "Hyrax Oil is a global lubricants manufacturer delivering high-performance engine oils, greases, and specialty fluids. Engineered for efficiency.";

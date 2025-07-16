@@ -1,9 +1,9 @@
 // src/pages/about/+onBeforeRender.server.js
 
-const BASE_URL = process.env.VITE_SITE_BASE_URL || "http://localhost:3000";
+const BASE_URL = (process.env.VITE_SITE_BASE_URL || "http://localhost:3000").replace(/\/+$/, "");
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}about`; // About page path
+  const fullUrl = `${BASE_URL}/about`; // About page path
 
   const title = "About Hyrax Oil | Our Mission, Vision & Global Reach";
   const description =

@@ -6,12 +6,23 @@
 // Which files act as wrappers (e.g. PageShell, app.jsx)
 
 export default {
-  clientRouting: true, // Enables SPA-like navigation on the client
-  hydrationCanBeAborted: true, // Optional, improves performance for fast transitions
+  clientRouting: true,
+  hydrationCanBeAborted: true,
 
-  // Enable pre-rendering for SEO and static hosting
   prerender: {
-    partial: true,      // Allow fallback for some routes if not all are pre-rendered
-    noExtraDir: true    // Keeps clean URLs like /about/index.html → /about/
-  }
-}
+    partial: true, // allow pre-rendering without full static site
+    keepDistServer: true, // IMPORTANT: prevents removal of dist/server/
+    noExtraDir: true,
+  },
+
+  // ✅ Correct format for meta.env
+  meta: {
+    // This tells Vike to run the 'Page' export on both client & server
+    Page: {
+      env: {
+        server: true,
+        client: true,
+      },
+    },
+  },
+};

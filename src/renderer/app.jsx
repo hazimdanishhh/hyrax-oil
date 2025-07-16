@@ -13,7 +13,6 @@ export default function App({ children }) {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        
         {/* Fallback to Vike-rendered pages */}
         <Route path="*" element={children} />
       </Routes>

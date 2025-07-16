@@ -1,13 +1,11 @@
 // src/renderer/PageShell.jsx
 import React, { useEffect } from "react";
-import { usePageContext } from "vike-react/usePageContext";
-import "./styles/main.scss"; // global styles
+import "./styles/main.scss";
 import Layout from "../pages/Layout";
 import Footer from "../pages/Footer";
 
 export function PageShell({ children, pageContext }) {
-  const context = usePageContext() || pageContext;
-  const { documentProps } = context;
+  const { documentProps } = pageContext || {};
 
   useEffect(() => {
     if (documentProps?.title) {

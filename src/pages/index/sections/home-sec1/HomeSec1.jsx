@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./HomeSec1.scss";
 import { motion } from "framer-motion";
 import {
@@ -12,7 +12,7 @@ function HomeSec1() {
   const youtubeID = useState("R9ePLCiB8_8");
 
   return (
-    <div className="sectionLight">
+    <section className="sectionLight">
       <div className="sectionWrapper">
         <div className="sectionContent bestLubricantsContent">
           <motion.div
@@ -66,7 +66,7 @@ function HomeSec1() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

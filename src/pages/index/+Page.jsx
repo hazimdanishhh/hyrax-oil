@@ -2,13 +2,13 @@
 
 import React, { useEffect } from "react";
 import "./home.scss";
-import Carousel from "./components/carousel/Carousel";
-import SectionLink from "./components/section-link/SectionLink";
-import HomeSec2 from "./components/home-sec2/HomeSec2";
-import PoweringUp from "./components/powering-up/PoweringUp";
+import Carousel from "./sections/carousel/Carousel";
+import SectionLink from "./sections/section-link/SectionLink";
+import HomeSec2 from "./sections/home-sec2/HomeSec2";
+import PoweringUp from "./sections/powering-up/PoweringUp";
 import CarouselSlider from "../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../navbar/components/nav-products/NavProductSegments";
-import HomeSec1 from "./components/home-sec1/HomeSec1";
+import HomeSec1 from "./sections/home-sec1/HomeSec1";
 
 export default function Page() {
   return (
@@ -16,23 +16,15 @@ export default function Page() {
       <main>
         <Carousel />
 
-        <section id="home-sec1">
-          <HomeSec1 />
-        </section>
+        <HomeSec1 />
 
-        <section id="home-sec2">
-          <CarouselSlider items={productSegments} isHomePage="Yes" />
-        </section>
+        <CarouselSlider items={productSegments} isHomePage="Yes" />
 
-        <div id="trust-quality">
-          <HomeSec2 />
-        </div>
+        <HomeSec2 />
 
         <section>Labs, Engine, Racetrack Cards</section>
 
-        <div id="powering-up">
-          <PoweringUp />
-        </div>
+        <PoweringUp />
 
         {/* Hyrax TFO */}
         <section id="tfo">

@@ -3,12 +3,12 @@ const BASE_URL = (
 ).replace(/\/+$/, "");
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}/about/the-company/`;
+  const fullUrl = `${BASE_URL}/careers/`;
 
-  const title = "About - Hyrax Oil | Our Company, Mission & Global Vision";
+  const title = "Careers at Hyrax Oil | Join Our Growing Global Team";
   const description =
-    "Discover the story behind Hyrax Oil — from our mission and core values to our global operations and commitment to producing world-class lubricants.";
-  const image = `${BASE_URL}/og-images/the-company.jpg`; // Ensure this image exists; fallback to a shared about.jpg if needed
+    "Discover exciting career opportunities at Hyrax Oil. Be part of a global company driven by innovation, quality, and sustainability in the lubricants industry.";
+  const image = `${BASE_URL}/og-images/careers.jpg`; // Make sure this image exists or fallback to a generic one
 
   return {
     pageContext: {
@@ -25,16 +25,16 @@ export function onBeforeRender() {
             url: BASE_URL,
             logo: `${BASE_URL}/logo.png`,
             description:
-              "Hyrax Oil is a global manufacturer of premium-quality lubricants, driven by innovation and sustainability.",
+              "Hyrax Oil is a global manufacturer of premium-quality lubricants, greases, and specialty fluids, driven by innovation and sustainability.",
             sameAs: [
               "https://linkedin.com/company/hyrax-oil-sdn-bhd",
-              "https://www.hyraxoil.com", // Add more verified profiles if available
+              "https://www.hyraxoil.com",
             ],
           },
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "About The Company",
+            name: "Careers at Hyrax Oil",
             url: fullUrl,
             description: description,
             breadcrumb: {
@@ -49,13 +49,7 @@ export function onBeforeRender() {
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "About",
-                  item: `${BASE_URL}/about/`,
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "The Company",
+                  name: "Careers",
                   item: fullUrl,
                 },
               ],

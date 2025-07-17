@@ -26,7 +26,7 @@ export function onBeforeRender() {
             logo: `${BASE_URL}/logo.png`,
             description:
               "A global leader in high-quality lubricants and sustainable oil solutions.",
-            sameAs: ["https://linkedin.com/company/hyrax-oil"],
+            sameAs: ["https://linkedin.com/company/hyrax-oil-sdn-bhd"],
           },
           {
             "@context": "https://schema.org",
@@ -40,12 +40,18 @@ export function onBeforeRender() {
                 {
                   "@type": "ListItem",
                   position: 1,
-                  name: "About",
-                  item: `${BASE_URL}/about`,
+                  name: "Home",
+                  item: BASE_URL,
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
+                  name: "About",
+                  item: `${BASE_URL}/about/`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
                   name: "Our Leaders",
                   item: fullUrl,
                 },

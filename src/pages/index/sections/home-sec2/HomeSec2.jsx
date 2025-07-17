@@ -1,4 +1,3 @@
-import React from "react";
 import "./HomeSec2.scss";
 import { motion } from "framer-motion";
 import ButtonRouter from "../../../../components/buttons/ButtonRouter.jsx";
@@ -14,7 +13,7 @@ import image4 from "/src/assets/logos/Doble-Logo.webp";
 
 function HomeSec2() {
   return (
-    <div className="home-sec2">
+    <section className="home-sec2">
       <div className="home-sec2-wrapper">
         <motion.div
           className="home-sec2-text"
@@ -100,7 +99,7 @@ function HomeSec2() {
           link="/about/certifications"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

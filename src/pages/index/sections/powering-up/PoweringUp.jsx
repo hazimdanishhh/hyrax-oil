@@ -3,7 +3,7 @@ import "./poweringUp.scss";
 
 function PoweringUp() {
   return (
-    <div className="powering-background">
+    <section className="powering-background">
       <div className="bg-gradient">
         <div className="section-link-wrapper">
           <div className="text">
@@ -28,7 +28,7 @@ function PoweringUp() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

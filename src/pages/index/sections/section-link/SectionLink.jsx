@@ -3,7 +3,7 @@ import "./sectionLink.scss";
 
 function SectionLink() {
   return (
-    <div className="background">
+    <section className="background">
       <div className="bg-gradient">
         <a href="/about" className="section-link-div">
           <div className="section-link-wrapper">
@@ -35,7 +35,7 @@ function SectionLink() {
           </div>
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 

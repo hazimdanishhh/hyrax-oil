@@ -127,7 +127,7 @@ src/pages/route-name/
 - Page-level meta (title, description, Open Graph tags) is handled in: +onBeforeRender.server.js
 - Do **not** manually edit `<head>` in `+Page.jsx` — it's handled server-side.
 
-## 📦 Environment Variables
+### 📦 Environment Variables
 
 Environment variables control base URLs used for metadata, SEO, and deployment behavior. (No trailing slash "/" at the end)
 

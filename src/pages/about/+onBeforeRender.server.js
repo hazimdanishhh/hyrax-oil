@@ -37,6 +37,23 @@ export function onBeforeRender() {
             name: "About Hyrax Oil",
             url: fullUrl,
             description: description,
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: BASE_URL,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "About",
+                  item: fullUrl,
+                },
+              ],
+            },
           },
         ],
       },

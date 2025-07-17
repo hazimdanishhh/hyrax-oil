@@ -21,7 +21,6 @@ $background: white;
     }
 
     h2 {
-      font-family: "GilroyMedium", sans-serif;
       color: black;
       width: 100%;
       text-align: center;
@@ -94,7 +93,6 @@ $background: white;
             transition: 1s;
           }
           .history-year {
-            font-family: "GilroyMedium", sans-serif;
             background: linear-gradient(to right, $primary, $secondary);
             background-clip: $primary;
             -webkit-text-fill-color: transparent;

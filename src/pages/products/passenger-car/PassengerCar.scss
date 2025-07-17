@@ -23,7 +23,6 @@ $background: white;
     }
 
     h2 {
-      font-family: "GilroyMedium", sans-serif;
       color: black;
 
       @media screen and (max-width: 768px) {
@@ -121,7 +120,6 @@ $background: white;
     height: 33px;
     padding: 0 1rem;
     margin-right: 1rem;
-    font-family: "GilroyLight";
 
     border-radius: 20px;
     border: 1px solid $primary;
@@ -160,7 +158,6 @@ $background: white;
     min-width: fit-content;
     height: 33px;
     padding: 0 1rem;
-    font-family: "GilroyLight";
 
     border-radius: 20px;
     border: 1px solid $secondary;

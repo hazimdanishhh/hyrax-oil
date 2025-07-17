@@ -13,7 +13,7 @@ function VisionCard({ src, alt, title, desc }) {
       <div className="vision-mission-header">
         <img className="vision-icon" src={src} alt={alt} />
 
-        <h4>{title}</h4>
+        <h3 className="textRegular textS">{title}</h3>
       </div>
       <p className="vision-mission-desc">{desc}</p>
     </motion.div>

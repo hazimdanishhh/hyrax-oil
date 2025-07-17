@@ -1,21 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./layout.scss";
-import NavCard from "./navbar/NavCard";
-import { productSegments } from "./navbar/components/nav-products/NavProductSegments";
-import { aboutSections } from "./navbar/components/nav-about/NavAboutSections";
-import { servicesSections } from "./navbar/components/nav-services/NavServicesSections";
-import { mediaSections } from "./navbar/components/nav-media/NavMediaSections";
+import "./navbar.scss";
+import NavCard from "../../pages/navbar/NavCard";
+import { productSegments } from "../../pages/navbar/components/nav-products/NavProductSegments";
+import { aboutSections } from "../../pages/navbar/components/nav-about/NavAboutSections";
+import { servicesSections } from "../../pages/navbar/components/nav-services/NavServicesSections";
+import { mediaSections } from "../../pages/navbar/components/nav-media/NavMediaSections";
 import { AnimatePresence, motion } from "framer-motion";
-import ButtonRouter from "./components/buttons/ButtonRouter";
+import ButtonRouter from "../buttons/ButtonRouter";
 
 import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
 import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
 import apiLogo from "/src/assets/logos/APILogo-Light.webp";
 import malaysianBrandLogo from "/src/assets/logos/malaysian-brand.png";
 import useNavbar from "/src/functions/useNavbar";
-import { staggerContainerFast } from "../functions/motionUtils";
+import {
+  fadeInWithEase,
+  staggerContainerFast,
+} from "../../functions/motionUtils";
 
-function Layout() {
+function Navbar() {
   const {
     activePopup,
     isActive,
@@ -50,7 +53,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("about")}
             className={`${activePopup === "about" ? "link-active" : ""}`}
           >
-            <a href="#">About</a>
+            <a>About</a>
           </li>
 
           <li
@@ -58,7 +61,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("products")}
             className={`${activePopup === "products" ? "link-active" : ""}`}
           >
-            <a href="#">Products</a>
+            <a>Products</a>
           </li>
 
           <li
@@ -66,7 +69,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("services")}
             className={`${activePopup === "services" ? "link-active" : ""}`}
           >
-            <a href="#">Services</a>
+            <a>Services</a>
           </li>
 
           <li
@@ -74,7 +77,7 @@ function Layout() {
             onMouseEnter={() => openOverlay("media")}
             className={`${activePopup === "media" ? "link-active" : ""}`}
           >
-            <a href="#">Media</a>
+            <a>Media</a>
           </li>
         </ul>
 
@@ -162,6 +165,29 @@ function Layout() {
 
                     <h2>About</h2>
                   </div>
+                  <motion.div
+                    className="nav-overlay-overview-wrapper"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    <motion.a
+                      href="/about"
+                      className="nav-overlay-overview"
+                      variants={fadeInWithEase}
+                    >
+                      About Us
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 256 256"
+                      >
+                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                      </svg>
+                    </motion.a>
+                  </motion.div>
                   <motion.ul
                     className="nav-card-layout"
                     variants={staggerContainerFast}
@@ -211,26 +237,58 @@ function Layout() {
 
                     <h2>Products</h2>
                   </div>
-                  <div className="nav-overlay-logos">
-                    <img
+                  <motion.div
+                    className="nav-overlay-logos"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    <motion.img
                       loading="lazy"
                       src={hyraxLogo}
                       alt="hyrax brand logo"
                       className="nav-overlay-logo"
+                      variants={fadeInWithEase}
                     />
-                    <img
+                    <motion.img
                       loading="lazy"
                       src={apiLogo}
                       alt="American Petroleum Institute Logo"
                       className="nav-overlay-logo"
+                      variants={fadeInWithEase}
                     />
-                    <img
+                    <motion.img
                       loading="lazy"
                       src={malaysianBrandLogo}
                       alt="Malaysian Brand Logo"
                       className="nav-overlay-logo"
+                      variants={fadeInWithEase}
                     />
-                  </div>
+                  </motion.div>
+                  <motion.div
+                    className="nav-overlay-overview-wrapper"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    <motion.a
+                      href="/products"
+                      className="nav-overlay-overview"
+                      variants={fadeInWithEase}
+                    >
+                      Our Products
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 256 256"
+                      >
+                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                      </svg>
+                    </motion.a>
+                  </motion.div>
                   <motion.ul
                     className="nav-card-layout"
                     variants={staggerContainerFast}
@@ -280,6 +338,29 @@ function Layout() {
 
                     <h2>Services</h2>
                   </div>
+                  <motion.div
+                    className="nav-overlay-overview-wrapper"
+                    variants={staggerContainerFast}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    <motion.a
+                      href="/services"
+                      className="nav-overlay-overview"
+                      variants={fadeInWithEase}
+                    >
+                      Our Services
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 256 256"
+                      >
+                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                      </svg>
+                    </motion.a>
+                  </motion.div>
                   <motion.ul
                     className="nav-card-layout"
                     variants={staggerContainerFast}
@@ -358,4 +439,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default Navbar;

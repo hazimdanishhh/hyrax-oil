@@ -28,6 +28,10 @@ function Carousel() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
+        <h1 className="sr-only">
+          Hyrax Oil – Better Oil, Better Care | Established Manufacturer of High
+          Quality Lubricants & Transformer Oils
+        </h1>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex} // IMPORTANT for AnimatePresence

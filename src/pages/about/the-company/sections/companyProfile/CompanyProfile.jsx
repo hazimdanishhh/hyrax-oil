@@ -20,7 +20,7 @@ function CompanyProfile() {
           >
             <div className="companyProfileHeader">
               <motion.h2
-                className="textL textRegular"
+                className="textXL textRegular"
                 variants={fadeInWithEase}
               >
                 About Us

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./footer.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import SocialLink from "./components/social-link/SocialLink";
-import { socialLinks } from "./components/social-link/socials";
+import SocialLink from "../../pages/components/social-link/SocialLink";
+import { socialLinks } from "../../pages/components/social-link/socials";
 
 import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
 import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
@@ -29,12 +29,16 @@ function Footer() {
 
   return (
     <>
-      <footer className="footer">
+      <footer
+        className="footer"
+        role="contentinfo"
+        aria-label="Footer Navigation"
+      >
         <div className="footer-wrapper">
           <div className="footer-segments">
             {/* FOOTER LINKS */}
             <div className="footer-item">
-              <h3 className="textM textRegular">Quick Links</h3>
+              <p className="textM textRegular">Quick Links</p>
               <ul>
                 <li>
                   <a href="/about/the-company" className="textLight textXXS">
@@ -79,7 +83,7 @@ function Footer() {
 
             {/* FOOTER ADDRESS */}
             <div className="footer-item">
-              <h3 className="textM textRegular">Head Office</h3>
+              <p className="textM textRegular">Head Office</p>
               <a
                 href="https://www.google.com/maps/place/Hyrax+Oil+Sdn.+Bhd./data=!4m2!3m1!1s0x0:0x53085859f88dd00d?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
@@ -98,7 +102,7 @@ function Footer() {
               </a>
               <br />
 
-              <h3 className="textM textRegular">Meru LOBP</h3>
+              <p className="textM textRegular">Meru LOBP</p>
               <a
                 href="https://www.google.com/maps?ll=3.123462,101.441422&z=11&t=m&hl=en&gl=MY&mapclient=embed&cid=5472883420717197171"
                 target="_blank"
@@ -119,7 +123,7 @@ function Footer() {
 
             {/* FOOTER CONTACT */}
             <div className="footer-item">
-              <h3 className="textM textRegular">Contact</h3>
+              <p className="textM textRegular">Contact</p>
               <span>
                 <a href="tel:+60321635893" className="textLight textXXS">
                   Tel: &#40;+603&#41; 2163-5893

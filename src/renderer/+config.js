@@ -3,6 +3,8 @@ export default {
   clientRouting: false,
   hydrationCanBeAborted: true,
 
+  trailingSlash: "never", // 👈 Add this here
+
   prerender: {
     partial: true,
     keepDistServer: true,

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Hero.scss";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeInWithEase } from "/src/functions/motionUtils";
@@ -30,24 +29,26 @@ function Hero({ image, crumble, crumbleLink, title, desc, logo }) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Link to={crumbleLink}>{crumble}</Link>
-              <svg
-                className="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="m10 16 4-4-4-4"
-                />
-              </svg>
+              <a href={crumbleLink}>{crumble}</a>
+              {crumbleLink || crumble ? (
+                <svg
+                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1"
+                    d="m10 16 4-4-4-4"
+                  />
+                </svg>
+              ) : null}
               {title}
             </motion.div>
 

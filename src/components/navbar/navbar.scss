@@ -1,8 +1,3 @@
-$primary: #f26f27;
-$secondary: #ff9d10;
-$tertiary: #323232;
-$background: white;
-
 // =====================
 // NO SCROLL BODY
 // =====================
@@ -191,6 +186,36 @@ nav {
     }
   }
 
+  .nav-overlay-overview-wrapper {
+    display: flex;
+    align-self: flex-start;
+    width: 100%;
+
+    .nav-overlay-overview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      border-bottom: 1px solid white;
+      width: 100%;
+
+      &:hover {
+        border-bottom: 1px solid $secondary;
+        transition: 0.3s;
+
+        svg {
+          fill: $secondary;
+          transition: 0.3s;
+        }
+      }
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
   .nav-overlay-logos {
     display: flex;
     gap: 1rem;
@@ -207,7 +232,7 @@ nav {
     justify-content: space-evenly;
 
     @media screen and (max-width: 1024px) {
-      justify-content: start;
+      justify-content: center;
     }
   }
 }

@@ -1,32 +1,31 @@
-$primary: #f26f27;
-$secondary: #f2a327;
-$tertiary: #323232;
-$background: white;
+.historyWrapper {
+  padding: 0;
 
-.the-company-history-background {
-  display: flex;
-  justify-content: center;
-  background-color: #f0f0f0;
-
-  .the-company-history-wrapper {
-    display: flex;
-    max-width: 1366px;
+  .historyContent {
     padding: 7rem 3rem;
-    flex-direction: column;
-    gap: 8rem;
     position: relative;
 
     @media screen and (max-width: 768px) {
       padding: 7rem 1rem;
     }
 
-    h2 {
-      color: black;
-      width: 100%;
+    .historyHeading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      gap: 1rem;
+      width: 90%;
       text-align: center;
+      align-self: end;
+      margin-bottom: 3rem;
+
+      p {
+        text-align: justify;
+      }
     }
 
-    .history-card {
+    .historyCard {
       display: flex;
       justify-content: center;
       align-items: start;
@@ -37,7 +36,7 @@ $background: white;
         gap: 1rem;
       }
 
-      .history-circle {
+      .historyCircle {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -49,7 +48,7 @@ $background: white;
         z-index: 500;
       }
 
-      .history-text {
+      .historyText {
         text-align: justify;
         display: flex;
         flex-direction: column;
@@ -61,7 +60,7 @@ $background: white;
           gap: 0.5rem;
         }
 
-        .history-text-wrapper {
+        .historyTextWrapper {
           position: relative;
           display: flex;
           justify-content: start;
@@ -92,7 +91,7 @@ $background: white;
             // border-bottom: none;
             transition: 1s;
           }
-          .history-year {
+          .historyYear {
             background: linear-gradient(to right, $primary, $secondary);
             background-clip: $primary;
             -webkit-text-fill-color: transparent;
@@ -100,12 +99,12 @@ $background: white;
             width: 100%;
           }
 
-          .history-desc {
+          .historyDesc {
             color: #323232;
           }
         }
 
-        .history-img {
+        .historyImg {
           width: 100%;
           border-radius: 0 0 20px 0;
 

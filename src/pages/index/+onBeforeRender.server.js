@@ -1,6 +1,8 @@
 // src/pages/index/+onBeforeRender.server.js
 
-const BASE_URL = (process.env.VITE_SITE_BASE_URL || "http://localhost:3000").replace(/\/+$/, "");
+const BASE_URL = (
+  process.env.VITE_SITE_BASE_URL || "http://localhost:3000"
+).replace(/\/+$/, "");
 
 export function onBeforeRender() {
   const fullUrl = `${BASE_URL}/`; // Home page always ends with "/"
@@ -20,27 +22,25 @@ export function onBeforeRender() {
           {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Hyrax Oil",
-            "url": fullUrl,
-            "logo": `${BASE_URL}/logo.png`,
-            "description": description,
-            "sameAs": [
-              "https://linkedin.com/company/hyrax-oil"
-            ]
+            name: "Hyrax Oil",
+            url: fullUrl,
+            logo: `${BASE_URL}/logo.png`,
+            description: description,
+            sameAs: ["https://linkedin.com/company/hyrax-oil-sdn-bhd"],
           },
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "url": fullUrl,
-            "name": "Hyrax Oil",
-            "potentialAction": {
+            url: fullUrl,
+            name: "Hyrax Oil",
+            potentialAction: {
               "@type": "SearchAction",
-              "target": `${BASE_URL}/search?q={search_term_string}`,
-              "query-input": "required name=search_term_string"
-            }
-          }
-        ]
-      }
-    }
+              target: `${BASE_URL}/search?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
+          },
+        ],
+      },
+    },
   };
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import "./WorldMapPopUp.scss";
 
 function WorldMapPopUp({ country, onClose }) {
@@ -76,9 +75,9 @@ function WorldMapPopUp({ country, onClose }) {
                       Friday&#41;
                     </span>
                     <span>
-                      <Link to="tel:+60321635893">
+                      <a href="tel:+60321635893">
                         Tel: &#40;+603&#41; 2163-5893
-                      </Link>
+                      </a>
                     </span>
                   </div>
                 </div>
@@ -120,9 +119,9 @@ function WorldMapPopUp({ country, onClose }) {
                       Friday&#41;
                     </span>
                     <span>
-                      <Link to="tel:+60333923585">
+                      <a href="tel:+60333923585">
                         Tel: &#40;+603&#41; 3392-3585
-                      </Link>
+                      </a>
                     </span>
                   </div>
                 </div>
@@ -162,9 +161,9 @@ function WorldMapPopUp({ country, onClose }) {
                       Friday&#41;
                     </span>
                     <span>
-                      <Link to="tel:+94114382881">
+                      <a href="tel:+94114382881">
                         Tel: &#40;+94&#41; 114 382 881
-                      </Link>
+                      </a>
                     </span>
                   </div>
                 </div>

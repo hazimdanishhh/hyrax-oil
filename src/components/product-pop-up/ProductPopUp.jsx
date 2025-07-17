@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./ProductPopUp.scss";
-import ButtonRouter from "../../pages/components/buttons/ButtonRouter";
+import ButtonRouter from "../buttons/ButtonRouter";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 
 function ProductPopUp({ product, onClose }) {

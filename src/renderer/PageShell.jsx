@@ -1,13 +1,13 @@
 // src/renderer/PageShell.jsx
 import React from "react";
 import "./styles/main.scss";
-import Layout from "../pages/Layout";
-import Footer from "../pages/Footer";
+import Footer from "../components/footer/Footer";
+import Navbar from "../components/navbar/Navbar";
 
 export function PageShell({ children }) {
   return (
     <>
-      <Layout />
+      <Navbar />
       {children}
       <Footer />
     </>

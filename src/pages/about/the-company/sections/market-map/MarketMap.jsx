@@ -61,15 +61,15 @@ function MarketMap() {
           variants={staggerContainer}
         >
           <div className="world-map-header">
-            <motion.h2 className="textRegular textL" variants={fadeInWithEase}>
+            <motion.h2 className="textRegular textXL" variants={fadeInWithEase}>
               Our Market Presence
             </motion.h2>
 
-            <motion.h5 className="textLight textS" variants={fadeInWithEase}>
+            <motion.p className="textLight textXS" variants={fadeInWithEase}>
               Delivering high-quality, innovative lubricants and specialty
               fluids to diverse industries across Asia Pacific, the Middle East,
               and Africa.
-            </motion.h5>
+            </motion.p>
           </div>
           {/* <li>
               Our customer-focused approach ensures tailored solutions backed by

@@ -48,27 +48,27 @@ function GlobalImpact() {
               <div className="company-impact-cards">
                 <div className="company-impact-digit">
                   <Counter end={40} duration={1.5} />
-                  <h3 className="company-impact-digit-plus textRegular textXXL">
+                  <div className="company-impact-digit-plus textRegular textXXL">
                     +
-                  </h3>
+                  </div>
                 </div>
                 <p>Countries Served Worldwide</p>
               </div>
               <div className="company-impact-cards">
                 <div className="company-impact-digit">
                   <Counter end={90} duration={2} />
-                  <h3 className="company-impact-digit-plus textRegular textXXL">
+                  <div className="company-impact-digit-plus textRegular textXXL">
                     +
-                  </h3>
+                  </div>
                 </div>
                 <p>Total Skilled Employees Globally</p>
               </div>
               <div className="company-impact-cards">
                 <div className="company-impact-digit">
                   <Counter end={80} duration={2.5} />
-                  <h3 className="company-impact-digit-plus textRegular textXXL">
+                  <div className="company-impact-digit-plus textRegular textXXL">
                     M+
-                  </h3>
+                  </div>
                 </div>
                 <p>Liters of Lubricants Delivered Annually</p>
               </div>

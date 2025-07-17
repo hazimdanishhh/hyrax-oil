@@ -22,12 +22,12 @@ function HomeSec1() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.h1
+            <motion.h2
               className="home-sec1-title textRegular textXXL"
               variants={fadeInWithEase}
             >
               Only The Best Lubricants For The World
-            </motion.h1>
+            </motion.h2>
 
             <motion.p className="home-sec1-desc" variants={fadeInWithEase}>
               By leveraging cutting-edge technology and extensive industry

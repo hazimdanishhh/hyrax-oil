@@ -41,7 +41,7 @@ export default async function onRenderHtml(pageContext) {
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
-        <meta name="apple-mobile-web-app-title" content="Rangka Empat Studio" />
+        <meta name="apple-mobile-web-app-title" content="Hyrax Oil" />
         <link rel="manifest" href="/site.webmanifest" />
 
         <!-- Fonts -->
@@ -81,7 +81,9 @@ export default async function onRenderHtml(pageContext) {
           structuredData
             .map(
               (schema) =>
-                `<script type="application/ld+json">${JSON.stringify(schema)}</script>`
+                `<script type="application/ld+json">${JSON.stringify(
+                  schema
+                )}</script>`
             )
             .join("")
         )}

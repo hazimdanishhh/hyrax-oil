@@ -1,14 +1,13 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
 import "./LeaderCard.scss";
 import { motion } from "framer-motion";
 import { fadeInWithEase } from "../../functions/motionUtils";
 
-function LeaderCard({ src, alt, name, title, link, onClick }) {
+function LeaderCard({ src, alt, name, title, onClick }) {
   return (
     <>
       <motion.div className="leader-card-wrapper" variants={fadeInWithEase}>
-        <Link className="leader-card" to={link} onClick={onClick}>
+        <a className="leader-card" onClick={onClick}>
           <img loading="lazy" src={src} alt={alt} className="leader-card-img" />
           <div className="leader-card-overlay">
             <div className="leader-hover">
@@ -36,10 +35,8 @@ function LeaderCard({ src, alt, name, title, link, onClick }) {
               <p className="textLight textXXS">{title}</p>
             </div>
           </div>
-        </Link>
+        </a>
       </motion.div>
-
-      <Outlet />
     </>
   );
 }

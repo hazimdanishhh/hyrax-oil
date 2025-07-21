@@ -1,3 +1,5 @@
+# React Vike SSR File Structure
+
 ```bash
 root/
 ├── src/

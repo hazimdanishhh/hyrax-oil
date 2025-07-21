@@ -17,16 +17,19 @@ A modern, SEO-optimized company website for **Hyrax Oil**, built with React, Vit
   - [3. Tech Stack](#3-tech-stack)
   - [4. Folder Structure](#4-folder-structure)
   - [5. Getting Started](#5-getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
   - [6. Development](#6-development)
-    - [🗂️ Page Structure \& Routing](#️-page-structure--routing)
-    - [🌐 Global Layout](#-global-layout)
-    - [🧠 Metadata \& SEO](#-metadata--seo)
-    - [📦 Environment Variables](#-environment-variables)
-    - [🎨 Styling](#-styling)
-    - [⚙️ State \& Logic (Optional Notes)](#️-state--logic-optional-notes)
+    - [6.1 🗂️ Page Structure \& Routing](#61-️-page-structure--routing)
+    - [6.2 🌐 Global Layout](#62--global-layout)
+    - [6.3 🧠 Metadata \& SEO](#63--metadata--seo)
+    - [6.4 📦 Environment Variables](#64--environment-variables)
+    - [6.5 🎨 Styling](#65--styling)
+    - [6.6 ⚙️ State \& Logic (Optional Notes)](#66-️-state--logic-optional-notes)
   - [7. Production Build](#7-production-build)
   - [8. Deployment](#8-deployment)
-    - [✅ Configuration](#-configuration)
+    - [✅ Render Configuration](#-render-configuration)
+    - [🚀 To Deploy](#-to-deploy)
   - [9. Metadata \& SEO](#9-metadata--seo)
     - [🧠 How Metadata Works](#-how-metadata-works)
       - [`+onBeforeRender.server.js`](#onbeforerenderserverjs)
@@ -38,7 +41,7 @@ A modern, SEO-optimized company website for **Hyrax Oil**, built with React, Vit
 
 ## 1. Overview
 
-This project powers the official website of **Hyrax Oil**, delivering a performance-optimized, scalable front-end that highlights the brand’s lubricant and transformer oil products, services, and identity. Built with modern web technologies and designed to be responsive, engaging, and SEO-ready.
+This project is the official redesign and redevelopment of **Hyrax Oil**'s corporate website, delivering a performance-optimized, scalable front-end that highlights the brand’s lubricant and transformer oil products, services, and identity. Built with modern web technologies and designed to be responsive, engaging, and SEO-ready.
 
 ---
 
@@ -68,13 +71,13 @@ This project powers the official website of **Hyrax Oil**, delivering a performa
 
 ## 4. Folder Structure
 
-For clarity and consistency across our codebase, we follow a modular structure optimized for server-side rendering (SSR) with Vike and React.
+For clarity and consistency across our codebase, we follow a **modular structure optimized for server-side rendering (SSR) with Vike and React.**
 
 To avoid cluttering the README, the full breakdown of the project structure, file responsibilities, and SSR integration details is documented separately:
 
 📁 [See detailed file structure and SSR setup](./React_Vike_SSR_File_Structure.md)
 
-This structure ensures:
+**This structure ensures:**
 
 - Seamless integration between client and server code.
 - Per-page config, routing, and metadata management.
@@ -84,12 +87,12 @@ This structure ensures:
 
 ## 5. Getting Started
 
-Prerequisites
+### Prerequisites
 
 - Node.js v16 or newer
 - npm
 
-Setup
+### Setup
 
 ```bash
 # Clone the repo
@@ -102,10 +105,11 @@ npm install
 # Start development server
 npm run dev
 
-#Change the VITE_SITE_BASE_URL= in the .env file to match the appropriate base URL (for SEO and Meta) - ensure no "/" trailing slash at the end
+# Change the VITE_SITE_BASE_URL= in the .env file to match the appropriate base URL (for SEO and Meta)
+# - ensure no "/" trailing slash at the end
 ```
 
-Open http://localhost:3000 to view it in the browser.
+Open `http://localhost:3000` to view it in the browser.
 
 ---
 
@@ -113,7 +117,7 @@ Open http://localhost:3000 to view it in the browser.
 
 This project uses **Vite**, **Vike (vite-plugin-ssr)**, and **React**. Below is a guide to understand the structure, flow, and conventions used.
 
-### 🗂️ Page Structure & Routing
+### 6.1 🗂️ Page Structure & Routing
 
 - All routes are defined in `src/pages/` using **Vike’s file-based routing** (like Next.js).
 - Each route lives in its own folder with the following files:
@@ -129,17 +133,18 @@ src/pages/route-name/
 
 - The root route (`/`) is in `src/pages/index/`
 
-### 🌐 Global Layout
+### 6.2 🌐 Global Layout
 
-- The global app shell (layout, providers, etc.) is defined in: src/renderer/PageShell.jsx
+- The global app shell (layout, providers, etc.) is defined in: `src/renderer/PageShell.jsx`
 - This wraps every page and includes layout components like navbar and footer.
 
-### 🧠 Metadata & SEO
+### 6.3 🧠 Metadata & SEO
 
 - Page-level meta (title, description, Open Graph tags) is handled in: +onBeforeRender.server.js
 - Do **not** manually edit `<head>` in `+Page.jsx` — it's handled server-side.
+- Go to [9. Metadata \& SEO](#9-metadata--seo) for the full context.
 
-### 📦 Environment Variables
+### 6.4 📦 Environment Variables
 
 Environment variables control base URLs used for metadata, SEO, and deployment behavior. (No trailing slash "/" at the end)
 
@@ -149,7 +154,7 @@ VITE_SITE_BASE_URL=https://hyrax-oil.onrender.com   #example
 ```
 
 - Used in SSR to generate canonical URLs, Open Graph meta tags, and absolute asset paths in each page’s metadata.
-- In development (npm run dev), fallback is always http://localhost:3000.
+- In development (npm run dev), fallback is always `http://localhost:3000`.
 - For staging and production, you must set the correct base URL in .env:
 - Make sure to change this URL based on the environment (e.g. staging vs production domains).
 
@@ -165,7 +170,7 @@ const url = process.env.VITE_SITE_BASE_URL || "http://localhost:3000";
 const url = documentProps?.url || "http://localhost:3000";
 ```
 
-### 🎨 Styling
+### 6.5 🎨 Styling
 
 - Use **SCSS** for all styling. The structure is:
 
@@ -176,7 +181,7 @@ const url = documentProps?.url || "http://localhost:3000";
 - Global SCSS variables are auto-injected from: src/styles/\_variables.scss
 - This is configured via `vite.config.js` under `css.preprocessorOptions.scss.additionalData`.
 
-### ⚙️ State & Logic (Optional Notes)
+### 6.6 ⚙️ State & Logic (Optional Notes)
 
 - Global providers (e.g. `ThemeProvider`, `HydrationFix`, etc.) are added in `PageShell.jsx`.
 - Reusable logic (e.g. hooks, functions) lives in: src/functions/
@@ -198,13 +203,15 @@ This will generate:
 - dist/client/: static assets (HTML, JS, CSS)
 - dist/server/entry.mjs: SSR logic used by server.js
 
+Open `http://localhost:3000` to view it in the browser.
+
 ---
 
 ## 8. Deployment
 
 We use **[Render.com](https://render.com)** (Node Web Service) for staging deployments of this SSR-enabled Vike + React application.
 
-### ✅ Configuration
+### ✅ Render Configuration
 
 ```render.yaml
 services:
@@ -222,44 +229,47 @@ services:
 
 This file allows Render to auto-detect and set up your service when the repo is connected.
 
-To deploy:
+### 🚀 To Deploy
 
 ✅ Don’t forget to update .env with the correct VITE_SITE_BASE_URL when deploying to staging or production. (no trailing slash "/" at the end)
 
 1. Push changes to GitHub
 2. Connect Render to the repository
 
-   - Go to https://render.com and sign in.
+   - Go to `https://render.com` and sign in.
    - Click “New +” → “Web Service”.
-   - Under Connect a Repository, select GitHub.
+   - Under `Connect a Repository`, select `GitHub`.
    - Authorize Render if you haven’t already.
    - Choose your repository (e.g., hyrax-oil).
    - Render will auto-detect the render.yaml configuration.
 
 3. Fill in Remaining Details (if render.yaml is missing)
-   If you're not using render.yaml, you must fill out manually:
 
-   - Name: hyrax-oil
-   - Environment: Node
-   - Build Command: npm run build
-   - Start Command: node server.js
-   - Publish Directory: leave blank (SSR apps serve from server.js)
-   - Environment Variables:
-     - NODE_ENV=production
-     - VITE_SITE_BASE_URL=https://hyrax-oil.onrender.com
-     - PORT=3000 (Render automatically sets this too, but it's good practice to define it)
+If you're not using render.yaml, you must fill out manually:
 
-4. Deploy
+| Field                     | Input                      |
+| ------------------------- | -------------------------- |
+| **Name**                  | hyrax-oil                  |
+| **Environment**           | Node                       |
+| **Build Command**         | npm run build              |
+| **Start Command**         | node server.js             |
+| **Publish Directory**     | leave blank                |
+| **Environment Variables** | NODE_ENV=production        |
+|                           | VITE_SITE_BASE_URL=`https://hyrax-oil.onrender.com`            |
+|                           | PORT=3000 (Render automatically sets this too, but it's good practice to define it)            |
+
+4. **Deploy**
 
    - Click “Create Web Service”
    - Render will:
      1. Clone the repo
      2. Run the build
      3. Start the Node server from server.js
-   - Once complete, your SSR app will be live on a Render-generated subdomain like https://hyrax-oil.onrender.com
+   - Once complete, your SSR app will be live on a Render-generated subdomain like `https://hyrax-oil.onrender.com`
 
-5. Auto Deployments
-   Render automatically redeploys whenever you push to the connected GitHub branch (e.g., main or staging).
+5. **Auto Deployments**
+
+Render automatically redeploys whenever you push to the connected GitHub branch (e.g., main or staging).
 
 ---
 
@@ -293,11 +303,14 @@ export function onBeforeRender() {
 
 #### `+onRenderHtml.jsx`
 
-This is where the SSR HTML output is generated. It reads pageContext.documentProps and injects the metadata into the <head> of the HTML.
+This is where the SSR HTML output is generated. It reads pageContext.documentProps and injects the metadata into the `<head>` of the HTML.
 
 You can also define global metadata, such as favicons, Open Graph defaults, or fonts here.
 
-```js
+```jsx
+// Example: src/renderer/+onRenderHtml.jsx
+
+...
 <head>
   <meta name="description" content={documentProps.description} />
   <meta

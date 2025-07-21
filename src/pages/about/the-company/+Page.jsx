@@ -13,7 +13,7 @@ function Page() {
     <>
       <main>
         <Hero
-          image={`url(${background})`}
+          image={background}
           crumble="About"
           crumbleLink="/about"
           title="The Company"

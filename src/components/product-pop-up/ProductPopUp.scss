@@ -30,6 +30,12 @@
       top: 1.5rem;
       right: 1.5rem;
       cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        color: $secondary;
+        transition: 0.3s;
+      }
     }
 
     .product-pop-up-header {

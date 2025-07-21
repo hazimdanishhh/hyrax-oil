@@ -1,4 +1,3 @@
-import React from "react";
 import "./LeaderCard.scss";
 import { motion } from "framer-motion";
 import { fadeInWithEase } from "../../functions/motionUtils";

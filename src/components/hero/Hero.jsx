@@ -1,4 +1,3 @@
-import React from "react";
 import "./Hero.scss";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeInWithEase } from "/src/functions/motionUtils";
@@ -9,7 +8,7 @@ function Hero({ image, crumble, crumbleLink, title, desc, logo }) {
       <motion.div
         className="hero-background"
         style={{
-          backgroundImage: image,
+          backgroundImage: `url(${image})`,
         }}
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}

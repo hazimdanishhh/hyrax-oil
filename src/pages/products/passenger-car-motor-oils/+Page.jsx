@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./PassengerCar.scss";
 import { productsPCMO } from "./productsPCMO";
 import ProductCard from "../../../components/product-card/ProductCard";
 import ProductPopUp from "../../../components/product-pop-up/ProductPopUp";
 import CarouselSlider from "../../../components/carousel-slider/CarouselSlider";
-import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../../components/hero/Hero";
 import ProductSideNav from "../../../components/side-nav/SideNav";
-import background from "/src/assets/products/passenger/pcmo-background.webp";
 import logo from "/src/assets/products/passenger/Hyrax-Platineum-2.webp";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import productSegments from "../../../data/NavProductSegments";
+import { staggerContainer } from "../../../functions/motionUtils";
 
-function PassengerCar() {
+function Page() {
   const [activePopup, setActivePopup] = useState(null);
   const productSegment = "Passenger Car Motor Oils";
 
@@ -23,18 +23,18 @@ function PassengerCar() {
     setActivePopup(null);
   };
 
-  useEffect(() => {
-    document.title = `Hyrax Oil | ${productSegment}`;
-  }, []);
+  const segment = productSegments.find(
+    (item) => item.link === "/products/passenger-car-motor-oils"
+  );
 
   return (
     <>
       {/* HERO SECTION */}
       <Hero
-        image={`url(${background})`}
+        image={segment.background}
         crumble="Products"
         crumbleLink="/products"
-        title={productSegment}
+        title={segment.title}
         desc="Discover our wide range of passenger car motor oils, designed to provide the best protection for your engine."
         logo={logo}
       />
@@ -45,7 +45,13 @@ function PassengerCar() {
           <h2 className="product-section-title">
             Our Range of {productSegment}
           </h2>
-          <div className="product-layout">
+          <motion.div
+            className="product-layout"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
             {productsPCMO.map((product, index) => (
               <ProductCard
                 key={index}
@@ -57,7 +63,7 @@ function PassengerCar() {
                 onClick={() => openOverlay(product)}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -77,4 +83,4 @@ function PassengerCar() {
   );
 }
 
-export default PassengerCar;
+export default Page;

@@ -1,0 +1,12 @@
+.aboutUsOverviewText {
+  flex-direction: row;
+  align-items: start;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  p {
+    text-align: justify;
+  }
+}

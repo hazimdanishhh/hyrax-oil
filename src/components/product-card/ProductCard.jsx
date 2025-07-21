@@ -1,12 +1,12 @@
-import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./ProductCard.scss";
+import { fadeInWithEase } from "../../functions/motionUtils";
 
 function ProductCard({ src, alt, title, link, type, onClick }) {
   return (
     <>
-      <div className="product-card-wrapper">
-        <Link className="product-card" to={link} onClick={onClick}>
+      <motion.div className="product-card-wrapper" variants={fadeInWithEase}>
+        <a className="product-card" onClick={onClick}>
           <img
             loading="lazy"
             src={src}
@@ -38,7 +38,7 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
               <h3 className="textRegular textS">{title}</h3>
             </div>
           </div>
-        </Link>
+        </a>
         {type ? (
           <div
             className={`textRegular textXXS product-type ${
@@ -54,9 +54,7 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
             {type}
           </div>
         ) : null}
-      </div>
-
-      <Outlet />
+      </motion.div>
     </>
   );
 }

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import productSegments from "./productSegment";
 import "./SideNav.scss";
 import { motion } from "framer-motion";
@@ -10,10 +9,10 @@ const ProductSideNav = () => {
   return (
     <div className="product-side-nav-container">
       {productSegments.map((segment, index) => (
-        <Link
+        <a
           key={index}
           className="product-side-nav"
-          to={segment.path}
+          href={segment.path}
           onMouseEnter={() => setHovered(index)}
           onMouseLeave={() => setHovered(null)}
           // style={{
@@ -35,7 +34,7 @@ const ProductSideNav = () => {
               {segment.title}
             </motion.h4>
           )}
-        </Link>
+        </a>
       ))}
     </div>
   );

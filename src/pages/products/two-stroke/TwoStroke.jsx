@@ -30,7 +30,7 @@ function TwoStroke() {
     <>
       {/* HERO SECTION */}
       <Hero
-        image={`url(${background})`}
+        image={background}
         crumble="Products"
         crumbleLink="/products"
         title={productSegment}

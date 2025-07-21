@@ -1,12 +1,8 @@
 import { useRef } from "react";
-import "./CarouselSlider.scss"; // Ensure to style as needed
-import NavCard from "../../navbar/NavCard";
+import "./CarouselSlider.scss";
+import NavCard from "../navCard/NavCard";
 import { motion } from "framer-motion";
-import {
-  fadeInWithEase,
-  staggerContainer,
-} from "../../../functions/motionUtils";
-import { div } from "framer-motion/client";
+import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 
 function CarouselSlider({ items, isHomePage }) {
   const carouselRef = useRef(null);

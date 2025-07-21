@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
 import Hero from "../../../components/hero/Hero";
 import MarketMap from "./sections/market-map/MarketMap";
-import History from "../../components/history/History";
+import History from "../../../components/history/History";
 
 import background from "/src/assets/about/the-company-background.webp";
 import CompanyProfile from "./sections/companyProfile/CompanyProfile";

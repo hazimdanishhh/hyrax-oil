@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./footer.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import SocialLink from "../../pages/components/social-link/SocialLink";
-import { socialLinks } from "../../pages/components/social-link/socials";
+import SocialLink from "../social-link/SocialLink";
+import { socialLinks } from "../social-link/socials";
 
 import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
 import hyraxLogo from "/src/assets/logos/hyrax-logo.png";

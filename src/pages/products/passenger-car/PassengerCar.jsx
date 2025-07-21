@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Layout from "../../Layout";
-import Footer from "../../Footer";
+import { useState, useEffect } from "react";
 import "./PassengerCar.scss";
-import { Link, Outlet } from "react-router-dom";
 import { productsPCMO } from "./productsPCMO";
 import ProductCard from "../../../components/product-card/ProductCard";
 import ProductPopUp from "../../../components/product-pop-up/ProductPopUp";
-import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
+import CarouselSlider from "../../../components/carousel-slider/CarouselSlider";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../../components/hero/Hero";
 import ProductSideNav from "../../../components/side-nav/SideNav";
@@ -32,8 +29,6 @@ function PassengerCar() {
 
   return (
     <>
-      <Layout />
-
       {/* HERO SECTION */}
       <Hero
         image={`url(${background})`}
@@ -78,10 +73,6 @@ function PassengerCar() {
 
       {/* PRODUCT SIDE NAV */}
       <ProductSideNav />
-
-      <Footer />
-
-      <Outlet />
     </>
   );
 }

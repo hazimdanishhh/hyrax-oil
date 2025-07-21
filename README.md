@@ -1,8 +1,8 @@
+# Hyrax Oil Website
+
 ![Node.js CI](https://img.shields.io/badge/Node-v16+-green)
 ![Vite](https://img.shields.io/badge/Built%20with-Vite-blueviolet)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-# Hyrax Oil Website
 
 A modern, SEO-optimized company website for **Hyrax Oil**, built with React, Vite, Framer-motion, Sass, and **Vike SSR**. This project uses server-side rendering (SSR) via a custom Node.js + Express server and is currently staged on **Render.com**. It serves as Hyrax Oil’s digital platform to showcase products, company info, and brand presence globally.
 
@@ -10,17 +10,29 @@ A modern, SEO-optimized company website for **Hyrax Oil**, built with React, Vit
 
 ## 📁 Table of Contents
 
-- [1. Overview](#1-overview)
-- [2. Features](#2-features)
-- [3. Tech Stack](#3-tech-stack)
-- [4. Folder Structure](#4-folder-structure)
-- [5. Getting Started](#5-getting-started)
-- [6. Development](#6-development)
-- [7. Production Build](#7-production-build)
-- [8. Deployment](#8-deployment)
-- [9. Metadata & SEO](#9-metadata--seo)
-- [10. License](#10-license)
-- [11. Contact](#11-contact)
+- [Hyrax Oil Website](#hyrax-oil-website)
+  - [📁 Table of Contents](#-table-of-contents)
+  - [1. Overview](#1-overview)
+  - [2. Features](#2-features)
+  - [3. Tech Stack](#3-tech-stack)
+  - [4. Folder Structure](#4-folder-structure)
+  - [5. Getting Started](#5-getting-started)
+  - [6. Development](#6-development)
+    - [🗂️ Page Structure \& Routing](#️-page-structure--routing)
+    - [🌐 Global Layout](#-global-layout)
+    - [🧠 Metadata \& SEO](#-metadata--seo)
+    - [📦 Environment Variables](#-environment-variables)
+    - [🎨 Styling](#-styling)
+    - [⚙️ State \& Logic (Optional Notes)](#️-state--logic-optional-notes)
+  - [7. Production Build](#7-production-build)
+  - [8. Deployment](#8-deployment)
+    - [✅ Configuration](#-configuration)
+  - [9. Metadata \& SEO](#9-metadata--seo)
+    - [🧠 How Metadata Works](#-how-metadata-works)
+      - [`+onBeforeRender.server.js`](#onbeforerenderserverjs)
+      - [`+onRenderHtml.jsx`](#onrenderhtmljsx)
+  - [10. License](#10-license)
+  - [11. Contact](#11-contact)
 
 ---
 

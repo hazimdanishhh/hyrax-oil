@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import React from "react";
 import "./GlobalImpact.scss";
-import Counter from "../../../../components/counter/Counter";
+import Counter from "../../../../../components/counter/Counter";
 import {
   fadeInWithEase,
   staggerContainer,

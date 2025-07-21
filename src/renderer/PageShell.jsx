@@ -1,6 +1,5 @@
 // src/renderer/PageShell.jsx
-import React from "react";
-import "./styles/main.scss";
+import ".././styles/main.scss";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import "./History.scss";
-import historyList from "../../../data/historyList.js";
+import historyList from "../../data/historyList.js";
 import { motion } from "framer-motion";
 import {
   fadeInWithEase,
   staggerContainer,
-} from "../../../functions/motionUtils.js";
+} from "../../functions/motionUtils.js";
 
 function History() {
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import "./SocialLink.scss";
 
 function SocialLink({ link, icon }) {

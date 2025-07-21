@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Layout from "../../Layout";
-import Footer from "../../Footer";
-import { Link, Outlet } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { productsGFEO } from "./productsGFEO.js";
 import ProductCard from "../../../components/product-card/ProductCard.jsx";
 import ProductPopUp from "../../../components/product-pop-up/ProductPopUp.jsx";
-import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
+import CarouselSlider from "../../../components/carousel-slider/CarouselSlider.jsx";
 import { productSegments } from "../../navbar/components/nav-products/NavProductSegments";
 import Hero from "../../../components/hero/Hero";
 import ProductSideNav from "../../../components/side-nav/SideNav.jsx";
@@ -30,8 +27,6 @@ function GasFuel() {
 
   return (
     <>
-      <Layout />
-
       {/* HERO SECTION */}
       <Hero
         image={`url(${background})`}
@@ -74,10 +69,6 @@ function GasFuel() {
 
       {/* PRODUCT SIDE NAV */}
       <ProductSideNav />
-
-      <Footer />
-
-      <Outlet />
     </>
   );
 }

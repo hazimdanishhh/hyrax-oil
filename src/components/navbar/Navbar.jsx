@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
 import "./navbar.scss";
-import NavCard from "../../pages/navbar/NavCard";
-import { productSegments } from "../../pages/navbar/components/nav-products/NavProductSegments";
-import { aboutSections } from "../../pages/navbar/components/nav-about/NavAboutSections";
-import { servicesSections } from "../../pages/navbar/components/nav-services/NavServicesSections";
-import { mediaSections } from "../../pages/navbar/components/nav-media/NavMediaSections";
+import NavCard from "../navCard/NavCard";
+import { productSegments } from "../../data/NavProductSegments";
+import { aboutSections } from "../../data/NavAboutSections";
+import { servicesSections } from "../../data/NavServicesSections";
+import { mediaSections } from "../../data/NavMediaSections";
 import { AnimatePresence, motion } from "framer-motion";
 import ButtonRouter from "../buttons/ButtonRouter";
 

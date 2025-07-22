@@ -1,3 +1,4 @@
+import { fadeInWithEase } from "../../functions/motionUtils";
 import "./PageSectionCard.scss";
 import { motion } from "framer-motion";
 
@@ -5,8 +6,7 @@ function PageSectionCard({ title, desc, link, background }) {
   return (
     <motion.li
       style={{ listStyle: "none" }}
-      initial={{ opacity: 0, scale: 1 }}
-      whileInView={{ opacity: 1 }}
+      variants={fadeInWithEase}
       className="productSectionWrapper"
     >
       <motion.a

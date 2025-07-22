@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "../ProductSpecific.scss";
-import { productsPCMO } from "../../../data/products/productsPCMO";
 import ProductCard from "../../../components/product-card/ProductCard";
 import ProductPopUp from "../../../components/product-pop-up/ProductPopUp";
 import CarouselSlider from "../../../components/carousel-slider/CarouselSlider";
@@ -10,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import productSegments from "../../../data/NavProductSegments";
 import { staggerContainer } from "../../../functions/motionUtils";
 import ProductFeaturesCard from "../../../components/productFeaturesCard/productFeaturesCard";
+import { productsDEO } from "../../../data/products/productsDEO";
 
 function Page() {
   const [activePopup, setActivePopup] = useState(null);
@@ -23,7 +23,7 @@ function Page() {
   };
 
   const segment = productSegments.find(
-    (item) => item.link === "/products/passenger-car-motor-oils" // TODO: Adjust the link as necessary
+    (item) => item.link === "/products/diesel-engine-oils" // TODO: Adjust the link as necessary
   );
 
   return (
@@ -55,7 +55,7 @@ function Page() {
                 variants={staggerContainer}
               >
                 {/* TODO: Adjust product segment as necessary */}
-                {productsPCMO.map((product, index) => (
+                {productsDEO.map((product, index) => (
                   <ProductCard
                     key={index}
                     src={product.src}

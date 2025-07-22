@@ -49,14 +49,18 @@
         align-items: center;
         gap: 2rem;
 
+        h3 {
+          width: 50%;
+          text-align: start;
+        }
+
         .product-pop-up-type {
           display: flex;
           justify-content: center;
           align-items: center;
           color: #9c7008;
           background: linear-gradient(to right, #ae8625, #f7ef8a);
-          width: 120px;
-          height: 25px;
+          padding: 0.3rem 1rem;
           border-radius: 20px;
           text-align: center;
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
@@ -86,79 +90,6 @@
   gap: 1.5rem;
 
   padding-bottom: 1.5rem;
-
-  .button-type-2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-width: fit-content;
-    height: 33px;
-    padding: 0 1rem;
-    margin-right: 1rem;
-
-    border-radius: 20px;
-    border: 1px solid $primary;
-    background: rgba(0, 0, 0, 0);
-    color: $primary;
-    transition: 0.3s;
-
-    svg {
-      margin-left: 0.5rem;
-
-      path {
-        stroke: $primary;
-      }
-    }
-
-    &:hover {
-      border-color: $secondary;
-      background: linear-gradient(270deg, $primary, $secondary);
-      color: white;
-
-      svg path {
-        stroke: white;
-        transition: 0.3s;
-      }
-    }
-
-    &:active {
-      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8) inset;
-    }
-  }
-
-  .button-type-1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-width: fit-content;
-    height: 33px;
-    padding: 0 1rem;
-
-    border-radius: 20px;
-    border: 1px solid $secondary;
-    background: linear-gradient(270deg, $primary, $secondary);
-
-    color: white;
-    transition: 0.3s;
-
-    svg {
-      margin-left: 0.5rem;
-    }
-
-    &:hover {
-      background: none;
-      color: $primary;
-
-      svg path {
-        stroke: $primary;
-        transition: 0.3s;
-      }
-    }
-
-    &:active {
-      box-shadow: 0px 0px 4px 0px $primary inset;
-    }
-  }
 }
 
 .product-pop-up-img {

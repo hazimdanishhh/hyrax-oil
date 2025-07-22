@@ -1,6 +1,7 @@
 import "./Products.scss";
 import Hero from "../../components/hero/Hero";
-import background from "/src/assets/about/aboutBackground.webp";
+import background from "/src/assets/products/hyrax-products-hub.webp";
+import logo from "/src/assets/logos/hyrax-logo.png";
 import OverviewText from "../../components/overviewText/OverviewText";
 import { motion } from "framer-motion";
 import { staggerContainer } from "../../functions/motionUtils";
@@ -14,7 +15,8 @@ function Page() {
         image={background}
         crumble={"Home"}
         crumbleLink={"/"}
-        title="Our Products"
+        title="Hyrax® Products"
+        logo={logo}
         desc="Explore our extensive range of high-performance lubricants and specialty petroleum products designed to meet diverse industry needs."
       />
 
@@ -48,6 +50,8 @@ function Page() {
           </div>
         </div>
       </section>
+
+      <section className=""></section>
     </main>
   );
 }

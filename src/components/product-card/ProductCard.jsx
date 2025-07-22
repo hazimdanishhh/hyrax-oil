@@ -35,7 +35,7 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
               </svg>
             </div>
             <div className="product-title">
-              <h3 className="textRegular textS">{title}</h3>
+              <h3 className="textRegular textXXS">{title}</h3>
             </div>
           </div>
         </a>

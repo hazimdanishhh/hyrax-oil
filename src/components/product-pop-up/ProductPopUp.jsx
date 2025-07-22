@@ -78,21 +78,22 @@ function ProductPopUp({ product, onClose }) {
             {product.type ? (
               <motion.div
                 variants={fadeInWithEase}
-                className={`textLight textXS product-pop-up-type ${
-                  ["Semi Synthetic", "Synthetic Blend", "Uninhibited"].includes(
-                    product.type
-                  )
+                className={`textRegular textXXS product-pop-up-type ${["Semi Synthetic", "Synthetic Blend", "Uninhibited"].includes(
+                  product.type
+                )
                     ? "semi"
                     : product.type === "Premium Blend"
-                    ? "premium"
-                    : ""
-                }`}
+                      ? "premium"
+                      : ""
+                  }`}
               >
                 {product.type}
               </motion.div>
             ) : null}
           </div>
         </div>
+
+        <motion.hr variants={fadeInWithEase} />
 
         <div className="product-pop-up-body">
           <motion.p variants={fadeInWithEase}>{product.description}</motion.p>

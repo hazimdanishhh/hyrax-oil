@@ -5,7 +5,7 @@ import { staggerContainer, fadeInWithEase } from "/src/functions/motionUtils";
 function Hero({ image, crumble, crumbleLink, title, desc, logo }) {
   return (
     <>
-      <motion.div
+      <motion.section
         className="hero-background"
         style={{
           backgroundImage: `url(${image})`,
@@ -77,7 +77,7 @@ function Hero({ image, crumble, crumbleLink, title, desc, logo }) {
             </div>
           </motion.div>
         </div>
-      </motion.div>
+      </motion.section>
     </>
   );
 }

@@ -1,11 +1,9 @@
-.productSectionWrapper {
+.productFeaturesWrapper {
   color: white;
   width: 49%;
   aspect-ratio: 3/2;
   border-radius: 1rem;
   overflow: hidden;
-  // -webkit-filter: grayscale(100%);
-  // filter: grayscale(100%);
   border: 2px solid rgba(255, 255, 255, 0);
 
   transition: 0.3s;
@@ -23,7 +21,7 @@
     transition: 0.3s;
   }
 
-  .productSectionCard {
+  .productFeaturesCard {
     position: relative;
     width: 100%;
     height: 100%;
@@ -45,11 +43,6 @@
           rgba(0, 0, 0, 0.3)
         );
       }
-      .arrowIcon {
-        opacity: 1;
-        fill: $secondary;
-        transition: 0.3s;
-      }
     }
 
     &::after {
@@ -64,18 +57,9 @@
       z-index: 1; // place overlay above background, but below text
     }
 
-    .productSectionText {
+    .productFeaturesText {
       width: 90%;
       padding: 1rem;
-      z-index: 2;
-    }
-
-    .arrowIcon {
-      opacity: 0;
-      fill: white;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
       z-index: 2;
     }
   }

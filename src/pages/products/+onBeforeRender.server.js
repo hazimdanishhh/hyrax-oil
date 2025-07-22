@@ -3,12 +3,12 @@ const BASE_URL = (
 ).replace(/\/+$/, "");
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}/products/passenger-car-motor-oils/`;
+  const fullUrl = `${BASE_URL}/products/`;
 
-  const title = "Passenger Car Motor Oils | Hyrax® Engine Lubricants";
+  const title = "Hyrax® Products | Better Oil, Better Care.";
   const description =
-    "Explore our premium range of passenger car motor oils engineered for peak engine performance and long-lasting protection. Trusted by drivers worldwide, Hyrax® formulations meet the latest industry standards.";
-  const image = `${BASE_URL}/og-images/passenger-car-motor-oils.jpg`;
+    "Explore our extensive range of high-performance lubricants and specialty petroleum products designed to meet diverse industry needs.";
+  const image = `${BASE_URL}/og-images/products-hub.jpg`; // Prefer a products-wide OG image; fallback if not available
 
   return {
     pageContext: {
@@ -21,10 +21,9 @@ export function onBeforeRender() {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Passenger Car Motor Oils",
+            name: title,
             url: fullUrl,
             description,
-            image,
             isPartOf: {
               "@type": "WebSite",
               name: "Hyrax Oil",
@@ -43,12 +42,6 @@ export function onBeforeRender() {
                   "@type": "ListItem",
                   position: 2,
                   name: "Products",
-                  item: `${BASE_URL}/products/`,
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Passenger Car Motor Oils",
                   item: fullUrl,
                 },
               ],

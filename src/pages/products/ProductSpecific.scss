@@ -1,0 +1,28 @@
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: justify;
+  gap: 2rem;
+
+  h2 {
+    text-align: start;
+  }
+}
+
+.product-layout {
+  display: flex;
+  gap: 4rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productFeaturesLayout {
+  display: flex;
+  gap: 0.7rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

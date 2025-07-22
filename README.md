@@ -247,16 +247,16 @@ This file allows Render to auto-detect and set up your service when the repo is 
 
 If you're not using render.yaml, you must fill out manually:
 
-| Field                     | Input                      |
-| ------------------------- | -------------------------- |
-| **Name**                  | hyrax-oil                  |
-| **Environment**           | Node                       |
-| **Build Command**         | npm run build              |
-| **Start Command**         | node server.js             |
-| **Publish Directory**     | leave blank                |
-| **Environment Variables** | NODE_ENV=production        |
-|                           | VITE_SITE_BASE_URL=`https://hyrax-oil.onrender.com`            |
-|                           | PORT=3000 (Render automatically sets this too, but it's good practice to define it)            |
+| Field                     | Input                                                                               |
+| ------------------------- | ----------------------------------------------------------------------------------- |
+| **Name**                  | hyrax-oil                                                                           |
+| **Environment**           | Node                                                                                |
+| **Build Command**         | npm run build                                                                       |
+| **Start Command**         | node server.js                                                                      |
+| **Publish Directory**     | leave blank                                                                         |
+| **Environment Variables** | NODE_ENV=production                                                                 |
+|                           | VITE_SITE_BASE_URL=`https://hyrax-oil.onrender.com`                                 |
+|                           | PORT=3000 (Render automatically sets this too, but it's good practice to define it) |
 
 4. **Deploy**
 

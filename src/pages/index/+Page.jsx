@@ -8,6 +8,8 @@ import PoweringUp from "./sections/powering-up/PoweringUp";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";
 import HomeSec1 from "./sections/home-sec1/HomeSec1";
 import { productSegments } from "../../data/NavProductSegments";
+import GlobalImpact from "../about/the-company/sections/globalImpact/GlobalImpact";
+import CorporateVideo from "../about/the-company/sections/corporateVideo/CorporateVideo";
 
 export default function Page() {
   return (
@@ -17,27 +19,15 @@ export default function Page() {
 
         <HomeSec1 />
 
-        <CarouselSlider items={productSegments} isHomePage="Yes" />
+        <CarouselSlider items={productSegments} isHomePage />
 
         <HomeSec2 />
 
-        <section>Labs, Engine, Racetrack Cards</section>
-
         <PoweringUp />
 
-        {/* Hyrax TFO */}
-        <section id="tfo">
-          <div>
-            <h2>Hyrax Transformer Oils &#40;TFO&#41;</h2>
-          </div>
-        </section>
+        <GlobalImpact />
 
-        {/* TFO Video Production Process */}
-        <section>
-          <div>
-            <h2>Our TFO's Stringent Production Process</h2>
-          </div>
-        </section>
+        <CorporateVideo />
 
         <SectionLink />
       </main>

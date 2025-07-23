@@ -20,7 +20,7 @@ function Page() {
 
       <OverviewText
         title="Overview"
-        desc="Founded in Malaysia in 1991, Hyrax Oil has grown from a humble transformer oil trader into a world-class manufacturer of high-performance lubricants and specialty petroleum products. With over 33 years of expertise, our brand now spans across 40+ countries in Asia, the Middle East, and Africa, trusted for quality, innovation, and reliability. Backed by state-of-the-art blending plants in Malaysia and Sri Lanka, advanced R&D, and ISO 9001:2015 certification, we deliver excellence to meet diverse market needs. Proudly bearing the National Mark of Malaysian Brand, Hyrax Oil continues to drive industries forward with premium lubrication solutions and a commitment to global standards."
+        desc="Founded in Malaysia in 1991, Hyrax Oil has grown from a humble transformer oil trader into a world-class manufacturer of high-performance lubricants and specialty petroleum products. With over 34 years of expertise, our brand now spans across 40+ countries in Asia, the Middle East, and Africa, trusted for quality, innovation, and reliability. Backed by state-of-the-art blending plants in Malaysia and Sri Lanka, advanced R&D, and ISO 9001:2015 certification, we deliver excellence to meet diverse market needs. Proudly bearing the National Mark of Malaysian Brand, Hyrax Oil continues to drive industries forward with premium lubrication solutions and a commitment to global standards."
       />
 
       <section className="sectionLight">

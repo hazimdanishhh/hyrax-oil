@@ -1,35 +1,32 @@
 .bestLubricantsContent {
   flex-direction: column;
+
   .home-sec1-text {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 70%;
     color: #323232;
     margin: auto;
-    text-align: center;
-
-    .home-sec1-title {
-      background: linear-gradient(to right, $primary, $secondary);
-      background-clip: $primary;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-    }
+    width: 100%;
+    text-align: start;
 
     .home-sec1-desc {
       text-align: justify;
+      width: 60%;
 
-      span {
-        background: linear-gradient(to right, $primary, $secondary);
-        background-clip: $primary;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
       }
     }
+  }
 
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
+  .homeSectionLayout {
+    //   color: white;
+    display: flex;
+    gap: 0.7rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .home-sec1-img {

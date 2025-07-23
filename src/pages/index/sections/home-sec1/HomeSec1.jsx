@@ -7,6 +7,8 @@ import {
 } from "../../../../functions/motionUtils";
 
 import image from "/src/assets/home/Hyrax-Platineum-Background-2.webp";
+import PageSectionCard from "../../../../components/PageSectionCard/PageSectionCard";
+import { homeSections } from "../../../../data/NavHomeSections";
 
 function HomeSec1() {
   const youtubeID = useState("R9ePLCiB8_8");
@@ -23,27 +25,38 @@ function HomeSec1() {
             viewport={{ once: true }}
           >
             <motion.h2
-              className="home-sec1-title textRegular textXXL"
+              className="textRegular textS"
               variants={fadeInWithEase}
             >
-              Only The Best Lubricants For The World
+              World-Class Lubricants.
+              <br />
+              Unmatched Performance.
             </motion.h2>
 
-            <motion.p className="home-sec1-desc" variants={fadeInWithEase}>
-              By leveraging cutting-edge technology and extensive industry
-              knowledge, Hyrax Oil continually develops lubricants that{" "}
-              <span>surpass industry standards</span> and consistently deliver{" "}
-              <span>superior performance</span>.
-            </motion.p>
-
-            <motion.p className="home-sec1-desc" variants={fadeInWithEase}>
-              We always ensure our products are engineered to meet our
-              customers’ expectations, making it the preferred choice for those
-              who demand only the best in lubrication.
+            <motion.p className="home-sec1-desc textLight textXS" variants={fadeInWithEase}>
+              At Hyrax Oil, we engineer lubricants that exceed industry standards—delivering unmatched protection, efficiency, and reliability. Backed by cutting-edge technology and decades of expertise, our products are trusted across 40+ countries to power engines, machinery, and industries worldwide. For those who demand only the best, Hyrax is the preferred choice.
             </motion.p>
           </motion.div>
 
-          <motion.iframe
+          <motion.ul
+            className="homeSectionLayout"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {homeSections.map((segment, index) => (
+              <PageSectionCard
+                key={index}
+                title={segment.title}
+                desc={segment.desc}
+                link={segment.link}
+                background={segment.background}
+              />
+            ))}
+          </motion.ul>
+
+          {/* <motion.iframe
             className="home-sec1-video"
             title="YouTube video player"
             frameBorder="0"
@@ -53,9 +66,9 @@ function HomeSec1() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-          ></motion.iframe>
+          ></motion.iframe> */}
 
-          <motion.img
+          {/* <motion.img
             className="home-sec1-img"
             src={image}
             alt="Hyrax Platineum"
@@ -63,7 +76,7 @@ function HomeSec1() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-          />
+          /> */}
         </div>
       </div>
     </section>

@@ -1,61 +1,50 @@
-.background {
-  .bg-gradient {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
+.sectionLinkBackground {
+  position: relative;
 
-    .section-link-div {
-      color: white;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0; // shorthand for top:0; right:0; bottom:0; left:0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    z-index: 1; // place overlay above background, but below text
+  }
+}
 
-      .section-link-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
+.sectionWrapper {
+  &:hover {
+    .link-div {
+      filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
+        brightness(99%) contrast(92%);
+      transition: 0.2s;
+    }
+  }
+  .text {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
 
-        max-width: 1366px;
-        margin: auto;
-        padding: 6rem 3rem;
+    width: 70%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 
-        .text {
-          z-index: 2;
-          display: flex;
-          flex-direction: column;
+    .desc {
+      text-align: justify;
+    }
+  }
 
-          width: 70%;
-          text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  .link-div {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: fit-content;
 
-          .title {
-            font-size: 40px;
-          }
+    .link {
+      margin-right: 1rem;
+    }
 
-          .desc {
-            font-size: 20px;
-            text-align: justify;
-            margin: 1rem 0;
-          }
-        }
-
-        .link-div {
-          display: flex;
-          align-items: center;
-          height: fit-content;
-
-          .link {
-            margin-right: 1rem;
-          }
-
-          .link-arrow {
-            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
-              brightness(102%) contrast(102%);
-            width: 30px;
-          }
-        }
-
-        .link-div:hover {
-          filter: invert(67%) sepia(87%) saturate(825%) hue-rotate(341deg)
-            brightness(99%) contrast(92%);
-          transition: 0.2s;
-        }
-      }
+    .link-arrow {
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(78deg)
+        brightness(102%) contrast(102%);
+      width: 30px;
     }
   }
 }

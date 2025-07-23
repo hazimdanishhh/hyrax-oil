@@ -108,7 +108,7 @@ li {
   z-index: 1;
 
   @media screen and (max-width: 1024px) {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
   }
 
   // Noise Filter

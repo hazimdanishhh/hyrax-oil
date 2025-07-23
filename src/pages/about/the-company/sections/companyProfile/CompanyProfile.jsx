@@ -31,7 +31,7 @@ function CompanyProfile() {
             <motion.p variants={fadeInWithEase}>
               Incorporated in Malaysia in 1991, Hyrax Oil Sdn Bhd (Hyrax Oil)
               has achieved a remarkable growth since its inception. With more
-              than 33 years of experience, Hyrax Oil has rapidly grown from its
+              than {new Date().getFullYear() - 1991} years of experience, Hyrax Oil has rapidly grown from its
               humble beginning as a transformer oils trading company to become
               an established manufacturer and a global player in the
               manufacturing of lubricants with a full range of top quality and

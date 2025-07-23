@@ -6,7 +6,7 @@ import { management } from "../../../data/management";
 import LeaderPopUp from "../../../components/leader-pop-up/LeaderPopUp";
 import { directors } from "../../../data/directors";
 
-import background from "/src/assets/about/our-leaders-background.webp";
+import background from "/src/assets/about/ourLeaders.webp";
 import FounderMessage from "./sections/founderMessage/FounderMessage";
 import { AnimatePresence, motion } from "framer-motion";
 import {

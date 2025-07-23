@@ -1,7 +1,11 @@
 import "./Services.scss";
 import Hero from "../../components/hero/Hero";
-import background from "/src/assets/about/aboutBackground.webp";
+import background from "/src/assets/services/services.webp";
 import OverviewText from "../../components/overviewText/OverviewText";
+import { servicesSections } from "../../data/NavServicesSections";
+import { motion } from "framer-motion";
+import { staggerContainer } from "../../functions/motionUtils";
+import PageSectionCard from "../../components/PageSectionCard/PageSectionCard";
 
 function Page() {
   return (
@@ -21,32 +25,24 @@ function Page() {
       <section className="sectionLight">
         <div className="sectionWrapper">
           <div className="sectionContent">
-            <h2>Our Services Sections</h2>
-            <ul>
-              <li>
-                <a href="/about/the-company">About - The Company</a>
-              </li>
-              <li>
-                <a href="/about/our-leaders">About - Our Leaders</a>
-              </li>
-              <li>
-                <a href="/about/awards">About - Awards & Accreditations</a>
-              </li>
-              <li>
-                <a href="/about/blending-plants">About - Blending Plants</a>
-              </li>
-              <li>
-                <a href="/about/sustainability">About - Sustainability & ESG</a>
-              </li>
-              <li>
-                <a href="/about/csr">About - CSR & Community Outreach</a>
-              </li>
-              <li>
-                <a href="/about/certifications">
-                  About - Certifications & Compliance
-                </a>
-              </li>
-            </ul>
+            <h2 className="textRegular textXL">In This Section</h2>
+            <motion.ul
+              className="servicesSectionLayout"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {servicesSections.map((segment, index) => (
+                <PageSectionCard
+                  key={index}
+                  title={segment.title}
+                  desc={segment.desc}
+                  link={segment.link}
+                  background={segment.background}
+                />
+              ))}
+            </motion.ul>
           </div>
         </div>
       </section>

@@ -52,7 +52,7 @@ function Navbar() {
             onMouseEnter={() => openOverlay("about")}
             className={`${activePopup === "about" ? "link-active" : ""}`}
           >
-            <a>About</a>
+            <button>About</button>
           </li>
 
           <li
@@ -60,7 +60,7 @@ function Navbar() {
             onMouseEnter={() => openOverlay("products")}
             className={`${activePopup === "products" ? "link-active" : ""}`}
           >
-            <a>Products</a>
+            <button>Products</button>
           </li>
 
           <li
@@ -68,15 +68,19 @@ function Navbar() {
             onMouseEnter={() => openOverlay("services")}
             className={`${activePopup === "services" ? "link-active" : ""}`}
           >
-            <a>Services</a>
+            <button>Services</button>
           </li>
 
-          <li
+          {/* <li
             onClick={() => openOverlay("media")}
             onMouseEnter={() => openOverlay("media")}
             className={`${activePopup === "media" ? "link-active" : ""}`}
           >
-            <a>Media</a>
+            <button>Media</button>
+          </li> */}
+
+          <li>
+            <a href="/media">Media</a>
           </li>
         </ul>
 

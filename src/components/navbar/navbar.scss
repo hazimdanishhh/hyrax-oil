@@ -78,6 +78,7 @@ nav {
       cursor: pointer;
 
       &:hover {
+        color: $secondary;
         text-decoration: underline;
         text-decoration-color: $secondary;
         text-underline-offset: 0.4rem;

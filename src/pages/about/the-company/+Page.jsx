@@ -2,7 +2,7 @@ import Hero from "../../../components/hero/Hero";
 import MarketMap from "./sections/market-map/MarketMap";
 import History from "../../../components/history/History";
 
-import background from "/src/assets/about/the-company-background.webp";
+import background from "/src/assets/about/theCompany.webp";
 import CompanyProfile from "./sections/companyProfile/CompanyProfile";
 import VisionMission from "./sections/visionMission/VisionMission";
 import GlobalImpact from "./sections/globalImpact/GlobalImpact";

@@ -1,6 +1,6 @@
 import "./About.scss";
 import Hero from "../../components/hero/Hero";
-import background from "/src/assets/about/aboutBackground.webp";
+import background from "/src/assets/about/about.webp";
 import OverviewText from "../../components/overviewText/OverviewText";
 import { motion } from "framer-motion";
 import { staggerContainer } from "../../functions/motionUtils";

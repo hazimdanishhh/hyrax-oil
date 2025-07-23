@@ -1,18 +1,18 @@
-import image1 from "/src/assets/navbar/the-company-2.webp";
-import image2 from "/src/assets/navbar/our-leaders.webp";
-import image3 from "/src/assets/navbar/awards.webp";
-import image4 from "/src/assets/navbar/blending-plants.webp";
-import image5 from "/src/assets/navbar/ESG.webp";
-import image6 from "/src/assets/navbar/CSR.webp";
-import image7 from "/src/assets/navbar/certifications.webp";
+import image1 from "/src/assets/about/theCompany-small.webp";
+import image2 from "/src/assets/about/ourLeaders-small.webp";
+import image3 from "/src/assets/about/awards-small.webp";
+import image4 from "/src/assets/about/blendingPlants-small.webp";
+import image5 from "/src/assets/about/sustainability-small.webp";
+import image6 from "/src/assets/about/csr-small.webp";
+import image7 from "/src/assets/about/certifications-small.webp";
 
-import aboutBackground1 from "/src/assets/about/the-company-background.webp";
-import aboutBackground2 from "/src/assets/about/the-company-background.webp";
-import aboutBackground3 from "/src/assets/about/the-company-background.webp";
-import aboutBackground4 from "/src/assets/about/the-company-background.webp";
-import aboutBackground5 from "/src/assets/about/the-company-background.webp";
-import aboutBackground6 from "/src/assets/about/the-company-background.webp";
-import aboutBackground7 from "/src/assets/about/the-company-background.webp";
+import aboutBackground1 from "/src/assets/about/theCompany.webp";
+import aboutBackground2 from "/src/assets/about/ourLeaders.webp";
+import aboutBackground3 from "/src/assets/about/awards.webp";
+import aboutBackground4 from "/src/assets/about/blendingPlants.webp";
+import aboutBackground5 from "/src/assets/about/sustainability.webp";
+import aboutBackground6 from "/src/assets/about/csr.webp";
+import aboutBackground7 from "/src/assets/about/certifications.webp";
 
 export const aboutSections = [
   {

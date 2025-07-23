@@ -15,15 +15,15 @@ const ProductSideNav = () => {
           href={segment.path}
           onMouseEnter={() => setHovered(index)}
           onMouseLeave={() => setHovered(null)}
-          // style={{
-          //   ...(hovered && hovered === index
-          //     ? { backgroundColor: segment.textColor }
-          //     : {}),
-          // }}
+        // style={{
+        //   ...(hovered && hovered === index
+        //     ? { backgroundColor: segment.textColor }
+        //     : {}),
+        // }}
         >
           <img src={segment.icon} alt={`${segment.title} Icon`} />
           {hovered === index && ( // Only render the title when hovered
-            <motion.h4
+            <motion.div
               className="product-side-nav-title"
               style={{ color: segment.textColor }}
               initial={{ opacity: 0, x: 50 }}
@@ -32,7 +32,7 @@ const ProductSideNav = () => {
               transition={{ duration: 0.3 }}
             >
               {segment.title}
-            </motion.h4>
+            </motion.div>
           )}
         </a>
       ))}

@@ -8,7 +8,7 @@ export function onBeforeRender() {
   const title = "Four-Stroke Motorcycle Oils | Hyrax® Engine Lubricants";
   const description =
     "Explore our premium range of Hyrax® NitroX Four-Stroke Motorcycle Oils engineered for peak engine performance and long-lasting protection. Trusted by riders worldwide, Hyrax® formulations meet the latest industry standards.";
-  const image = `${BASE_URL}/og-images/four-stroke-motorcycle-oils.jpg`;
+  const image = `${BASE_URL}/og-images/products.jpg`;
 
   return {
     pageContext: {

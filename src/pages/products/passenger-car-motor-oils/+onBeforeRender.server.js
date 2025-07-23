@@ -8,7 +8,7 @@ export function onBeforeRender() {
   const title = "Passenger Car Motor Oils | Hyrax® Engine Lubricants";
   const description =
     "Explore our premium range of passenger car motor oils engineered for peak engine performance and long-lasting protection. Trusted by drivers worldwide, Hyrax® formulations meet the latest industry standards.";
-  const image = `${BASE_URL}/og-images/passenger-car-motor-oils.jpg`;
+  const image = `${BASE_URL}/og-images/products.jpg`;
 
   return {
     pageContext: {

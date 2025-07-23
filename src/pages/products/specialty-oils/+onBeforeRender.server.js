@@ -3,12 +3,12 @@ const BASE_URL = (
 ).replace(/\/+$/, "");
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}/products/`;
+  const fullUrl = `${BASE_URL}/products/specialty-oils/`;
 
-  const title = "Hyrax® Products | Better Oil, Better Care.";
+  const title = "Specialty Oils | Hyrax®";
   const description =
-    "Explore our extensive range of high-performance lubricants and specialty petroleum products designed to meet diverse industry needs.";
-  const image = `${BASE_URL}/og-images/products.jpg`; // Prefer a products-wide OG image; fallback if not available
+    "For applications that demand more, Hyrax® Specialty Oils deliver exceptional performance and reliability. Designed for specialized machinery and processes, these premium formulations provide advanced lubrication and protection where it matters most.";
+  const image = `${BASE_URL}/og-images/products.jpg`;
 
   return {
     pageContext: {
@@ -21,9 +21,10 @@ export function onBeforeRender() {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: title,
+            name: "Specialty Oils",
             url: fullUrl,
             description,
+            image,
             isPartOf: {
               "@type": "WebSite",
               name: "Hyrax Oil",
@@ -42,6 +43,12 @@ export function onBeforeRender() {
                   "@type": "ListItem",
                   position: 2,
                   name: "Products",
+                  item: `${BASE_URL}/products/`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Specialty Oils",
                   item: fullUrl,
                 },
               ],

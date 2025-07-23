@@ -1,80 +1,95 @@
-.nav-card {
-  max-width: 124px;
-  max-height: 192px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  outline: 2px solid #f26e2700;
+.navCardContainer {
+  scroll-snap-align: start;
 
-  &.carousel-card {
-    max-width: 180px;
-    max-height: 280px;
+  @media screen and (max-width: 768px) {
+    scroll-snap-align: center;
   }
 
-  .nav-card-img {
-    height: 100%;
-    width: 100%;
-    min-width: 125px;
-    min-height: 180px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-
-  .nav-card-overlay {
+  .nav-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 124px;
-    height: 192px;
-    position: absolute;
+    aspect-ratio: 3/4.5;
+    // max-height: 192px;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px 1px rgba(242, 110, 39, 0) inset;
+    overflow: hidden;
+    position: relative;
+    outline: 2px solid #f26e2700;
+    // -webkit-filter: grayscale(100%);
+    // filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    &.carousel-card-overlay {
-      width: 180px;
-      height: 280px;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0; // shorthand for top:0; right:0; bottom:0; left:0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.2)
+      );
+      z-index: 1; // place overlay above background, but below text
+    }
+
+    &.carousel-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      width: 280px;
+      aspect-ratio: 3/4.5;
+      // -webkit-filter: grayscale(0%);
+      // filter: grayscale(0%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      .nav-title {
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
     }
 
     .nav-title {
-      position: absolute;
-      bottom: 0;
-      height: 60px;
+      height: 100%;
       width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 0 1rem;
       border-radius: 0 0 10px 10px;
-
-      background-color: #32323249;
-      backdrop-filter: blur(10px);
+      z-index: 2;
+      gap: 1rem;
 
       h3 {
-        font-weight: 500;
         font-size: 0.8rem;
         text-align: center;
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
       }
-    }
-  }
 
-  &:hover {
-    outline: 2px solid $primary;
-
-    .nav-card-img {
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%);
-      transition: 0.3s;
+      p {
+        text-align: center;
+      }
     }
 
-    .nav-card-overlay {
-      background: rgba(242, 111, 39, 0.01);
-      box-shadow: 0px 0px 30px 1px rgba(242, 111, 39, 0.6) inset;
-      transition: 0.3s;
+    &:hover {
+      outline: 2px solid $primary;
+      // -webkit-filter: grayscale(0%);
+      // filter: grayscale(0%);
 
       .nav-title {
-        background-color: #323232b7;
-        backdrop-filter: blur(20px);
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.4)
+        );
+
         color: $primary;
         transition: 0.3s;
 

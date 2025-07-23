@@ -2,18 +2,16 @@ import "./NavCard.scss";
 import { motion } from "framer-motion";
 import { fadeInWithEase } from "../../functions/motionUtils";
 
-function NavCard({ src, alt, title, link, styleLink, styleOverlay }) {
+function NavCard({ src, alt, title, link, styleLink, styleOverlay, desc }) {
   return (
     <>
-      <motion.li style={{ listStyle: "none" }} variants={fadeInWithEase}>
-        <a className={styleLink} href={link}>
-          <img src={src} alt={alt} className="nav-card-img" />
-          <div className={styleOverlay}>
-            <div className="nav-title">
-              <h3>{title}</h3>
-            </div>
+      <motion.li className="navCardContainer" variants={fadeInWithEase}>
+        <motion.a className={styleLink} href={link} style={{ backgroundImage: `url(${src})` }}>
+          <div className="nav-title">
+            <h3 className="textRegular">{title}</h3>
+            {styleOverlay && (<p className="textLight textXXS">{desc}</p>)}
           </div>
-        </a>
+        </motion.a>
       </motion.li>
     </>
   );

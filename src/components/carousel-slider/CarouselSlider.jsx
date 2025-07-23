@@ -20,22 +20,24 @@ function CarouselSlider({ items, isHomePage }) {
     <>
       <section>
         <motion.div
+          className="carouselHeader"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           {isHomePage ? (
-            <div>
+            <>
               <motion.h2
-                className="carousel-title-home"
+                className="carousel-title-home textRegular textL"
                 variants={fadeInWithEase}
               >
                 Find <span>The Right Oil</span> For Every Application
               </motion.h2>
-            </div>
+              <motion.p className="textLight textXS" variants={fadeInWithEase}>Discover the perfect lubricant for every engine and application with Hyrax Oil’s comprehensive product range. Our advanced formulations are designed to deliver superior protection, efficiency, and reliability—no matter the vehicle, machine, or industry.</motion.p>
+            </>
           ) : (
-            <motion.h2 className="carousel-title" variants={fadeInWithEase}>
+            <motion.h2 className="carousel-title textRegular textL" variants={fadeInWithEase}>
               Browse Our Product Segments
             </motion.h2>
           )}
@@ -76,6 +78,7 @@ function CarouselSlider({ items, isHomePage }) {
                 alt={segment.alt}
                 title={segment.title}
                 link={segment.link}
+                desc={segment.desc}
                 styleLink="nav-card carousel-card"
                 styleOverlay="nav-card-overlay carousel-card-overlay"
               />

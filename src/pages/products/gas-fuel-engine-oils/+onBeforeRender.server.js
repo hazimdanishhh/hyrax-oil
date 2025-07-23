@@ -8,7 +8,7 @@ export function onBeforeRender() {
   const title = "Gas Fuel Engine Oils | Hyrax® Engine Lubricants";
   const description =
     "Explore our premium range of gas fuel engine oils engineered for peak engine performance and long-lasting protection. Trusted by drivers worldwide, Hyrax® formulations meet the latest industry standards.";
-  const image = `${BASE_URL}/og-images/gas-fuel-engine-oils.jpg`;
+  const image = `${BASE_URL}/og-images/products.jpg`;
 
   return {
     pageContext: {

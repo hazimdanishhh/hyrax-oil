@@ -3,12 +3,13 @@ const BASE_URL = (
 ).replace(/\/+$/, "");
 
 export function onBeforeRender() {
-  const fullUrl = `${BASE_URL}/products/`;
+  const fullUrl = `${BASE_URL}/products/two-stroke-motorcycle-and-engine-oils/`;
 
-  const title = "Hyrax® Products | Better Oil, Better Care.";
+  const title =
+    "Two-Stroke Motorcycle & Engine Oils | Hyrax® Engine Lubricants";
   const description =
-    "Explore our extensive range of high-performance lubricants and specialty petroleum products designed to meet diverse industry needs.";
-  const image = `${BASE_URL}/og-images/products.jpg`; // Prefer a products-wide OG image; fallback if not available
+    "Experience unmatched braking confidence with Hyrax® Two-Stroke Motorcycle & Engine Oils, expertly formulated for superior performance and reliable protection. Engineered to meet and exceed global industry standards, our premium Two-Stroke Motorcycle & Engine Oils ensure optimal braking response, heat resistance, and long-lasting system integrity—trusted by drivers and riders worldwide.";
+  const image = `${BASE_URL}/og-images/products.jpg`;
 
   return {
     pageContext: {
@@ -21,9 +22,10 @@ export function onBeforeRender() {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: title,
+            name: "Two-Stroke Motorcycle & Engine Oils",
             url: fullUrl,
             description,
+            image,
             isPartOf: {
               "@type": "WebSite",
               name: "Hyrax Oil",
@@ -42,6 +44,12 @@ export function onBeforeRender() {
                   "@type": "ListItem",
                   position: 2,
                   name: "Products",
+                  item: `${BASE_URL}/products/`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Two-Stroke Motorcycle & Engine Oils",
                   item: fullUrl,
                 },
               ],

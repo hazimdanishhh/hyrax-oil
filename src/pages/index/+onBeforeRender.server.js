@@ -6,7 +6,7 @@ const BASE_URL = (
 
 export function onBeforeRender() {
   const fullUrl = `${BASE_URL}/`; // Home page always ends with "/"
-  const title = "Hyrax Oil | High-Performance Lubricants";
+  const title = "Hyrax Oil | The World's Top Quality Oils and Lubricants";
   const description =
     "Hyrax Oil is a global lubricants manufacturer delivering high-performance engine oils, greases, and specialty fluids. Engineered for efficiency.";
   const image = `${BASE_URL}/og-images/home.jpg`;

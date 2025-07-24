@@ -11,10 +11,18 @@ function PoweringUp() {
       <div className="sectionWrapper">
         <div className="sectionContent poweringUpSectionContent">
           <div className="text">
+            <p className="sectionTag textLight textXXS">
+              Hyrax® Transformer Oils
+            </p>
             <h2 className="textRegular textL">Powering Up The World</h2>
 
             <p className="desc textLight textXS">
-              Beyond automotive, industrial, and marine lubricants, Hyrax Oil is recognized as a global leader in transformer oils—trusted for their unmatched quality, reliability, and extensive range. Backed by decades of expertise, we provide not only world-class products but also technical support, industrial insights, and tailored solutions to power your operations with confidence.
+              Beyond automotive, industrial, and marine lubricants, Hyrax Oil is
+              recognized as a global leader in transformer oils—trusted for
+              their unmatched quality, reliability, and extensive range. Backed
+              by decades of expertise, we provide not only world-class products
+              but also technical support, industrial insights, and tailored
+              solutions to power your operations with confidence.
             </p>
           </div>
 
@@ -25,7 +33,12 @@ function PoweringUp() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <PageSectionCard title="Hyrax® Transformer Oils" desc="High-performance transformer oils for superior insulation, cooling, and long-lasting reliability in power systems worldwide." link="/products/transformer-and-electrical-oils" background={background} />
+            <PageSectionCard
+              title="Hyrax® Transformer Oils"
+              desc="High-performance transformer oils for superior insulation, cooling, and long-lasting reliability in power systems worldwide."
+              link="/products/transformer-and-electrical-oils"
+              background={background}
+            />
           </motion.ul>
         </div>
       </div>

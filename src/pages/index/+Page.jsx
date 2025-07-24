@@ -10,6 +10,7 @@ import HomeSec1 from "./sections/home-sec1/HomeSec1";
 import { productSegments } from "../../data/NavProductSegments";
 import GlobalImpact from "../about/the-company/sections/globalImpact/GlobalImpact";
 import CorporateVideo from "../about/the-company/sections/corporateVideo/CorporateVideo";
+import PageSectionCard from "../../components/PageSectionCard/PageSectionCard";
 
 export default function Page() {
   return (
@@ -29,7 +30,11 @@ export default function Page() {
 
         <CorporateVideo />
 
-        <SectionLink />
+        <section className=" sectionDark bottomSectionLinkSection">
+          <ul className="sectionWrapper">
+            <PageSectionCard />
+          </ul>
+        </section>
       </main>
     </>
   );

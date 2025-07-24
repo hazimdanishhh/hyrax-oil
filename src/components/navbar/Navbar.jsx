@@ -43,7 +43,7 @@ function Navbar() {
 
         {/* NAVIGATION LINKS */}
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
-          <li>
+          <li onMouseEnter={() => openOverlay(null)}>
             <a href="/">Home</a>
           </li>
 
@@ -79,7 +79,7 @@ function Navbar() {
             <button>Media</button>
           </li> */}
 
-          <li>
+          <li onMouseEnter={() => openOverlay(null)}>
             <a href="/media">Media</a>
           </li>
         </ul>

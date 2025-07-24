@@ -2,7 +2,6 @@
 
 import "./home.scss";
 import Carousel from "./sections/carousel/Carousel";
-import SectionLink from "./sections/section-link/SectionLink";
 import HomeSec2 from "./sections/home-sec2/HomeSec2";
 import PoweringUp from "./sections/powering-up/PoweringUp";
 import CarouselSlider from "../../components/carousel-slider/CarouselSlider";

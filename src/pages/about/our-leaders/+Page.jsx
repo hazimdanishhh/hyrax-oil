@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import "./OurLeaders.scss";
 import Hero from "../../../components/hero/Hero";
 import LeaderCard from "../../../components/leader-card/LeaderCard";
@@ -13,6 +13,8 @@ import {
   fadeInWithEase,
   staggerContainer,
 } from "../../../functions/motionUtils";
+import DiscoverNext from "../../../components/discoverNextSection/DiscoverNext";
+import { aboutSections } from "../../../data/NavAboutSections";
 
 function Page() {
   const [activePopup, setActivePopup] = useState(null);
@@ -125,6 +127,11 @@ function Page() {
             <LeaderPopUp leader={activePopup} onClose={closeOverlay} />
           )}
         </AnimatePresence>
+
+        <DiscoverNext
+          subheading="Our Accomplishments"
+          cardData={aboutSections[2]}
+        />
       </main>
     </>
   );

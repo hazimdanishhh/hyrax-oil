@@ -11,9 +11,9 @@ function PoweringUp() {
       <div className="sectionWrapper">
         <div className="sectionContent poweringUpSectionContent">
           <div className="text">
-            <p className="sectionTag textLight textXXS">
+            <span className="sectionTag textLight textXXS">
               Hyrax® Transformer Oils
-            </p>
+            </span>
             <h2 className="textRegular textL">Powering Up The World</h2>
 
             <p className="desc textLight textXS">

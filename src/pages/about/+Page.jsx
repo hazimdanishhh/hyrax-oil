@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { staggerContainer } from "../../functions/motionUtils";
 import { aboutSections } from "../../data/NavAboutSections";
 import PageSectionCard from "../../components/PageSectionCard/PageSectionCard";
+import DiscoverNext from "../../components/discoverNextSection/DiscoverNext";
 
 function Page() {
   return (
@@ -47,6 +48,11 @@ function Page() {
           </div>
         </div>
       </section>
+
+      <DiscoverNext
+        subheading="About The Company"
+        cardData={aboutSections[0]}
+      />
     </main>
   );
 }

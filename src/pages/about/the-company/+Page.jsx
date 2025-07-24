@@ -7,6 +7,8 @@ import CompanyProfile from "./sections/companyProfile/CompanyProfile";
 import VisionMission from "./sections/visionMission/VisionMission";
 import GlobalImpact from "./sections/globalImpact/GlobalImpact";
 import CorporateVideo from "./sections/corporateVideo/CorporateVideo";
+import DiscoverNext from "../../../components/discoverNextSection/DiscoverNext";
+import { aboutSections } from "../../../data/NavAboutSections";
 
 function Page() {
   return (
@@ -25,6 +27,7 @@ function Page() {
         <GlobalImpact />
         <History />
         <CorporateVideo />
+        <DiscoverNext subheading="Our Leadership" cardData={aboutSections[1]} />
       </main>
     </>
   );

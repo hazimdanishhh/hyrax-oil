@@ -10,17 +10,19 @@ root/
 │   │   │   ├── +onBeforeRender.server.js           # Server-side data fetching hook
 │   │   │   └── Home.scss                           # Scoped styles for homepage
 │   │   │
-│   │   └── about/                                  # `/about` route
-│   │       ├── +Page.jsx
-│   │       ├── +config.js
-│   │       ├── +onBeforeRender.server.js
-│   │       ├── About.scss
-│   │       │
-│   │       └── nested-page/                        # `/about/nested-page` route
-│   │           ├── +Page.jsx
-│   │           ├── +config.js
-│   │           ├── +onBeforeRender.server.js
-│   │           └── NestedPage.scss
+│   │   ├── about/                                  # `/about` route
+│   │   │   ├── +Page.jsx
+│   │   │   ├── +config.js
+│   │   │   ├── +onBeforeRender.server.js
+│   │   │   ├── About.scss
+│   │   │   │
+│   │   │   └── nested-page/                        # `/about/nested-page` route
+│   │   │       ├── +Page.jsx
+│   │   │       ├── +config.js
+│   │   │       ├── +onBeforeRender.server.js
+│   │   │       └── NestedPage.
+│   │   │
+│   │   └── _error/                                 # 404 route
 │   │
 │   ├── renderer/                                   # Vike SSR renderer logic
 │   │   ├── +config.js                              # Global Vike config (layout injection, meta merging, etc.)

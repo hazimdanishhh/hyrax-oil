@@ -7,6 +7,7 @@ const app = express();
 app.use(compression());
 app.use(express.static("dist/client"));
 
+// Vike SSR catch-all routes
 app.all(/.*/, async (req, res, next) => {
   const pageContext = await renderPage({ urlOriginal: req.originalUrl });
   const { httpResponse } = pageContext;

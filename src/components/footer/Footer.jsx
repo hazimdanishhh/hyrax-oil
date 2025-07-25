@@ -39,10 +39,15 @@ function Footer() {
             {/* FOOTER LINKS */}
             <div className="footer-item">
               <p className="textM textRegular">Quick Links</p>
-              <ul>
+              <ul className="footerQuickLinks">
+                <li>
+                  <a href="/" className="textLight textXXS">
+                    Home
+                  </a>
+                </li>
                 <li>
                   <a href="/about/the-company" className="textLight textXXS">
-                    The Company
+                    About Hyrax Oil
                   </a>
                 </li>
                 <li>
@@ -64,7 +69,7 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="textLight textXXS">
+                  <a href="/certifications" className="textLight textXXS">
                     Certifications & Compliance
                   </a>
                 </li>
@@ -76,6 +81,16 @@ function Footer() {
                 <li>
                   <a href="/services" className="textLight textXXS">
                     Our Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/careers" className="textLight textXXS">
+                    Careers at Hyrax Oil
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="textLight textXXS">
+                    Contact Us
                   </a>
                 </li>
               </ul>

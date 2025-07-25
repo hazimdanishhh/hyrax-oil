@@ -24,17 +24,22 @@ function HomeSec1() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.h2
-              className="textRegular textS"
-              variants={fadeInWithEase}
-            >
+            <motion.h2 className="textRegular textL" variants={fadeInWithEase}>
               World-Class Lubricants.
               <br />
               Unmatched Performance.
             </motion.h2>
 
-            <motion.p className="home-sec1-desc textLight textXS" variants={fadeInWithEase}>
-              At Hyrax Oil, we engineer lubricants that exceed industry standards—delivering unmatched protection, efficiency, and reliability. Backed by cutting-edge technology and decades of expertise, our products are trusted across 40+ countries to power engines, machinery, and industries worldwide. For those who demand only the best, Hyrax is the preferred choice.
+            <motion.p
+              className="home-sec1-desc textLight textXS"
+              variants={fadeInWithEase}
+            >
+              At Hyrax Oil, we engineer lubricants that exceed industry
+              standards—delivering unmatched protection, efficiency, and
+              reliability. Backed by cutting-edge technology and decades of
+              expertise, our products are trusted across 40+ countries to power
+              engines, machinery, and industries worldwide. For those who demand
+              only the best, Hyrax is the preferred choice.
             </motion.p>
           </motion.div>
 

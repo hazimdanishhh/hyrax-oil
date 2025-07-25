@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import images from "./images";
 import "./carousel.scss";
 import { motion, AnimatePresence } from "framer-motion";

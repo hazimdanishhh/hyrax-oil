@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { careersList } from "../../data/careersList";
 import CareersCard from "../../components/careersCard/CareersCard";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import DiscoverNext from "../../components/discoverNextSection/DiscoverNext";
+import { pageSections } from "../../data/pageSections";
 
 function Page() {
   const [activePopup, setActivePopup] = useState(null);
@@ -87,6 +89,8 @@ function Page() {
           <CareersPopUp careers={activePopup} onClose={closeOverlay} />
         )}
       </AnimatePresence>
+
+      <DiscoverNext subheading="FAQ" cardData={pageSections[0]} />
     </main>
   );
 }

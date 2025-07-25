@@ -17,6 +17,12 @@
         flex-direction: column;
         min-width: fit-content;
         gap: 0.7rem;
+
+        .footerQuickLinks {
+          display: flex;
+          flex-direction: column;
+          gap: 0.7rem;
+        }
       }
 
       .footer-socials {

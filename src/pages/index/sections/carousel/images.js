@@ -8,14 +8,14 @@ const images = [
     src: image3,
     alt: "F&L Asia Lifetime Achievement Award 2025",
     title: "F&L Asia Lifetime Achievement Award 2025",
-    desc: "Celebrating Dato’ Hazimah Zainuddin’s Lifetime Achievement at F+L Week 2025",
+    desc: "YBhg. Dato’ Hazimah Zainuddin proudly receives the Lifetime Achievement Award at F+L Week 2025",
     href: "/products/diesel-engine-oils",
   },
   {
     src: image4,
     alt: "Powering a Cleaner Future. Together.",
     title: "Powering a Cleaner Future. Together.",
-    desc: "A collaborative effort to enhance sustainability in the energy sector.",
+    desc: "Hyrax Oil appointed sole distributor for Ergon's Ester-based Transformer Oils.",
     href: "/about/sustainability",
   },
   {

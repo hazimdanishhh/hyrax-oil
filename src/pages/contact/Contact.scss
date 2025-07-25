@@ -1,14 +1,7 @@
-.contact-section-background {
-  background-color: #ececec;
-
-  .contact-section-wrapper {
-    position: relative;
-
-    .test-modal {
-      position: absolute;
-      top: 46%;
-      right: 26%;
-      color: black;
-    }
-  }
+.contactCardLayout {
+  display: flex;
+  gap: 0.7rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

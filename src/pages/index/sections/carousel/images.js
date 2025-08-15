@@ -9,7 +9,7 @@ const images = [
     alt: "F&L Asia Lifetime Achievement Award 2025",
     title: "F&L Asia Lifetime Achievement Award 2025",
     desc: "YBhg. Dato’ Hazimah Zainuddin proudly receives the Lifetime Achievement Award at F+L Week 2025",
-    href: "/products/diesel-engine-oils",
+    href: "/about/awards",
   },
   {
     src: image4,

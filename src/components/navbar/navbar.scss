@@ -220,6 +220,10 @@ nav {
   .nav-overlay-logos {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
     .nav-overlay-logo {
       height: 30px;
     }

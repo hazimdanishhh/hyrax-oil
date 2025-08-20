@@ -76,7 +76,7 @@ function Page() {
                 hours="8.00 am – 5.30 pm"
                 phone="+94114382881"
               />
-              <ContactCard
+              {/* <ContactCard
                 title="Johannesburg Lube Oil Blending Plant"
                 subtitle="Johannesburg, South Africa"
                 address={[
@@ -88,7 +88,7 @@ function Page() {
                 background={location4background}
                 hours="8.30 am – 4.30 pm"
                 phone="+27829560786"
-              />
+              /> */}
             </motion.div>
           </div>
         </div>

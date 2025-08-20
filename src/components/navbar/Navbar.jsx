@@ -16,6 +16,7 @@ import {
   fadeInWithEase,
   staggerContainerFast,
 } from "../../functions/motionUtils";
+import { ArrowRightIcon, CaretLeftIcon } from "@phosphor-icons/react/dist/ssr";
 
 function Navbar() {
   const {
@@ -147,25 +148,11 @@ function Navbar() {
               {activePopup === "about" && (
                 <>
                   <div className="nav-overlay-header">
-                    <svg
+                    <CaretLeftIcon
+                      size="24"
                       onClick={closeOverlay}
                       className="back-icon"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m15 19-7-7 7-7"
-                      />
-                    </svg>
-
+                    />
                     <h2>About</h2>
                   </div>
                   <motion.div
@@ -181,14 +168,7 @@ function Navbar() {
                       variants={fadeInWithEase}
                     >
                       About Us
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 256 256"
-                      >
-                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                      </svg>
+                      <ArrowRightIcon size={24} />
                     </motion.a>
                   </motion.div>
                   <motion.ul
@@ -219,24 +199,11 @@ function Navbar() {
               {activePopup === "products" && (
                 <>
                   <div className="nav-overlay-header">
-                    <svg
+                    <CaretLeftIcon
+                      size="24"
                       onClick={closeOverlay}
                       className="back-icon"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m15 19-7-7 7-7"
-                      />
-                    </svg>
+                    />
 
                     <h2>Products</h2>
                   </div>
@@ -282,14 +249,7 @@ function Navbar() {
                       variants={fadeInWithEase}
                     >
                       Our Products
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 256 256"
-                      >
-                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                      </svg>
+                      <ArrowRightIcon size={24} />
                     </motion.a>
                   </motion.div>
                   <motion.ul
@@ -320,24 +280,11 @@ function Navbar() {
               {activePopup === "services" && (
                 <>
                   <div className="nav-overlay-header">
-                    <svg
+                    <CaretLeftIcon
+                      size="24"
                       onClick={closeOverlay}
                       className="back-icon"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m15 19-7-7 7-7"
-                      />
-                    </svg>
+                    />
 
                     <h2>Services</h2>
                   </div>
@@ -354,14 +301,7 @@ function Navbar() {
                       variants={fadeInWithEase}
                     >
                       Our Services
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 256 256"
-                      >
-                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                      </svg>
+                      <ArrowRightIcon size={24} />
                     </motion.a>
                   </motion.div>
                   <motion.ul
@@ -392,24 +332,11 @@ function Navbar() {
               {activePopup === "media" && (
                 <>
                   <div className="nav-overlay-header">
-                    <svg
+                    <CaretLeftIcon
+                      size="24"
                       onClick={closeOverlay}
                       className="back-icon"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m15 19-7-7 7-7"
-                      />
-                    </svg>
+                    />
 
                     <h2>Media</h2>
                   </div>

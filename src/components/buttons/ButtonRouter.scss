@@ -21,9 +21,14 @@
   }
 
   &:hover {
-    border-color: $secondary;
-    background: linear-gradient(270deg, $primary, $secondary);
-    color: white;
+    border-color: white;
+    background: linear-gradient(270deg, white, white);
+    color: $primary;
+
+    svg {
+      fill: $primary;
+      transition: 0.3s;
+    }
   }
 
   &:active {
@@ -54,17 +59,17 @@
   }
 
   &:hover {
-    border: 1px solid $primary;
+    border: 1px solid white;
     background: none;
-    color: $primary;
+    color: white;
 
     svg {
-      fill: $primary;
+      fill: white;
       transition: 0.3s;
     }
   }
 
   &:active {
-    box-shadow: 0px 0px 4px 0px $primary inset;
+    box-shadow: 0px 0px 4px 0px white inset;
   }
 }

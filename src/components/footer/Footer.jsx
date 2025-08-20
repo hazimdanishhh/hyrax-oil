@@ -8,6 +8,11 @@ import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
 import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
 import apiLogo from "/src/assets/logos/APILogo-Light.webp";
 import malaysianBrandLogo from "/src/assets/logos/malaysian-brand.png";
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+  PrinterIcon,
+} from "@phosphor-icons/react/dist/ssr";
 
 function Footer() {
   const scrollToTop = () => {
@@ -140,21 +145,39 @@ function Footer() {
             <div className="footer-item">
               <p className="textM textRegular">Contact</p>
               <span>
-                <a href="tel:+60321635893" className="textLight textXXS">
-                  Tel: &#40;+603&#41; 2163-5893
+                <a
+                  href="tel:+60321635893"
+                  className="textLight textXXS footer-item-content"
+                >
+                  <PhoneIcon size={16} />
+                  &#40;HQ&#41; +603-2163-5893
                 </a>
               </span>
               <span>
-                <a href="tel:+60321646577" className="textLight textXXS">
-                  Fax: &#40;+603&#41; 2164-6577
+                <a
+                  href="tel:+60321646577"
+                  className="textLight textXXS footer-item-content"
+                >
+                  <PrinterIcon size={16} />
+                  &#40;HQ&#41; +603-2164-6577
                 </a>
               </span>
               <span>
                 <a
                   href="mailto:hyrax@hyraxoil.com"
-                  className="textLight textXXS"
+                  className="textLight textXXS footer-item-content"
                 >
-                  Email: hyrax@hyraxoil.com
+                  <EnvelopeIcon size={16} />
+                  hyrax@hyraxoil.com
+                </a>
+              </span>
+              <span>
+                <a
+                  href="mailto:sales@hyraxoil.com"
+                  className="textLight textXXS footer-item-content"
+                >
+                  <EnvelopeIcon size={16} />
+                  sales@hyraxoil.com
                 </a>
               </span>
             </div>

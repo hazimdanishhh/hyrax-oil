@@ -21,7 +21,15 @@
         .footerQuickLinks {
           display: flex;
           flex-direction: column;
-          gap: 0.7rem;
+
+          li {
+            padding: 0.35rem 0;
+          }
+        }
+
+        .footer-item-content {
+          display: flex;
+          gap: 1rem;
         }
       }
 

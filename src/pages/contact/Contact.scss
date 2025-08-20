@@ -5,3 +5,50 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.contactFormWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  .contactFormWrapperHalf {
+    width: 50%;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    h2 {
+      text-align: start;
+    }
+
+    .contactFormDisplay {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: start;
+      gap: 1rem;
+      padding: 1rem 0;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        gap: 3rem;
+      }
+
+      .footer-item {
+        display: flex;
+        flex-direction: column;
+        min-width: fit-content;
+        gap: 0.7rem;
+
+        .footer-item-content {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}

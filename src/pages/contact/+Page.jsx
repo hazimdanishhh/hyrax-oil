@@ -9,6 +9,11 @@ import location2background from "/src/assets/about/theCompany.webp";
 import location3background from "/src/assets/contact/locationHyraxOilSL.webp";
 import location4background from "/src/assets/contact/locationHyraxOilSA.webp";
 import ContactForm from "../../components/contactForm/ContactForm";
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+  PrinterIcon,
+} from "@phosphor-icons/react/dist/ssr";
 
 function Page() {
   return (
@@ -97,11 +102,76 @@ function Page() {
       <section className="sectionLight">
         <div className="sectionWrapper">
           <div className="sectionContent">
-            <h2 className="textRegular textL">Contact Form</h2>
-
             {/* TODO: FIX FORM */}
+            <div className="contactFormWrapper">
+              <div className="contactFormWrapperHalf">
+                <h2 className="textRegular textXL">Get in Touch With Us!</h2>
 
-            <ContactForm />
+                <div className="contactFormDisplay">
+                  <div className="footer-item">
+                    <p className="textM textRegular">Head Office, Malaysia</p>
+                    <a
+                      href="https://www.google.com/maps/place/Hyrax+Oil+Sdn.+Bhd./data=!4m2!3m1!1s0x0:0x53085859f88dd00d?sa=X&ved=1t:2428&ictx=111"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="textLight textXXS"
+                    >
+                      A-8-1, Megan Avenue II,
+                      <br />
+                      12, Jalan Yap Kwan Seng,
+                      <br />
+                      Kampung Baru,
+                      <br />
+                      50450 Kuala Lumpur,
+                      <br />
+                      Wilayah Persekutuan Kuala Lumpur.
+                    </a>
+                  </div>
+
+                  {/* FOOTER CONTACT */}
+                  <div className="footer-item">
+                    <p className="textM textRegular">Contact</p>
+                    <span>
+                      <a
+                        href="tel:+60321635893"
+                        className="textLight textXXS footer-item-content"
+                      >
+                        <PhoneIcon size={16} />
+                        &#40;HQ&#41; +603-2163-5893
+                      </a>
+                    </span>
+                    <span>
+                      <a
+                        href="tel:+60321646577"
+                        className="textLight textXXS footer-item-content"
+                      >
+                        <PrinterIcon size={16} />
+                        &#40;HQ&#41; +603-2164-6577
+                      </a>
+                    </span>
+                    <span>
+                      <a
+                        href="mailto:hyrax@hyraxoil.com"
+                        className="textLight textXXS footer-item-content"
+                      >
+                        <EnvelopeIcon size={16} />
+                        hyrax@hyraxoil.com
+                      </a>
+                    </span>
+                    <span>
+                      <a
+                        href="mailto:sales@hyraxoil.com"
+                        className="textLight textXXS footer-item-content"
+                      >
+                        <EnvelopeIcon size={16} />
+                        sales@hyraxoil.com
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

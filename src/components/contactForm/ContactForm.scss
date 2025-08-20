@@ -71,6 +71,13 @@ textarea {
   width: 100%;
   padding: 1rem;
   gap: 1rem;
+
+  .contactFormRadioGroup {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 1rem;
+  }
 }
 
 .contactFormSubmitButton {

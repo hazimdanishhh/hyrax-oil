@@ -51,6 +51,21 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="contactForm">
+      {/* Enquiry Type */}
+      {/* TODO: FINISH THIS ENQUIRY TYPE */}
+
+      <div className="contactFormInput">
+        <label htmlFor="Enquiry Type">Enquiry Type*</label>
+
+        <div className="contactFormRadioGroup">
+          <input type="radio" id="sales" name="enquiryType" value="Sales" />
+          <label htmlFor="sales">Sales Enquiry</label>
+          <input type="radio" id="general" name="enquiryType" value="General" />
+          <label htmlFor="general">General Enquiry</label>
+        </div>
+      </div>
+
+      {/* Form */}
       <div className="contactFormHalf">
         <div className="contactFormInput">
           <label htmlFor="name">Name*</label>

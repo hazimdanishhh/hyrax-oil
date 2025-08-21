@@ -6,6 +6,7 @@ function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
+    enquiryType: "",
     name: "",
     email: "",
     company: "",
@@ -38,6 +39,7 @@ function ContactForm() {
 
     // Clear form after submit
     setFormData({
+      enquiryType: "",
       name: "",
       email: "",
       company: "",
@@ -52,17 +54,37 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="contactForm">
       {/* Enquiry Type */}
-      {/* TODO: FINISH THIS ENQUIRY TYPE */}
 
       <div className="contactFormInput">
-        <label htmlFor="Enquiry Type">Enquiry Type*</label>
+        <fieldset className="contactFormRadioGroup">
+          <legend>Enquiry Type*</legend>
 
-        <div className="contactFormRadioGroup">
-          <input type="radio" id="sales" name="enquiryType" value="Sales" />
-          <label htmlFor="sales">Sales Enquiry</label>
-          <input type="radio" id="general" name="enquiryType" value="General" />
-          <label htmlFor="general">General Enquiry</label>
-        </div>
+          <div>
+            <input
+              type="radio"
+              id="sales"
+              name="enquiryType"
+              value="Sales"
+              checked={formData.enquiryType === "Sales"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="sales">Sales Enquiry</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="general"
+              name="enquiryType"
+              value="General"
+              checked={formData.enquiryType === "General"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="general">General Enquiry</label>
+          </div>
+        </fieldset>
       </div>
 
       {/* Form */}

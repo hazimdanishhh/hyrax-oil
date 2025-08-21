@@ -77,6 +77,11 @@ textarea {
     flex-direction: row;
     text-align: start;
     gap: 1rem;
+    border: none;
+
+    legend {
+      margin-bottom: 1rem;
+    }
   }
 }
 

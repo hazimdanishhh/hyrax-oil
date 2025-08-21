@@ -41,7 +41,7 @@ function GlobalImpact() {
               variants={fadeInWithEase}
             >
               <div className="company-impact-cards">
-                <Counter end={3} duration={1} />
+                <Counter end={2} duration={1} />
                 <p>Countries with Lube Oil Blending Plants</p>
               </div>
               <div className="company-impact-cards">
@@ -64,7 +64,7 @@ function GlobalImpact() {
               </div>
               <div className="company-impact-cards">
                 <div className="company-impact-digit">
-                  <Counter end={80} duration={2.5} />
+                  <Counter end={20} duration={2.5} />
                   <div className="company-impact-digit-plus textRegular textXXL">
                     M+
                   </div>

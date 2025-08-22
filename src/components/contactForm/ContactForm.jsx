@@ -1,9 +1,12 @@
 import { useState } from "react";
 import "./ContactForm.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
   const [formData, setFormData] = useState({
     enquiryType: "",
@@ -19,36 +22,65 @@ function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
 
-    // Clear Previous Errors (if any)
-    // setError(null)
+    try {
+      const templateId =
+        formData.enquiryType === "Sales"
+          ? import.meta.env.VITE_EMAILJS_TEMPLATE_SALES
+          : import.meta.env.VITE_EMAILJS_TEMPLATE_GENERAL;
 
-    // Optional: Disable submit button during loading
-    // setIsSubmitting(true)
+      // Guard against missing env vars
+      if (
+        !import.meta.env.VITE_EMAILJS_SERVICE_ID ||
+        !templateId ||
+        !import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      ) {
+        throw new Error(
+          "EmailJS environment variables are not configured properly."
+        );
+      }
 
-    // Validate input on frontend (basic checks, required fields, etc.)
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        templateId,
+        {
+          enquiryType: formData.enquiryType,
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-    // TODO: Add actual API call, try and error blocks
+      if (result.status === 200) {
+        console.log("✅ EmailJS Success:", result.text);
 
-    console.log("Form submitted:", formData);
+        setIsSubmitted(true);
+        setFormData({
+          enquiryType: "",
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+        });
 
-    // Boolean for UI success message
-    setIsSubmitted(true);
-
-    // Clear form after submit
-    setFormData({
-      enquiryType: "",
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      message: "",
-    });
-
-    // Remove UI success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        throw new Error("EmailJS response not OK.");
+      }
+    } catch (err) {
+      console.error("❌ EmailJS Error:", err);
+      setError("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -166,8 +198,12 @@ function ContactForm() {
         ></textarea>
       </div>
 
-      <button type="submit" className="contactFormSubmitButton">
-        Send Message
+      <button
+        type="submit"
+        className="contactFormSubmitButton"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Sending..." : "Send Message"}
       </button>
 
       <AnimatePresence>
@@ -197,6 +233,16 @@ function ContactForm() {
             <p className="textLight formSubmittedMessage">
               Thanks for reaching out to us.
             </p>
+          </motion.div>
+        )}
+        {error && (
+          <motion.div
+            className="formErrorCard"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            ❌ {error}
           </motion.div>
         )}
       </AnimatePresence>

@@ -16,22 +16,39 @@ function ContactCard({
   hours,
   phone,
   fax,
+  onClick,
+  src,
 }) {
   return (
     <motion.li
       style={{ listStyle: "none" }}
       variants={fadeInWithEase}
       className="contactCardWrapper"
+      onClick={onClick}
     >
-      <motion.div
-        className="contactCard"
-        style={{
-          backgroundImage: `url(${background})`,
-        }}
-      >
+      <motion.div className="contactCard">
+        <div className="contactCardImageWrapper">
+          <div
+            className="contactCardImage"
+            style={{ backgroundImage: `url(${background})` }}
+          />
+          <iframe
+            src={src}
+            width="100%"
+            height="100%"
+            style={{ border: 0, borderRadius: 15 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="contactCardMap"
+          ></iframe>
+        </div>
+
         <div className="contactCardText">
           <h3 className="textRegular textM">{title}</h3>
           <span className="textRegular textXS">{subtitle}</span>
+          <hr />
+
           <div className="addressContactCard">
             <a href={link} target="_blank" rel="noopener noreferrer">
               {address &&

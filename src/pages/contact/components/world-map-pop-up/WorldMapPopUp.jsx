@@ -56,10 +56,10 @@ function WorldMapPopUp({ country, onClose }) {
               <div className="country-pop-up-section">
                 <div className="country-pop-up-header">
                   <div className="country-pop-up-title">
-                    <h2>Malaysia</h2>
+                    <h2 className="textRegular textM">Malaysia</h2>
                     <hr />
-                    <h3>Head Office</h3>
-                    <h5>
+                    <h3 className="textRegular textS">Head Office</h3>
+                    <p>
                       A-8-1, Megan Avenue II,
                       <br />
                       12, Jalan Yap Kwan Seng,
@@ -69,7 +69,7 @@ function WorldMapPopUp({ country, onClose }) {
                       50450 Kuala Lumpur,
                       <br />
                       Wilayah Persekutuan Kuala Lumpur
-                    </h5>
+                    </p>
                     <span>
                       Business Hours: 8:30 AM to 5:00 PM &#40;Monday to
                       Friday&#41;
@@ -102,10 +102,12 @@ function WorldMapPopUp({ country, onClose }) {
               <div className="country-pop-up-section">
                 <div className="country-pop-up-header">
                   <div className="country-pop-up-title">
-                    <h2>Malaysia</h2>
+                    <h2 className="textRegular textM">Malaysia</h2>
                     <hr />
-                    <h3>Meru Lubricant Oil Blending Plant</h3>
-                    <h5>
+                    <h3 className="textRegular textS">
+                      Meru Lube Oil Blending Plant
+                    </h3>
+                    <p>
                       Lot 4937 Batu 5 1/2, Jalan Meru,
                       <br />
                       Mukim Kapar,
@@ -113,7 +115,7 @@ function WorldMapPopUp({ country, onClose }) {
                       Selangor Darul Ehsan, 41050 Klang,
                       <br />
                       Selangor
-                    </h5>
+                    </p>
                     <span>
                       Business Hours: 8:30 AM to 5:00 PM &#40;Monday to
                       Friday&#41;
@@ -146,16 +148,18 @@ function WorldMapPopUp({ country, onClose }) {
               <div className="country-pop-up-section">
                 <div className="country-pop-up-header">
                   <div className="country-pop-up-title">
-                    <h2>Sri Lanka</h2>
+                    <h2 className="textRegular textM">Sri Lanka</h2>
                     <hr />
-                    <h3>Muthurajawela Lubricant Oil Blending Plant</h3>
-                    <h5>
+                    <h3 className="textRegular textS">
+                      Muthurajawela Lube Oil Blending Plant
+                    </h3>
+                    <p>
                       No. 113, Ceylon Petroleum Storage Terminal,
                       <br />
                       Muthurajawela,
                       <br />
                       Wattala, Sri Lanka.
-                    </h5>
+                    </p>
                     <span>
                       Business Hours: 8:00 AM to 5:30 PM &#40;Monday to
                       Friday&#41;

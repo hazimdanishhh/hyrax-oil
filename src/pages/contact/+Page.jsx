@@ -76,6 +76,7 @@ function Page() {
                 hours="8.30 am – 5.00 pm"
                 phone="+60321635893"
                 fax="+60321646577"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4103.049972029473!2d101.71184350000001!3d3.1617352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37d9f4094533%3A0x53085859f88dd00d!2sHyrax%20Oil%20Sdn.%20Bhd.!5e1!3m2!1sen!2smy!4v1736907919506!5m2!1sen!2smy"
               />
               <ContactCard
                 title="Meru Lube Oil Blending Plant"
@@ -91,10 +92,11 @@ function Page() {
                 background={location2background}
                 hours="8.30 am – 5.30 pm"
                 phone="+60333923585"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d262604.82915697055!2d101.441422!3d3.123462!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc5151bee9af9b%3A0x4bf396797cf92773!2sHyrax%20Oil%20Sdn.%20Bhd.!5e1!3m2!1sen!2smy!4v1736917990926!5m2!1sen!2smy"
               />
               <ContactCard
                 title="Muthurajawela Lube Oil Blending Plant"
-                subtitle="Muthurajawela, Sri Lanka"
+                subtitle="Wattala, Sri Lanka"
                 address={[
                   "No. 113, Ceylon Petroleum Storage Terminal,",
                   "Muthurajawela,",
@@ -104,20 +106,8 @@ function Page() {
                 background={location3background}
                 hours="8.00 am – 5.30 pm"
                 phone="+94114382881"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4078.5074847997757!2d79.87046777510108!3d7.019131217205172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f653156ee74d%3A0xab50cd7be5810cba!2sHyrax%20Oil%20Blending%20Plant!5e1!3m2!1sen!2smy!4v1736920931097!5m2!1sen!2smy"
               />
-              {/* <ContactCard
-                title="Johannesburg Lube Oil Blending Plant"
-                subtitle="Johannesburg, South Africa"
-                address={[
-                  "15 Foden Rd,",
-                  "Aureus, Randfontein,",
-                  "1759, South Africa.",
-                ]}
-                link="https://www.google.com/maps/place/HITEK+OILS+AND+LUBRICANTS/@-26.2019969,27.6801074,206m/data=!3m1!1e3!4m6!3m5!1s0x1e95bd726311177b:0x564c208465993d94!8m2!3d-26.2019675!4d27.6800781!16s%2Fg%2F11s8hlr404?entry=ttu&g_ep=EgoyMDI1MDcyMS4wIKXMDSoASAFQAw%3D%3D"
-                background={location4background}
-                hours="8.30 am – 4.30 pm"
-                phone="+27829560786"
-              /> */}
             </motion.div>
           </div>
         </div>
@@ -221,7 +211,7 @@ function Page() {
               {TechnicalFAQList.map((item, index) => (
                 <li key={index} className="faqItem">
                   <button
-                    className={`textRegular textXXS faqQuestion ${
+                    className={`textRegular textXS faqQuestion ${
                       activeIndex1 === index ? "active" : ""
                     }`}
                     onClick={() => toggleFAQ1(index)}
@@ -255,7 +245,7 @@ function Page() {
               {CommercialFAQList.map((item, index) => (
                 <li key={index} className="faqItem">
                   <button
-                    className={`textRegular textXXS faqQuestion ${
+                    className={`textRegular textXS faqQuestion ${
                       activeIndex2 === index ? "active" : ""
                     }`}
                     onClick={() => toggleFAQ2(index)}

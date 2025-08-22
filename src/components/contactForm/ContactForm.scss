@@ -7,10 +7,11 @@
   background-color: $dark;
   color: $light;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 2rem 3rem 2rem;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+    padding: 1rem;
   }
 
   .contactFormHalf {
@@ -125,6 +126,10 @@ input[type="radio"] {
     gap: 1rem;
     border: none;
 
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
     legend {
       margin-bottom: 1rem;
     }
@@ -196,7 +201,6 @@ input[type="radio"] {
       p {
         text-align: start;
         margin: 0.5rem 0 1rem;
-        line-height: 1.6;
         color: #555;
       }
     }

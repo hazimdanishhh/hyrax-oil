@@ -57,9 +57,9 @@ function ContactForm() {
 
       <div className="contactFormInput">
         <fieldset className="contactFormRadioGroup">
-          <legend>Enquiry Type*</legend>
+          <legend className="textRegular textXS">Enquiry Type*</legend>
 
-          <div>
+          <div className="contactFormRadioOption">
             <input
               type="radio"
               id="sales"
@@ -72,7 +72,7 @@ function ContactForm() {
             <label htmlFor="sales">Sales Enquiry</label>
           </div>
 
-          <div>
+          <div className="contactFormRadioOption">
             <input
               type="radio"
               id="general"
@@ -90,24 +90,30 @@ function ContactForm() {
       {/* Form */}
       <div className="contactFormHalf">
         <div className="contactFormInput">
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name" className="textRegular textXS">
+            Name*
+          </label>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
+            placeholder="Enter your name"
             required
           />
         </div>
 
         <div className="contactFormInput">
-          <label htmlFor="email">Email*</label>
+          <label htmlFor="email" className="textRegular textXS">
+            Email*
+          </label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
+            placeholder="Enter your email"
             onChange={handleChange}
             required
           />
@@ -116,35 +122,44 @@ function ContactForm() {
 
       <div className="contactFormHalf">
         <div className="contactFormInput">
-          <label htmlFor="company">Company</label>
+          <label htmlFor="company" className="textRegular textXS">
+            Company
+          </label>
           <input
             type="text"
             id="company"
             name="company"
             value={formData.company}
+            placeholder="Enter your company name"
             onChange={handleChange}
           />
         </div>
 
         <div className="contactFormInput">
-          <label htmlFor="phone">Phone</label>
+          <label htmlFor="phone" className="textRegular textXS">
+            Phone
+          </label>
           <input
             type="text"
             id="phone"
             name="phone"
             value={formData.phone}
+            placeholder="Enter your phone number"
             onChange={handleChange}
           />
         </div>
       </div>
 
       <div className="contactFormInput">
-        <label htmlFor="message">Message*</label>
+        <label htmlFor="message" className="textRegular textXS">
+          Message*
+        </label>
         <textarea
           id="message"
           name="message"
           className="textArea"
           value={formData.message}
+          placeholder="Type your message here..."
           onChange={handleChange}
           rows={5}
           required

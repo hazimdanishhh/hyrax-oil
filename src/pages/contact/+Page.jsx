@@ -2,7 +2,7 @@ import "./Contact.scss";
 import background from "/src/assets/contact/contact.webp";
 import Hero from "../../components/hero/Hero";
 import ContactCard from "../../components/contactCard/ContactCard";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { staggerContainer } from "../../functions/motionUtils";
 import location1background from "/src/assets/contact/locationHyraxOilKL.webp";
 import location2background from "/src/assets/about/theCompany.webp";
@@ -14,8 +14,23 @@ import {
   PhoneIcon,
   PrinterIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import { useState } from "react";
+import { CommercialFAQList, TechnicalFAQList } from "../../data/FAQList";
+import DiscoverNext from "../../components/discoverNextSection/DiscoverNext";
+import { pageSections } from "../../data/pageSections";
 
 function Page() {
+  const [activeIndex1, setActiveIndex1] = useState(0);
+  const [activeIndex2, setActiveIndex2] = useState(0);
+
+  const toggleFAQ1 = (index) => {
+    setActiveIndex1(activeIndex1 === index ? null : index);
+  };
+
+  const toggleFAQ2 = (index) => {
+    setActiveIndex2(activeIndex2 === index ? null : index);
+  };
+
   return (
     <main>
       <Hero
@@ -30,6 +45,15 @@ function Page() {
         <div className="sectionWrapper">
           <div className="sectionContent">
             <h2 className="textRegular textL">Our Locations</h2>
+            <p className="textLight">
+              Looking for solutions to your questions and problems? Look no
+              further! Get in touch with us today and let us help you find the
+              answers you’re looking for. Our team of experts is dedicated to
+              providing top-notch solutions that meet your unique needs. So,
+              whether you have a question that needs answering or a problem that
+              needs solving, we’ve got you covered. Contact us now and let’s
+              work together to achieve your goals!
+            </p>
             <motion.div
               className="contactCardLayout"
               variants={staggerContainer}
@@ -105,11 +129,11 @@ function Page() {
             {/* TODO: FIX FORM */}
             <div className="contactFormWrapper">
               <div className="contactFormWrapperHalf">
-                <h2 className="textRegular textXL">Get in Touch With Us!</h2>
+                <h2 className="textRegular textL">Get in Touch With Us!</h2>
 
                 <div className="contactFormDisplay">
                   <div className="footer-item">
-                    <p className="textM textRegular">Head Office, Malaysia</p>
+                    <p className="textS textRegular">Head Office, Malaysia</p>
                     <a
                       href="https://www.google.com/maps/place/Hyrax+Oil+Sdn.+Bhd./data=!4m2!3m1!1s0x0:0x53085859f88dd00d?sa=X&ved=1t:2428&ictx=111"
                       target="_blank"
@@ -130,7 +154,7 @@ function Page() {
 
                   {/* FOOTER CONTACT */}
                   <div className="footer-item">
-                    <p className="textM textRegular">Contact</p>
+                    <p className="textS textRegular">Contact</p>
                     <span>
                       <a
                         href="tel:+60321635893"
@@ -179,10 +203,89 @@ function Page() {
       <section className="sectionLight" id="faq">
         <div className="sectionWrapper">
           <div className="sectionContent">
-            <h2 className="textRegular textL">FAQ</h2>
+            <h2 className="textRegular textL">Frequently Asked Questions</h2>
+            <p className="textLight">
+              It can be a challenging task to identify the most suitable
+              lubricant for a specific use, considering the extensive range of
+              available products. It may seem like maneuvering through a
+              complicated maze of options. At Hyrax Oil, we have compiled a list
+              of frequently asked questions on technical query and certain
+              commercial interest that we receive from our clients to help you
+              navigate the complexity of the issues.
+            </p>
+
+            <hr />
+
+            <h3 className="textRegular textM">Technical Queries</h3>
+            <ul className="faqList">
+              {TechnicalFAQList.map((item, index) => (
+                <li key={index} className="faqItem">
+                  <button
+                    className={`textRegular textXXS faqQuestion ${
+                      activeIndex1 === index ? "active" : ""
+                    }`}
+                    onClick={() => toggleFAQ1(index)}
+                  >
+                    {item.question}
+                    <span className="textS faqIcon">
+                      {activeIndex1 === index ? "−" : "+"}
+                    </span>
+                  </button>
+                  <AnimatePresence>
+                    {activeIndex1 === index && (
+                      <motion.div
+                        className="textLight textXXS faqAnswer"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <p>{item.answer}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </li>
+              ))}
+            </ul>
+
+            <hr />
+
+            <h3 className="textRegular textM">Commercial Queries</h3>
+            <ul className="faqList">
+              {CommercialFAQList.map((item, index) => (
+                <li key={index} className="faqItem">
+                  <button
+                    className={`textRegular textXXS faqQuestion ${
+                      activeIndex2 === index ? "active" : ""
+                    }`}
+                    onClick={() => toggleFAQ2(index)}
+                  >
+                    {item.question}
+                    <span className="textS faqIcon">
+                      {activeIndex2 === index ? "−" : "+"}
+                    </span>
+                  </button>
+                  <AnimatePresence>
+                    {activeIndex2 === index && (
+                      <motion.div
+                        className="textLight textXXS faqAnswer"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <p>{item.answer}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
+
+      <DiscoverNext subheading="Careers" cardData={pageSections[1]} />
     </main>
   );
 }

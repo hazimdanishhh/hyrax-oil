@@ -3,7 +3,7 @@ import { fadeInWithEase } from "../../functions/motionUtils";
 import "./PageSectionCard.scss";
 import { motion } from "framer-motion";
 
-function PageSectionCard({ title, desc, link, background }) {
+function PageSectionCard({ title, desc, link, link2, background }) {
   return (
     <motion.li
       style={{ listStyle: "none" }}
@@ -12,7 +12,7 @@ function PageSectionCard({ title, desc, link, background }) {
     >
       <motion.a
         className="pageSectionCard"
-        href={link}
+        href={link || link2}
         style={{
           backgroundImage: `url(${background})`,
         }}

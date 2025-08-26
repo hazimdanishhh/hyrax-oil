@@ -43,7 +43,7 @@ function Page() {
                   key={index}
                   title={segment.title}
                   desc={segment.desc}
-                  link={segment.link}
+                  link2={segment.link2}
                   background={segment.background}
                 />
               ))}

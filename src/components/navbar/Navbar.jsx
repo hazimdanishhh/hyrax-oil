@@ -7,10 +7,12 @@ import { mediaSections } from "../../data/NavMediaSections";
 import { AnimatePresence, motion } from "framer-motion";
 import ButtonRouter from "../buttons/ButtonRouter";
 
-import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
-import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
-import apiLogo from "/src/assets/logos/APILogo-Light.webp";
-import malaysianBrandLogo from "/src/assets/logos/malaysian-brand.png";
+import hyraxOilLogo from "/src/assets/logos/hyraxOilLogo.webp";
+import hyraxLogo from "/src/assets/logos/hyrax-logo.webp";
+import apiLogo from "/src/assets/logos/APILogo-Light-2.webp";
+import malaysianBrandLogo from "/src/assets/logos/malaysian-brand-logo.webp";
+import madeInMalaysiaLogo from "/src/assets/logos/made-in-malaysia-logo.webp";
+import SIRIMLogo from "/src/assets/logos/SIRIM-Logo.webp";
 import useNavbar from "/src/functions/useNavbar";
 import {
   fadeInWithEase,
@@ -37,7 +39,7 @@ function Navbar() {
           <img
             loading="lazy"
             className="nav-logo"
-            src={hyraxOil33Logo}
+            src={hyraxOilLogo}
             alt="Hyrax Oil Logo"
           />
         </a>
@@ -230,8 +232,22 @@ function Navbar() {
                     />
                     <motion.img
                       loading="lazy"
+                      src={madeInMalaysiaLogo}
+                      alt="Made In Malaysia Logo"
+                      className="nav-overlay-logo"
+                      variants={fadeInWithEase}
+                    />
+                    <motion.img
+                      loading="lazy"
                       src={malaysianBrandLogo}
                       alt="Malaysian Brand Logo"
+                      className="nav-overlay-logo"
+                      variants={fadeInWithEase}
+                    />
+                    <motion.img
+                      loading="lazy"
+                      src={SIRIMLogo}
+                      alt="SIRIM Tulen logo"
                       className="nav-overlay-logo"
                       variants={fadeInWithEase}
                     />

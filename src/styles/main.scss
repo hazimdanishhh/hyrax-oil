@@ -110,6 +110,7 @@ hr {
 
 .sectionBackgroundBlur {
   z-index: 1;
+  background-color: #00000038;
 
   @media screen and (max-width: 1024px) {
     backdrop-filter: blur(10px);

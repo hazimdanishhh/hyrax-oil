@@ -1,0 +1,33 @@
+.productBrandCertification {
+  h2 {
+    text-align: start;
+    width: 100%;
+  }
+
+  p {
+    text-align: justify;
+    width: 70%;
+    align-self: start;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+
+  .product-brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+
+    .nav-overlay-logo {
+      height: 90px;
+
+      @media screen and (max-width: 1024px) {
+        height: 70px;
+      }
+    }
+  }
+}

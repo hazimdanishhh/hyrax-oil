@@ -7,6 +7,11 @@ import { motion } from "framer-motion";
 import { staggerContainer } from "../../functions/motionUtils";
 import PageSectionCard from "../../components/PageSectionCard/PageSectionCard";
 
+import DiscoverNext from "../../components/discoverNextSection/DiscoverNext";
+import { pageSections } from "../../data/pageSections";
+import servicesSectionsList from "../../data/servicesSections";
+import ServicesSectionCard from "../../components/servicesSectionCard/ServicesSectionCard";
+
 function Page() {
   return (
     <main>
@@ -46,6 +51,42 @@ function Page() {
           </div>
         </div>
       </section>
+
+      {servicesSectionsList.map((section) => (
+        <section id={section.id} className="sectionLight" key={section.id}>
+          <div
+            className="sectionBackground"
+            style={{ backgroundImage: `url(${section.background})` }}
+          >
+            <div className="sectionBackgroundBlur">
+              <div className="sectionWrapper">
+                <div className="sectionContent">
+                  <h2 className="textRegular textXL">{section.title}</h2>
+                  <p className="textLight textXS">{section.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sectionWrapper">
+            <div className="sectionContent">
+              <ul className="servicesSectionCardLayout">
+                {section.cards.map((card, index) => (
+                  <ServicesSectionCard
+                    key={index}
+                    image={card.image}
+                    alt={card.alt}
+                    title={card.title}
+                    description={card.description}
+                  />
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <DiscoverNext subheading="Contact Us" cardData={pageSections[2]} />
     </main>
   );
 }

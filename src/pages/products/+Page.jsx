@@ -1,12 +1,14 @@
 import "./Products.scss";
 import Hero from "../../components/hero/Hero";
 import background from "/src/assets/products/hyrax-products-hub.webp";
-import logo from "/src/assets/logos/hyrax-logo.png";
+import hyraxLogo from "/src/assets/logos/hyrax-logo.webp";
+
 import OverviewText from "../../components/overviewText/OverviewText";
 import { motion } from "framer-motion";
-import { staggerContainer } from "../../functions/motionUtils";
+import { staggerContainerFast } from "../../functions/motionUtils";
 import productSegments from "/src/data/NavProductSegments";
 import PageSectionCard from "../../components/PageSectionCard/PageSectionCard";
+import ProductCertifiedSection from "../../components/productCertifiedSection/ProductCertifiedSection";
 
 function Page() {
   return (
@@ -16,7 +18,7 @@ function Page() {
         crumble={"Home"}
         crumbleLink={"/"}
         title="Hyrax® Products"
-        logo={logo}
+        logo={hyraxLogo}
         desc="Explore our extensive range of high-performance lubricants and specialty petroleum products designed to meet diverse industry needs."
       />
 
@@ -32,7 +34,7 @@ function Page() {
 
             <motion.ul
               className="productSectionLayout"
-              variants={staggerContainer}
+              variants={staggerContainerFast}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -50,6 +52,10 @@ function Page() {
           </div>
         </div>
       </section>
+
+      <hr />
+
+      <ProductCertifiedSection />
 
       <section className=""></section>
     </main>

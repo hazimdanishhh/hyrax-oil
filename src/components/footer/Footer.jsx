@@ -4,10 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import SocialLink from "../social-link/SocialLink";
 import { socialLinks } from "../social-link/socials";
 
-import hyraxOil33Logo from "/src/assets/logos/hyraxOil33Years.webp";
-import hyraxLogo from "/src/assets/logos/hyrax-logo.png";
-import apiLogo from "/src/assets/logos/APILogo-Light.webp";
-import malaysianBrandLogo from "/src/assets/logos/malaysian-brand.png";
+import hyraxOilLogo from "/src/assets/logos/hyraxOilLogo2.webp";
+import hyraxLogo from "/src/assets/logos/hyrax-logo.webp";
+import apiLogo from "/src/assets/logos/APILogo-Light-2.webp";
+import malaysianBrandLogo from "/src/assets/logos/malaysian-brand-logo.webp";
+import madeInMalaysiaLogo from "/src/assets/logos/made-in-malaysia-logo.webp";
 import {
   EnvelopeIcon,
   PhoneIcon,
@@ -205,7 +206,11 @@ function Footer() {
 
             {/* FOOTER LOGOS */}
             <div className="footerLogoWrapper">
-              <img className="footerLogo" src={apiLogo} alt="API Logo" />
+              <img
+                className="footerLogo"
+                src={madeInMalaysiaLogo}
+                alt="Made In Malaysia Logo"
+              />
               <img
                 className="footerLogo"
                 src={malaysianBrandLogo}
@@ -214,7 +219,7 @@ function Footer() {
               <img className="footerLogo" src={hyraxLogo} alt="Hyrax Logo" />
               <img
                 className="footerLogo"
-                src={hyraxOil33Logo}
+                src={hyraxOilLogo}
                 alt="Hyrax Oil Logo"
               />
             </div>

@@ -12,7 +12,7 @@ import hyraxLogo from "/src/assets/logos/hyrax-logo.webp";
 import apiLogo from "/src/assets/logos/APILogo-Light-2.webp";
 import malaysianBrandLogo from "/src/assets/logos/malaysian-brand-logo.webp";
 import madeInMalaysiaLogo from "/src/assets/logos/made-in-malaysia-logo.webp";
-import SIRIMLogo from "/src/assets/logos/SIRIM-Logo.webp";
+import SIRIMLogo from "/src/assets/logos/SIRIM-logo.webp";
 import useNavbar from "/src/functions/useNavbar";
 import {
   fadeInWithEase,

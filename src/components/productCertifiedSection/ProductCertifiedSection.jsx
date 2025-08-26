@@ -7,7 +7,7 @@ import {
 import apiLogo from "/src/assets/logos/API-Logo.webp";
 import malaysianBrandLogo from "/src/assets/logos/malaysian-brand-logo.webp";
 import madeInMalaysiaLogo from "/src/assets/logos/made-in-malaysia-logo.webp";
-import SIRIMLogo from "/src/assets/logos/SIRIM-Logo.webp";
+import SIRIMLogo from "/src/assets/logos/SIRIM-logo.webp";
 import ButtonRouter from "../buttons/ButtonRouter";
 
 function ProductCertifiedSection() {

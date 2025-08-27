@@ -53,6 +53,18 @@
             transition: 0.3s ease-in-out;
           }
         }
+
+        .servicesSectionButton {
+          color: $light;
+          transition: 0.3s ease-in-out;
+          border: 1px solid $light;
+
+          .servicesSectionButtonIcon {
+            color: $primary;
+            background-color: $light;
+            transition: 0.3s ease-in-out;
+          }
+        }
       }
     }
 
@@ -68,6 +80,10 @@
 
       &:hover {
         color: $light;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 3rem 1rem 1rem 1rem;
       }
 
       .servicesSectionImage {
@@ -101,6 +117,31 @@
 
         @media screen and (max-width: 768px) {
           text-align: center;
+        }
+      }
+
+      .servicesSectionButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark;
+        transition: 0.3s ease-in-out;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+        border-radius: 30px;
+        border: 1px solid $dark;
+        position: relative;
+
+        .servicesSectionButtonIcon {
+          position: absolute;
+          right: 0;
+          background-color: $dark;
+          height: 100%;
+          width: 36px;
+          border-radius: 30px;
+          padding: 0.5rem;
+          transition: 0.3s ease-in-out;
         }
       }
     }

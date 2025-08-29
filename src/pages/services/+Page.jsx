@@ -4,7 +4,11 @@ import background from "/src/assets/services/services.webp";
 import OverviewText from "../../components/overviewText/OverviewText";
 import { servicesSections } from "../../data/NavServicesSections";
 import { motion } from "framer-motion";
-import { staggerContainer } from "../../functions/motionUtils";
+import {
+  fadeInLeft,
+  fadeInWithEase,
+  staggerContainer,
+} from "../../functions/motionUtils";
 import PageSectionCard from "../../components/PageSectionCard/PageSectionCard";
 
 import DiscoverNext from "../../components/discoverNextSection/DiscoverNext";
@@ -63,7 +67,15 @@ function Page() {
       </section>
 
       {servicesSectionsList.map((section) => (
-        <section id={section.id} className="sectionLight" key={section.id}>
+        <motion.section
+          id={section.id}
+          className="sectionLight"
+          key={section.id}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
           <div
             className="sectionBackground"
             style={{
@@ -73,11 +85,24 @@ function Page() {
             <div className="sectionBackgroundBlur">
               <div className="sectionWrapper">
                 <div className="sectionContent servicesSectionHeadingContent">
-                  <h2 className="servicesSectionKey textRegular textL">
-                    <span className="textRegular textXXXL">{section.key}</span>
+                  <motion.h2
+                    className="servicesSectionKey textRegular textL"
+                    variants={fadeInLeft}
+                  >
+                    <motion.span
+                      className="textRegular textXXXL"
+                      initial={{ scale: 1.5, y: 50 }}
+                      whileInView={{
+                        scale: 1,
+                        y: 0,
+                        transition: { duration: 0.5 },
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      {section.key}
+                    </motion.span>
                     {section.title}
-                  </h2>
-                  <div className="servicesSectionKeyBottom" />
+                  </motion.h2>
                 </div>
               </div>
             </div>
@@ -87,12 +112,28 @@ function Page() {
           >
             <div className="sectionWrapper">
               <div className="sectionContent">
-                <p className="textLight textXS">{section.description}</p>
+                <motion.p
+                  className="textLight textXS"
+                  variants={fadeInWithEase}
+                >
+                  {section.description}
+                </motion.p>
 
                 {section.id === "oil-analysis-and-on-site-services" && (
                   <>
-                    <h3 className="textRegular textL">The Process</h3>
-                    <ul className="servicesSectionCardLayout">
+                    <motion.h3
+                      className="textRegular textL"
+                      variants={fadeInWithEase}
+                    >
+                      The Process
+                    </motion.h3>
+                    <motion.ul
+                      className="servicesSectionCardLayout"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={staggerContainer}
+                    >
                       <ServicesSectionCard
                         isProcess
                         image={processImage1}
@@ -116,7 +157,7 @@ function Page() {
                         title="3. Results"
                         description="With our extensive lab equipments, we produce accurate end results and will be delivered to clients."
                       />
-                    </ul>
+                    </motion.ul>
                   </>
                 )}
               </div>
@@ -139,7 +180,7 @@ function Page() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
       ))}
 
       <DiscoverNext subheading="Contact Us" cardData={pageSections[2]} />

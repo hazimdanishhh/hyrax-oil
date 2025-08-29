@@ -1,6 +1,7 @@
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import "./ServicesSectionCard.scss";
 import { motion } from "framer-motion";
+import { fadeInWithEase } from "../../functions/motionUtils";
 
 function ServicesSectionCard({ image, alt, title, description, isProcess }) {
   return (
@@ -10,8 +11,15 @@ function ServicesSectionCard({ image, alt, title, description, isProcess }) {
           ? "servicesSectionCard process textRegular textXS"
           : "servicesSectionCard textRegular textXS"
       }
-      initial={{ scale: 1 }}
+      initial={{ opacity: 0, scale: 1 }}
       whileHover={{ scale: 1.05 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 0.6,
+        },
+      }}
+      viewport={{ once: true }}
     >
       <a href="/contact#contactForm" className="servicesSectionCardLink">
         {image && (

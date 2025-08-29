@@ -122,7 +122,7 @@ function ProductPopUp({ product, onClose }) {
 
         <div className="product-pop-up-buttons">
           <ButtonRouter
-            name="PDS"
+            name="View PDS"
             link={product.pdsLink}
             type="button-type-1"
             pdf="pdf"

@@ -3,7 +3,7 @@
   margin-bottom: 3rem;
 
   .product-card {
-    width: 300px;
+    width: 280px;
     height: 350px;
     border-radius: 30px;
     display: flex;
@@ -12,7 +12,7 @@
     overflow: hidden;
     position: relative;
     outline: 2px solid #f26e2700;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #a9a9a9;
     cursor: pointer;
 
     .product-card-img {
@@ -22,7 +22,7 @@
     }
 
     .product-card-overlay {
-      width: 300px;
+      width: 280px;
       height: 350px;
       position: absolute;
       border-radius: 30px;
@@ -77,11 +77,10 @@
     }
 
     &:hover {
-      outline: 2px solid $primary;
+      border: 2px solid $primary;
 
       .product-card-overlay {
         background: rgba(0, 0, 0, 0.3);
-        box-shadow: 0px 0px 30px 1px rgba(242, 111, 39, 0.6) inset;
         transition: 0.3s;
 
         .product-title {
@@ -115,7 +114,6 @@
   padding: 0.3rem 1.3rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
 
   &.semi {
     background: linear-gradient(to right, #727272, #a5a5a5);

@@ -23,7 +23,7 @@ function CorporateVideo() {
                 className="textRegular textXL"
                 variants={fadeInWithEase}
               >
-                Our Corporate Video
+                Our Excellence in Action
               </motion.h2>
               <motion.p className="textLight textXS" variants={fadeInWithEase}>
                 Step into the world of Hyrax Oil and discover how we’re driving

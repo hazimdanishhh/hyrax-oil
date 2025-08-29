@@ -12,11 +12,19 @@
 }
 
 .product-layout {
-  display: flex;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
   max-width: 100%;
-  flex-wrap: wrap;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 0.5rem;
+  }
 }
 
 .productFeaturesLayout {

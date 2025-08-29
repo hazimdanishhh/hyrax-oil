@@ -15,11 +15,11 @@ const ProductSideNav = () => {
           href={segment.path}
           onMouseEnter={() => setHovered(index)}
           onMouseLeave={() => setHovered(null)}
-        // style={{
-        //   ...(hovered && hovered === index
-        //     ? { backgroundColor: segment.textColor }
-        //     : {}),
-        // }}
+          // style={{
+          //   ...(hovered && hovered === index
+          //     ? { backgroundColor: segment.textColor }
+          //     : {}),
+          // }}
         >
           <img src={segment.icon} alt={`${segment.title} Icon`} />
           {hovered === index && ( // Only render the title when hovered

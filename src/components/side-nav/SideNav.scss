@@ -8,12 +8,13 @@
   top: 0;
   bottom: 0;
   height: fit-content;
+  padding: 0.5rem;
+  background-color: #f4f4f4;
+  gap: 0.3rem;
 
-  // background-color: #ececec;
   margin: auto;
 
   border-radius: 5px 0 0 5px;
-  box-shadow: 0 0 5px #32323255;
 
   .product-side-nav {
     display: flex;
@@ -21,9 +22,8 @@
     align-items: center;
     height: fit-content;
     padding: 0.3rem;
-    border-radius: 5px 0 0 5px;
-    background-color: white;
-    border-bottom: 1px solid #323232;
+    border-radius: 5px;
+    background-color: $light;
 
     img {
       width: 25px;
@@ -38,12 +38,12 @@
     .product-side-nav-title {
       visibility: hidden;
       position: absolute;
-      right: 40px;
+      right: 50px;
       font-size: 14px;
 
       width: max-content;
       background-color: white;
-      box-shadow: 0 0 5px #32323255;
+      border: 1px solid #eaeaea;
       border-radius: 5px;
       padding: 0.3rem;
     }

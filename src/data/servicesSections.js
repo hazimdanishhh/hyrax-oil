@@ -36,6 +36,7 @@ import service5Image4 from "/src/assets/services/icons/excellence.png";
 
 const servicesSectionsList = [
   {
+    key: 1,
     id: "oil-analysis-and-on-site-services",
     title: "Oil Analysis & On-Site Services",
     description:
@@ -71,6 +72,7 @@ const servicesSectionsList = [
     ],
   },
   {
+    key: 2,
     id: "lab-testing",
     title: "Lab Testing",
     description:
@@ -108,6 +110,7 @@ const servicesSectionsList = [
     ],
   },
   {
+    key: 3,
     id: "industrial-and-technical-training",
     title: "Industrial & Technical Training",
     description:
@@ -144,6 +147,7 @@ const servicesSectionsList = [
     ],
   },
   {
+    key: 4,
     id: "contract-manufacturing-services",
     title: "Contract Manufacturing Services",
     description:
@@ -179,6 +183,7 @@ const servicesSectionsList = [
     ],
   },
   {
+    key: 5,
     id: "consultancy-services",
     title: "Consultancy Services",
     description:

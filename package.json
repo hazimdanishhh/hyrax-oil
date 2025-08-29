@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://hazimdanishhh.github.io/hyrax-oil",
   "scripts": {
-    "dev": "vite",
+    "dev": "vike dev",
     "build": "vike build",
     "preview": "vike preview",
     "start": "cross-env NODE_ENV=production node server.js",

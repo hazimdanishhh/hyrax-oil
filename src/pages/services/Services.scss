@@ -6,6 +6,37 @@
   justify-content: space-evenly;
 }
 
+.servicesSectionHeadingContent {
+  gap: 1rem;
+  .servicesSectionKey {
+    display: flex;
+    align-items: center;
+
+    span {
+      padding: 1rem;
+      margin-right: 1rem;
+      // color: #f26f27;
+      background-color: $primary;
+      border: 3px solid $primary;
+    }
+  }
+
+  .servicesSectionKeyBottom {
+    width: 50%;
+    height: 3px;
+    background-color: $primary;
+  }
+}
+
+.servicesSectionImage {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed; // Fix the background image in place, so it doesn't scroll with the content. Can be changed to "scroll" in the section itself if needed.
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .servicesSectionCardLayout {
   display: flex;
   gap: 0.7rem;
@@ -15,135 +46,5 @@
 
   @media screen and (max-width: 1024px) {
     gap: 3rem;
-  }
-
-  .servicesSectionCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    width: 23%;
-    border-radius: 30px;
-    text-align: start;
-    position: relative;
-    background-color: $dark;
-    color: $light;
-    transition: 0.3s ease-in-out;
-
-    @media screen and (max-width: 1024px) {
-      width: 45%;
-    }
-
-    @media screen and (max-width: 768px) {
-      width: 98%;
-    }
-
-    &:hover {
-      background-color: $primary;
-      transition: 0.3s ease-in-out;
-
-      .servicesSectionCardLink {
-        .servicesSectionImage {
-          border: 5px solid $primary;
-          transition: 0.3s ease-in-out;
-
-          img {
-            filter: grayscale(0%);
-            transition: 0.3s ease-in-out;
-          }
-        }
-
-        .servicesSectionButton {
-          color: $light;
-          transition: 0.3s ease-in-out;
-          border: 1px solid $light;
-
-          .servicesSectionButtonIcon {
-            color: $primary;
-            background-color: $light;
-            transition: 0.3s ease-in-out;
-          }
-        }
-      }
-    }
-
-    .servicesSectionCardLink {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 2rem 2rem 2rem;
-      width: 100%;
-      height: 100%;
-      gap: 2rem;
-
-      &:hover {
-        color: $light;
-      }
-
-      @media screen and (max-width: 768px) {
-        padding: 3rem 1rem 1rem 1rem;
-      }
-
-      .servicesSectionImage {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80px;
-        height: 80px;
-        align-self: start;
-        position: absolute;
-        top: -40px;
-        left: 50%;
-        right: 50%;
-        transform: translateX(-50%);
-        background-color: $light;
-        padding: 1rem;
-        border-radius: 50%;
-        border: 5px solid $dark;
-
-        img {
-          width: 45px;
-          height: 45px;
-          filter: grayscale(100%);
-          transition: 0.3s ease-in-out;
-        }
-      }
-
-      h3,
-      p {
-        width: 100%;
-
-        @media screen and (max-width: 768px) {
-          text-align: center;
-        }
-      }
-
-      .servicesSectionButton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $dark;
-        transition: 0.3s ease-in-out;
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem 0;
-        border-radius: 30px;
-        border: 1px solid $dark;
-        position: relative;
-
-        .servicesSectionButtonIcon {
-          position: absolute;
-          right: 0;
-          background-color: $dark;
-          height: 100%;
-          width: 36px;
-          border-radius: 30px;
-          padding: 0.5rem;
-          transition: 0.3s ease-in-out;
-        }
-      }
-    }
   }
 }

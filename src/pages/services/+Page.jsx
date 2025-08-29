@@ -12,6 +12,12 @@ import { pageSections } from "../../data/pageSections";
 import servicesSectionsList from "../../data/servicesSections";
 import ServicesSectionCard from "../../components/servicesSectionCard/ServicesSectionCard";
 
+import servicesBackground1 from "/src/assets/services/oilAnalysis.webp";
+import servicesBackground2 from "/src/assets/services/labTesting.webp";
+import servicesBackground3 from "/src/assets/services/training.webp";
+import servicesBackground4 from "/src/assets/services/contractManufacturing.webp";
+import servicesBackground5 from "/src/assets/services/consultancy.webp";
+
 function Page() {
   return (
     <main>
@@ -56,31 +62,74 @@ function Page() {
         <section id={section.id} className="sectionLight" key={section.id}>
           <div
             className="sectionBackground"
-            style={{ backgroundImage: `url(${section.background})` }}
+            style={{
+              backgroundImage: `url(${section.background})`,
+            }}
           >
             <div className="sectionBackgroundBlur">
               <div className="sectionWrapper">
-                <div className="sectionContent">
-                  <h2 className="textRegular textXL">{section.title}</h2>
-                  <p className="textLight textXS">{section.description}</p>
+                <div className="sectionContent servicesSectionHeadingContent">
+                  <h2 className="servicesSectionKey textRegular textL">
+                    <span className="textRegular textXXXL">{section.key}</span>
+                    {section.title}
+                  </h2>
+                  <div className="servicesSectionKeyBottom" />
                 </div>
               </div>
             </div>
           </div>
+          <div
+            className={section.key % 2 === 0 ? "sectionDark" : "sectionLight"}
+          >
+            <div className="sectionWrapper">
+              <div className="sectionContent">
+                <p className="textLight textXS">{section.description}</p>
 
-          <div className="sectionWrapper">
-            <div className="sectionContent">
-              <ul className="servicesSectionCardLayout">
-                {section.cards.map((card, index) => (
-                  <ServicesSectionCard
-                    key={index}
-                    image={card.image}
-                    alt={card.alt}
-                    title={card.title}
-                    description={card.description}
-                  />
-                ))}
-              </ul>
+                {section.id === "oil-analysis-and-on-site-services" && (
+                  <>
+                    <h3 className="textRegular textL">The Process</h3>
+                    <ul className="servicesSectionCardLayout">
+                      <ServicesSectionCard
+                        image=""
+                        alt="Specification"
+                        title="1. Specification"
+                        description="Clients provides all products and specifications to be tested in our laboratory."
+                      />
+
+                      <ServicesSectionCard
+                        image=""
+                        alt="Oil Analysis"
+                        title="2. Oil Analysis"
+                        description="Client’s products will go through our testing equipments by our tireless hard-working scientists."
+                      />
+
+                      <ServicesSectionCard
+                        image=""
+                        alt="Results"
+                        title="3. Results"
+                        description="With our extensive lab equipments, we produce accurate end results and will be delivered to clients."
+                      />
+                    </ul>
+                  </>
+                )}
+              </div>
+            </div>
+
+            <div className="sectionWrapper">
+              <div className="sectionContent">
+                <h3 className="textRegular textL">The Benefits</h3>
+                <ul className="servicesSectionCardLayout">
+                  {section.cards.map((card, index) => (
+                    <ServicesSectionCard
+                      key={index}
+                      image={card.image}
+                      alt={card.alt}
+                      title={card.title}
+                      description={card.description}
+                    />
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>

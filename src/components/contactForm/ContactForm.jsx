@@ -84,7 +84,7 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contactForm" id="contactForm">
+    <form onSubmit={handleSubmit} className="contactForm">
       {/* Enquiry Type */}
 
       <div className="contactFormInput">

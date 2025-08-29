@@ -2,10 +2,14 @@ import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import "./ServicesSectionCard.scss";
 import { motion } from "framer-motion";
 
-function ServicesSectionCard({ image, alt, title, description }) {
+function ServicesSectionCard({ image, alt, title, description, isProcess }) {
   return (
     <motion.li
-      className="servicesSectionCard textRegular textXS"
+      className={
+        isProcess
+          ? "servicesSectionCard process textRegular textXS"
+          : "servicesSectionCard textRegular textXS"
+      }
       initial={{ scale: 1 }}
       whileHover={{ scale: 1.05 }}
     >
@@ -16,6 +20,9 @@ function ServicesSectionCard({ image, alt, title, description }) {
           </div>
         )}
         <h3 className="textRegular textS">{title}</h3>
+
+        <hr />
+
         {description && <p className="textLight">{description}</p>}
         {/* <div className="servicesSectionButton">
           Contact Us

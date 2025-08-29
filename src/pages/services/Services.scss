@@ -8,9 +8,11 @@
 
 .servicesSectionHeadingContent {
   gap: 1rem;
+
   .servicesSectionKey {
     display: flex;
     align-items: center;
+    border-bottom: 3px solid $primary;
 
     span {
       padding: 1rem;
@@ -19,12 +21,6 @@
       background-color: $primary;
       border: 3px solid $primary;
     }
-  }
-
-  .servicesSectionKeyBottom {
-    width: 50%;
-    height: 3px;
-    background-color: $primary;
   }
 }
 

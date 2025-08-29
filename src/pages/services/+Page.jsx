@@ -18,6 +18,10 @@ import servicesBackground3 from "/src/assets/services/training.webp";
 import servicesBackground4 from "/src/assets/services/contractManufacturing.webp";
 import servicesBackground5 from "/src/assets/services/consultancy.webp";
 
+import processImage1 from "/src/assets/services/icons/specifications.png";
+import processImage2 from "/src/assets/services/icons/oil-analysis.png";
+import processImage3 from "/src/assets/services/icons/results.png";
+
 function Page() {
   return (
     <main>
@@ -90,21 +94,24 @@ function Page() {
                     <h3 className="textRegular textL">The Process</h3>
                     <ul className="servicesSectionCardLayout">
                       <ServicesSectionCard
-                        image=""
+                        isProcess
+                        image={processImage1}
                         alt="Specification"
                         title="1. Specification"
                         description="Clients provides all products and specifications to be tested in our laboratory."
                       />
 
                       <ServicesSectionCard
-                        image=""
+                        isProcess
+                        image={processImage2}
                         alt="Oil Analysis"
                         title="2. Oil Analysis"
                         description="Client’s products will go through our testing equipments by our tireless hard-working scientists."
                       />
 
                       <ServicesSectionCard
-                        image=""
+                        isProcess
+                        image={processImage3}
                         alt="Results"
                         title="3. Results"
                         description="With our extensive lab equipments, we produce accurate end results and will be delivered to clients."
@@ -117,7 +124,7 @@ function Page() {
 
             <div className="sectionWrapper">
               <div className="sectionContent">
-                <h3 className="textRegular textL">The Benefits</h3>
+                <h3 className="textRegular textL">What You Get</h3>
                 <ul className="servicesSectionCardLayout">
                   {section.cards.map((card, index) => (
                     <ServicesSectionCard

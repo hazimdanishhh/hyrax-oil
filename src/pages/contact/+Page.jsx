@@ -113,7 +113,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="sectionLight">
+      <section className="sectionLight" id="contactForm">
         <div className="sectionWrapper">
           <div className="sectionContent">
             {/* TODO: FIX FORM */}

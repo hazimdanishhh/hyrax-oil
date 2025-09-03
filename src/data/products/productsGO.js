@@ -18,6 +18,9 @@ export const productsGO = [
       "A premium quality high performance multi-service, non-corrosive limited slip type hypoid automotive gear oil that is formulated from high quality base oils and exclusively selected additives technology designed for limited slip rear drive differentials and exceed the severe requirements of API GL-5 performance standard.",
     grades: ["SAE 90", "75W-90", "80W-90", "85W-140"],
     pdsLink: PDS1,
+    shortDesc:
+      "Premium high-performance gear oil for limited slip differentials, engineered with advanced additives to meet API GL-5 standards.",
+    cardDesc: "Strong protection for limited slip gears.",
   },
   {
     src: image1,
@@ -28,6 +31,9 @@ export const productsGO = [
       "A multi-service, non-corrosive type hypoid gear lubricants suitable for API service GL-5 applications. It is made from selected, highly refined base oils and blended with field proven additive system to impart excellent chemical and thermal stability over a wide range of temperature.",
     grades: ["80W-90", "85W-140"],
     pdsLink: PDS2,
+    shortDesc:
+      "Durable multi-service gear lubricant for API GL-5 applications, delivering stability across a wide temperature range.",
+    cardDesc: "Reliable gear oil for everyday use.",
   },
   {
     src: image2,
@@ -39,6 +45,9 @@ export const productsGO = [
       "An extreme pressure (EP) automotive gear oil formulated from solvent refined mineral base oils and containing special sulfur phosphorus additives to produce a superior gear lubricant with extreme pressure characteristic and thermal stability for automotive applications over a wide range of temperatures.",
     grades: ["SAE 90", "SAE 140"],
     pdsLink: PDS3,
+    shortDesc:
+      "Extreme pressure automotive gear oil with sulfur-phosphorus additives for superior load-carrying and thermal stability.",
+    cardDesc: "Tough oil for tough gears.",
   },
   {
     src: image3,
@@ -50,6 +59,9 @@ export const productsGO = [
       "An extreme pressure (EP) automotive gear oil formulated from solvent refined mineral base oils and containing special sulphur phosphorus additives to produce a superior gear lubricant with extreme pressure characteristic and thermal stability for automotive applications over a wide range of temperatures.",
     grades: ["SAE 90", "SAE 140", "75W-90", "80W-90", "85W-140"],
     pdsLink: PDS4,
+    shortDesc:
+      "High-performance EP gear oil designed for automotive gear systems requiring API GL-4 protection and stability.",
+    cardDesc: "Smooth shifting, reliable protection.",
   },
   {
     src: image1,
@@ -67,6 +79,9 @@ export const productsGO = [
       "ISO VG 1000",
     ],
     pdsLink: PDS5,
+    shortDesc:
+      "Fully synthetic PAO-based industrial gear lubricants for extreme service conditions and maximum durability.",
+    cardDesc: "Synthetic strength for extreme gears.",
   },
   {
     src: image1,
@@ -85,5 +100,8 @@ export const productsGO = [
       "ISO VG 680",
     ],
     pdsLink: PDS6,
+    shortDesc:
+      "Heavy-duty industrial gear oils fortified with EP, anti-rust, and anti-oxidant additives for long-lasting reliability.",
+    cardDesc: "Heavy-duty gear oil for industry.",
   },
 ];

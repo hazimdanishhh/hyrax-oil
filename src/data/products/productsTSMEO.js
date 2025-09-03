@@ -16,6 +16,9 @@ export const productsTSMEO = [
       "An extreme performance synthetic blend two-stroke motorcycle oil specially engineered based on racing oil technology for the extreme protection of all modern high revving and extreme performance two-stroke motorcycle engines operating under very severe riding conditions.",
     grades: ["API TC JASO FC"],
     pdsLink: PDS1,
+    shortDesc:
+      "Semi-synthetic two-stroke motorcycle oil designed with racing technology for extreme protection under severe riding conditions.",
+    cardDesc: "Extreme protection for 2T engines.",
   },
   {
     src: image2,
@@ -27,6 +30,9 @@ export const productsTSMEO = [
       "A high quality two-stroke motorcycle oil specially formulated for the lubrication all modern high revs, high performance two-stroke motorcycle engines operating under very severe riding conditions both on and off the track.",
     grades: ["API TB JASO FB"],
     pdsLink: PDS2,
+    shortDesc:
+      "High-quality two-stroke motorcycle oil delivering reliable lubrication and performance for modern high-rev engines.",
+    cardDesc: "Trusted performance for 2T engines.",
   },
   {
     src: image3,
@@ -37,5 +43,8 @@ export const productsTSMEO = [
     description:
       "A premium performance two-stroke motor oil specially designed for use in water cooled outboard engines (both large and small outputs) running at all fuel to oil ratios specified by the Original Equipment Manufacturers (OEMs).",
     pdsLink: PDS3,
+    shortDesc:
+      "Premium two-stroke outboard motor oil formulated for water-cooled engines of all sizes, ensuring smooth marine performance.",
+    cardDesc: "Reliable power on the water.",
   },
 ];

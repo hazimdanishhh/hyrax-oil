@@ -51,14 +51,14 @@ export const awardsList = [
   {
     alt: "Woman Entrepreneur Award",
     title: "Woman Entrepreneur Award",
-    desc: "by Small Medium Industries (`SMI`) Malaysia",
+    desc: "by Small Medium Industries (SMI) Malaysia",
     year: "2003",
     image: award5,
   },
   {
     alt: "Malaysian Woman Entrepreneur of the Year",
     title: "Malaysian Woman Entrepreneur of the Year",
-    desc: "by Malaysian Business Council U.A.E ('MBC')",
+    desc: "by Malaysian Business Council U.A.E (MBC)",
     year: "2011",
     image: award6,
   },
@@ -107,7 +107,7 @@ export const awardsList = [
   {
     alt: "Outstanding Export Achievement Award",
     title: "Outstanding Export Achievement Award",
-    desc: "by Ministry of International Trade & Industry ('MITI') & Malaysian External Trade Development Corporation ('MATRADE')",
+    desc: "by Ministry of International Trade & Industry (MITI) & Malaysian External Trade Development Corporation (MATRADE)",
     year: "2015",
     image: award13,
   },
@@ -128,7 +128,7 @@ export const awardsList = [
   {
     alt: "MATRADE Export Award Women Exporter",
     title: "MATRADE Export Award Women Exporter",
-    desc: "by Malaysian External Trade Development Corporation ('MATRADE')",
+    desc: "by Malaysian External Trade Development Corporation (MATRADE)",
     year: "2018",
     image: award16,
   },

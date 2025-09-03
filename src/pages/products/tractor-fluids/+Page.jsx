@@ -62,6 +62,8 @@ function Page() {
                     title={product.title}
                     link={product.link}
                     type={product.type}
+                    shortDesc={product.shortDesc}
+                    cardDesc={product.cardDesc}
                     onClick={() => openOverlay(product)}
                   />
                 ))}

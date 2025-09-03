@@ -12,6 +12,9 @@ export const productsBF = [
     description:
       "Specially formulated for high performance hydraulic brake and clutch systems of automotive vehicles. It offers protection against corrosion and rusting of metal parts even in the presence of moisture and does not affect natural or synthetic rubber washers.",
     pdsLink: PDS1,
+    shortDesc:
+      "For high performance hydraulic brake and clutch systems of automotive vehicles.",
+    cardDesc: "For high performance hydraulic brake and clutch systems.",
   },
   {
     src: image2,
@@ -21,5 +24,8 @@ export const productsBF = [
     description:
       "Specially formulated for high performance hydraulic brake and clutch systems of automotive vehicles. It offers protection against corrosion and rusting of metal parts even in the presence of moisture and does not affect natural or synthetic rubber washers.",
     pdsLink: PDS2,
+    shortDesc:
+      "For high performance hydraulic brake and clutch systems of automotive vehicles.",
+    cardDesc: "For high performance hydraulic brake and clutch systems.",
   },
 ];

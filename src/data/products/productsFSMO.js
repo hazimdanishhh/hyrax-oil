@@ -20,6 +20,9 @@ export const productsFSMO = [
       "An ultimate performance fully synthetic four-stroke motorcycle oil specially designed for extremely high revs, high stress, riding conditions normally present in track and racing application.",
     grades: ["10W-40"],
     pdsLink: PDS1,
+    shortDesc:
+      "Fully synthetic motorcycle oil built for extreme racing conditions, delivering maximum power and engine protection at high revs.",
+    cardDesc: "Race-ready performance oil.",
   },
   {
     src: image2,
@@ -31,6 +34,9 @@ export const productsFSMO = [
       "An extreme performance synthetic blend motorcycle oil specially engineered based on the racing oil technology intended for use in modern high-revving, high-performance four-stroke motorcycle engines.",
     grades: ["10W-40"],
     pdsLink: PDS2,
+    shortDesc:
+      "Semi-synthetic motorcycle oil infused with racing technology for high-revving, high-performance four-stroke engines.",
+    cardDesc: "Racing technology for the road.",
   },
   {
     src: image3,
@@ -42,6 +48,9 @@ export const productsFSMO = [
       "A high performance premium quality synthetic blend motorcycle oil specially designed for scooters, mopeds, ATVs and motorcycle engines fitted with automatic gear transmission system.",
     grades: ["10W-40"],
     pdsLink: PDS3,
+    shortDesc:
+      "Premium synthetic blend oil designed for scooters, mopeds, and ATVs, ensuring smooth rides and reliable engine protection.",
+    cardDesc: "Smooth rides, trusted protection.",
   },
   {
     src: image4,
@@ -53,6 +62,9 @@ export const productsFSMO = [
       "A series of specially formulated premium quality four-stroke motorcycle oils designed to prolong engine life, while providing extended drain capability and ultra-smooth, jerk-free riding performance.",
     grades: ["15W-40", "20W-40"],
     pdsLink: PDS4,
+    shortDesc:
+      "Premium four-stroke motorcycle oil that extends engine life and delivers ultra-smooth, jerk-free riding performance.",
+    cardDesc: "Extended life, smoother rides.",
   },
   {
     src: image5,
@@ -64,5 +76,8 @@ export const productsFSMO = [
       "A premium quality fighting grade motorcycle oil that is specially designed to prolong engine life, while providing smooth riding and problem free operation.",
     grades: ["SAE 40"],
     pdsLink: PDS5,
+    shortDesc:
+      "Reliable premium blend motorcycle oil crafted to prolong engine life and deliver consistent, smooth riding.",
+    cardDesc: "Reliable oil for everyday rides.",
   },
 ];

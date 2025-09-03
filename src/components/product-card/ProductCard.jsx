@@ -3,7 +3,16 @@ import "./ProductCard.scss";
 import { fadeInWithEase } from "../../functions/motionUtils";
 import { CaretCircleRightIcon } from "@phosphor-icons/react/dist/ssr";
 
-function ProductCard({ src, alt, title, link, type, onClick }) {
+function ProductCard({
+  src,
+  alt,
+  title,
+  link,
+  type,
+  onClick,
+  shortDesc,
+  cardDesc,
+}) {
   return (
     <>
       <motion.div
@@ -23,7 +32,11 @@ function ProductCard({ src, alt, title, link, type, onClick }) {
           <div className="product-card-overlay">
             <div className="product-title">
               <h3 className="textRegular textXXS">{title}</h3>
-              <h3 className="product-desc textRegular textXXS">Learn More</h3>
+              <p className="card-desc textLight textXXS">{cardDesc}</p>
+              <p className="product-desc textLight textXXS">{shortDesc}</p>
+              <span className="product-action textLight textXXS">
+                Learn More
+              </span>
             </div>
           </div>
           <CaretCircleRightIcon

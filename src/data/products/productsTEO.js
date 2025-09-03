@@ -19,6 +19,9 @@ export const productsTEO = [
       "A specially selected low viscosity mineral based heat transfer fluid formulated for use in closed, oil sealed, heat transfer systems.",
     grades: ["ISO VG 32", "ISO VG 46"],
     pdsLink: PDS1,
+    shortDesc:
+      "Low-viscosity mineral heat transfer oil for closed, sealed heating systems.",
+    cardDesc: "Efficient oil for heat transfer.",
   },
   {
     src: image1,
@@ -29,6 +32,9 @@ export const productsTEO = [
       "Specially formulated with highly refined paraffinic base oils and advanced additive system to provide maximum protection of percussion rock drills.",
     grades: ["ISO VG 100", "ISO VG 150"],
     pdsLink: PDS2,
+    shortDesc:
+      "Specially formulated lubricant providing protection for percussion rock drills and pneumatic tools.",
+    cardDesc: "Tough oil for pneumatic tools.",
   },
   {
     src: image1,
@@ -39,6 +45,9 @@ export const productsTEO = [
     description:
       "A premium inhibited mineral insulating oil made from a severely hydrotreated wax-free naphthenic oil which is good as a dielectric and coolant.",
     pdsLink: PDS3,
+    shortDesc:
+      "Inhibited mineral insulating oil with excellent dielectric strength and cooling properties.",
+    cardDesc: "Inhibited protection for transformers.",
   },
   {
     src: image1,
@@ -49,6 +58,9 @@ export const productsTEO = [
     description:
       "A premium uninhibited mineral insulating oil made from a severely hydrotreated wax-free naphthenic oil which is good as a dielectric and coolant.",
     pdsLink: PDS4,
+    shortDesc:
+      "Uninhibited mineral insulating oil with strong dielectric and cooling performance.",
+    cardDesc: "Uninhibited insulation oil.",
   },
   {
     src: image1,
@@ -59,6 +71,9 @@ export const productsTEO = [
     description:
       "A premium inhibited mineral insulating oil made from a severely hydrotreated wax-free naphthenic oil which is good as a dielectric and coolant.",
     pdsLink: PDS5,
+    shortDesc:
+      "Premium inhibited mineral insulating oil for transformers, offering reliable dielectric strength.",
+    cardDesc: "Reliable inhibited insulation oil.",
   },
   {
     src: image1,
@@ -69,6 +84,9 @@ export const productsTEO = [
     description:
       "A premium uninhibited mineral insulating oil made from a severely hydrotreated wax-free naphthenic oil which is good as a dielectric and coolant.",
     pdsLink: PDS6,
+    shortDesc:
+      "Uninhibited mineral insulating oil for electrical transformers and systems.",
+    cardDesc: "Standard transformer oil.",
   },
   {
     src: image1,
@@ -79,6 +97,9 @@ export const productsTEO = [
     description:
       "A premium type of inhibited mineral insulating oil (transformer oil) made from severely hydrotreated base oil.",
     pdsLink: PDS7,
+    shortDesc:
+      "Inhibited transformer oil made from hydrotreated base oils for premium performance.",
+    cardDesc: "Premium inhibited transformer oil.",
   },
   {
     src: image1,
@@ -89,6 +110,9 @@ export const productsTEO = [
     description:
       "A standard uninhibited mineral insulating oil made from a severely hydroprocessed base oil which is good as a dielectric and coolant.",
     pdsLink: PDS8,
+    shortDesc:
+      "Uninhibited transformer oil engineered for cooling and dielectric stability.",
+    cardDesc: "Reliable uninhibited transformer oil.",
   },
   {
     src: image1,
@@ -98,5 +122,8 @@ export const productsTEO = [
     description:
       "A premium cable fluid prepared from a high quality base stock to provide optimum protection for electrical cable system.",
     pdsLink: PDS9,
+    shortDesc:
+      "Premium dielectric oil designed for optimum electrical cable protection.",
+    cardDesc: "Strong insulation for cables.",
   },
 ];

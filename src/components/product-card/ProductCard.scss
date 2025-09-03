@@ -14,11 +14,11 @@
     border: 3px solid #a9a9a900;
     background-color: $light;
     cursor: pointer;
-    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.05);
 
     .product-card-img {
       position: absolute;
-      height: 80%;
+      height: 70%;
       top: 0;
     }
 
@@ -28,7 +28,6 @@
       position: absolute;
       bottom: 0;
       border-radius: 30px;
-      box-shadow: 0px 0px 30px 1px rgba(242, 110, 39, 0) inset;
       transition: 0.5s;
 
       &:hover {
@@ -64,14 +63,14 @@
       .product-title {
         position: absolute;
         bottom: 0;
-        height: 80px;
+        height: 30%;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 0 1rem;
-        gap: 1rem;
+        gap: 0.5rem;
 
         background-color: #2f2f2fc5;
         backdrop-filter: blur(10px);
@@ -80,13 +79,25 @@
         color: white;
         transition: 0.3s;
 
+        .card-desc {
+          visibility: visible;
+          display: block;
+          transition: 0.3s;
+        }
+
         .product-desc {
           visibility: hidden;
           display: none;
+          transition: 0.3s;
+        }
+
+        .product-action {
+          visibility: hidden;
+          display: none;
+          margin-top: 1rem;
+          padding: 0.5rem 1rem;
           border-radius: 30px;
-          background-color: #f4f4f421;
-          padding: 0.5rem 1.2rem;
-          color: $light;
+          border: 1px solid $primary;
           transition: 0.3s;
         }
       }
@@ -115,7 +126,19 @@
             text-shadow: none;
           }
 
+          .card-desc {
+            visibility: hidden;
+            display: none;
+            transition: 0.3s;
+          }
+
           .product-desc {
+            visibility: visible;
+            display: block;
+            transition: 0.3s;
+          }
+
+          .product-action {
             visibility: visible;
             display: block;
             transition: 0.3s;

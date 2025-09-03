@@ -11,6 +11,8 @@ export const productsG = [
     description:
       "A premium quality extreme pressure multipurpose lithium hydroxyl-stearate grease developed for use in applications which require extreme pressure",
     pdsLink: PDS1,
+    shortDesc: "Premium quality, extreme pressure multipurpose lithium grease.",
+    cardDesc: "Premium quality, extreme pressure multipurpose lithium grease.",
   },
   {
     src: image1,
@@ -20,5 +22,7 @@ export const productsG = [
     description:
       "A multipurpose lithium soap grease developed for use in applications that do not require EP grease.",
     pdsLink: PDS2,
+    shortDesc: "Multipurpose lithium soap grease.",
+    cardDesc: "Multipurpose lithium soap grease.",
   },
 ];

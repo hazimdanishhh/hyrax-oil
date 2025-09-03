@@ -22,6 +22,9 @@ export const productsTFluids = [
       "An advanced technology synthetic Automatic Transmission Fluid (ATF) specially engineered for the lubrication of power transmissions and hydraulic systems for passenger cars and trucks.",
     grades: ["ATF SP-4"],
     pdsLink: PDS1,
+    shortDesc:
+      "Synthetic blend ATF formulated for smooth power transmission and hydraulic performance in modern vehicles.",
+    cardDesc: "Advanced ATF for smooth shifts.",
   },
   {
     src: image2,
@@ -33,6 +36,9 @@ export const productsTFluids = [
       "An advanced technology synthetic Multi-Vehicle Automatic Transmission Fluid (ATF) specially engineered for the lubrication of power transmissions and hydraulic systems for passenger cars and trucks.",
     grades: ["ATF"],
     pdsLink: PDS2,
+    shortDesc:
+      "Multi-vehicle synthetic ATF engineered for a wide range of passenger cars and trucks, ensuring smooth performance.",
+    cardDesc: "One ATF, many applications.",
   },
   {
     src: image3,
@@ -44,6 +50,9 @@ export const productsTFluids = [
       "An advanced technology synthetic Multi-Vehicle Continuous Variable Transmission Fluid specially designed for the lubrication of continuous variable transmissions for passenger cars and trucks.",
     grades: ["CVT Fluid"],
     pdsLink: PDS3,
+    shortDesc:
+      "Specially designed synthetic CVT fluid for continuous variable transmissions, ensuring efficiency and durability.",
+    cardDesc: "Reliable fluid for CVTs.",
   },
   {
     src: image4,
@@ -55,6 +64,9 @@ export const productsTFluids = [
       "A modern, synthetic blend high performance transmission fluid primarily intended for use in power transmission and hydraulic system of passenger cars and trucks automatic transmissions, powershift transmissions in off-highway equipment, power steering and hydraulic systems where DEXRON® III or Allison C-4 fluid is specified.",
     grades: ["Dexron III D"],
     pdsLink: PDS4,
+    shortDesc:
+      "Synthetic blend ATF meeting Dexron III D and Allison C-4 specs, suitable for automatic transmissions and hydraulic systems.",
+    cardDesc: "Trusted Dexron III performance.",
   },
   {
     src: image5,
@@ -66,6 +78,9 @@ export const productsTFluids = [
       "A modern, high performance quality fluid primarily intended for use in automatic transmissions and in many other applications where DEXRON® II fluids are specified.",
     grades: ["Dexron II D"],
     pdsLink: PDS5,
+    shortDesc:
+      "High-quality ATF designed for automatic transmissions requiring Dexron II specifications.",
+    cardDesc: "Proven reliability with Dexron II.",
   },
   {
     src: image6,
@@ -77,5 +92,8 @@ export const productsTFluids = [
       "A premium quality high performance transmission drive train fluids specially designed for application in powershift transmissions, drive trains and hydraulic system of off-highway equipment where the use of an oil meeting Caterpillar TO-4 is recommended.",
     grades: ["SAE 10W", "SAE 30", "SAE 40", "SAE 50"],
     pdsLink: PDS6,
+    shortDesc:
+      "Premium drivetrain fluid for powershift transmissions and off-highway equipment, engineered to meet Caterpillar TO-4 standards.",
+    cardDesc: "TO-4 strength for heavy-duty machines.",
   },
 ];

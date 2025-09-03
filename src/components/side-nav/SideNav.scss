@@ -11,10 +11,9 @@
   padding: 0.5rem;
   background-color: $light;
   gap: 0.3rem;
-
   margin: auto;
-
   border-radius: 5px 0 0 5px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 
   .product-side-nav {
     display: flex;
@@ -23,8 +22,8 @@
     height: fit-content;
     padding: 0.3rem;
     border-radius: 5px;
-    background-color: $background;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
 
     img {
       width: 25px;

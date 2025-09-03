@@ -3,17 +3,18 @@
   margin-bottom: 3rem;
 
   .product-card {
-    width: 280px;
-    height: 350px;
+    width: 100%;
+    aspect-ratio: 3/4;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
-    outline: 2px solid #f26e2700;
-    border: 1px solid #a9a9a9;
+    border: 3px solid #a9a9a900;
+    background-color: $light;
     cursor: pointer;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
 
     .product-card-img {
       position: absolute;
@@ -22,14 +23,16 @@
     }
 
     .product-card-overlay {
-      width: 280px;
-      height: 350px;
+      width: 100%;
+      height: 100%;
       position: absolute;
+      bottom: 0;
       border-radius: 30px;
       box-shadow: 0px 0px 30px 1px rgba(242, 110, 39, 0) inset;
+      transition: 0.5s;
 
       &:hover {
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
         transition: 0.5s;
 
         .product-hover {
@@ -64,26 +67,44 @@
         height: 80px;
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 0 1rem;
+        gap: 1rem;
 
         background-color: #2f2f2fc5;
         backdrop-filter: blur(10px);
 
         text-align: center;
         color: white;
+        transition: 0.3s;
+
+        .product-desc {
+          visibility: hidden;
+          display: none;
+          border-radius: 30px;
+          background-color: #f4f4f421;
+          padding: 0.5rem 1.2rem;
+          color: $light;
+          transition: 0.3s;
+        }
       }
     }
 
     &:hover {
-      border: 2px solid $primary;
+      border: 3px solid $primary;
 
       .product-card-overlay {
-        background: rgba(0, 0, 0, 0.3);
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0)
+        );
         transition: 0.3s;
 
         .product-title {
+          height: 100%;
           background-color: #323232dc;
           backdrop-filter: blur(20px);
           color: $primary;
@@ -92,6 +113,12 @@
           h3 {
             color: $primary;
             text-shadow: none;
+          }
+
+          .product-desc {
+            visibility: visible;
+            display: block;
+            transition: 0.3s;
           }
         }
       }
@@ -109,19 +136,25 @@
   right: 0;
   margin: auto;
   color: #9c7008;
-  background: linear-gradient(to right, #ae8625, #f7ef8a);
+  background: linear-gradient(45deg, #ae8625, #f7ef8a);
   width: fit-content;
   padding: 0.3rem 1.3rem;
   border-radius: 20px;
   text-align: center;
 
   &.semi {
-    background: linear-gradient(to right, #727272, #a5a5a5);
+    background: linear-gradient(45deg, #727272, #a5a5a5);
     color: rgb(255, 255, 255);
   }
 
   &.premium {
-    background: linear-gradient(to right, #804a00, #9c7a3c);
+    background: linear-gradient(45deg, #804a00, #9c7a3c);
     color: #ffc87d;
   }
+}
+
+.plus-icon-2 {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }

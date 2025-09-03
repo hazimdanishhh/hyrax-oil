@@ -9,7 +9,7 @@
   bottom: 0;
   height: fit-content;
   padding: 0.5rem;
-  background-color: #f4f4f4;
+  background-color: $light;
   gap: 0.3rem;
 
   margin: auto;
@@ -23,10 +23,12 @@
     height: fit-content;
     padding: 0.3rem;
     border-radius: 5px;
-    background-color: $light;
+    background-color: $background;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 
     img {
       width: 25px;
+      aspect-ratio: 1/1;
     }
 
     &:hover {
@@ -42,7 +44,7 @@
       font-size: 14px;
 
       width: max-content;
-      background-color: white;
+      background-color: $light;
       border: 1px solid #eaeaea;
       border-radius: 5px;
       padding: 0.3rem;

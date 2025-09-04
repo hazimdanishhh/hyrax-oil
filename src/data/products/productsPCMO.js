@@ -23,6 +23,14 @@ export const productsPCMO = [
     shortDesc:
       "Eco-friendly fully synthetic oil engineered for ultimate performance and superior engine protection.",
     cardDesc: "Ultimate performance and superior engine protection.",
+    applications:
+      "Hyrax Platineum HS is highly recommended for all type of passenger cars especially current and future model high performance cars fitted with emission control devices, fuel injections, turbochargers, super-charger and multi-valve engines fuelled by gasoline, diesel, LPG and Flexible Fuel Vehicles (FFV). Also suitable for engines requiring API SM, SL, SJ, SH, SG and below performance levels.",
+    performance: [
+      "API SN",
+      "ACEA C5",
+      "Mercedes-Benz MB p229.71",
+      "Jaguar Land Rover STJLR.51.5122",
+    ],
   },
   {
     src: image2,
@@ -37,6 +45,17 @@ export const productsPCMO = [
     shortDesc:
       "Premium fully synthetic oil delivering maximum performance and advanced protection for modern engines.",
     cardDesc: "Maximum performance and advanced protection.",
+    applications:
+      "Hyrax Platineum is highly recommended for all type of passenger cars especially current and future model high performance cars fitted with emission control devices, fuel injections, turbo-chargers, super-charger and multi-valve engines fuelled by gasoline, diesel, LPG and Flexible Fuel Vehicles (FFV). Also suitable for engines requiring API SM, SL, SJ, SH, SG and below performance levels.",
+    performance: [
+      "API SN Plus",
+      "API SN/CF",
+      "ILSAC GF-5 Plus",
+      "ACEA C3",
+      "Mercedes-Benz MB p229.51",
+      "BMW LL-04",
+      "VW 502.00/505.01",
+    ],
   },
   {
     src: image3,
@@ -51,6 +70,15 @@ export const productsPCMO = [
     shortDesc:
       "High-performance fully synthetic oil built for power, protection, and next-gen engine demands.",
     cardDesc: "Built for power, protection, and next-gen engine demands.",
+    applications:
+      "Hyrax Aureus is highly recommended for all type of passenger cars especially latest model fitted with emission control devices, fuel injections, turbo-chargers, super-charger and multi-valve engines fuelled by gasoline, diesel, LPG and Flexible Fuel Vehicles (FFV). Also suitable for engines requiring API SM and below performance levels.",
+    performance: [
+      "API SN/CF",
+      "ACEA A3/B4",
+      "Mercedes-Benz MB p229.3",
+      "BMW LL-01",
+      "VW 502.00/505.00",
+    ],
   },
   {
     src: image4,
@@ -65,6 +93,16 @@ export const productsPCMO = [
     shortDesc:
       "Semi-synthetic motor oil with advanced cleaning technology for lasting engine performance.",
     cardDesc: "Advanced cleaning tech for lasting engine performance.",
+    applications:
+      "Hyrax Elite Ultra is recommended for all type of high performance passenger cars, sport utility vehicles and light trucks fitted with fuel injections, multi-valves, turbochargers or superchargers operating under extreme conditions. Also suitable for engine requiring API SM and below performance levels.",
+    performance: [
+      "API SN Plus",
+      "API SN/CF",
+      "ILSAC GF-5 Plus",
+      "ACEA A3/B4",
+      "Mercedes-Benz MB p229.3",
+      "VW 501.01/505.00",
+    ],
   },
   {
     src: image5,
@@ -79,5 +117,8 @@ export const productsPCMO = [
     shortDesc:
       "Reliable premium blend oil for smooth performance in passenger cars and light trucks.",
     cardDesc: "Smooth performance in passenger cars and light trucks.",
+    applications:
+      "Hyrax Ultra Novo is recommended for most passenger cars, sport utility vehicles and light trucks and most turbo-charged, super-charged engines requiring API SL or below performance levels.",
+    performance: ["API SL/CF", "ILSAC GF-3"],
   },
 ];

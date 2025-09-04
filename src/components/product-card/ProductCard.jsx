@@ -19,7 +19,7 @@ function ProductCard({
         className="product-card-wrapper"
         variants={fadeInWithEase}
         whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
+        whileTap={{ scale: 1 }}
       >
         <a className="product-card" onClick={onClick}>
           <img
@@ -31,9 +31,9 @@ function ProductCard({
 
           <div className="product-card-overlay">
             <div className="product-title">
-              <h3 className="textRegular textXXS">{title}</h3>
-              <p className="card-desc textLight textXXS">{cardDesc}</p>
-              <p className="product-desc textLight textXXS">{shortDesc}</p>
+              <h3 className="textRegular textXS">{title}</h3>
+              <p className="card-desc textLight textXXXS">{cardDesc}</p>
+              <p className="product-desc textLight textXXXS">{shortDesc}</p>
               <span className="product-action textLight textXXS">
                 Learn More
               </span>

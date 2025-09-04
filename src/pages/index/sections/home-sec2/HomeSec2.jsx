@@ -29,8 +29,16 @@ function HomeSec2() {
               Certified Excellence.
             </motion.h2>
 
-            <motion.p className="home-sec2-desc textLight textXS" variants={fadeInWithEase}>
-              Our relentless focus on quality has earned Hyrax Oil global recognition, international certifications, and approvals from leading automotive and industrial OEMs. Every product we deliver reflects our commitment to innovation, safety, and sustainability—setting new benchmarks for lubricant performance worldwide.
+            <motion.p
+              className="home-sec2-desc textLight textXS"
+              variants={fadeInWithEase}
+            >
+              Our relentless focus on quality has earned Hyrax Oil global
+              recognition, international certifications, and approvals from
+              leading automotive and industrial OEMs. Every product we deliver
+              reflects our commitment to innovation, safety, and
+              sustainability—setting new benchmarks for lubricant performance
+              worldwide.
             </motion.p>
           </motion.div>
 
@@ -94,11 +102,18 @@ function HomeSec2() {
             </a>
           </motion.div>
 
-          <ButtonRouter
-            name="Learn More"
-            type="button-type-1"
-            link="/about/certifications"
-          />
+          <div className="home-sec2-buttons">
+            <ButtonRouter
+              name="Learn More"
+              type="button-type-1"
+              link="/about/certifications"
+            />
+            <ButtonRouter
+              name="Our Products"
+              type="button-type-2"
+              link="/products"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -42,34 +42,34 @@ function GlobalImpact() {
             >
               <div className="company-impact-cards">
                 <Counter end={2} duration={1} />
-                <p>Countries with Lube Oil Blending Plants</p>
+                <p className="textS">Countries with Lube Oil Blending Plants</p>
               </div>
               <div className="company-impact-cards">
                 <div className="company-impact-digit">
                   <Counter end={40} duration={1.5} />
-                  <div className="company-impact-digit-plus textRegular textXXL">
+                  <div className="company-impact-digit-plus textRegular textXXXL">
                     +
                   </div>
                 </div>
-                <p>Countries Served Worldwide</p>
+                <p className="textS">Countries Served Worldwide</p>
               </div>
               <div className="company-impact-cards">
                 <div className="company-impact-digit">
                   <Counter end={90} duration={2} />
-                  <div className="company-impact-digit-plus textRegular textXXL">
+                  <div className="company-impact-digit-plus textRegular textXXXL">
                     +
                   </div>
                 </div>
-                <p>Total Skilled Employees Globally</p>
+                <p className="textS">Total Skilled Employees Globally</p>
               </div>
               <div className="company-impact-cards">
                 <div className="company-impact-digit">
                   <Counter end={20} duration={2.5} />
-                  <div className="company-impact-digit-plus textRegular textXXL">
+                  <div className="company-impact-digit-plus textRegular textXXXL">
                     M+
                   </div>
                 </div>
-                <p>Liters of Lubricants Delivered Annually</p>
+                <p className="textS">Liters of Lubricants Delivered Annually</p>
               </div>
             </motion.div>
           </div>

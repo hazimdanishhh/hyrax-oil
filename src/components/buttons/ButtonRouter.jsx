@@ -16,7 +16,7 @@ function ButtonRouter({ name, link, type, target }) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        {name === "PDS" ? (
+        {name === "View PDS" ? (
           <a
             className={type}
             href={link}

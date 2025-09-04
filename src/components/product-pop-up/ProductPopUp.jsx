@@ -2,7 +2,11 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import "./ProductPopUp.scss";
 import ButtonRouter from "../buttons/ButtonRouter";
-import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import {
+  fadeInWithEase,
+  staggerContainer,
+  staggerContainerFast,
+} from "../../functions/motionUtils";
 
 function ProductPopUp({ product, onClose }) {
   const productOverlayRef = useRef(null);
@@ -42,7 +46,7 @@ function ProductPopUp({ product, onClose }) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={staggerContainer}
+        variants={staggerContainerFast}
       >
         <svg
           className="product-close-icon"
@@ -96,28 +100,83 @@ function ProductPopUp({ product, onClose }) {
 
         <motion.hr variants={fadeInWithEase} />
 
-        <div className="product-pop-up-body">
+        {/* DESCRIPTION */}
+        <motion.div
+          className="product-pop-up-section"
+          variants={fadeInWithEase}
+          whileHover={{ scale: 1.02 }}
+        >
+          <motion.h3 className="textRegular textS" variants={fadeInWithEase}>
+            Description
+          </motion.h3>
           <motion.p variants={fadeInWithEase}>{product.description}</motion.p>
-        </div>
+        </motion.div>
 
+        {/* GRADES */}
         {product.grades && (
-          <div>
-            <motion.h3
-              className="product-pop-up-grade-title textRegular textS"
-              variants={fadeInWithEase}
-            >
+          <motion.div
+            className="product-pop-up-section"
+            variants={fadeInWithEase}
+            whileHover={{ scale: 1.02 }}
+          >
+            <motion.h3 className="textRegular textS" variants={fadeInWithEase}>
               Grades
             </motion.h3>
-            {product.grades.map((grade, index) => (
-              <motion.p
-                key={index}
-                className="product-pop-up-grade"
-                variants={fadeInWithEase}
-              >
-                {grade}
-              </motion.p>
-            ))}
-          </div>
+            <div className="product-pop-up-grades-list">
+              {product.grades.map((grade, index) => (
+                <motion.p
+                  key={index}
+                  className="product-pop-up-grade"
+                  variants={fadeInWithEase}
+                >
+                  {grade}
+                </motion.p>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* APPLICATIONS */}
+        {product.applications && (
+          <motion.div
+            className="product-pop-up-section"
+            variants={fadeInWithEase}
+            whileHover={{ scale: 1.02 }}
+          >
+            <motion.h3 className="textRegular textS" variants={fadeInWithEase}>
+              Applications
+            </motion.h3>
+            <motion.p
+              className="product-pop-up-grade"
+              variants={fadeInWithEase}
+            >
+              {product.applications}
+            </motion.p>
+          </motion.div>
+        )}
+
+        {/* PERFORMANCE */}
+        {product.performance && (
+          <motion.div
+            className="product-pop-up-section"
+            variants={fadeInWithEase}
+            whileHover={{ scale: 1.02 }}
+          >
+            <motion.h3 className="textRegular textS" variants={fadeInWithEase}>
+              Performance
+            </motion.h3>
+            <div className="product-pop-up-grades-list">
+              {product.performance.map((performance, index) => (
+                <motion.p
+                  key={index}
+                  className="product-pop-up-grade"
+                  variants={fadeInWithEase}
+                >
+                  {performance}
+                </motion.p>
+              ))}
+            </div>
+          </motion.div>
         )}
 
         <div className="product-pop-up-buttons">

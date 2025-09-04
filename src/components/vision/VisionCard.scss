@@ -8,9 +8,11 @@
   padding: 1rem;
   border: 1px solid #d3d3d3;
   border-radius: 10px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px 1px;
   position: relative;
   bottom: 0;
+  background-color: $light;
+  gap: 1rem;
 
   &:hover {
     border: 1px solid #f26f27;
@@ -24,7 +26,6 @@
 
   .vision-mission-header {
     display: flex;
-    padding: 1rem 0;
 
     .vision-icon {
       width: 25px;

@@ -23,7 +23,7 @@ const Counter = ({ end = 100, duration = 2 }) => {
       animate={controls}
       initial={{ count: 0 }}
       onUpdate={(latest) => setCount(Math.floor(latest.count))}
-      className="digit-counter textXXL textRegular"
+      className="digit-counter textXXXL textRegular"
     >
       {count}
     </motion.div>
